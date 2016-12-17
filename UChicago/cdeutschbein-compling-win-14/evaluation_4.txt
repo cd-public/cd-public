@@ -1,0 +1,16 @@
+Evaluation for Assignment 6: Anagrams and learning morphology
+
+Comments: Folder badly named.
+You should keep the output file.
+
+
+Evaluation:
+
+1. Program output on dx1 file: 4/4
+2. Analysis of alphabetized list: 2/2
+3. Code efficiency: -/2
+
+4. Bonus: -/2
+5. Total: 0/8 + -/2
+
+Grader: Nikita Mishra
