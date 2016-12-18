@@ -6,13 +6,13 @@ morph.c:  Source code for the affix/anagram analyzer
 
 	Currently it accepts a .dx1 file and outputs unordered signature tables
 
-hmm.exe:  hmm.c compiled with gcc.
+morph.exe:  hmm.c compiled with gcc.
 
 	To compile it, I used (-O3 is, of course, unneeded):
 
 		gcc morph.c -o morph.exe -O3
 
-	To use hmm.exe, I usually run: 
+	To use morph.exe, I usually run: 
 
 		./morph.exe <{file}.dx1
 
