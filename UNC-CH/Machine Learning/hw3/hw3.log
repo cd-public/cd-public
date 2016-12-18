@@ -1,0 +1,798 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.10.1)  21 NOV 2015 01:19
+entering extended mode
+**D:/Documents/ML/hw3/hw3.tex
+(D:/Documents/ML/hw3/hw3.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+("D:\General Utilities\MikTex\Install Site\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("D:\General Utilities\MikTex\Install Site\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\@input{hwdefs.aux}
+(hwdefs.tex
+\c@problemCtr=\count87
+\c@HW=\count88
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\amscls\amsthm.sty"
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks14
+\thm@bodyfont=\toks15
+\thm@headfont=\toks16
+\thm@notefont=\toks17
+\thm@headpunct=\toks18
+\thm@preskip=\skip43
+\thm@postskip=\skip44
+\thm@headsep=\skip45
+\dth@everypar=\toks19
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+) ("D:\General Utilities\MikTex\Install Site\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count89
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+) (natbib.sty
+Package: natbib 2009/07/16 8.31 (PWD, AO)
+\bibhang=\skip46
+\bibsep=\skip47
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count90
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\algorithms\algorithm.sty"
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count91
+\float@exts=\toks21
+\float@box=\box26
+\@float@everytoks=\toks22
+\@floatcapt=\box27
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\@float@every@algorithm=\toks23
+\c@algorithm=\count92
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\algorithms\algorithmic.sty
+"
+Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
+\c@ALC@unique=\count93
+\c@ALC@line=\count94
+\c@ALC@rem=\count95
+\c@ALC@depth=\count96
+\ALC@tlm=\skip48
+\algorithmicindent=\skip49
+) ("D:\General Utilities\MikTex\Install Site\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+("D:\General Utilities\MikTex\Install Site\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks24
+\ex@=\dimen105
+))
+("D:\General Utilities\MikTex\Install Site\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen106
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box28
+\strutbox@=\box29
+\big@size=\dimen107
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks25
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks26
+\eqnshift@=\dimen108
+\alignsep@=\dimen109
+\tagshift@=\dimen110
+\tagwidth@=\dimen111
+\totwidth@=\dimen112
+\lineht@=\dimen113
+\@envbody=\toks27
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks28
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\oberdiek\hobsub-hyperref
+.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
+
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\oberdiek\hobsub-generic.
+sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen114
+\Hy@linkcounter=\count109
+\Hy@pagecounter=\count110
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count111
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count112
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen115
+\Fld@menulength=\count113
+\Field@Width=\dimen116
+\Fld@charsize=\dimen117
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count114
+\c@Item=\count115
+\c@Hfootnote=\count116
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count117
+\c@bookmark@seq@number=\count118
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\oberdiek\rerunfilecheck.st
+y"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip53
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\frontendlayer\tikz.sty
+" ("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\basiclayer\pgf.sty"
+("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\utilities\pgfrcs.sty"
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\utilities\pgfutil-co
+mmon.tex"
+\pgfutil@everybye=\toks29
+\pgfutil@tempdima=\dimen118
+\pgfutil@tempdimb=\dimen119
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\utilities\pgfutil-co
+mmon-lists.tex"))
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\utilities\pgfutil-la
+tex.def"
+\pgfutil@abb=\box30
+ ("D:\General Utilities\MikTex\Install Site\tex\latex\ms\everyshi.sty"
+Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
+))
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\utilities\pgfrcs.cod
+e.tex"
+Package: pgfrcs 2015/08/07 v3.0.1a (rcs-revision 1.31)
+))
+Package: pgf 2015/08/07 v3.0.1a (rcs-revision 1.15)
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\basiclayer\pgfcore.sty
+"
+("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\systemlayer\pgfsys.sty
+"
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\systemlayer\pgfsys.c
+ode.tex"
+Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\utilities\pgfkeys.co
+de.tex"
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\utilities\pgfkeysfil
+tered.code.tex"
+\pgfkeys@tmptoks=\toks32
+))
+\pgf@x=\dimen120
+\pgf@y=\dimen121
+\pgf@xa=\dimen122
+\pgf@ya=\dimen123
+\pgf@xb=\dimen124
+\pgf@yb=\dimen125
+\pgf@xc=\dimen126
+\pgf@yc=\dimen127
+\w@pgf@writea=\write3
+\r@pgf@reada=\read1
+\c@pgf@counta=\count119
+\c@pgf@countb=\count120
+\c@pgf@countc=\count121
+\c@pgf@countd=\count122
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\systemlayer\pgf.cfg"
+File: pgf.cfg 2008/05/14  (rcs-revision 1.7)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\systemlayer\pgfsys-p
+dftex.def"
+File: pgfsys-pdftex.def 2014/10/11  (rcs-revision 1.35)
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\systemlayer\pgfsys-c
+ommon-pdf.def"
+File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
+)))
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\systemlayer\pgfsysso
+ftpath.code.tex"
+File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
+\pgfsyssoftpath@smallbuffer@items=\count123
+\pgfsyssoftpath@bigbuffer@items=\count124
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\systemlayer\pgfsyspr
+otocol.code.tex"
+File: pgfsysprotocol.code.tex 2006/10/16  (rcs-revision 1.4)
+))
+("D:\General Utilities\MikTex\Install Site\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcore.c
+ode.tex"
+Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmath.code.te
+x"
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathcalc.cod
+e.tex"
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathutil.cod
+e.tex")
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathparser.c
+ode.tex"
+\pgfmath@dimen=\dimen128
+\pgfmath@count=\count125
+\pgfmath@box=\box31
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfunction
+s.code.tex"
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfunction
+s.basic.code.tex")
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfunction
+s.trigonometric.code.tex")
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfunction
+s.random.code.tex")
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfunction
+s.comparison.code.tex")
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfunction
+s.base.code.tex")
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfunction
+s.round.code.tex")
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfunction
+s.misc.code.tex")
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfunction
+s.integerarithmetics.code.tex")))
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmathfloat.co
+de.tex"
+\c@pgfmathroundto@lastzeros=\count126
+))
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcorepo
+ints.code.tex"
+File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
+\pgf@picminx=\dimen129
+\pgf@picmaxx=\dimen130
+\pgf@picminy=\dimen131
+\pgf@picmaxy=\dimen132
+\pgf@pathminx=\dimen133
+\pgf@pathmaxx=\dimen134
+\pgf@pathminy=\dimen135
+\pgf@pathmaxy=\dimen136
+\pgf@xx=\dimen137
+\pgf@xy=\dimen138
+\pgf@yx=\dimen139
+\pgf@yy=\dimen140
+\pgf@zx=\dimen141
+\pgf@zy=\dimen142
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcorepa
+thconstruct.code.tex"
+File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
+\pgf@path@lastx=\dimen143
+\pgf@path@lasty=\dimen144
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcorepa
+thusage.code.tex"
+File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
+\pgf@shorten@end@additional=\dimen145
+\pgf@shorten@start@additional=\dimen146
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcoresc
+opes.code.tex"
+File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
+\pgfpic=\box32
+\pgf@hbox=\box33
+\pgf@layerbox@main=\box34
+\pgf@picture@serial@count=\count127
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcoregr
+aphicstate.code.tex"
+File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
+\pgflinewidth=\dimen147
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcoretr
+ansformations.code.tex"
+File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
+\pgf@pt@x=\dimen148
+\pgf@pt@y=\dimen149
+\pgf@pt@temp=\dimen150
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcorequ
+ick.code.tex"
+File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcoreob
+jects.code.tex"
+File: pgfcoreobjects.code.tex 2006/10/11  (rcs-revision 1.2)
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcorepa
+thprocessing.code.tex"
+File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcorear
+rows.code.tex"
+File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
+\pgfarrowsep=\dimen151
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcoresh
+ade.code.tex"
+File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
+\pgf@max=\dimen152
+\pgf@sys@shading@range@num=\count128
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcoreim
+age.code.tex"
+File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcoreex
+ternal.code.tex"
+File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
+\pgfexternal@startupbox=\box35
+))
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcorela
+yers.code.tex"
+File: pgfcorelayers.code.tex 2013/07/18  (rcs-revision 1.7)
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcoretr
+ansparency.code.tex"
+File: pgfcoretransparency.code.tex 2013/09/30  (rcs-revision 1.5)
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\basiclayer\pgfcorepa
+tterns.code.tex"
+File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
+)))
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\modules\pgfmodulesha
+pes.code.tex"
+File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
+\pgfnodeparttextbox=\box36
+)
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\modules\pgfmoduleplo
+t.code.tex"
+File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\compatibility\pgfcomp-
+version-0-65.sty"
+Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
+\pgf@nodesepstart=\dimen153
+\pgf@nodesepend=\dimen154
+)
+("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\compatibility\pgfcomp-
+version-1-18.sty"
+Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
+))
+("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\utilities\pgffor.sty"
+("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\utilities\pgfkeys.sty"
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\utilities\pgfkeys.co
+de.tex"))
+("D:\General Utilities\MikTex\Install Site\tex\latex\pgf\math\pgfmath.sty"
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmath.code.te
+x"))
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\utilities\pgffor.cod
+e.tex"
+Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\math\pgfmath.code.te
+x")
+\pgffor@iter=\dimen155
+\pgffor@skip=\dimen156
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
+))
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\frontendlayer\tikz\t
+ikz.code.tex"
+Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\libraries\pgflibrary
+plothandlers.code.tex"
+File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
+\pgf@plot@mark@count=\count129
+\pgfplotmarksize=\dimen157
+)
+\tikz@lastx=\dimen158
+\tikz@lasty=\dimen159
+\tikz@lastxsaved=\dimen160
+\tikz@lastysaved=\dimen161
+\tikzleveldistance=\dimen162
+\tikzsiblingdistance=\dimen163
+\tikz@figbox=\box37
+\tikz@figbox@bg=\box38
+\tikz@tempbox=\box39
+\tikz@tempbox@bg=\box40
+\tikztreelevel=\count130
+\tikznumberofchildren=\count131
+\tikznumberofcurrentchild=\count132
+\tikz@fig@count=\count133
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\modules\pgfmodulemat
+rix.code.tex"
+File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
+\pgfmatrixcurrentrow=\count134
+\pgfmatrixcurrentcolumn=\count135
+\pgf@matrix@numberofcolumns=\count136
+)
+\tikz@expandcount=\count137
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\pgf\frontendlayer\tikz\l
+ibraries\tikzlibrarytopaths.code.tex"
+File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
+)))
+\c@remark=\count138
+\c@lemma=\count139
+\c@definition=\count140
+\c@proposition=\count141
+\c@assumption=\count142
+\c@corollary=\count143
+\c@theorem=\count144
+) (hw3.aux)
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+("D:\General Utilities\MikTex\Install Site\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count145
+\scratchdimen=\dimen164
+\scratchbox=\box41
+\nofMPsegments=\count146
+\nofMParguments=\count147
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count148
+\MPscratchDim=\dimen165
+\MPnumerator=\count149
+\makeMPintoPDFobject=\count150
+\everyMPtoPDFconversion=\toks42
+)
+\AtBeginShipoutBox=\box42
+Package hyperref Info: Link coloring OFF on input line 3.
+ ("D:\General Utilities\MikTex\Install Site\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+("D:\General Utilities\MikTex\Install Site\tex\generic\oberdiek\gettitlestring.
+sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count151
+)
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
+ (hw3.out) (hw3.out)
+\@outlinefile=\write4
+ ABD: EveryShipout initializing macros [1
+
+
+
+{C:/Users/calvinde/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
+Overfull \hbox (68.04466pt too wide) in alignment at lines 189--192
+ [][][] []
+ []
+
+[3] <noisy.png, id=40, 80.3pt x 117.43875pt>
+File: noisy.png Graphic file (type png)
+ <use noisy.png>
+Package pdftex.def Info: noisy.png used on input line 212.
+(pdftex.def)             Requested size: 80.29979pt x 117.43845pt.
+
+Overfull \hbox (23.16362pt too wide) detected at line 230
+\OMS/cmsy/m/n/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10   \OML
+/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[] + (\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10   
+\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )[] + (\OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/1
+0   \OML/cmm/m/it/10 y[]\OT1/cmr/m/n/10 )[] : \OML/cmm/m/it/10 i; j \OMS/cmsy/m
+/n/10 2 f\OT1/cmr/m/n/10 (1\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2)\OML/cmm/m/it/1
+0 ; \OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 1)\OML/cmm/m/it/10 ; \
+OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2)\OML/cmm/m/it/10 ; \OT1/c
+mr/m/n/10 (2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 3)\OML/cmm/m/it/10 ; \OT1/cmr/m/
+n/10 (3\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2)\OMS/cmsy/m/n/10 gg
+ []
+
+[4 <./noisy.png (PNG copy)>]
+Overfull \hbox (0.84315pt too wide) in paragraph at lines 267--269
+[]\OT1/cmr/m/n/10 Let the terms that do not in-volve $\OML/cmm/m/it/10 x[]$ \OT
+1/cmr/m/n/10 be col-lected in some func-tion $\OML/cmm/m/it/10 f\OT1/cmr/m/n/10
+ (\OT1/cmr/bx/n/10 x[]\OT1/cmr/m/n/10 )$
+ []
+
+
+Overfull \hbox (136.37282pt too wide) detected at line 278
+[]
+ []
+
+[5] [6] [7] <10iter.pdf, id=65, 614.295pt x 794.97pt>
+File: 10iter.pdf Graphic file (type pdf)
+ <use 10iter.pdf>
+Package pdftex.def Info: 10iter.pdf used on input line 385.
+(pdftex.def)             Requested size: 153.57336pt x 198.742pt.
+
+<100iter.pdf, id=66, 614.295pt x 794.97pt>
+File: 100iter.pdf Graphic file (type pdf)
+ <use 100iter.pdf>
+Package pdftex.def Info: 100iter.pdf used on input line 387.
+(pdftex.def)             Requested size: 153.57336pt x 198.742pt.
+
+<100iterrescale.pdf, id=67, 614.295pt x 794.97pt>
+File: 100iterrescale.pdf Graphic file (type pdf)
+ <use 100iterrescale.pdf>
+Package pdftex.def Info: 100iterrescale.pdf used on input line 389.
+(pdftex.def)             Requested size: 153.57336pt x 198.742pt.
+
+Overfull \hbox (151.7201pt too wide) in paragraph at lines 383--391
+[][] 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 400.
+
+("D:\General Utilities\MikTex\Install Site\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 400.
+
+<bestx.pdf, id=68, 614.295pt x 794.97pt>
+File: bestx.pdf Graphic file (type pdf)
+ <use bestx.pdf>
+Package pdftex.def Info: bestx.pdf used on input line 412.
+(pdftex.def)             Requested size: 153.57336pt x 198.742pt.
+
+<mean.pdf, id=69, 614.295pt x 794.97pt>
+File: mean.pdf Graphic file (type pdf)
+ <use mean.pdf>
+Package pdftex.def Info: mean.pdf used on input line 415.
+(pdftex.def)             Requested size: 153.57336pt x 198.742pt.
+
+<afterb.pdf, id=70, 614.295pt x 794.97pt>
+File: afterb.pdf Graphic file (type pdf)
+ <use afterb.pdf>
+Package pdftex.def Info: afterb.pdf used on input line 419.
+(pdftex.def)             Requested size: 153.57336pt x 198.742pt.
+
+Overfull \hbox (151.7201pt too wide) in paragraph at lines 410--422
+[][] 
+ []
+
+<var.pdf, id=71, 614.295pt x 794.97pt>
+File: var.pdf Graphic file (type pdf)
+ <use var.pdf>
+Package pdftex.def Info: var.pdf used on input line 423.
+(pdftex.def)             Requested size: 153.57336pt x 198.742pt.
+ [8 <./10iter.pdf> <./100iter.pdf> <./100iterrescale.pdf>]
+<emptiness.pdf, id=117, 426.59375pt x 284.06125pt>
+File: emptiness.pdf Graphic file (type pdf)
+ <use emptiness.pdf>
+Package pdftex.def Info: emptiness.pdf used on input line 432.
+(pdftex.def)             Requested size: 426.5927pt x 284.06053pt.
+
+Overfull \hbox (81.5927pt too wide) in paragraph at lines 432--433
+ [] 
+ []
+
+File: emptiness.pdf Graphic file (type pdf)
+<use emptiness.pdf>
+Package pdftex.def Info: emptiness.pdf used on input line 440.
+(pdftex.def)             Requested size: 426.5927pt x 284.06053pt.
+
+Overfull \hbox (81.5927pt too wide) in paragraph at lines 440--441
+ [] 
+ []
+
+[9 <./bestx.pdf> <./mean.pdf> <./afterb.pdf> <./var.pdf>] [10 <./emptiness.pdf>
+] [11]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 447.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 447.
+ (hw3.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 447.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 447.
+Package rerunfilecheck Info: File `hw3.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 447.
+ ) 
+Here is how much of TeX's memory you used:
+ 16354 strings out of 493673
+ 304101 string characters out of 3138686
+ 371733 words of memory out of 3000000
+ 19402 multiletter control sequences out of 15000+200000
+ 9244 words of font info for 34 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 59i,14n,56p,422b,663s stack positions out of 5000i,500n,10000p,200000b,50000s
+<D:/General Utilities/MikTex/Install Site/fonts/type1/public/amsfonts/cm/cmbx
+10.pfb><D:/General Utilities/MikTex/Install Site/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><D:/General Utilities/MikTex/Install Site/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb><D:/General Utilities/MikTex/Install Site/fonts/type1/public/a
+msfonts/cm/cmmi5.pfb><D:/General Utilities/MikTex/Install Site/fonts/type1/publ
+ic/amsfonts/cm/cmmi7.pfb><D:/General Utilities/MikTex/Install Site/fonts/type1/
+public/amsfonts/cm/cmr10.pfb><D:/General Utilities/MikTex/Install Site/fonts/ty
+pe1/public/amsfonts/cm/cmr12.pfb><D:/General Utilities/MikTex/Install Site/font
+s/type1/public/amsfonts/cm/cmr17.pfb><D:/General Utilities/MikTex/Install Site/
+fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/General Utilities/MikTex/Install Si
+te/fonts/type1/public/amsfonts/cm/cmr7.pfb><D:/General Utilities/MikTex/Install
+ Site/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/General Utilities/MikTex/In
+stall Site/fonts/type1/public/amsfonts/cm/cmsy7.pfb><D:/General Utilities/MikTe
+x/Install Site/fonts/type1/public/amsfonts/cm/cmti10.pfb><D:/General Utilities/
+MikTex/Install Site/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on hw3.pdf (11 pages, 497002 bytes).
+PDF statistics:
+ 203 PDF objects out of 1000 (max. 8388607)
+ 30 named destinations out of 1000 (max. 500000)
+ 58 words of extra memory for PDF output out of 10000 (max. 10000000)
+

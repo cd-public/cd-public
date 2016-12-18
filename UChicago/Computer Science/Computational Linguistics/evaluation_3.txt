@@ -1,0 +1,24 @@
+Evaluation for Assignment 3-4-5 on HMM
+
+Comments:
+
+Although this evaluation file is for the final assignment in your repository, we have kept track of the submission deadlines separately.
+
+1. Initialization: -/3
+2. Forward and Backward -/3
+3. Total probability: -/1
+4. Expected counts of state-production of letters: -/3
+5. Maximization, part 1: -/2 
+6. Maximization, part 2: -/1
+7. Expectation-Maximization: -/2
+8. Local maxima: -/3
+9. Viterbi: -/2
+
+Bonus 
+1. Plots: -/3
+2. Phonemic transcription: -/2
+ 
+xlsm, doesn't work.  Better be safe and provide a .jpg, .png, .pdf...  
+
+Total: 20/20 + -/5
+Grader: John Santerre

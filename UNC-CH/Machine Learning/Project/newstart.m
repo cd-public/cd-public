@@ -1,0 +1,9 @@
+function [trans, emis] = newstart(parts)
+trans = rand(2,2);
+trans(1,1) = trans(1,1) / 2 + .5;
+trans(1,2) = 1 - trans(1,1);
+trans(2,2) = trans(2,2) / 2 + .5;
+trans(2,1) = 1 - trans(2,2);
+emis = rand(2,parts);
+div = sum(emis,2);
+emis = bsxfun (@rdivide, emis, div);

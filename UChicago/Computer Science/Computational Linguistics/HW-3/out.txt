@@ -1,0 +1,2200 @@
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.5941769
+State  1:  Probability:  0.4058231
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.9342907
+State  0:  Probability:  0.0657093
+
+>Emission Values <
+
+Letter #:  Probability:  0.1007431
+Letter r:  Probability:  0.0497896
+Letter n:  Probability:  0.0375678
+Letter h:  Probability:  0.0344464
+Letter a:  Probability:  0.0310357
+Letter e:  Probability:  0.0302368
+Letter t:  Probability:  0.0273793
+Letter o:  Probability:  0.0251605
+Letter l:  Probability:  0.0234770
+Letter w:  Probability:  0.0227359
+Letter i:  Probability:  0.0187850
+Letter k:  Probability:  0.0159436
+Letter y:  Probability:  0.0132536
+Letter p:  Probability:  0.0118446
+Letter u:  Probability:  0.0115643
+Letter s:  Probability:  0.0106164
+Letter b:  Probability:  0.0098781
+Letter v:  Probability:  0.0087541
+Letter g:  Probability:  0.0061991
+Letter d:  Probability:  0.0060026
+Letter ':  Probability:  0.0026267
+Letter x:  Probability:  0.0010275
+Letter z:  Probability:  0.0009116
+Letter m:  Probability:  0.0000166
+Letter c:  Probability:  0.0000025
+Letter j:  Probability:  0.0000015
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.7177912
+State  1:  Probability:  0.2822088
+
+>Emission Values <
+
+Letter #:  Probability:  0.0733484
+Letter e:  Probability:  0.0698048
+Letter s:  Probability:  0.0363897
+Letter t:  Probability:  0.0350724
+Letter o:  Probability:  0.0338551
+Letter a:  Probability:  0.0313687
+Letter i:  Probability:  0.0235905
+Letter c:  Probability:  0.0235457
+Letter d:  Probability:  0.0215645
+Letter l:  Probability:  0.0213688
+Letter m:  Probability:  0.0193624
+Letter n:  Probability:  0.0164814
+Letter u:  Probability:  0.0152822
+Letter r:  Probability:  0.0151895
+Letter f:  Probability:  0.0141583
+Letter g:  Probability:  0.0129265
+Letter p:  Probability:  0.0098621
+Letter y:  Probability:  0.0080917
+Letter h:  Probability:  0.0077240
+Letter b:  Probability:  0.0065238
+Letter ':  Probability:  0.0027088
+Letter x:  Probability:  0.0011899
+Letter v:  Probability:  0.0003370
+Letter j:  Probability:  0.0001479
+Letter z:  Probability:  0.0000819
+Letter k:  Probability:  0.0000240
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0040511  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.2868695
+State  1:  Probability:  0.7131305
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.5538837
+State  1:  Probability:  0.4461163
+
+>Emission Values <
+
+Letter #:  Probability:  0.1237365
+Letter h:  Probability:  0.0566141
+Letter e:  Probability:  0.0487800
+Letter a:  Probability:  0.0469848
+Letter i:  Probability:  0.0316324
+Letter r:  Probability:  0.0303694
+Letter t:  Probability:  0.0285677
+Letter w:  Probability:  0.0270318
+Letter y:  Probability:  0.0229863
+Letter o:  Probability:  0.0220226
+Letter k:  Probability:  0.0213609
+Letter l:  Probability:  0.0198509
+Letter s:  Probability:  0.0144432
+Letter n:  Probability:  0.0020320
+Letter z:  Probability:  0.0013214
+Letter u:  Probability:  0.0009923
+Letter ':  Probability:  0.0005571
+Letter v:  Probability:  0.0004581
+Letter x:  Probability:  0.0002169
+Letter d:  Probability:  0.0000393
+Letter m:  Probability:  0.0000012
+Letter g:  Probability:  0.0000006
+Letter p:  Probability:  0.0000003
+Letter c:  Probability:  0.0000002
+Letter j:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.8674576
+State  0:  Probability:  0.1325424
+
+>Emission Values <
+
+Letter #:  Probability:  0.0732720
+Letter e:  Probability:  0.0544435
+Letter t:  Probability:  0.0328082
+Letter o:  Probability:  0.0326358
+Letter n:  Probability:  0.0323368
+Letter r:  Probability:  0.0295803
+Letter s:  Probability:  0.0288506
+Letter a:  Probability:  0.0265182
+Letter l:  Probability:  0.0229759
+Letter d:  Probability:  0.0194859
+Letter i:  Probability:  0.0185575
+Letter c:  Probability:  0.0177047
+Letter u:  Probability:  0.0175201
+Letter m:  Probability:  0.0145668
+Letter p:  Probability:  0.0138948
+Letter g:  Probability:  0.0131103
+Letter f:  Probability:  0.0106452
+Letter b:  Probability:  0.0103091
+Letter h:  Probability:  0.0077277
+Letter y:  Probability:  0.0064629
+Letter v:  Probability:  0.0049055
+Letter w:  Probability:  0.0043571
+Letter ':  Probability:  0.0033072
+Letter k:  Probability:  0.0023546
+Letter x:  Probability:  0.0013919
+Letter z:  Probability:  0.0001652
+Letter j:  Probability:  0.0001121
+Letter j:  Probability:  0.0001121
+Letter j:  Probability:  0.0001121
+Letter j:  Probability:  0.0001121
+Letter j:  Probability:  0.0001121
+Letter j:  Probability:  0.0001121
+Letter j:  Probability:  0.0001121
+Letter j:  Probability:  0.0001121
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0042938  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.7329011
+State  1:  Probability:  0.2670989
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.5806694
+State  0:  Probability:  0.4193306
+
+>Emission Values <
+
+Letter #:  Probability:  0.1078977
+Letter e:  Probability:  0.0478574
+Letter r:  Probability:  0.0427630
+Letter t:  Probability:  0.0404790
+Letter n:  Probability:  0.0358360
+Letter a:  Probability:  0.0269918
+Letter l:  Probability:  0.0255094
+Letter i:  Probability:  0.0252448
+Letter h:  Probability:  0.0248745
+Letter o:  Probability:  0.0226657
+Letter u:  Probability:  0.0210788
+Letter p:  Probability:  0.0170398
+Letter c:  Probability:  0.0156952
+Letter m:  Probability:  0.0125039
+Letter w:  Probability:  0.0110093
+Letter y:  Probability:  0.0085521
+Letter v:  Probability:  0.0059735
+Letter s:  Probability:  0.0017900
+Letter k:  Probability:  0.0017274
+Letter g:  Probability:  0.0012765
+Letter d:  Probability:  0.0010481
+Letter z:  Probability:  0.0006868
+Letter f:  Probability:  0.0006068
+Letter x:  Probability:  0.0005259
+Letter ':  Probability:  0.0003669
+Letter j:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.9949133
+State  1:  Probability:  0.0050867
+
+>Emission Values <
+
+Letter s:  Probability:  0.0655800
+Letter e:  Probability:  0.0620493
+Letter #:  Probability:  0.0460777
+Letter o:  Probability:  0.0428882
+Letter d:  Probability:  0.0385574
+Letter a:  Probability:  0.0383735
+Letter g:  Probability:  0.0249622
+Letter b:  Probability:  0.0213212
+Letter f:  Probability:  0.0209931
+Letter t:  Probability:  0.0172499
+Letter l:  Probability:  0.0167712
+Letter i:  Probability:  0.0153634
+Letter k:  Probability:  0.0151635
+Letter y:  Probability:  0.0131557
+Letter c:  Probability:  0.0101474
+Letter m:  Probability:  0.0090404
+Letter h:  Probability:  0.0090354
+Letter r:  Probability:  0.0078359
+Letter n:  Probability:  0.0076987
+Letter w:  Probability:  0.0071577
+Letter ':  Probability:  0.0065655
+Letter x:  Probability:  0.0021259
+Letter u:  Probability:  0.0012998
+Letter v:  Probability:  0.0003547
+Letter j:  Probability:  0.0002317
+Letter z:  Probability:  0.0000006
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0039585  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.7369256
+State  1:  Probability:  0.2630744
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.7356843
+State  1:  Probability:  0.2643157
+
+>Emission Values <
+
+Letter e:  Probability:  0.0608458
+Letter #:  Probability:  0.0464563
+Letter s:  Probability:  0.0448538
+Letter n:  Probability:  0.0369534
+Letter a:  Probability:  0.0365636
+Letter l:  Probability:  0.0301133
+Letter i:  Probability:  0.0285756
+Letter o:  Probability:  0.0265957
+Letter d:  Probability:  0.0263089
+Letter r:  Probability:  0.0240670
+Letter m:  Probability:  0.0196941
+Letter p:  Probability:  0.0187900
+Letter g:  Probability:  0.0177282
+Letter w:  Probability:  0.0168202
+Letter b:  Probability:  0.0139410
+Letter h:  Probability:  0.0123166
+Letter y:  Probability:  0.0101782
+Letter u:  Probability:  0.0077373
+Letter f:  Probability:  0.0072388
+Letter v:  Probability:  0.0063467
+Letter k:  Probability:  0.0036486
+Letter x:  Probability:  0.0019652
+Letter ':  Probability:  0.0012123
+Letter z:  Probability:  0.0007191
+Letter t:  Probability:  0.0001777
+Letter j:  Probability:  0.0001515
+Letter c:  Probability:  0.0000010
+Letter c:  Probability:  0.0000010
+Letter c:  Probability:  0.0000010
+Letter c:  Probability:  0.0000010
+Letter c:  Probability:  0.0000010
+Letter c:  Probability:  0.0000010
+Letter c:  Probability:  0.0000010
+Letter c:  Probability:  0.0000010
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.7463390
+State  0:  Probability:  0.2536610
+
+>Emission Values <
+
+Letter #:  Probability:  0.1356808
+Letter t:  Probability:  0.0736719
+Letter e:  Probability:  0.0429551
+Letter r:  Probability:  0.0372891
+Letter o:  Probability:  0.0349483
+Letter c:  Probability:  0.0316444
+Letter h:  Probability:  0.0277841
+Letter a:  Probability:  0.0241767
+Letter u:  Probability:  0.0216191
+Letter i:  Probability:  0.0123024
+Letter l:  Probability:  0.0118723
+Letter k:  Probability:  0.0108001
+Letter y:  Probability:  0.0103813
+Letter n:  Probability:  0.0100418
+Letter f:  Probability:  0.0094596
+Letter ':  Probability:  0.0046066
+Letter v:  Probability:  0.0006243
+Letter d:  Probability:  0.0000765
+Letter z:  Probability:  0.0000510
+Letter m:  Probability:  0.0000069
+Letter x:  Probability:  0.0000062
+Letter g:  Probability:  0.0000015
+Letter p:  Probability:  0.0000001
+Letter s:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter j:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0040967  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.3761039
+State  1:  Probability:  0.6238961
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.5000474
+State  1:  Probability:  0.4999526
+
+>Emission Values <
+
+Letter a:  Probability:  0.0565958
+Letter r:  Probability:  0.0418695
+Letter o:  Probability:  0.0394660
+Letter c:  Probability:  0.0388435
+Letter i:  Probability:  0.0380208
+Letter t:  Probability:  0.0353245
+Letter #:  Probability:  0.0319618
+Letter l:  Probability:  0.0250985
+Letter f:  Probability:  0.0233555
+Letter n:  Probability:  0.0229629
+Letter m:  Probability:  0.0209609
+Letter p:  Probability:  0.0194620
+Letter g:  Probability:  0.0192514
+Letter k:  Probability:  0.0191721
+Letter h:  Probability:  0.0190313
+Letter d:  Probability:  0.0168377
+Letter b:  Probability:  0.0151618
+Letter u:  Probability:  0.0070080
+Letter e:  Probability:  0.0067204
+Letter z:  Probability:  0.0012174
+Letter v:  Probability:  0.0011907
+Letter y:  Probability:  0.0004039
+Letter x:  Probability:  0.0000660
+Letter ':  Probability:  0.0000099
+Letter j:  Probability:  0.0000076
+Letter s:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.7519854
+State  0:  Probability:  0.2480146
+
+>Emission Values <
+
+Letter #:  Probability:  0.1134960
+Letter e:  Probability:  0.0782337
+Letter s:  Probability:  0.0393385
+Letter t:  Probability:  0.0299445
+Letter n:  Probability:  0.0266594
+Letter o:  Probability:  0.0251806
+Letter r:  Probability:  0.0232168
+Letter l:  Probability:  0.0207205
+Letter h:  Probability:  0.0189501
+Letter a:  Probability:  0.0175153
+Letter u:  Probability:  0.0173428
+Letter y:  Probability:  0.0155968
+Letter w:  Probability:  0.0147519
+Letter d:  Probability:  0.0140225
+Letter i:  Probability:  0.0126718
+Letter p:  Probability:  0.0059588
+Letter m:  Probability:  0.0059460
+Letter v:  Probability:  0.0053368
+Letter g:  Probability:  0.0051424
+Letter ':  Probability:  0.0041146
+Letter b:  Probability:  0.0040306
+Letter x:  Probability:  0.0016920
+Letter j:  Probability:  0.0001288
+Letter z:  Probability:  0.0000064
+Letter k:  Probability:  0.0000022
+Letter c:  Probability:  0.0000002
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0040117  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.7853878
+State  1:  Probability:  0.2146122
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.9530659
+State  0:  Probability:  0.0469341
+
+>Emission Values <
+
+Letter #:  Probability:  0.2960666
+Letter e:  Probability:  0.0449441
+Letter p:  Probability:  0.0399181
+Letter f:  Probability:  0.0305880
+Letter d:  Probability:  0.0199616
+Letter a:  Probability:  0.0169795
+Letter t:  Probability:  0.0110216
+Letter h:  Probability:  0.0087005
+Letter ':  Probability:  0.0075538
+Letter o:  Probability:  0.0067732
+Letter r:  Probability:  0.0035505
+Letter y:  Probability:  0.0031211
+Letter n:  Probability:  0.0029728
+Letter u:  Probability:  0.0028544
+Letter i:  Probability:  0.0015895
+Letter l:  Probability:  0.0009550
+Letter z:  Probability:  0.0009444
+Letter k:  Probability:  0.0008530
+Letter v:  Probability:  0.0005228
+Letter j:  Probability:  0.0000808
+Letter g:  Probability:  0.0000430
+Letter m:  Probability:  0.0000025
+Letter x:  Probability:  0.0000018
+Letter c:  Probability:  0.0000012
+Letter s:  Probability:  0.0000001
+Letter w:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.6653104
+State  0:  Probability:  0.3346896
+
+>Emission Values <
+
+Letter e:  Probability:  0.0561396
+Letter t:  Probability:  0.0394485
+Letter r:  Probability:  0.0393546
+Letter o:  Probability:  0.0387643
+Letter a:  Probability:  0.0364432
+Letter s:  Probability:  0.0348799
+Letter n:  Probability:  0.0335563
+Letter l:  Probability:  0.0300526
+Letter i:  Probability:  0.0288777
+Letter h:  Probability:  0.0227401
+Letter c:  Probability:  0.0186179
+Letter u:  Probability:  0.0176915
+Letter m:  Probability:  0.0153180
+Letter g:  Probability:  0.0137712
+Letter d:  Probability:  0.0131983
+Letter w:  Probability:  0.0130800
+Letter y:  Probability:  0.0128804
+Letter b:  Probability:  0.0108411
+Letter k:  Probability:  0.0088792
+Letter #:  Probability:  0.0075997
+Letter v:  Probability:  0.0051114
+Letter x:  Probability:  0.0015312
+Letter ':  Probability:  0.0008885
+Letter z:  Probability:  0.0002436
+Letter j:  Probability:  0.0000883
+Letter p:  Probability:  0.0000029
+Letter f:  Probability:  0.0000002
+Letter f:  Probability:  0.0000002
+Letter f:  Probability:  0.0000002
+Letter f:  Probability:  0.0000002
+Letter f:  Probability:  0.0000002
+Letter f:  Probability:  0.0000002
+Letter f:  Probability:  0.0000002
+Letter f:  Probability:  0.0000002
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0019616  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.5398930
+State  1:  Probability:  0.4601070
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.5810709
+State  1:  Probability:  0.4189291
+
+>Emission Values <
+
+Letter #:  Probability:  0.1033361
+Letter a:  Probability:  0.0434151
+Letter r:  Probability:  0.0385518
+Letter n:  Probability:  0.0349154
+Letter s:  Probability:  0.0314206
+Letter l:  Probability:  0.0307426
+Letter o:  Probability:  0.0287043
+Letter t:  Probability:  0.0284035
+Letter h:  Probability:  0.0210083
+Letter d:  Probability:  0.0206520
+Letter e:  Probability:  0.0197517
+Letter i:  Probability:  0.0168870
+Letter c:  Probability:  0.0141191
+Letter w:  Probability:  0.0133997
+Letter b:  Probability:  0.0111061
+Letter p:  Probability:  0.0107449
+Letter g:  Probability:  0.0095315
+Letter y:  Probability:  0.0093753
+Letter v:  Probability:  0.0053459
+Letter u:  Probability:  0.0034045
+Letter ':  Probability:  0.0033351
+Letter x:  Probability:  0.0015693
+Letter z:  Probability:  0.0001688
+Letter m:  Probability:  0.0000987
+Letter k:  Probability:  0.0000094
+Letter f:  Probability:  0.0000034
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.9692146
+State  1:  Probability:  0.0307854
+
+>Emission Values <
+
+Letter e:  Probability:  0.1367440
+Letter t:  Probability:  0.0404179
+Letter u:  Probability:  0.0395369
+Letter m:  Probability:  0.0390488
+Letter #:  Probability:  0.0386877
+Letter o:  Probability:  0.0339215
+Letter i:  Probability:  0.0332843
+Letter f:  Probability:  0.0287076
+Letter k:  Probability:  0.0235541
+Letter h:  Probability:  0.0138964
+Letter y:  Probability:  0.0124952
+Letter c:  Probability:  0.0124057
+Letter g:  Probability:  0.0114996
+Letter s:  Probability:  0.0107971
+Letter p:  Probability:  0.0105772
+Letter r:  Probability:  0.0077523
+Letter n:  Probability:  0.0014417
+Letter z:  Probability:  0.0010888
+Letter ':  Probability:  0.0010195
+Letter l:  Probability:  0.0010083
+Letter d:  Probability:  0.0008838
+Letter a:  Probability:  0.0007132
+Letter j:  Probability:  0.0003019
+Letter v:  Probability:  0.0002165
+Letter x:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0031613  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.4078808
+State  1:  Probability:  0.5921192
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.5759990
+State  1:  Probability:  0.4240010
+
+>Emission Values <
+
+Letter e:  Probability:  0.0572864
+Letter #:  Probability:  0.0408229
+Letter a:  Probability:  0.0394279
+Letter o:  Probability:  0.0384959
+Letter s:  Probability:  0.0319714
+Letter t:  Probability:  0.0317287
+Letter n:  Probability:  0.0290446
+Letter d:  Probability:  0.0215211
+Letter h:  Probability:  0.0214643
+Letter i:  Probability:  0.0206022
+Letter r:  Probability:  0.0198676
+Letter c:  Probability:  0.0189433
+Letter l:  Probability:  0.0186623
+Letter p:  Probability:  0.0153854
+Letter g:  Probability:  0.0145143
+Letter y:  Probability:  0.0144251
+Letter w:  Probability:  0.0137731
+Letter f:  Probability:  0.0117878
+Letter b:  Probability:  0.0114156
+Letter u:  Probability:  0.0096939
+Letter k:  Probability:  0.0086471
+Letter v:  Probability:  0.0051385
+Letter ':  Probability:  0.0032460
+Letter x:  Probability:  0.0016097
+Letter m:  Probability:  0.0003381
+Letter z:  Probability:  0.0001869
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+Letter j:  Probability:  0.0000001
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.9970390
+State  1:  Probability:  0.0029610
+
+>Emission Values <
+
+Letter #:  Probability:  0.1854037
+Letter r:  Probability:  0.0523330
+Letter e:  Probability:  0.0436814
+Letter m:  Probability:  0.0360263
+Letter t:  Probability:  0.0320687
+Letter l:  Probability:  0.0304564
+Letter i:  Probability:  0.0237666
+Letter u:  Probability:  0.0228925
+Letter n:  Probability:  0.0169624
+Letter h:  Probability:  0.0133082
+Letter a:  Probability:  0.0125236
+Letter o:  Probability:  0.0112531
+Letter s:  Probability:  0.0108517
+Letter k:  Probability:  0.0023527
+Letter c:  Probability:  0.0015096
+Letter ':  Probability:  0.0013700
+Letter v:  Probability:  0.0010157
+Letter z:  Probability:  0.0009890
+Letter y:  Probability:  0.0007773
+Letter j:  Probability:  0.0002828
+Letter d:  Probability:  0.0001580
+Letter x:  Probability:  0.0000078
+Letter g:  Probability:  0.0000077
+Letter p:  Probability:  0.0000018
+Letter w:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0033333  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.3405112
+State  1:  Probability:  0.6594888
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.5000079
+State  0:  Probability:  0.4999921
+
+>Emission Values <
+
+Letter a:  Probability:  0.0582076
+Letter s:  Probability:  0.0550148
+Letter i:  Probability:  0.0547371
+Letter w:  Probability:  0.0499466
+Letter o:  Probability:  0.0477732
+Letter f:  Probability:  0.0476462
+Letter m:  Probability:  0.0436843
+Letter p:  Probability:  0.0412619
+Letter l:  Probability:  0.0307175
+Letter r:  Probability:  0.0278274
+Letter e:  Probability:  0.0233606
+Letter u:  Probability:  0.0100037
+Letter n:  Probability:  0.0064732
+Letter x:  Probability:  0.0020595
+Letter v:  Probability:  0.0009851
+Letter h:  Probability:  0.0001525
+Letter t:  Probability:  0.0001228
+Letter z:  Probability:  0.0000218
+Letter k:  Probability:  0.0000013
+Letter y:  Probability:  0.0000012
+Letter c:  Probability:  0.0000012
+Letter g:  Probability:  0.0000003
+Letter d:  Probability:  0.0000000
+Letter #:  Probability:  0.0000000
+Letter ':  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter j:  Probability:  0.0000000
+Letter j:  Probability:  0.0000000
+Letter j:  Probability:  0.0000000
+Letter j:  Probability:  0.0000000
+Letter j:  Probability:  0.0000000
+Letter j:  Probability:  0.0000000
+Letter j:  Probability:  0.0000000
+Letter j:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.9966297
+State  0:  Probability:  0.0033703
+
+>Emission Values <
+
+Letter #:  Probability:  0.0941743
+Letter e:  Probability:  0.0563985
+Letter t:  Probability:  0.0353019
+Letter r:  Probability:  0.0299736
+Letter a:  Probability:  0.0282764
+Letter o:  Probability:  0.0282696
+Letter n:  Probability:  0.0274292
+Letter s:  Probability:  0.0223092
+Letter l:  Probability:  0.0213310
+Letter h:  Probability:  0.0210385
+Letter i:  Probability:  0.0179371
+Letter d:  Probability:  0.0166528
+Letter c:  Probability:  0.0151214
+Letter u:  Probability:  0.0141226
+Letter y:  Probability:  0.0113888
+Letter g:  Probability:  0.0111975
+Letter b:  Probability:  0.0088049
+Letter m:  Probability:  0.0076618
+Letter k:  Probability:  0.0074649
+Letter p:  Probability:  0.0073526
+Letter w:  Probability:  0.0051582
+Letter v:  Probability:  0.0041990
+Letter f:  Probability:  0.0038786
+Letter ':  Probability:  0.0029669
+Letter x:  Probability:  0.0010188
+Letter z:  Probability:  0.0004761
+Letter j:  Probability:  0.0000957
+Letter j:  Probability:  0.0000957
+Letter j:  Probability:  0.0000957
+Letter j:  Probability:  0.0000957
+Letter j:  Probability:  0.0000957
+Letter j:  Probability:  0.0000957
+Letter j:  Probability:  0.0000957
+Letter j:  Probability:  0.0000957
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0042495  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.9223614
+State  1:  Probability:  0.0776386
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.7796790
+State  1:  Probability:  0.2203210
+
+>Emission Values <
+
+Letter #:  Probability:  0.0985408
+Letter e:  Probability:  0.0658022
+Letter t:  Probability:  0.0369897
+Letter o:  Probability:  0.0367612
+Letter a:  Probability:  0.0338645
+Letter i:  Probability:  0.0266335
+Letter n:  Probability:  0.0251603
+Letter r:  Probability:  0.0220795
+Letter l:  Probability:  0.0181940
+Letter u:  Probability:  0.0167799
+Letter m:  Probability:  0.0138923
+Letter c:  Probability:  0.0126909
+Letter y:  Probability:  0.0126598
+Letter g:  Probability:  0.0125019
+Letter d:  Probability:  0.0123717
+Letter p:  Probability:  0.0102431
+Letter k:  Probability:  0.0083318
+Letter h:  Probability:  0.0076976
+Letter s:  Probability:  0.0058467
+Letter w:  Probability:  0.0058325
+Letter f:  Probability:  0.0052448
+Letter b:  Probability:  0.0048270
+Letter v:  Probability:  0.0042770
+Letter ':  Probability:  0.0019558
+Letter z:  Probability:  0.0003943
+Letter x:  Probability:  0.0003921
+Letter j:  Probability:  0.0000353
+Letter j:  Probability:  0.0000353
+Letter j:  Probability:  0.0000353
+Letter j:  Probability:  0.0000353
+Letter j:  Probability:  0.0000353
+Letter j:  Probability:  0.0000353
+Letter j:  Probability:  0.0000353
+Letter j:  Probability:  0.0000353
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.9986451
+State  1:  Probability:  0.0013549
+
+>Emission Values <
+
+Letter s:  Probability:  0.1079743
+Letter h:  Probability:  0.0662150
+Letter r:  Probability:  0.0619299
+Letter l:  Probability:  0.0392685
+Letter #:  Probability:  0.0277107
+Letter n:  Probability:  0.0262081
+Letter d:  Probability:  0.0260590
+Letter w:  Probability:  0.0252488
+Letter b:  Probability:  0.0209569
+Letter f:  Probability:  0.0205498
+Letter a:  Probability:  0.0201907
+Letter c:  Probability:  0.0175628
+Letter p:  Probability:  0.0125976
+Letter t:  Probability:  0.0102369
+Letter ':  Probability:  0.0056827
+Letter x:  Probability:  0.0041757
+Letter o:  Probability:  0.0026916
+Letter v:  Probability:  0.0022282
+Letter u:  Probability:  0.0008885
+Letter z:  Probability:  0.0005864
+Letter i:  Probability:  0.0003503
+Letter j:  Probability:  0.0002999
+Letter y:  Probability:  0.0002408
+Letter e:  Probability:  0.0001206
+Letter k:  Probability:  0.0000164
+Letter g:  Probability:  0.0000072
+Letter m:  Probability:  0.0000027
+Letter m:  Probability:  0.0000027
+Letter m:  Probability:  0.0000027
+Letter m:  Probability:  0.0000027
+Letter m:  Probability:  0.0000027
+Letter m:  Probability:  0.0000027
+Letter m:  Probability:  0.0000027
+Letter m:  Probability:  0.0000027
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0042022  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.3852113
+State  1:  Probability:  0.6147887
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.6512252
+State  1:  Probability:  0.3487748
+
+>Emission Values <
+
+Letter #:  Probability:  0.0518541
+Letter r:  Probability:  0.0425798
+Letter t:  Probability:  0.0406553
+Letter s:  Probability:  0.0366288
+Letter n:  Probability:  0.0353557
+Letter a:  Probability:  0.0351818
+Letter h:  Probability:  0.0272208
+Letter i:  Probability:  0.0229386
+Letter d:  Probability:  0.0215219
+Letter e:  Probability:  0.0192669
+Letter u:  Probability:  0.0173546
+Letter m:  Probability:  0.0160870
+Letter p:  Probability:  0.0153445
+Letter c:  Probability:  0.0149192
+Letter y:  Probability:  0.0146524
+Letter g:  Probability:  0.0144749
+Letter o:  Probability:  0.0142414
+Letter w:  Probability:  0.0137358
+Letter f:  Probability:  0.0117559
+Letter b:  Probability:  0.0113846
+Letter k:  Probability:  0.0096119
+Letter v:  Probability:  0.0055614
+Letter ':  Probability:  0.0029966
+Letter l:  Probability:  0.0025214
+Letter x:  Probability:  0.0016087
+Letter z:  Probability:  0.0004738
+Letter j:  Probability:  0.0000722
+Letter j:  Probability:  0.0000722
+Letter j:  Probability:  0.0000722
+Letter j:  Probability:  0.0000722
+Letter j:  Probability:  0.0000722
+Letter j:  Probability:  0.0000722
+Letter j:  Probability:  0.0000722
+Letter j:  Probability:  0.0000722
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.8289109
+State  1:  Probability:  0.1710891
+
+>Emission Values <
+
+Letter #:  Probability:  0.1609156
+Letter e:  Probability:  0.1311057
+Letter l:  Probability:  0.0676813
+Letter o:  Probability:  0.0669093
+Letter a:  Probability:  0.0221291
+Letter i:  Probability:  0.0184086
+Letter t:  Probability:  0.0115245
+Letter c:  Probability:  0.0106629
+Letter u:  Probability:  0.0053422
+Letter n:  Probability:  0.0023608
+Letter ':  Probability:  0.0019322
+Letter z:  Probability:  0.0003335
+Letter r:  Probability:  0.0002592
+Letter y:  Probability:  0.0001690
+Letter j:  Probability:  0.0001186
+Letter k:  Probability:  0.0000928
+Letter d:  Probability:  0.0000229
+Letter v:  Probability:  0.0000164
+Letter g:  Probability:  0.0000079
+Letter h:  Probability:  0.0000075
+Letter x:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter m:  Probability:  0.0000000
+Letter s:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0035052  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.3547481
+State  1:  Probability:  0.6452519
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.8323422
+State  1:  Probability:  0.1676578
+
+>Emission Values <
+
+Letter #:  Probability:  0.0770528
+Letter e:  Probability:  0.0614893
+Letter o:  Probability:  0.0337941
+Letter t:  Probability:  0.0326730
+Letter a:  Probability:  0.0311548
+Letter r:  Probability:  0.0281049
+Letter s:  Probability:  0.0255135
+Letter i:  Probability:  0.0248135
+Letter n:  Probability:  0.0228710
+Letter l:  Probability:  0.0225760
+Letter h:  Probability:  0.0220438
+Letter d:  Probability:  0.0158890
+Letter c:  Probability:  0.0158322
+Letter u:  Probability:  0.0152520
+Letter m:  Probability:  0.0129149
+Letter g:  Probability:  0.0117221
+Letter f:  Probability:  0.0095194
+Letter k:  Probability:  0.0077426
+Letter p:  Probability:  0.0065595
+Letter w:  Probability:  0.0054643
+Letter y:  Probability:  0.0053146
+Letter b:  Probability:  0.0046291
+Letter v:  Probability:  0.0038719
+Letter ':  Probability:  0.0022912
+Letter z:  Probability:  0.0004274
+Letter x:  Probability:  0.0004150
+Letter j:  Probability:  0.0000681
+Letter j:  Probability:  0.0000681
+Letter j:  Probability:  0.0000681
+Letter j:  Probability:  0.0000681
+Letter j:  Probability:  0.0000681
+Letter j:  Probability:  0.0000681
+Letter j:  Probability:  0.0000681
+Letter j:  Probability:  0.0000681
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.9912865
+State  1:  Probability:  0.0087135
+
+>Emission Values <
+
+Letter #:  Probability:  0.1333700
+Letter y:  Probability:  0.0409105
+Letter n:  Probability:  0.0407821
+Letter r:  Probability:  0.0400180
+Letter p:  Probability:  0.0363061
+Letter w:  Probability:  0.0350221
+Letter a:  Probability:  0.0316842
+Letter b:  Probability:  0.0284074
+Letter t:  Probability:  0.0266286
+Letter s:  Probability:  0.0256670
+Letter l:  Probability:  0.0202806
+Letter d:  Probability:  0.0095721
+Letter o:  Probability:  0.0079060
+Letter x:  Probability:  0.0054939
+Letter ':  Probability:  0.0050453
+Letter u:  Probability:  0.0042113
+Letter v:  Probability:  0.0039445
+Letter i:  Probability:  0.0014700
+Letter e:  Probability:  0.0014631
+Letter m:  Probability:  0.0006912
+Letter z:  Probability:  0.0004558
+Letter k:  Probability:  0.0004536
+Letter j:  Probability:  0.0001989
+Letter g:  Probability:  0.0000110
+Letter h:  Probability:  0.0000067
+Letter c:  Probability:  0.0000001
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0038229  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.4172238
+State  1:  Probability:  0.5827762
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.5719520
+State  1:  Probability:  0.4280480
+
+>Emission Values <
+
+Letter #:  Probability:  0.0968570
+Letter e:  Probability:  0.0629143
+Letter a:  Probability:  0.0345591
+Letter o:  Probability:  0.0323906
+Letter h:  Probability:  0.0322239
+Letter t:  Probability:  0.0245734
+Letter u:  Probability:  0.0218127
+Letter i:  Probability:  0.0209261
+Letter l:  Probability:  0.0182826
+Letter p:  Probability:  0.0181665
+Letter c:  Probability:  0.0173687
+Letter g:  Probability:  0.0171377
+Letter w:  Probability:  0.0162623
+Letter f:  Probability:  0.0139182
+Letter b:  Probability:  0.0134787
+Letter y:  Probability:  0.0120762
+Letter k:  Probability:  0.0113362
+Letter n:  Probability:  0.0112380
+Letter r:  Probability:  0.0102982
+Letter m:  Probability:  0.0095239
+Letter ':  Probability:  0.0017201
+Letter v:  Probability:  0.0013489
+Letter x:  Probability:  0.0008821
+Letter z:  Probability:  0.0005977
+Letter j:  Probability:  0.0000762
+Letter d:  Probability:  0.0000308
+Letter s:  Probability:  0.0000000
+Letter s:  Probability:  0.0000000
+Letter s:  Probability:  0.0000000
+Letter s:  Probability:  0.0000000
+Letter s:  Probability:  0.0000000
+Letter s:  Probability:  0.0000000
+Letter s:  Probability:  0.0000000
+Letter s:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.6112605
+State  1:  Probability:  0.3887395
+
+>Emission Values <
+
+Letter #:  Probability:  0.0678290
+Letter s:  Probability:  0.0621795
+Letter r:  Probability:  0.0577070
+Letter n:  Probability:  0.0456461
+Letter t:  Probability:  0.0422804
+Letter e:  Probability:  0.0391926
+Letter d:  Probability:  0.0365073
+Letter l:  Probability:  0.0279831
+Letter o:  Probability:  0.0270806
+Letter a:  Probability:  0.0264922
+Letter i:  Probability:  0.0225121
+Letter m:  Probability:  0.0136530
+Letter c:  Probability:  0.0082867
+Letter y:  Probability:  0.0076827
+Letter v:  Probability:  0.0068887
+Letter ':  Probability:  0.0040457
+Letter u:  Probability:  0.0021249
+Letter x:  Probability:  0.0014661
+Letter z:  Probability:  0.0001933
+Letter k:  Probability:  0.0001310
+Letter j:  Probability:  0.0001008
+Letter h:  Probability:  0.0000111
+Letter g:  Probability:  0.0000053
+Letter p:  Probability:  0.0000007
+Letter f:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0039300  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.4530350
+State  1:  Probability:  0.5469650
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.5652212
+State  1:  Probability:  0.4347788
+
+>Emission Values <
+
+Letter e:  Probability:  0.0768424
+Letter #:  Probability:  0.0489370
+Letter r:  Probability:  0.0446981
+Letter o:  Probability:  0.0358435
+Letter n:  Probability:  0.0353298
+Letter l:  Probability:  0.0316205
+Letter s:  Probability:  0.0289239
+Letter t:  Probability:  0.0278705
+Letter a:  Probability:  0.0216510
+Letter f:  Probability:  0.0162430
+Letter b:  Probability:  0.0157301
+Letter d:  Probability:  0.0153393
+Letter u:  Probability:  0.0139634
+Letter i:  Probability:  0.0134175
+Letter c:  Probability:  0.0131998
+Letter h:  Probability:  0.0111025
+Letter m:  Probability:  0.0110460
+Letter y:  Probability:  0.0110010
+Letter k:  Probability:  0.0066634
+Letter g:  Probability:  0.0065807
+Letter w:  Probability:  0.0064161
+Letter ':  Probability:  0.0037904
+Letter v:  Probability:  0.0034740
+Letter j:  Probability:  0.0001509
+Letter z:  Probability:  0.0000912
+Letter x:  Probability:  0.0000738
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.5654643
+State  0:  Probability:  0.4345357
+
+>Emission Values <
+
+Letter #:  Probability:  0.1216216
+Letter a:  Probability:  0.0410244
+Letter t:  Probability:  0.0359043
+Letter i:  Probability:  0.0298964
+Letter e:  Probability:  0.0290334
+Letter h:  Probability:  0.0270274
+Letter o:  Probability:  0.0244649
+Letter s:  Probability:  0.0221067
+Letter p:  Probability:  0.0216127
+Letter n:  Probability:  0.0152279
+Letter d:  Probability:  0.0146907
+Letter r:  Probability:  0.0145670
+Letter c:  Probability:  0.0140830
+Letter g:  Probability:  0.0136844
+Letter u:  Probability:  0.0134789
+Letter w:  Probability:  0.0128063
+Letter l:  Probability:  0.0127345
+Letter m:  Probability:  0.0113982
+Letter y:  Probability:  0.0095268
+Letter k:  Probability:  0.0068025
+Letter v:  Probability:  0.0037791
+Letter x:  Probability:  0.0021906
+Letter ':  Probability:  0.0015393
+Letter z:  Probability:  0.0007785
+Letter j:  Probability:  0.0000204
+Letter f:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0042205  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.2538246
+State  1:  Probability:  0.7461754
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.8161039
+State  1:  Probability:  0.1838961
+
+>Emission Values <
+
+Letter #:  Probability:  0.1216755
+Letter e:  Probability:  0.0537157
+Letter l:  Probability:  0.0337900
+Letter t:  Probability:  0.0244100
+Letter o:  Probability:  0.0231302
+Letter n:  Probability:  0.0228434
+Letter d:  Probability:  0.0227889
+Letter a:  Probability:  0.0221355
+Letter r:  Probability:  0.0216554
+Letter s:  Probability:  0.0207638
+Letter c:  Probability:  0.0206934
+Letter u:  Probability:  0.0172625
+Letter m:  Probability:  0.0170259
+Letter y:  Probability:  0.0155842
+Letter i:  Probability:  0.0145533
+Letter b:  Probability:  0.0120493
+Letter k:  Probability:  0.0102151
+Letter g:  Probability:  0.0059527
+Letter p:  Probability:  0.0056699
+Letter f:  Probability:  0.0043794
+Letter h:  Probability:  0.0042925
+Letter ':  Probability:  0.0040004
+Letter z:  Probability:  0.0006493
+Letter v:  Probability:  0.0006142
+Letter j:  Probability:  0.0001275
+Letter x:  Probability:  0.0000220
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.5088994
+State  0:  Probability:  0.4911006
+
+>Emission Values <
+
+Letter e:  Probability:  0.0520294
+Letter a:  Probability:  0.0487750
+Letter h:  Probability:  0.0473183
+Letter t:  Probability:  0.0461550
+Letter r:  Probability:  0.0454050
+Letter o:  Probability:  0.0438228
+Letter i:  Probability:  0.0351001
+Letter s:  Probability:  0.0347415
+Letter n:  Probability:  0.0302231
+Letter w:  Probability:  0.0280535
+Letter p:  Probability:  0.0203979
+Letter g:  Probability:  0.0180830
+Letter f:  Probability:  0.0155588
+Letter #:  Probability:  0.0138937
+Letter v:  Probability:  0.0101879
+Letter u:  Probability:  0.0068734
+Letter x:  Probability:  0.0032432
+Letter ':  Probability:  0.0001152
+Letter z:  Probability:  0.0000108
+Letter j:  Probability:  0.0000066
+Letter y:  Probability:  0.0000027
+Letter k:  Probability:  0.0000012
+Letter l:  Probability:  0.0000011
+Letter m:  Probability:  0.0000006
+Letter c:  Probability:  0.0000000
+Letter d:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0048254  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.6198303
+State  1:  Probability:  0.3801697
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.9864529
+State  0:  Probability:  0.0135471
+
+>Emission Values <
+
+Letter #:  Probability:  0.1731590
+Letter e:  Probability:  0.0496502
+Letter r:  Probability:  0.0387496
+Letter n:  Probability:  0.0370395
+Letter u:  Probability:  0.0306285
+Letter l:  Probability:  0.0286963
+Letter h:  Probability:  0.0232096
+Letter t:  Probability:  0.0200810
+Letter a:  Probability:  0.0171090
+Letter i:  Probability:  0.0151745
+Letter m:  Probability:  0.0143637
+Letter p:  Probability:  0.0112818
+Letter d:  Probability:  0.0103540
+Letter y:  Probability:  0.0093700
+Letter s:  Probability:  0.0093569
+Letter k:  Probability:  0.0079895
+Letter o:  Probability:  0.0014931
+Letter v:  Probability:  0.0011515
+Letter z:  Probability:  0.0007891
+Letter j:  Probability:  0.0002361
+Letter x:  Probability:  0.0001003
+Letter ':  Probability:  0.0000147
+Letter w:  Probability:  0.0000013
+Letter g:  Probability:  0.0000004
+Letter c:  Probability:  0.0000002
+Letter f:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.5002987
+State  1:  Probability:  0.4997013
+
+>Emission Values <
+
+Letter e:  Probability:  0.0548866
+Letter o:  Probability:  0.0445559
+Letter #:  Probability:  0.0407111
+Letter a:  Probability:  0.0382943
+Letter t:  Probability:  0.0377131
+Letter s:  Probability:  0.0336309
+Letter r:  Probability:  0.0252641
+Letter i:  Probability:  0.0247654
+Letter c:  Probability:  0.0204510
+Letter n:  Probability:  0.0195186
+Letter l:  Probability:  0.0190341
+Letter d:  Probability:  0.0173405
+Letter h:  Probability:  0.0168612
+Letter g:  Probability:  0.0151440
+Letter w:  Probability:  0.0143669
+Letter f:  Probability:  0.0122965
+Letter b:  Probability:  0.0119082
+Letter y:  Probability:  0.0107140
+Letter p:  Probability:  0.0104044
+Letter m:  Probability:  0.0096387
+Letter k:  Probability:  0.0060978
+Letter u:  Probability:  0.0052529
+Letter v:  Probability:  0.0052484
+Letter ':  Probability:  0.0040052
+Letter x:  Probability:  0.0016325
+Letter z:  Probability:  0.0002523
+Letter j:  Probability:  0.0000113
+Letter j:  Probability:  0.0000113
+Letter j:  Probability:  0.0000113
+Letter j:  Probability:  0.0000113
+Letter j:  Probability:  0.0000113
+Letter j:  Probability:  0.0000113
+Letter j:  Probability:  0.0000113
+Letter j:  Probability:  0.0000113
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0033843  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.6924138
+State  1:  Probability:  0.3075862
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.9878635
+State  1:  Probability:  0.0121365
+
+>Emission Values <
+
+Letter #:  Probability:  0.0800399
+Letter e:  Probability:  0.0559362
+Letter s:  Probability:  0.0355300
+Letter t:  Probability:  0.0349054
+Letter a:  Probability:  0.0313114
+Letter o:  Probability:  0.0303835
+Letter r:  Probability:  0.0272799
+Letter n:  Probability:  0.0229342
+Letter h:  Probability:  0.0225643
+Letter l:  Probability:  0.0210550
+Letter i:  Probability:  0.0206586
+Letter c:  Probability:  0.0145052
+Letter u:  Probability:  0.0142572
+Letter d:  Probability:  0.0125639
+Letter p:  Probability:  0.0117168
+Letter m:  Probability:  0.0115663
+Letter b:  Probability:  0.0111875
+Letter k:  Probability:  0.0092969
+Letter w:  Probability:  0.0091243
+Letter y:  Probability:  0.0083601
+Letter g:  Probability:  0.0063448
+Letter v:  Probability:  0.0041925
+Letter ':  Probability:  0.0030201
+Letter x:  Probability:  0.0011301
+Letter j:  Probability:  0.0001198
+Letter f:  Probability:  0.0000159
+Letter z:  Probability:  0.0000000
+Letter z:  Probability:  0.0000000
+Letter z:  Probability:  0.0000000
+Letter z:  Probability:  0.0000000
+Letter z:  Probability:  0.0000000
+Letter z:  Probability:  0.0000000
+Letter z:  Probability:  0.0000000
+Letter z:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.9919008
+State  0:  Probability:  0.0080992
+
+>Emission Values <
+
+Letter #:  Probability:  0.0967169
+Letter e:  Probability:  0.0463142
+Letter r:  Probability:  0.0358210
+Letter n:  Probability:  0.0312899
+Letter a:  Probability:  0.0310259
+Letter o:  Probability:  0.0297288
+Letter f:  Probability:  0.0281631
+Letter l:  Probability:  0.0251905
+Letter t:  Probability:  0.0243300
+Letter i:  Probability:  0.0237832
+Letter d:  Probability:  0.0209827
+Letter g:  Probability:  0.0192438
+Letter y:  Probability:  0.0149177
+Letter u:  Probability:  0.0123960
+Letter c:  Probability:  0.0114937
+Letter w:  Probability:  0.0106773
+Letter m:  Probability:  0.0103561
+Letter h:  Probability:  0.0102250
+Letter p:  Probability:  0.0082076
+Letter v:  Probability:  0.0031240
+Letter ':  Probability:  0.0018300
+Letter z:  Probability:  0.0014843
+Letter s:  Probability:  0.0011343
+Letter x:  Probability:  0.0011005
+Letter k:  Probability:  0.0004593
+Letter j:  Probability:  0.0000044
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0040627  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.5312337
+State  1:  Probability:  0.4687663
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.9816548
+State  0:  Probability:  0.0183452
+
+>Emission Values <
+
+Letter #:  Probability:  0.2007968
+Letter n:  Probability:  0.0616063
+Letter m:  Probability:  0.0505278
+Letter g:  Probability:  0.0453475
+Letter l:  Probability:  0.0195090
+Letter k:  Probability:  0.0182419
+Letter f:  Probability:  0.0181632
+Letter s:  Probability:  0.0165757
+Letter a:  Probability:  0.0157417
+Letter y:  Probability:  0.0148406
+Letter h:  Probability:  0.0140539
+Letter o:  Probability:  0.0085133
+Letter v:  Probability:  0.0047631
+Letter x:  Probability:  0.0029955
+Letter e:  Probability:  0.0022470
+Letter r:  Probability:  0.0019695
+Letter u:  Probability:  0.0015639
+Letter z:  Probability:  0.0011459
+Letter ':  Probability:  0.0010011
+Letter t:  Probability:  0.0003257
+Letter i:  Probability:  0.0000654
+Letter d:  Probability:  0.0000032
+Letter c:  Probability:  0.0000018
+Letter j:  Probability:  0.0000001
+Letter p:  Probability:  0.0000001
+Letter w:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.7266721
+State  0:  Probability:  0.2733279
+
+>Emission Values <
+
+Letter e:  Probability:  0.0676550
+Letter #:  Probability:  0.0518280
+Letter t:  Probability:  0.0408181
+Letter r:  Probability:  0.0376884
+Letter o:  Probability:  0.0363764
+Letter a:  Probability:  0.0356453
+Letter s:  Probability:  0.0280900
+Letter i:  Probability:  0.0276988
+Letter l:  Probability:  0.0230404
+Letter h:  Probability:  0.0203832
+Letter d:  Probability:  0.0192904
+Letter c:  Probability:  0.0175169
+Letter u:  Probability:  0.0171823
+Letter n:  Probability:  0.0150254
+Letter p:  Probability:  0.0137478
+Letter w:  Probability:  0.0123066
+Letter b:  Probability:  0.0102000
+Letter y:  Probability:  0.0089609
+Letter f:  Probability:  0.0053524
+Letter v:  Probability:  0.0036307
+Letter k:  Probability:  0.0034452
+Letter ':  Probability:  0.0031515
+Letter x:  Probability:  0.0005870
+Letter z:  Probability:  0.0002275
+Letter j:  Probability:  0.0001108
+Letter g:  Probability:  0.0000385
+Letter m:  Probability:  0.0000024
+Letter m:  Probability:  0.0000024
+Letter m:  Probability:  0.0000024
+Letter m:  Probability:  0.0000024
+Letter m:  Probability:  0.0000024
+Letter m:  Probability:  0.0000024
+Letter m:  Probability:  0.0000024
+Letter m:  Probability:  0.0000024
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0033566  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.5687882
+State  1:  Probability:  0.4312118
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.5292870
+State  1:  Probability:  0.4707130
+
+>Emission Values <
+
+Letter a:  Probability:  0.0598250
+Letter o:  Probability:  0.0576673
+Letter e:  Probability:  0.0499476
+Letter h:  Probability:  0.0428186
+Letter s:  Probability:  0.0337567
+Letter w:  Probability:  0.0259840
+Letter l:  Probability:  0.0227498
+Letter n:  Probability:  0.0223594
+Letter i:  Probability:  0.0215637
+Letter m:  Probability:  0.0212449
+Letter p:  Probability:  0.0203389
+Letter t:  Probability:  0.0194054
+Letter g:  Probability:  0.0166934
+Letter c:  Probability:  0.0151043
+Letter b:  Probability:  0.0145927
+Letter d:  Probability:  0.0139729
+Letter #:  Probability:  0.0133069
+Letter u:  Probability:  0.0130649
+Letter y:  Probability:  0.0130531
+Letter x:  Probability:  0.0017365
+Letter r:  Probability:  0.0002902
+Letter j:  Probability:  0.0002095
+Letter z:  Probability:  0.0001484
+Letter k:  Probability:  0.0001164
+Letter ':  Probability:  0.0000285
+Letter v:  Probability:  0.0000213
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+Letter f:  Probability:  0.0000000
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.7699187
+State  0:  Probability:  0.2300813
+
+>Emission Values <
+
+Letter #:  Probability:  0.1266582
+Letter e:  Probability:  0.0550031
+Letter r:  Probability:  0.0469609
+Letter t:  Probability:  0.0390844
+Letter n:  Probability:  0.0271147
+Letter l:  Probability:  0.0219690
+Letter i:  Probability:  0.0215683
+Letter s:  Probability:  0.0207368
+Letter d:  Probability:  0.0156158
+Letter a:  Probability:  0.0145401
+Letter o:  Probability:  0.0141600
+Letter u:  Probability:  0.0140965
+Letter f:  Probability:  0.0129779
+Letter c:  Probability:  0.0127698
+Letter k:  Probability:  0.0105876
+Letter y:  Probability:  0.0086390
+Letter g:  Probability:  0.0062414
+Letter v:  Probability:  0.0061350
+Letter m:  Probability:  0.0053612
+Letter p:  Probability:  0.0050703
+Letter h:  Probability:  0.0050661
+Letter ':  Probability:  0.0042183
+Letter b:  Probability:  0.0040521
+Letter x:  Probability:  0.0007625
+Letter z:  Probability:  0.0005964
+Letter j:  Probability:  0.0000144
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+Letter w:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0045531  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+================================
+= Printing Hidden Markov Model =
+================================
+
+
+-------------
+- Pi Values -
+-------------
+
+State  0:  Probability:  0.8280270
+State  1:  Probability:  0.1719730
+
+-------------------
+- State  0 Values -
+-------------------
+
+> Transition Values <
+
+State  0:  Probability:  0.5007676
+State  1:  Probability:  0.4992324
+
+>Emission Values <
+
+Letter e:  Probability:  0.0441763
+Letter o:  Probability:  0.0374044
+Letter a:  Probability:  0.0336306
+Letter s:  Probability:  0.0316385
+Letter i:  Probability:  0.0309006
+Letter c:  Probability:  0.0306874
+Letter h:  Probability:  0.0301792
+Letter t:  Probability:  0.0284718
+Letter r:  Probability:  0.0277982
+Letter #:  Probability:  0.0275900
+Letter d:  Probability:  0.0243578
+Letter f:  Probability:  0.0184520
+Letter b:  Probability:  0.0178693
+Letter k:  Probability:  0.0149306
+Letter u:  Probability:  0.0147335
+Letter w:  Probability:  0.0142019
+Letter g:  Probability:  0.0140688
+Letter n:  Probability:  0.0126433
+Letter l:  Probability:  0.0123654
+Letter m:  Probability:  0.0122458
+Letter p:  Probability:  0.0117607
+Letter y:  Probability:  0.0073095
+Letter x:  Probability:  0.0016708
+Letter z:  Probability:  0.0004536
+Letter ':  Probability:  0.0003649
+Letter v:  Probability:  0.0000906
+Letter j:  Probability:  0.0000045
+Letter j:  Probability:  0.0000045
+Letter j:  Probability:  0.0000045
+Letter j:  Probability:  0.0000045
+Letter j:  Probability:  0.0000045
+Letter j:  Probability:  0.0000045
+Letter j:  Probability:  0.0000045
+Letter j:  Probability:  0.0000045
+
+-------------------
+- State  1 Values -
+-------------------
+
+> Transition Values <
+
+State  1:  Probability:  0.6417711
+State  0:  Probability:  0.3582289
+
+>Emission Values <
+
+Letter #:  Probability:  0.1306670
+Letter e:  Probability:  0.0603024
+Letter n:  Probability:  0.0355251
+Letter t:  Probability:  0.0345174
+Letter r:  Probability:  0.0313310
+Letter l:  Probability:  0.0301601
+Letter a:  Probability:  0.0293091
+Letter o:  Probability:  0.0244313
+Letter s:  Probability:  0.0206579
+Letter i:  Probability:  0.0141085
+Letter u:  Probability:  0.0129036
+Letter y:  Probability:  0.0126277
+Letter m:  Probability:  0.0103907
+Letter h:  Probability:  0.0100291
+Letter p:  Probability:  0.0098471
+Letter d:  Probability:  0.0075415
+Letter g:  Probability:  0.0069166
+Letter v:  Probability:  0.0069114
+Letter w:  Probability:  0.0058790
+Letter ':  Probability:  0.0045195
+Letter x:  Probability:  0.0006826
+Letter z:  Probability:  0.0004135
+Letter k:  Probability:  0.0001754
+Letter j:  Probability:  0.0001516
+Letter c:  Probability:  0.0000009
+Letter f:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+Letter b:  Probability:  0.0000000
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
++ Total Probability of All Strings:   0.0043460  +
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
