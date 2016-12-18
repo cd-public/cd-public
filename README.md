@@ -1,8 +1,8 @@
-This repository publicly presents the subset of my personal work for which I have:
+This repository publicly presents the subset of my personal work which I:
 
-1)  Successfully retained, and
+1)  Have successfully retained, and
 
-2)  Can  present in this forum
+2)  Can present in this forum
 
 The "UChicago" folder contains work done while I was an undergraduate at the University of Chicago.
 
