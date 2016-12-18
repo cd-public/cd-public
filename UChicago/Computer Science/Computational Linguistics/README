@@ -1,0 +1,15 @@
+This folder contains all work and grades from my Computational Linguistics coarse.  Do note that some corresponding numbers are complicated by the fact the development of a Hidden Markov Model was split into 3 different assignments but that myself and various graders all used numbering in different ways.
+
+For me:
+
+HW-1 was a phonem tester.
+
+HW-2 was an anagram finder.
+
+HW-3 was the Hidden Markov Model.
+
+HW-4 was an affix/anagram analyzer.
+
+HW-5 was a compression algorithm.
+
+HW-6 was a string edit distance algorithm.
