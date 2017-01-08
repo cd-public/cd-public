@@ -9,7 +9,7 @@ def buildlp(file_name, content):
 	frame = gal.gcds(costs)
 	frames = hyperperiod // frame
 	tasks = len(list)
-	print("For "+file_name.replace('.in', ':\nHyperperiod = ')+str(hyperperiod)+"\nFrame = "+str(frame)+"\nFrames = "+str(frames)+"\nTasks = "+str(tasks)+"\n\n")
+	print("For "+file_name.replace('.in', ':\nHyperperiod = ')+str(hyperperiod)+"\nFrame  = "+str(frame)+"\nFrames = "+str(frames)+"\nTasks  = "+str(tasks)+"\n\n")
 	m = 2 #number of processors
 	array = [[[pulp.LpVariable('var_'+str(i).zfill(len(str(tasks)))+'_'+str(j).zfill(len(str(m)))+'_'+str(k).zfill(len(str(frames))),0,1) for k in range(frames)] for j in range(m)] for i in range(tasks)] #out of convenience, tasks get indices instead of jobs
 	prob = pulp.LpProblem('Built LP')
