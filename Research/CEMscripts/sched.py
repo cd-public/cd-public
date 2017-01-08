@@ -8,7 +8,7 @@ def sched(file_name, content1, content2):
 	frame = gal.gcds(costs)
 	frames = hyperperiod // frame
 	tasks = len(list)
-	print("For "+file_name.replace('.in', ':\nHyperperiod = ')+str(hyperperiod)+"\nFrame = "+str(frame)+"\nFrames = "+str(frames)+"\nTasks = "+str(tasks)+"\n\n")
+	print("For "+file_name.replace('.csv', ':\nHyperperiod = ')+str(hyperperiod)+"\nFrame = "+str(frame)+"\nFrames = "+str(frames)+"\nTasks = "+str(tasks)+"\n\n")
 	m = 2 #number of processors
 	schedule = [[[0 for k in range(frames)] for j in range(m)] for i in range(tasks)] #out of convenience, tasks get indices instead of jobs
 	temp1 = [x.replace('var_','') for x in content1]
