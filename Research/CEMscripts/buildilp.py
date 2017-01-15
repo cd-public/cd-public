@@ -1,7 +1,7 @@
 import gal
 from pulp import *
 
-def buildlp(file_name, content):
+def buildilp(file_name, content):
 	list = [x.split(',') for x in content]
 	periods = [int(item[0]) for item in list]
 	costs = [int(item[1]) for item in list]
@@ -9,10 +9,14 @@ def buildlp(file_name, content):
 	frame = gal.gcds(periods)
 	frames = hyperperiod // frame
 	tasks = len(list)
-	print("  ==  LP  ==\nFor "+file_name.replace('.in', ':\nHyperperiod = ')+str(hyperperiod)+"\nFrame  = "+str(frame)+"\nFrames = "+str(frames)+"\nTasks  = "+str(tasks)+"\n\n")
 	m = 2 #number of processors
-	array = [[[pulp.LpVariable('var_'+str(i).zfill(len(str(tasks)))+'_'+str(j).zfill(len(str(m)))+'_'+str(k).zfill(len(str(frames))),0,1) for k in range(frames)] for j in range(m)] for i in range(tasks)] #out of convenience, tasks get indices instead of jobs
-	prob = pulp.LpProblem('Built LP')
+	for i in range(tasks):
+		if costs[i] > frame:
+			print("  ==  ILP infeasible as cost > frame for at least one task  ==\n\n")
+			return
+	print("  ==  ILP  ==\nFor "+file_name.replace('.in', ':\nHyperperiod = ')+str(hyperperiod)+"\nFrame  = "+str(frame)+"\nFrames = "+str(frames)+"\nTasks  = "+str(tasks)+"\n\n")
+	array = [[[pulp.LpVariable('var_'+str(i).zfill(len(str(tasks)))+'_'+str(j).zfill(len(str(m)))+'_'+str(k).zfill(len(str(frames))),0,1,'Binary') for k in range(frames)] for j in range(m)] for i in range(tasks)]
+	prob = pulp.LpProblem('Built ILP')
 	for i in range(tasks): #first constraint type - required execution of jobs
 		finp = periods[i] // frame
 		pinh = hyperperiod // periods[i]
@@ -24,4 +28,4 @@ def buildlp(file_name, content):
 	for i in range(tasks): #third contraint type - no concurrency within jobs
 		for k in range(frames):
 			prob += pulp.lpSum([costs[i] * array[i][j][k] for j in range(m)]) <= frame
-	prob.writeLP(file_name.replace('.in', '_c.lp'))
+	prob.writeLP(file_name.replace('.in', '_i.lp'))
