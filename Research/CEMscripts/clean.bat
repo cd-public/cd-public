@@ -1,2 +1,0 @@
-del *.csv
-del *.lp
