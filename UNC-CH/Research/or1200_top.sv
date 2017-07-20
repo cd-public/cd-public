@@ -8514,7 +8514,7 @@ end
 `endif
 `endif
 
-// ADDED:  Monster assume from stripped.h
+// ADDED:  Full assume from stripped.h
 
 assume property (((icpu_dat_i & 4227858432) >> 26 == 0) | 
 ((icpu_dat_i & 4227858432) >> 26 == 1) | 
