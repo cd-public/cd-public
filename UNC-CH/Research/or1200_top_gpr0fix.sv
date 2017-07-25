@@ -8338,7 +8338,7 @@ assign rf_addra = (spr_valid & !spr_write) ? spr_addr[4:0] :
 assign rf_addrw = (spr_valid & spr_write) ? spr_addr[4:0] : addrw;
 
 //
-// RF write address is either from SPRS or normal from CPU control
+// RF write data is either from SPRS or normal from CPU datapath
 // ADDED:  GPR0 Fix
 assign rf_dataw = (rf_addrw == 0) ? 32'b0 : (spr_valid & spr_write) ? spr_dat_i : dataw;
 
@@ -8514,190 +8514,11 @@ end
 `endif
 `endif
 
-// ADDED:  Full assume from stripped.h
-/*
-assume property (((icpu_dat_i & 4227858432) >> 26 == 0) | 
-((icpu_dat_i & 4227858432) >> 26 == 1) | 
-((icpu_dat_i & 4227858432) >> 26 == 3) |
-((icpu_dat_i & 4227858432) >> 26 == 4) | 
-(((icpu_dat_i & 4227858432) >> 26 == 5) & 
-((icpu_dat_i & 50331648) >> 24 == 1)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 6) & 
-((icpu_dat_i & 65536) >> 16 == 0)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 6) & 
-((icpu_dat_i & 65536) >> 16 == 1)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 8) & 
-((icpu_dat_i & 67043328) >> 16 == 0)) |
-(((icpu_dat_i & 4227858432) >> 26 == 8) & 
-((icpu_dat_i & 67043328) >> 16 == 256)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 8) & 
-((icpu_dat_i & 67043328) >> 16 == 512)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 8) & 
-((icpu_dat_i & 67043328) >> 16 == 640)) |
-(((icpu_dat_i & 4227858432) >> 26 == 8) & 
-((icpu_dat_i & 67043328) >> 16 == 768)) | 
-((icpu_dat_i & 4227858432) >> 26 == 9) | 
-((icpu_dat_i & 4227858432) >> 26 == 17) | 
-((icpu_dat_i & 4227858432) >> 26 == 18) | 
-((icpu_dat_i & 4227858432) >> 26 == 19) | 
-((icpu_dat_i & 4227858432) >> 26 == 27) | 
-((icpu_dat_i & 4227858432) >> 26 == 32) | 
-((icpu_dat_i & 4227858432) >> 26 == 33) | 
-((icpu_dat_i & 4227858432) >> 26 == 34) | 
-((icpu_dat_i & 4227858432) >> 26 == 35) | 
-((icpu_dat_i & 4227858432) >> 26 == 36) | 
-((icpu_dat_i & 4227858432) >> 26 == 37) | 
-((icpu_dat_i & 4227858432) >> 26 == 38) | 
-((icpu_dat_i & 4227858432) >> 26 == 39) |  
-((icpu_dat_i & 4227858432) >> 26 == 40) |  
-((icpu_dat_i & 4227858432) >> 26 == 41) | 
-((icpu_dat_i & 4227858432) >> 26 == 42) | 
-((icpu_dat_i & 4227858432) >> 26 == 43) | 
-((icpu_dat_i & 4227858432) >> 26 == 44) | 
-((icpu_dat_i & 4227858432) >> 26 == 45) | 
-(((icpu_dat_i & 4227858432) >> 26 == 46) & 
-((icpu_dat_i & 192) >> 6 == 0)) |
-(((icpu_dat_i & 4227858432) >> 26 == 46) & 
-((icpu_dat_i & 192) >> 6 == 1)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 46) & 
-((icpu_dat_i & 192) >> 6 == 2)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 46) & 
-((icpu_dat_i & 192) >> 6 == 3)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 0)) |
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 1)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 2)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 3)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 4)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 5)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 10)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 11)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 12)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 47) & 
-((icpu_dat_i & 65011712) >> 21 == 13)) | 
-((icpu_dat_i & 4227858432) >> 26 == 48) | 
-(((icpu_dat_i & 4227858432) >> 26 == 49) & 
-((icpu_dat_i & 3) >> 0 == 1)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 49) & 
-((icpu_dat_i & 3) >> 0 == 2)) | 
-((icpu_dat_i & 4227858432) >> 26 == 51) | 
-((icpu_dat_i & 4227858432) >> 26 == 52) | 
-((icpu_dat_i & 4227858432) >> 26 == 53) | 
-((icpu_dat_i & 4227858432) >> 26 == 54) | 
-((icpu_dat_i & 4227858432) >> 26 == 55) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 15) >> 0 == 0)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 15) >> 0 == 1)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 15) >> 0 == 2)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 15) >> 0 == 3)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 15) >> 0 == 4)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 15) >> 0 == 5)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 3) & 
-((icpu_dat_i & 15) >> 0 == 6)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 0) & 
-((icpu_dat_i & 15) >> 0 == 8)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 1) & 
-((icpu_dat_i & 15) >> 0 == 8)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 2) & 
-((icpu_dat_i & 15) >> 0 == 8)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 3) & 
-((icpu_dat_i & 15) >> 0 == 8)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 3) & 
-((icpu_dat_i & 15) >> 0 == 9)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 3) & 
-((icpu_dat_i & 15) >> 0 == 10)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 3) & 
-((icpu_dat_i & 15) >> 0 == 11)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 1) & 
-((icpu_dat_i & 15) >> 0 == 12)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 0) & 
-((icpu_dat_i & 15) >> 0 == 12)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 0) & 
-((icpu_dat_i & 15) >> 0 == 13)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 3) & 
-((icpu_dat_i & 15) >> 0 == 12)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 2) & 
-((icpu_dat_i & 15) >> 0 == 12)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 192) >> 6 == 1) & 
-((icpu_dat_i & 15) >> 0 == 13)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 15) >> 0 == 14)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 0) & 
-((icpu_dat_i & 15) >> 0 == 15)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 56) & 
-((icpu_dat_i & 768) >> 8 == 1) & 
-((icpu_dat_i & 15) >> 0 == 15)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 0)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 1)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 2)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 3)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 4)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 5)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 10)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 11)) |
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 12)) | 
-(((icpu_dat_i & 4227858432) >> 26 == 57) & 
-((icpu_dat_i & 65011712) >> 21 == 13)));
-*/
 // ADDED:  Assert property
 // From Rui:  if (or1200_rf.we == 1 && or1200_rf.addrw == 0)   or1200_rf.dataw == 0
 // The variables actually appear to be named rf_we, rf_addrw, rf_dataw
 // Recall that p→q is equivalent to ¬p∨q
-// assert property (~(rf_we == 1 && rf_addrw == 0) || (rf_dataw == 0));
+assert property (~(rf_we == 1 && rf_addrw == 0) || (rf_dataw == 0));
 
 endmodule
 
@@ -16271,14 +16092,6 @@ assign spr_dat_o = 32'b0;
 
 `endif
 
-// ADDED:  assert property which should be false
-
-// assert property (intr==1'b0);
-
-// ADDED:  assert property which should be true
-
-// assert property (1==1);
-
 endmodule
 
 // END TT
@@ -16704,32 +16517,6 @@ parameter bl = 4; /* Can currently be either 4 or 8 - the two optional line
 endmodule
 
 // END WB_BIU
-
-// BEGIN EXAMPLE1
-// ADDED: EXAMPLE1
-/*
-module my_add1(input a, input b, output [1:0] y);
-
-  assign y[0]=a^b;
-  assign y[1]=a&b;
-
-endmodule
-
-module my_add(input a, input b);
-
-  wire [1:0] result;
-
-  my_add1 adder(a, b, result);
-  
-// An assume statement
-  assume property (a==0);
-
-// This should be true
-  assert property (a+b==result);
-
-endmodule */
-
-// END EXAMPLE1
 
 module or1200_top(
 	// System
@@ -17881,9 +17668,5 @@ assume property (((icpu_dat_i & 4227858432) >> 26 == 0) |
 ((icpu_dat_i & 65011712) >> 21 == 12)) | 
 (((icpu_dat_i & 4227858432) >> 26 == 57) & 
 ((icpu_dat_i & 65011712) >> 21 == 13)));
-
-// ADDED GRP0 Assertion
-
-assert property (~(rf_we == 1 && rf_addrw == 0) || (rf_dataw == 0));
 
 endmodule
