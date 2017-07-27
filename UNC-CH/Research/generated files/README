@@ -7,7 +7,7 @@ Each experiment was performed on the or1200_top.sv file created through the manu
 
 All runs indicated or1200_top as the starting module.  All runs contained the GPR0 assertion in the or1200_rf module.
 
-I should additionally note that I have crashed ebmc this week when running over the full file as I did last week.  I believe the crash to be related to improper usage of the tool rather it's limitations with regard to file size or complexity.
+I should additionally note that I have NOT crashed ebmc this week when running over the full file as I did last week.  I believe the crash to be related to improper usage of the tool rather than it's limitations with regard to file size or complexity.
 
 The runs were performed and timed (on my desktop) somewhat hackishly with a script of the following form:
 
@@ -43,7 +43,7 @@ Expected Result:  Failure
 Actual Result:  Success
 Time:  05:13.62
 
-Discussion:  Unfortunately the main information we can get from ebmc is in the case of a counterexample which we are not getting here.  I honestly am out of theories of what could be happening here to disallow illegal instructions or whatever else is going on.
+Discussion:  Unfortunately the main information we can get from ebmc is in the form of a counterexample which we are not getting here.  I honestly am out of theories of what could be happening here to disallow illegal instructions or whatever else is going on.
 
 Experiment 3:  "gpr0fix_noconstraint_bound10"
 
@@ -73,7 +73,7 @@ Experiment 4:  "nofix"
 2)  Constraints present as an assume property
 3)  No additional commandline arguments
 
-This is one half of the "sanity check" testing to see if ebmc is capable of detecting bugs, namely GPR0.  It is the control for experiment 1.
+This is the other half of the "sanity check" testing to see if ebmc is capable of detecting bugs, namely GPR0.  It is the control for experiment 1.
 
 Expected Result:  Failure
 Actual Result:  Failure
@@ -98,3 +98,5 @@ Actual Result:  Null
 Time:  00:08.45
 
 Discussion:  It is my impression that the "--reset" command doesn't specify whether to send a reset but rather what the reset value should be.  This is different from my expectation that it would cause the system to begin in a reset state.  I believe the Null result occurred because there was not a variable specified as "reset" in or1200 as there is in the provided example4.sv from cprover that has a "reset" variable (download link: http://www.cprover.org/ebmc/manual/tutorial/example4.sv).  
+
+I think from here I probably want to tinker with reset command further as well as attempt a fix of a different bug to see if the presence of constraints interact with other bugs in the same manner but I am soliciting feedback.
