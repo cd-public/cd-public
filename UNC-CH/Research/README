@@ -1,8 +1,8 @@
 Stage 1:  Curate trace
 
-Open .vcd in GTKWave, save relevant registers
+Open .vcd (same as prior weeks) in GTKWave, save relevant registers
 
-Stage 2:  Convert to Texada friendly format
+Stage 2:  Convert to texada friendly format
 
 Find and replace:
 
