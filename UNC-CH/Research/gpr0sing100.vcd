@@ -1,0 +1,107 @@
+b1 rf_addrw
+b0 rf_dataw
+rf_addrw5822000
+..
+rf_addrw5823000
+..
+rf_addrw5824000
+..
+rf_addrw5825000
+..
+rf_addrw5826000
+..
+rf_addrw5827000
+..
+rf_addrw5828000
+..
+rf_addrw5829000
+..
+rf_addrw5830000
+..
+rf_addrw5831000
+..
+b1111111111111110 rf_dataw
+b11111 rf_addrw
+rf_addrw5832000
+--
+b1111111111111110 rf_dataw
+b11111 rf_addrw
+rf_addrw5832000
+..
+rf_addrw5833000
+..
+rf_addrw5834000
+..
+rf_addrw5835000
+..
+rf_addrw5836000
+..
+rf_addrw5837000
+..
+rf_addrw5838000
+..
+rf_addrw5839000
+..
+rf_addrw5840000
+..
+rf_addrw5841000
+..
+b110 rf_addrw
+b11001000000 rf_dataw
+rf_addrw5842000
+--
+b110 rf_addrw
+b11001000000 rf_dataw
+rf_addrw5842000
+..
+rf_addrw5843000
+..
+rf_addrw5844000
+..
+rf_addrw5845000
+..
+rf_addrw5846000
+..
+rf_addrw5847000
+..
+rf_addrw5848000
+..
+rf_addrw5849000
+..
+1rf_we
+rf_addrw5850000
+..
+rf_addrw5851000
+..
+b11000110000 rf_dataw
+b10 rf_addrw
+0rf_we
+rf_addrw5852000
+--
+b11000110000 rf_dataw
+b10 rf_addrw
+0rf_we
+rf_addrw5852000
+..
+rf_addrw5853000
+..
+rf_addrw5854000
+..
+rf_addrw5855000
+..
+rf_addrw5856000
+..
+rf_addrw5857000
+..
+rf_addrw5858000
+..
+rf_addrw5859000
+..
+rf_addrw5860000
+..
+rf_addrw5861000
+..
+b11001000000 rf_dataw
+b100 rf_addrw
+rf_addrw5862000
+--

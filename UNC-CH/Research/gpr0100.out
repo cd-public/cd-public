@@ -1,0 +1,100 @@
+G(("0rf_we" & "1rf_we") -> "b0 rf_dataw")
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> "b1 rf_addrw")
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> "b10 rf_addrw")
+   support: 1
+   support potential: 1
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> "b100 rf_addrw")
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> "b110 rf_addrw")
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> "b11000110000 rf_dataw")
+   support: 1
+   support potential: 1
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> "b11001000000 rf_dataw")
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> "b11111 rf_addrw")
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> "b1111111111111110 rf_dataw")
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5822000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5823000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5824000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5825000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5826000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5827000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5828000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5829000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5830000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5831000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5832000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5833000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5834000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5835000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5836000)
+   support: 2
+   support potential: 2
+   confidence: 1
+G(("0rf_we" & "1rf_we") -> rf_addrw5837000)
+   support: 2
+   support potential: 2
+   confidence: 1

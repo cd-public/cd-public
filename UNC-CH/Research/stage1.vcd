@@ -1,0 +1,100 @@
+$date
+	Wed Feb 28 11:57:54 2018
+$end
+$version
+	GTKWave Analyzer v3.3.81 (w)1999-2017 BSI
+$end
+$timescale
+	10ps
+$end
+$scope module orpsoc_testbench $end
+$scope module dut $end
+$scope module or1200_top0 $end
+$scope module or1200_cpu $end
+$scope module or1200_rf $end
+$var wire 1 " clk $end
+$var wire 5 # rf_addrw[4:0] $end
+$var wire 32 $ rf_dataw[31:0] $end
+$var wire 1 % rf_we $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$dumpvars
+#0
+bx $
+bx #
+0"
+x%
+#1000
+1"
+#2000
+0"
+#3000
+1"
+#4000
+0"
+#5000
+1"
+#6000
+0"
+#7000
+1"
+#8000
+0"
+#9000
+1"
+#10000
+0"
+#11000
+1"
+#12000
+0"
+#13000
+1"
+#14000
+0"
+#15000
+1"
+#16000
+0"
+#17000
+1"
+#18000
+0"
+#19000
+1"
+#20000
+0"
+#21000
+1"
+#22000
+0"
+#23000
+1"
+#24000
+0"
+#25000
+1"
+#26000
+0"
+#27000
+1"
+#28000
+0"
+#29000
+1"
+#30000
+0"
+#31000
+1"
+#32000
+0"
+#33000
+1"
+#34000
+0"
+#35000
+1"
