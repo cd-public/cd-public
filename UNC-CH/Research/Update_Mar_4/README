@@ -1,0 +1,11 @@
+An example to clarify what support, support potential, and confidence are.
+
+The .in was generated manually as an example, the .out was generated with the following command:  
+
+./texada -l -f 'G(x -> Xy)' --log-file tester1.in --print-stats --conf-threshold .01 --use-global-thresholds --out-file tester1.out
+
+"Support" denotes the number of occurances of the pattern x -> Xy given.
+
+"Support Potential" denotes the number of occurances of the "x" in x -> Xy, that is, the number of times the pattern could have occurred.
+
+"Confidence" is "Support"/"Support Potential"
