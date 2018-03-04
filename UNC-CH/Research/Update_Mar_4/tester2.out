@@ -28,12 +28,12 @@ G(b -> (Xa -> XXd))
    confidence: 1
 G(b -> (Xc -> XXa))
    support: 1
-   support potential: 7
-   confidence: 0.14286
+   support potential: 8
+   confidence: 0.125
 G(b -> (Xc -> XXd))
-   support: 3
-   support potential: 7
-   confidence: 0.42857
+   support: 4
+   support potential: 8
+   confidence: 0.5
 G(c -> (Xa -> XXb))
    support: 1
    support potential: 1
@@ -48,8 +48,8 @@ G(c -> (Xb -> XXd))
    confidence: 1
 G(c -> (Xd -> XXa))
    support: 1
-   support potential: 4
-   confidence: 0.25
+   support potential: 5
+   confidence: 0.2
 G(d -> (Xa -> XXb))
    support: 3
    support potential: 3
