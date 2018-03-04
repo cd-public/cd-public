@@ -19,15 +19,17 @@ The .in was generated manually as an example, the .out was generated with the fo
 
 ./texada -l -f 'G(x -> Xy -> XXz)' --log-file tester2.in --print-stats --conf-threshold .01 --use-global-thresholds --out-file tester2.out
 
-"a"  occurs 9 times
+"a"   occurs 9 times
 
-"b"  occurs 9 times
+"b"   occurs 9 times
 
-"c"  occurs 9 times
+"c"   occurs 9 times
 
-"ab" occurs 8 times
+"ab"  occurs 8 times
 
-"bc" occurs 8 times
+"bc"  occurs 8 times
+
+"abc" occurs 7 times
 
 Given:
 
