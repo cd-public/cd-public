@@ -40,7 +40,7 @@ G(a -> (Xb -> XXc))
    
 "Support" same as above but considers the entire (a -> Xb) as a single term.  (verified this by adding an additional "ab" and seeing counts go up)
 
-"Support Potential" gives number of such occurances in which a immediately precedes.
+"Support Potential" gives number of such occurances in which a the full pattern is found.
 
 "Confidence" same as above.
 
