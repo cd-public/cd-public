@@ -1,0 +1,72 @@
+G(a -> (Xb -> XXc))
+   support: 7
+   support potential: 8
+   confidence: 0.875
+G(a -> (Xb -> XXd))
+   support: 1
+   support potential: 8
+   confidence: 0.125
+G(a -> (Xc -> XXd))
+   support: 1
+   support potential: 1
+   confidence: 1
+G(a -> (Xd -> XXb))
+   support: 0
+   support potential: 0
+   confidence: 1
+G(a -> (Xd -> XXc))
+   support: 0
+   support potential: 0
+   confidence: 1
+G(b -> (Xa -> XXc))
+   support: 0
+   support potential: 0
+   confidence: 1
+G(b -> (Xa -> XXd))
+   support: 0
+   support potential: 0
+   confidence: 1
+G(b -> (Xc -> XXa))
+   support: 1
+   support potential: 7
+   confidence: 0.14286
+G(b -> (Xc -> XXd))
+   support: 3
+   support potential: 7
+   confidence: 0.42857
+G(c -> (Xa -> XXb))
+   support: 1
+   support potential: 1
+   confidence: 1
+G(c -> (Xb -> XXa))
+   support: 0
+   support potential: 0
+   confidence: 1
+G(c -> (Xb -> XXd))
+   support: 0
+   support potential: 0
+   confidence: 1
+G(c -> (Xd -> XXa))
+   support: 1
+   support potential: 4
+   confidence: 0.25
+G(d -> (Xa -> XXb))
+   support: 3
+   support potential: 3
+   confidence: 1
+G(d -> (Xb -> XXa))
+   support: 0
+   support potential: 0
+   confidence: 1
+G(d -> (Xb -> XXc))
+   support: 0
+   support potential: 0
+   confidence: 1
+G(d -> (Xc -> XXa))
+   support: 0
+   support potential: 0
+   confidence: 1
+G(d -> (Xc -> XXb))
+   support: 0
+   support potential: 0
+   confidence: 1
