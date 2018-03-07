@@ -1,0 +1,26 @@
+"multi.out" is the culmination of a number of refinements the model used in the previous weeks, generated with the following command.
+
+time ./texada -l -f 'G((x & y) -> z)' --log-file multi.vcd --parse-mult-prop --conf-threshold 1 --sup-threshold 1000 --print-stats --out-file multi.out
+
+Where "multi.vcd" is the ~200k line composition of 4 different .vcd files - 3 regression tests and the hand-coded assembly .vcd seen in previous weeks - that have all been processed in the following manner (primarily with regex find/replace).
+
+#[0123456789]+ -> ..
+ascii -> names
+<remove headers>
+1we -> we == 1
+b0 addr -> addr == 0
+b0 data -> data == 0
+[0x]we -> we != 1
+b[01x]+ addr -> addr != 0
+b[01x]+ data -> data != 0
+
+The first line gives the timing information, the others make the output readable and then remove information redundant to the GPR0 property.  Switching to an equality model considerably improves performance.  Just over a 1400 line single trace, the difference between having everything at equality except registers and changing registers to equality was 49775 LTLs rather than 38 LTLs and 6:06.712 vs 0:00.711.
+
+Ultimately, with these refinements, multi.out was generated in only 4.183 seconds and generated only 24 LTL properties.
+
+In multi.out, a number of properties are incorrect because they contain internal contradictions.  This is an active area of research.  However, interestingly enough, the only LTL property that didn't contain contradictions was GPR0 property exactly as searched for, with ground truth here presented for reference:
+
+property ASSERT_B10;  // bug is in rf
+   @(posedge clk)
+((~((or1200_rf.rf_we == 1) && (or1200_rf.rf_addrw == 0))) || (or1200_rf.rf_dataw == 0));
+endproperty
