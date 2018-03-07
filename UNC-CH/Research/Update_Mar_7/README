@@ -20,7 +20,7 @@ Switching to an equality model considerably improves performance.  Just over a 1
 
 Ultimately, with these refinements, multi.out was generated in only 4.183 seconds and generated only 24 LTL properties.
 
-In multi.out, a number of properties are incorrect because they contain internal contradictions which I hope to study with smaller scale examples.  However, interestingly enough, the only LTL property that didn't contain contradictions was GPR0 property exactly as searched for, with ground truth here presented for reference:
+In multi.out, a number of properties are incorrect because they contain internal contradictions which I hope to study with smaller scale examples.  However, interestingly enough, the only LTL property that didn't contain contradictions was the exact GPR0 property, with ground truth here presented for reference:
 
 property ASSERT_B10;  // bug is in rf
    @(posedge clk)
@@ -34,4 +34,4 @@ G(("addr == 0" & "we == 1") -> "data == 0")
    support potential: 17461
    confidence: 1
 
-While usually overfitting is bad, I think in this case it's not totally reasonable to expect this would happen so now it only stands to extend this expertise over the broader model and better understand the apparent contradictions.
+While usually overfitting is bad, I think in this case it's reasonable to expect this would happen so now it only stands to extend this expertise over the broader model and better understand the apparent contradictions.
