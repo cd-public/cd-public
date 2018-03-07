@@ -1,4 +1,4 @@
-"multi.out" is the culmination of a number of refinements the model used in the previous weeks, generated with the following command.
+"multi.out" is the culmination of a number of refinements of the model used in the previous weeks, generated with the following command.
 
 time ./texada -l -f 'G((x & y) -> z)' --log-file multi.vcd --parse-mult-prop --conf-threshold 1 --sup-threshold 1000 --print-stats --out-file multi.out
 
