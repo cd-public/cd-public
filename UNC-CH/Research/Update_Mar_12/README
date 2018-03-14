@@ -1,9 +1,8 @@
 Gx -> x must hold in every event
 x  -> x must hold in every trace
 
-Definition 6 (Trace support potential). The support potential
-of a property instance π on a trace t is the number of time
-points of t which could falsify π.
-Definition 7 (Trace support). The support of a property instance
-π on a trace t is the number of time points of t which could
-falsify π, but do not falsify π.
+Support potential is the # of times a trace could be falsified.
+
+Support is the # of times a property could be falsified that it isn't.  
+
+Any non-temporal formula is true on a trace if it is true on the first event of the trace.
