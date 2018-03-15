@@ -1,0 +1,60 @@
+G("addr != 0" & !"addr == 0")
+   support: 103798
+   support potential: 126882
+   confidence: 0.81807
+G(!"addr == 0" & "data != 0")
+   support: 100330
+   support potential: 126882
+   confidence: 0.79073
+G(!"addr == 0" & "data == 0")
+   support: 66328
+   support potential: 126882
+   confidence: 0.52275
+G(!"addr == 0" & "we != 1")
+   support: 72219
+   support potential: 126882
+   confidence: 0.56918
+G(!"addr == 0" & "we == 1")
+   support: 72211
+   support potential: 126882
+   confidence: 0.56912
+G("addr != 0" & !"data != 0")
+   support: 66909
+   support potential: 126882
+   confidence: 0.52733
+G("addr != 0" & !"data == 0")
+   support: 100911
+   support potential: 126882
+   confidence: 0.79531
+G("data != 0" & !"data == 0")
+   support: 97443
+   support potential: 126882
+   confidence: 0.76798
+G(!"data == 0" & "we != 1")
+   support: 69332
+   support potential: 126882
+   confidence: 0.54643
+G(!"data == 0" & "we == 1")
+   support: 69324
+   support potential: 126882
+   confidence: 0.54637
+G("addr != 0" & !"we != 1")
+   support: 95020
+   support potential: 126882
+   confidence: 0.74888
+G("data != 0" & !"we != 1")
+   support: 91552
+   support potential: 126882
+   confidence: 0.72155
+G("addr != 0" & !"we == 1")
+   support: 95028
+   support potential: 126882
+   confidence: 0.74895
+G("data != 0" & !"we == 1")
+   support: 91560
+   support potential: 126882
+   confidence: 0.72162
+G("we != 1" & !"we == 1")
+   support: 63449
+   support potential: 126882
+   confidence: 0.50006
