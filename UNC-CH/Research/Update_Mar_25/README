@@ -1,3 +1,7 @@
+EDIT:  A note before we begin.
+
+I incorrectly stated that the "--parse-mult-prop" flag refers to parsing multiple properties at our last meeting.  In fact, it refers to parsing multiple *propositions* and this is clarified in the documentation.
+
 Commands:
 
 texada@texada-VirtualBox:~/texada$ time ./texada -l -f 'G(!(a & x) & (a | x)) & G(!(b & y) & (b | y)) & G(!(c & z) & (c | z)) & G((a & b) -> c)' --log-file trc.out --parse-mult-prop --print-stats --out-file temp.out
