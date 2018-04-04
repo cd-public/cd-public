@@ -2,6 +2,8 @@ Extending the pre-processor.  The second half of the pipeline (configuring each 
 
 With this current model, over a trace of the rf module of length 3000 lines (60 clock cycles), GPR0 is discovered.  Longer traces and more modules did not resolve.  Changing length helped more than I expected - 3000 lines completed in about 2:30 whereas I never got the full trace to complete in the hour range.  Traditionally increasing length hadn't meaningfully effected the time cost.
 
-This pre-processing increases the size of the file by approximately a factor of 10.  
+This pre-processing increases the size of the file by approximately a factor of 10.
 
--c
+I think my next step is to take this preprocessing model and extend over the entire processor (which means automating the manual parts) and see if I can find meaningful properties on traces short enough they complete in under an hour.  Alternatively, I could search for properties module wise.
+
+This pre-processing methodology would trivially accomodate equality testing but does not do so at texada level.  However, I could easily add a series of equality events and outputting them either at every cycle or only when true.
