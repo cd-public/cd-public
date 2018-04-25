@@ -1,0 +1,2702 @@
+$scope module or1200_top0 $end
+$var wire 1 )$ abort_ex $end
+$var wire 1 *$ abort_mvspr $end
+$var wire 1 +$ boot_adr_sel $end
+$var wire 3 ,$ branch_op [2:0] $end
+$var wire 1 6 clk_i $end
+$var wire 2 -$ clmode_i [1:0] $end
+$var wire 1 7 dbg_ack_o $end
+$var wire 32 .$ dbg_adr_i [31:0] $end
+$var wire 1 9 dbg_bp_o $end
+$var wire 32 /$ dbg_dat_i [31:0] $end
+$var wire 32 0$ dbg_dat_o [31:0] $end
+$var wire 1 1$ dbg_ewt_i $end
+$var wire 2 2$ dbg_is_o [1:0] $end
+$var wire 4 3$ dbg_lss_o [3:0] $end
+$var wire 1 ? dbg_stall_i $end
+$var wire 1 @ dbg_stb_i $end
+$var wire 1 A dbg_we_i $end
+$var wire 11 4$ dbg_wp_o [10:0] $end
+$var wire 1 5$ dc_en $end
+$var wire 1 6$ dc_no_writethrough $end
+$var wire 1 7$ dcpu_ack_qmem $end
+$var wire 32 8$ dcpu_adr_cpu [31:0] $end
+$var wire 1 9$ dcpu_cycstb_cpu $end
+$var wire 32 :$ dcpu_dat_cpu [31:0] $end
+$var wire 32 ;$ dcpu_dat_qmem [31:0] $end
+$var wire 1 <$ dcpu_err_dmmu $end
+$var wire 1 =$ dcpu_rty_qmem $end
+$var wire 4 >$ dcpu_sel_cpu [3:0] $end
+$var wire 4 ?$ dcpu_tag_cpu [3:0] $end
+$var wire 4 @$ dcpu_tag_dmmu [3:0] $end
+$var wire 1 A$ dcpu_we_cpu $end
+$var wire 1 B$ dcqmem_ack_dc $end
+$var wire 32 C$ dcqmem_adr_qmem [31:0] $end
+$var wire 1 D$ dcqmem_ci_qmem $end
+$var wire 1 E$ dcqmem_cycstb_qmem $end
+$var wire 32 F$ dcqmem_dat_dc [31:0] $end
+$var wire 32 G$ dcqmem_dat_qmem [31:0] $end
+$var wire 1 H$ dcqmem_err_dc $end
+$var wire 1 I$ dcqmem_rty_dc $end
+$var wire 4 J$ dcqmem_sel_qmem [3:0] $end
+$var wire 4 K$ dcqmem_tag_dc [3:0] $end
+$var wire 4 L$ dcqmem_tag_qmem [3:0] $end
+$var wire 1 M$ dcqmem_we_qmem $end
+$var wire 1 N$ dcsb_ack_sb $end
+$var wire 32 O$ dcsb_adr_dc [31:0] $end
+$var wire 1 P$ dcsb_cab_dc $end
+$var wire 1 Q$ dcsb_cyc_dc $end
+$var wire 32 R$ dcsb_dat_dc [31:0] $end
+$var wire 32 S$ dcsb_dat_sb [31:0] $end
+$var wire 1 T$ dcsb_err_sb $end
+$var wire 4 U$ dcsb_sel_dc [3:0] $end
+$var wire 1 V$ dcsb_stb_dc $end
+$var wire 1 W$ dcsb_we_dc $end
+$var wire 1 X$ dmmu_en $end
+$var wire 32 Y$ du_addr [31:0] $end
+$var wire 32 Z$ du_dat_cpu [31:0] $end
+$var wire 32 [$ du_dat_du [31:0] $end
+$var wire 25 \$ du_dmr1 [24:0] $end
+$var wire 14 ]$ du_dsr [13:0] $end
+$var wire 14 ^$ du_except_stop [13:0] $end
+$var wire 14 _$ du_except_trig [13:0] $end
+$var wire 1 `$ du_hwbkpt $end
+$var wire 1 a$ du_hwbkpt_ls_r $end
+$var wire 32 b$ du_lsu_load_dat [31:0] $end
+$var wire 32 c$ du_lsu_store_dat [31:0] $end
+$var wire 1 d$ du_read $end
+$var wire 1 e$ du_stall $end
+$var wire 1 f$ du_write $end
+$var wire 1 b dwb_ack_i $end
+$var wire 32 g$ dwb_adr_o [31:0] $end
+$var wire 2 h$ dwb_bte_o [1:0] $end
+$var wire 1 H dwb_clk_i $end
+$var wire 3 i$ dwb_cti_o [2:0] $end
+$var wire 1 f dwb_cyc_o $end
+$var wire 32 j$ dwb_dat_i [31:0] $end
+$var wire 32 k$ dwb_dat_o [31:0] $end
+$var wire 1 i dwb_err_i $end
+$var wire 1 I dwb_rst_i $end
+$var wire 1 j dwb_rty_i $end
+$var wire 4 l$ dwb_sel_o [3:0] $end
+$var wire 1 l dwb_stb_o $end
+$var wire 1 m dwb_we_o $end
+$var wire 1 m$ ex_freeze $end
+$var wire 32 n$ ex_insn [31:0] $end
+$var wire 32 o$ ex_pc [31:0] $end
+$var wire 1 p$ ex_void $end
+$var wire 1 q$ flushpipe $end
+$var wire 1 r$ ic_en $end
+$var wire 1 s$ icbiu_ack_biu $end
+$var wire 32 t$ icbiu_adr_ic [31:0] $end
+$var wire 32 u$ icbiu_adr_ic_word [31:0] $end
+$var wire 1 v$ icbiu_cab_ic $end
+$var wire 1 w$ icbiu_cyc_ic $end
+$var wire 32 x$ icbiu_dat_biu [31:0] $end
+$var wire 32 y$ icbiu_dat_ic [31:0] $end
+$var wire 1 z$ icbiu_err_biu $end
+$var wire 4 {$ icbiu_sel_ic [3:0] $end
+$var wire 1 |$ icbiu_stb_ic $end
+$var wire 1 }$ icbiu_we_ic $end
+$var wire 1 ~$ icpu_ack_qmem $end
+$var wire 32 !% icpu_adr_cpu [31:0] $end
+$var wire 32 "% icpu_adr_immu [31:0] $end
+$var wire 1 #% icpu_cycstb_cpu $end
+$var wire 32 $% icpu_dat_qmem [31:0] $end
+$var wire 1 %% icpu_err_immu $end
+$var wire 1 &% icpu_rty_immu $end
+$var wire 4 '% icpu_sel_cpu [3:0] $end
+$var wire 4 (% icpu_tag_cpu [3:0] $end
+$var wire 4 )% icpu_tag_immu [3:0] $end
+$var wire 1 *% icqmem_ack_ic $end
+$var wire 32 +% icqmem_adr_qmem [31:0] $end
+$var wire 1 ,% icqmem_ci_qmem $end
+$var wire 1 -% icqmem_cycstb_qmem $end
+$var wire 32 .% icqmem_dat_ic [31:0] $end
+$var wire 1 /% icqmem_err_ic $end
+$var wire 1 0% icqmem_rty_ic $end
+$var wire 4 1% icqmem_sel_qmem [3:0] $end
+$var wire 4 2% icqmem_tag_ic [3:0] $end
+$var wire 4 3% icqmem_tag_qmem [3:0] $end
+$var wire 32 4% id_insn [31:0] $end
+$var wire 32 5% id_pc [31:0] $end
+$var wire 1 6% id_void $end
+$var wire 1 7% immu_en $end
+$var wire 1 n iwb_ack_i $end
+$var wire 32 8% iwb_adr_o [31:0] $end
+$var wire 2 9% iwb_bte_o [1:0] $end
+$var wire 1 H iwb_clk_i $end
+$var wire 3 :% iwb_cti_o [2:0] $end
+$var wire 1 r iwb_cyc_o $end
+$var wire 32 ;% iwb_dat_i [31:0] $end
+$var wire 32 <% iwb_dat_o [31:0] $end
+$var wire 1 u iwb_err_i $end
+$var wire 1 I iwb_rst_i $end
+$var wire 1 v iwb_rty_i $end
+$var wire 4 =% iwb_sel_o [3:0] $end
+$var wire 1 x iwb_stb_o $end
+$var wire 1 y iwb_we_o $end
+$var wire 1 >% mtspr_dc_done $end
+$var wire 20 ?% pic_ints_i [19:0] $end
+$var wire 1 @% pic_wakeup $end
+$var wire 4 A% pm_clksd_o [3:0] $end
+$var wire 1 B% pm_cpu_gate_o $end
+$var wire 1 C% pm_cpustall_i $end
+$var wire 1 D% pm_dc_gate_o $end
+$var wire 1 E% pm_dmmu_gate_o $end
+$var wire 1 F% pm_ic_gate_o $end
+$var wire 1 G% pm_immu_gate_o $end
+$var wire 1 H% pm_lvolt_o $end
+$var wire 1 I% pm_tt_gate_o $end
+$var wire 1 J% pm_wakeup_o $end
+$var wire 32 K% qmemdmmu_adr_dmmu [31:0] $end
+$var wire 1 L% qmemdmmu_ci_dmmu $end
+$var wire 1 M% qmemdmmu_cycstb_dmmu $end
+$var wire 1 N% qmemdmmu_err_qmem $end
+$var wire 4 O% qmemdmmu_tag_qmem [3:0] $end
+$var wire 32 P% qmemimmu_adr_immu [31:0] $end
+$var wire 1 Q% qmemimmu_ci_immu $end
+$var wire 1 R% qmemimmu_cycstb_immu $end
+$var wire 1 S% qmemimmu_err_qmem $end
+$var wire 1 T% qmemimmu_rty_qmem $end
+$var wire 4 U% qmemimmu_tag_qmem [3:0] $end
+$var wire 32 V% rf_dataw [31:0] $end
+$var wire 1 D rst_i $end
+$var wire 1 W% sb_en $end
+$var wire 1 X% sbbiu_ack_biu $end
+$var wire 32 Y% sbbiu_adr_sb [31:0] $end
+$var wire 1 Z% sbbiu_cab_sb $end
+$var wire 1 [% sbbiu_cyc_sb $end
+$var wire 32 \% sbbiu_dat_biu [31:0] $end
+$var wire 32 ]% sbbiu_dat_sb [31:0] $end
+$var wire 1 ^% sbbiu_err_biu $end
+$var wire 4 _% sbbiu_sel_sb [3:0] $end
+$var wire 1 `% sbbiu_stb_sb $end
+$var wire 1 a% sbbiu_we_sb $end
+$var wire 1 b% sig_int $end
+$var wire 1 F sig_tick $end
+$var wire 32 c% spr_addr [31:0] $end
+$var wire 32 d% spr_cs [31:0] $end
+$var wire 32 e% spr_dat_cpu [31:0] $end
+$var wire 32 f% spr_dat_dmmu [31:0] $end
+$var wire 32 g% spr_dat_du [31:0] $end
+$var wire 32 h% spr_dat_immu [31:0] $end
+$var wire 32 i% spr_dat_npc [31:0] $end
+$var wire 32 j% spr_dat_pic [31:0] $end
+$var wire 32 k% spr_dat_pm [31:0] $end
+$var wire 32 l% spr_dat_tt [31:0] $end
+$var wire 1 m% spr_we $end
+$var wire 1 n% supv $end
+$var wire 1 o% wb_freeze $end
+$var wire 32 p% wb_insn [31:0] $end
+$var wire 32 q% wb_pc [31:0] $end
+$scope module iwb_biu $end
+$var wire 1 s$ biu_ack_o $end
+$var wire 32 r% biu_adr_i [31:0] $end
+$var wire 1 v$ biu_cab_i $end
+$var wire 1 w$ biu_cyc_i $end
+$var wire 32 s% biu_dat_i [31:0] $end
+$var wire 32 t% biu_dat_o [31:0] $end
+$var wire 1 z$ biu_err_o $end
+$var wire 1 u% biu_rty $end
+$var wire 4 v% biu_sel_i [3:0] $end
+$var wire 1 w% biu_stb $end
+$var wire 1 |$ biu_stb_i $end
+$var wire 1 }$ biu_we_i $end
+$var wire 1 6 clk $end
+$var wire 2 x% clmode [1:0] $end
+$var wire 1 y% retry_cnt $end
+$var wire 1 D rst $end
+$var wire 1 z% wb_ack $end
+$var wire 1 n wb_ack_i $end
+$var wire 1 H wb_clk_i $end
+$var wire 32 {% wb_dat_i [31:0] $end
+$var wire 32 |% wb_dat_o [31:0] $end
+$var wire 1 u wb_err_i $end
+$var wire 2 }% wb_fsm_idle [1:0] $end
+$var wire 2 ~% wb_fsm_last [1:0] $end
+$var wire 2 !& wb_fsm_trans [1:0] $end
+$var wire 1 I wb_rst_i $end
+$var wire 1 v wb_rty_i $end
+$var reg 1 "& biu_ack_cnt $end
+$var reg 1 #& biu_err_cnt $end
+$var reg 1 $& biu_rty_cnt $end
+$var reg 1 %& biu_stb_reg $end
+$var reg 4 && burst_len [3:0] $end
+$var reg 1 '& wb_ack_cnt $end
+$var reg 32 (& wb_adr_o [31:0] $end
+$var reg 2 )& wb_bte_o [1:0] $end
+$var reg 3 *& wb_cti_nxt [2:0] $end
+$var reg 3 +& wb_cti_o [2:0] $end
+$var reg 1 ,& wb_cyc_nxt $end
+$var reg 1 -& wb_cyc_o $end
+$var reg 1 .& wb_err_cnt $end
+$var reg 2 /& wb_fsm_state_cur [1:0] $end
+$var reg 2 0& wb_fsm_state_nxt [1:0] $end
+$var reg 1 1& wb_rty_cnt $end
+$var reg 4 2& wb_sel_o [3:0] $end
+$var reg 1 3& wb_stb_nxt $end
+$var reg 1 4& wb_stb_o $end
+$var reg 1 5& wb_we_o $end
+$upscope $end
+$scope module dwb_biu $end
+$var wire 1 X% biu_ack_o $end
+$var wire 32 6& biu_adr_i [31:0] $end
+$var wire 1 Z% biu_cab_i $end
+$var wire 1 [% biu_cyc_i $end
+$var wire 32 7& biu_dat_i [31:0] $end
+$var wire 32 8& biu_dat_o [31:0] $end
+$var wire 1 ^% biu_err_o $end
+$var wire 1 9& biu_rty $end
+$var wire 4 :& biu_sel_i [3:0] $end
+$var wire 1 ;& biu_stb $end
+$var wire 1 `% biu_stb_i $end
+$var wire 1 a% biu_we_i $end
+$var wire 1 6 clk $end
+$var wire 2 <& clmode [1:0] $end
+$var wire 1 =& retry_cnt $end
+$var wire 1 D rst $end
+$var wire 1 >& wb_ack $end
+$var wire 1 b wb_ack_i $end
+$var wire 1 H wb_clk_i $end
+$var wire 32 ?& wb_dat_i [31:0] $end
+$var wire 32 @& wb_dat_o [31:0] $end
+$var wire 1 i wb_err_i $end
+$var wire 2 A& wb_fsm_idle [1:0] $end
+$var wire 2 B& wb_fsm_last [1:0] $end
+$var wire 2 C& wb_fsm_trans [1:0] $end
+$var wire 1 I wb_rst_i $end
+$var wire 1 j wb_rty_i $end
+$var reg 1 D& biu_ack_cnt $end
+$var reg 1 E& biu_err_cnt $end
+$var reg 1 F& biu_rty_cnt $end
+$var reg 1 G& biu_stb_reg $end
+$var reg 4 H& burst_len [3:0] $end
+$var reg 1 I& wb_ack_cnt $end
+$var reg 32 J& wb_adr_o [31:0] $end
+$var reg 2 K& wb_bte_o [1:0] $end
+$var reg 3 L& wb_cti_nxt [2:0] $end
+$var reg 3 M& wb_cti_o [2:0] $end
+$var reg 1 N& wb_cyc_nxt $end
+$var reg 1 O& wb_cyc_o $end
+$var reg 1 P& wb_err_cnt $end
+$var reg 2 Q& wb_fsm_state_cur [1:0] $end
+$var reg 2 R& wb_fsm_state_nxt [1:0] $end
+$var reg 1 S& wb_rty_cnt $end
+$var reg 4 T& wb_sel_o [3:0] $end
+$var reg 1 U& wb_stb_nxt $end
+$var reg 1 V& wb_stb_o $end
+$var reg 1 W& wb_we_o $end
+$upscope $end
+$scope module or1200_immu_top $end
+$var wire 1 +$ boot_adr_sel_i $end
+$var wire 1 6 clk $end
+$var wire 1 X& fault $end
+$var wire 1 r$ ic_en $end
+$var wire 32 Y& icpu_adr_boot [31:0] $end
+$var wire 32 Z& icpu_adr_i [31:0] $end
+$var wire 1 #% icpu_cycstb_i $end
+$var wire 1 %% icpu_err_o $end
+$var wire 1 &% icpu_rty_o $end
+$var wire 4 [& icpu_tag_o [3:0] $end
+$var wire 1 7% immu_en $end
+$var wire 1 \& itlb_ci $end
+$var wire 32 ]& itlb_dat_o [31:0] $end
+$var wire 1 ^& itlb_done $end
+$var wire 1 _& itlb_en $end
+$var wire 1 `& itlb_hit $end
+$var wire 19 a& itlb_ppn [31:13] $end
+$var wire 1 b& itlb_spr_access $end
+$var wire 1 c& itlb_sxe $end
+$var wire 1 d& itlb_uxe $end
+$var wire 1 e& miss $end
+$var wire 1 f& page_cross $end
+$var wire 32 g& qmemimmu_adr_o [31:0] $end
+$var wire 1 Q% qmemimmu_ci_o $end
+$var wire 1 R% qmemimmu_cycstb_o $end
+$var wire 1 S% qmemimmu_err_i $end
+$var wire 1 T% qmemimmu_rty_i $end
+$var wire 4 h& qmemimmu_tag_i [3:0] $end
+$var wire 1 D rst $end
+$var wire 32 i& spr_addr [31:0] $end
+$var wire 1 j& spr_cs $end
+$var wire 32 k& spr_dat_i [31:0] $end
+$var wire 32 l& spr_dat_o [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 1 n% supv $end
+$var reg 1 m& dis_spr_access_frst_clk $end
+$var reg 1 n& dis_spr_access_scnd_clk $end
+$var reg 32 o& icpu_adr_default [31:0] $end
+$var reg 32 p& icpu_adr_o [31:0] $end
+$var reg 1 q& icpu_adr_select $end
+$var reg 19 r& icpu_vpn_r [31:13] $end
+$var reg 1 s& itlb_en_r $end
+$var reg 32 t& spr_dat_reg [31:0] $end
+$scope module or1200_immu_tlb $end
+$var wire 1 \& ci $end
+$var wire 1 6 clk $end
+$var wire 1 `& hit $end
+$var wire 19 u& ppn [31:13] $end
+$var wire 1 D rst $end
+$var wire 32 v& spr_addr [31:0] $end
+$var wire 1 b& spr_cs $end
+$var wire 32 w& spr_dat_i [31:0] $end
+$var wire 32 x& spr_dat_o [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 1 c& sxe $end
+$var wire 1 _& tlb_en $end
+$var wire 6 y& tlb_index [5:0] $end
+$var wire 1 z& tlb_mr_en $end
+$var wire 14 {& tlb_mr_ram_in [13:0] $end
+$var wire 14 |& tlb_mr_ram_out [13:0] $end
+$var wire 1 }& tlb_mr_we $end
+$var wire 1 ~& tlb_tr_en $end
+$var wire 22 !' tlb_tr_ram_in [21:0] $end
+$var wire 22 "' tlb_tr_ram_out [21:0] $end
+$var wire 1 #' tlb_tr_we $end
+$var wire 1 d& uxe $end
+$var wire 1 $' v $end
+$var wire 32 %' vaddr [31:0] $end
+$var wire 13 &' vpn [31:19] $end
+$scope module itlb_mr_ram $end
+$var wire 6 '' addr [5:0] $end
+$var wire 1 z& ce $end
+$var wire 1 6 clk $end
+$var wire 14 (' di [13:0] $end
+$var wire 14 )' doq [13:0] $end
+$var wire 1 }& we $end
+$var reg 6 *' addr_reg [5:0] $end
+$upscope $end
+$scope module itlb_tr_ram $end
+$var wire 6 +' addr [5:0] $end
+$var wire 1 ~& ce $end
+$var wire 1 6 clk $end
+$var wire 22 ,' di [21:0] $end
+$var wire 22 -' doq [21:0] $end
+$var wire 1 #' we $end
+$var reg 6 .' addr_reg [5:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module or1200_ic_top $end
+$var wire 1 6 clk $end
+$var wire 32 /' from_icram [31:0] $end
+$var wire 32 0' ic_addr [31:0] $end
+$var wire 1 r$ ic_en $end
+$var wire 1 1' ic_inv $end
+$var wire 1 s$ icbiu_ack_i $end
+$var wire 32 2' icbiu_adr_o [31:0] $end
+$var wire 1 v$ icbiu_cab_o $end
+$var wire 1 w$ icbiu_cyc_o $end
+$var wire 32 3' icbiu_dat_i [31:0] $end
+$var wire 32 4' icbiu_dat_o [31:0] $end
+$var wire 1 z$ icbiu_err_i $end
+$var wire 4 5' icbiu_sel_o [3:0] $end
+$var wire 1 |$ icbiu_stb_o $end
+$var wire 1 }$ icbiu_we_o $end
+$var wire 1 6' icfsm_biu_read $end
+$var wire 1 7' icfsm_burst $end
+$var wire 1 8' icfsm_first_hit_ack $end
+$var wire 1 9' icfsm_first_miss_ack $end
+$var wire 1 :' icfsm_first_miss_err $end
+$var wire 1 ;' icfsm_tag_we $end
+$var wire 1 *% icqmem_ack_o $end
+$var wire 32 <' icqmem_adr_i [31:0] $end
+$var wire 1 ,% icqmem_ci_i $end
+$var wire 1 -% icqmem_cycstb_i $end
+$var wire 32 =' icqmem_dat_o [31:0] $end
+$var wire 1 /% icqmem_err_o $end
+$var wire 1 0% icqmem_rty_o $end
+$var wire 4 >' icqmem_sel_i [3:0] $end
+$var wire 4 ?' icqmem_tag_i [3:0] $end
+$var wire 4 @' icqmem_tag_o [3:0] $end
+$var wire 4 A' icram_we [3:0] $end
+$var wire 8 B' ictag_addr [11:4] $end
+$var wire 1 C' ictag_en $end
+$var wire 1 D' ictag_v $end
+$var wire 1 E' ictag_we $end
+$var wire 1 D rst $end
+$var wire 32 F' saved_addr [31:0] $end
+$var wire 1 G' spr_cs $end
+$var wire 32 H' spr_dat_i [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 20 I' tag [19:0] $end
+$var wire 1 J' tag_v $end
+$var wire 32 K' to_icram [31:0] $end
+$var reg 1 L' ic_inv_q $end
+$var reg 1 M' tagcomp_miss $end
+$scope module or1200_ic_fsm $end
+$var wire 1 6' biu_read $end
+$var wire 1 z$ biudata_error $end
+$var wire 1 s$ biudata_valid $end
+$var wire 1 7' burst $end
+$var wire 1 6 clk $end
+$var wire 1 8' first_hit_ack $end
+$var wire 1 9' first_miss_ack $end
+$var wire 1 :' first_miss_err $end
+$var wire 1 r$ ic_en $end
+$var wire 1 ,% icqmem_ci_i $end
+$var wire 1 -% icqmem_cycstb_i $end
+$var wire 4 N' icram_we [3:0] $end
+$var wire 1 D rst $end
+$var wire 32 O' saved_addr [31:0] $end
+$var wire 32 P' start_addr [31:0] $end
+$var wire 1 ;' tag_we $end
+$var wire 1 Q' tagcomp_miss $end
+$var reg 1 R' cache_inhibit $end
+$var reg 4 S' cnt [3:0] $end
+$var reg 1 T' hitmiss_eval $end
+$var reg 1 U' last_eval_miss $end
+$var reg 1 V' load $end
+$var reg 32 W' saved_addr_r [31:0] $end
+$var reg 2 X' state [1:0] $end
+$upscope $end
+$scope module or1200_ic_ram $end
+$var wire 10 Y' addr [9:0] $end
+$var wire 1 6 clk $end
+$var wire 32 Z' datain [31:0] $end
+$var wire 32 [' dataout [31:0] $end
+$var wire 1 r$ en $end
+$var wire 1 D rst $end
+$var wire 4 \' we [3:0] $end
+$scope module ic_ram0 $end
+$var wire 10 ]' addr [9:0] $end
+$var wire 1 r$ ce $end
+$var wire 1 6 clk $end
+$var wire 32 ^' di [31:0] $end
+$var wire 32 _' doq [31:0] $end
+$var wire 1 `' we $end
+$var reg 10 a' addr_reg [9:0] $end
+$upscope $end
+$upscope $end
+$scope module or1200_ic_tag $end
+$var wire 8 b' addr [7:0] $end
+$var wire 1 6 clk $end
+$var wire 21 c' datain [20:0] $end
+$var wire 1 C' en $end
+$var wire 1 D rst $end
+$var wire 20 d' tag [19:0] $end
+$var wire 1 J' tag_v $end
+$var wire 1 E' we $end
+$scope module ic_tag0 $end
+$var wire 8 e' addr [7:0] $end
+$var wire 1 C' ce $end
+$var wire 1 6 clk $end
+$var wire 21 f' di [20:0] $end
+$var wire 21 g' doq [20:0] $end
+$var wire 1 E' we $end
+$var reg 8 h' addr_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module or1200_cpu $end
+$var wire 1 )$ abort_ex $end
+$var wire 1 *$ abort_mvspr $end
+$var wire 32 i' alu_dataout [31:0] $end
+$var wire 5 j' alu_op [4:0] $end
+$var wire 4 k' alu_op2 [3:0] $end
+$var wire 1 +$ boot_adr_sel_i $end
+$var wire 3 l' branch_op [2:0] $end
+$var wire 1 m' carry $end
+$var wire 1 6 clk $end
+$var wire 4 n' comp_op [3:0] $end
+$var wire 6 o' cust5_limm [5:0] $end
+$var wire 5 p' cust5_op [4:0] $end
+$var wire 1 q' cy_we_alu $end
+$var wire 1 r' cy_we_rf $end
+$var wire 1 s' cyforw $end
+$var wire 1 5$ dc_en $end
+$var wire 1 6$ dc_no_writethrough $end
+$var wire 1 7$ dcpu_ack_i $end
+$var wire 32 t' dcpu_adr_o [31:0] $end
+$var wire 1 9$ dcpu_cycstb_o $end
+$var wire 32 u' dcpu_dat_i [31:0] $end
+$var wire 32 v' dcpu_dat_o [31:0] $end
+$var wire 1 <$ dcpu_err_i $end
+$var wire 1 =$ dcpu_rty_i $end
+$var wire 4 w' dcpu_sel_o [3:0] $end
+$var wire 4 x' dcpu_tag_i [3:0] $end
+$var wire 4 y' dcpu_tag_o [3:0] $end
+$var wire 1 A$ dcpu_we_o $end
+$var wire 1 X$ dmmu_en $end
+$var wire 1 z' dsx $end
+$var wire 32 {' du_addr [31:0] $end
+$var wire 32 |' du_dat_cpu [31:0] $end
+$var wire 32 }' du_dat_du [31:0] $end
+$var wire 25 ~' du_dmr1 [24:0] $end
+$var wire 14 !( du_dsr [13:0] $end
+$var wire 14 "( du_except_stop [13:0] $end
+$var wire 14 #( du_except_trig [13:0] $end
+$var wire 1 `$ du_hwbkpt $end
+$var wire 1 a$ du_hwbkpt_ls_r $end
+$var wire 32 $( du_lsu_load_dat [31:0] $end
+$var wire 32 %( du_lsu_store_dat [31:0] $end
+$var wire 1 d$ du_read $end
+$var wire 1 e$ du_stall $end
+$var wire 1 f$ du_write $end
+$var wire 32 &( eear [31:0] $end
+$var wire 1 '( eear_we $end
+$var wire 32 (( epcr [31:0] $end
+$var wire 1 )( epcr_we $end
+$var wire 17 *( esr [16:0] $end
+$var wire 1 +( esr_we $end
+$var wire 30 ,( ex_branch_addrtarget [31:2] $end
+$var wire 1 -( ex_branch_taken $end
+$var wire 1 q$ ex_flushpipe $end
+$var wire 1 m$ ex_freeze $end
+$var wire 32 .( ex_insn [31:0] $end
+$var wire 1 /( ex_macrc_op $end
+$var wire 32 0( ex_pc [31:0] $end
+$var wire 32 1( ex_simm [31:0] $end
+$var wire 1 2( ex_spr_read $end
+$var wire 1 3( ex_spr_write $end
+$var wire 1 p$ ex_void $end
+$var wire 1 4( except_align $end
+$var wire 1 5( except_dbuserr $end
+$var wire 1 6( except_dmmufault $end
+$var wire 1 7( except_dtlbmiss $end
+$var wire 1 8( except_flushpipe $end
+$var wire 1 9( except_ibuserr $end
+$var wire 1 :( except_illegal $end
+$var wire 1 ;( except_immufault $end
+$var wire 1 <( except_itlbmiss $end
+$var wire 1 =( except_start $end
+$var wire 1 >( except_started $end
+$var wire 14 ?( except_stop [13:0] $end
+$var wire 14 @( except_trig [13:0] $end
+$var wire 4 A( except_type [3:0] $end
+$var wire 1 B( extend_flush $end
+$var wire 1 C( flag $end
+$var wire 1 D( flag_we $end
+$var wire 1 E( flag_we_alu $end
+$var wire 1 F( flag_we_fpu $end
+$var wire 1 G( flagforw $end
+$var wire 1 H( flagforw_alu $end
+$var wire 1 I( flagforw_fpu $end
+$var wire 1 J( force_dslot_fetch $end
+$var wire 12 K( fpcsr [11:0] $end
+$var wire 1 L( fpcsr_we $end
+$var wire 32 M( fpu_dataout [31:0] $end
+$var wire 1 N( fpu_done $end
+$var wire 1 O( fpu_except_started $end
+$var wire 8 P( fpu_op [7:0] $end
+$var wire 1 Q( genpc_freeze $end
+$var wire 1 R( genpc_refetch $end
+$var wire 1 r$ ic_en $end
+$var wire 1 ~$ icpu_ack_i $end
+$var wire 32 S( icpu_adr_i [31:0] $end
+$var wire 32 T( icpu_adr_o [31:0] $end
+$var wire 1 #% icpu_cycstb_o $end
+$var wire 32 U( icpu_dat_i [31:0] $end
+$var wire 1 %% icpu_err_i $end
+$var wire 1 &% icpu_rty_i $end
+$var wire 4 V( icpu_sel_o [3:0] $end
+$var wire 4 W( icpu_tag_i [3:0] $end
+$var wire 4 X( icpu_tag_o [3:0] $end
+$var wire 30 Y( id_branch_addrtarget [31:2] $end
+$var wire 1 Z( id_flushpipe $end
+$var wire 1 [( id_freeze $end
+$var wire 32 \( id_insn [31:0] $end
+$var wire 4 ]( id_lsu_op [3:0] $end
+$var wire 3 ^( id_mac_op [2:0] $end
+$var wire 1 _( id_macrc_op $end
+$var wire 32 `( id_pc [31:0] $end
+$var wire 32 a( id_simm [31:0] $end
+$var wire 1 6% id_void $end
+$var wire 1 b( if_flushpipe $end
+$var wire 1 c( if_freeze $end
+$var wire 32 d( if_insn [31:0] $end
+$var wire 32 e( if_pc [31:0] $end
+$var wire 1 f( if_stall $end
+$var wire 1 7% immu_en $end
+$var wire 32 g( lsu_dataout [31:0] $end
+$var wire 1 h( lsu_stall $end
+$var wire 1 i( lsu_unstall $end
+$var wire 3 j( mac_op [2:0] $end
+$var wire 1 >% mtspr_dc_done $end
+$var wire 1 k( mtspr_done $end
+$var wire 32 l( mult_mac_result [31:0] $end
+$var wire 1 m( mult_mac_stall $end
+$var wire 3 n( multicycle [2:0] $end
+$var wire 32 o( muxed_a [31:0] $end
+$var wire 32 p( muxed_b [31:0] $end
+$var wire 1 q( no_more_dslot $end
+$var wire 32 r( operand_a [31:0] $end
+$var wire 32 s( operand_b [31:0] $end
+$var wire 1 t( ov_we_alu $end
+$var wire 1 u( ov_we_mult_mac $end
+$var wire 1 v( ovforw $end
+$var wire 1 w( ovforw_mult_mac $end
+$var wire 1 x( pc_we $end
+$var wire 3 y( pre_branch_op [2:0] $end
+$var wire 5 z( rf_addra [4:0] $end
+$var wire 5 {( rf_addrb [4:0] $end
+$var wire 5 |( rf_addrw [4:0] $end
+$var wire 32 }( rf_dataa [31:0] $end
+$var wire 32 ~( rf_datab [31:0] $end
+$var wire 32 !) rf_dataw [31:0] $end
+$var wire 1 ") rf_rda $end
+$var wire 1 #) rf_rdb $end
+$var wire 1 $) rfe $end
+$var wire 4 %) rfwb_op [3:0] $end
+$var wire 1 D rst $end
+$var wire 1 &) saving_if_insn $end
+$var wire 1 W% sb_en $end
+$var wire 2 ') sel_a [1:0] $end
+$var wire 2 () sel_b [1:0] $end
+$var wire 1 )) sig_fp $end
+$var wire 1 b% sig_int $end
+$var wire 1 *) sig_range $end
+$var wire 1 +) sig_syscall $end
+$var wire 1 F sig_tick $end
+$var wire 1 ,) sig_trap $end
+$var wire 32 -) spr_addr [31:0] $end
+$var wire 32 .) spr_cs [31:0] $end
+$var wire 32 /) spr_dat_cfgr [31:0] $end
+$var wire 32 0) spr_dat_cpu [31:0] $end
+$var wire 32 1) spr_dat_dmmu [31:0] $end
+$var wire 32 2) spr_dat_du [31:0] $end
+$var wire 32 3) spr_dat_fpu [31:0] $end
+$var wire 32 4) spr_dat_immu [31:0] $end
+$var wire 32 5) spr_dat_mac [31:0] $end
+$var wire 32 6) spr_dat_npc [31:0] $end
+$var wire 32 7) spr_dat_pic [31:0] $end
+$var wire 32 8) spr_dat_pm [31:0] $end
+$var wire 32 9) spr_dat_ppc [31:0] $end
+$var wire 32 :) spr_dat_rf [31:0] $end
+$var wire 32 ;) spr_dat_tt [31:0] $end
+$var wire 1 m% spr_we $end
+$var wire 32 <) sprs_dataout [31:0] $end
+$var wire 17 =) sr [16:0] $end
+$var wire 1 >) sr_we $end
+$var wire 1 n% supv $end
+$var wire 17 ?) to_sr [16:0] $end
+$var wire 2 @) wait_on [1:0] $end
+$var wire 1 A) wb_flushpipe $end
+$var wire 32 B) wb_forw [31:0] $end
+$var wire 1 o% wb_freeze $end
+$var wire 32 C) wb_insn [31:0] $end
+$var wire 32 D) wb_pc [31:0] $end
+$var wire 1 E) wbforw_valid $end
+$scope module or1200_genpc $end
+$var wire 3 F) branch_op [2:0] $end
+$var wire 1 6 clk $end
+$var wire 32 G) epcr [31:0] $end
+$var wire 30 H) ex_branch_addrtarget [31:2] $end
+$var wire 1 I) except_prefix $end
+$var wire 1 =( except_start $end
+$var wire 4 J) except_type [3:0] $end
+$var wire 1 C( flag $end
+$var wire 1 G( flagforw $end
+$var wire 1 Q( genpc_freeze $end
+$var wire 1 R( genpc_refetch $end
+$var wire 32 K) icpu_adr_i [31:0] $end
+$var wire 32 L) icpu_adr_o [31:0] $end
+$var wire 1 #% icpu_cycstb_o $end
+$var wire 1 &% icpu_rty_i $end
+$var wire 4 M) icpu_sel_o [3:0] $end
+$var wire 4 N) icpu_tag_o [3:0] $end
+$var wire 30 O) id_branch_addrtarget [31:2] $end
+$var wire 1 h( lsu_stall $end
+$var wire 32 P) muxed_b [31:0] $end
+$var wire 1 q( no_more_dslot $end
+$var wire 32 Q) operand_b [31:0] $end
+$var wire 32 R) pcreg_boot [31:0] $end
+$var wire 3 S) pre_branch_op [2:0] $end
+$var wire 1 D rst $end
+$var wire 32 T) spr_dat_i [31:0] $end
+$var wire 1 x( spr_pc_we $end
+$var reg 1 U) ex_branch_taken $end
+$var reg 1 V) genpc_refetch_r $end
+$var reg 32 W) pc [31:0] $end
+$var reg 30 X) pcreg [31:2] $end
+$var reg 30 Y) pcreg_default [31:2] $end
+$var reg 1 Z) pcreg_select $end
+$var reg 1 [) wait_lsu $end
+$upscope $end
+$scope module or1200_if $end
+$var wire 1 6 clk $end
+$var wire 1 9( except_ibuserr $end
+$var wire 1 ;( except_immufault $end
+$var wire 1 <( except_itlbmiss $end
+$var wire 1 R( genpc_refetch $end
+$var wire 1 ~$ icpu_ack_i $end
+$var wire 32 \) icpu_adr_i [31:0] $end
+$var wire 32 ]) icpu_dat_i [31:0] $end
+$var wire 1 %% icpu_err_i $end
+$var wire 4 ^) icpu_tag_i [3:0] $end
+$var wire 1 _) if_bypass $end
+$var wire 1 b( if_flushpipe $end
+$var wire 1 c( if_freeze $end
+$var wire 32 `) if_insn [31:0] $end
+$var wire 32 a) if_pc [31:0] $end
+$var wire 1 f( if_stall $end
+$var wire 1 q( no_more_dslot $end
+$var wire 1 $) rfe $end
+$var wire 1 D rst $end
+$var wire 1 b) save_insn $end
+$var wire 1 &) saving_if_insn $end
+$var reg 32 c) addr_saved [31:0] $end
+$var reg 3 d) err_saved [2:0] $end
+$var reg 1 e) if_bypass_reg $end
+$var reg 32 f) insn_saved [31:0] $end
+$var reg 1 g) saved $end
+$upscope $end
+$scope module or1200_ctrl $end
+$var wire 1 *$ abort_mvspr $end
+$var wire 1 6 clk $end
+$var wire 6 h) cust5_limm [5:0] $end
+$var wire 5 i) cust5_op [4:0] $end
+$var wire 1 6$ dc_no_writethrough $end
+$var wire 1 `$ du_hwbkpt $end
+$var wire 1 -( ex_branch_taken $end
+$var wire 1 q$ ex_flushpipe $end
+$var wire 1 m$ ex_freeze $end
+$var wire 32 j) ex_pc [31:0] $end
+$var wire 1 2( ex_spr_read $end
+$var wire 1 3( ex_spr_write $end
+$var wire 1 p$ ex_void $end
+$var wire 1 8( except_flushpipe $end
+$var wire 1 B( extend_flush $end
+$var wire 1 J( force_dslot_fetch $end
+$var wire 8 k) fpu_op [7:0] $end
+$var wire 30 l) id_branch_addrtarget [31:2] $end
+$var wire 1 Z( id_flushpipe $end
+$var wire 1 [( id_freeze $end
+$var wire 1 _( id_macrc_op $end
+$var wire 32 m) id_pc [31:0] $end
+$var wire 1 6% id_void $end
+$var wire 1 b( if_flushpipe $end
+$var wire 32 n) if_insn [31:0] $end
+$var wire 1 o) if_maci_op $end
+$var wire 3 p) mac_op [2:0] $end
+$var wire 1 q( no_more_dslot $end
+$var wire 1 x( pc_we $end
+$var wire 5 q) rf_addra [4:0] $end
+$var wire 5 r) rf_addrb [4:0] $end
+$var wire 1 ") rf_rda $end
+$var wire 1 #) rf_rdb $end
+$var wire 1 $) rfe $end
+$var wire 1 D rst $end
+$var wire 1 A) wb_flushpipe $end
+$var wire 1 o% wb_freeze $end
+$var wire 1 s) wb_void $end
+$var wire 1 E) wbforw_valid $end
+$var reg 5 t) alu_op [4:0] $end
+$var reg 4 u) alu_op2 [3:0] $end
+$var reg 4 v) comp_op [3:0] $end
+$var reg 30 w) ex_branch_addrtarget [31:2] $end
+$var reg 3 x) ex_branch_op [2:0] $end
+$var reg 1 y) ex_delayslot_dsi $end
+$var reg 1 z) ex_delayslot_nop $end
+$var reg 32 {) ex_insn [31:0] $end
+$var reg 3 |) ex_mac_op [2:0] $end
+$var reg 1 }) ex_macrc_op $end
+$var reg 32 ~) ex_simm [31:0] $end
+$var reg 1 !* except_illegal $end
+$var reg 3 "* id_branch_op [2:0] $end
+$var reg 32 #* id_insn [31:0] $end
+$var reg 4 $* id_lsu_op [3:0] $end
+$var reg 3 %* id_mac_op [2:0] $end
+$var reg 32 &* id_simm [31:0] $end
+$var reg 3 '* multicycle [2:0] $end
+$var reg 5 (* rf_addrw [4:0] $end
+$var reg 4 )* rfwb_op [3:0] $end
+$var reg 2 ** sel_a [1:0] $end
+$var reg 2 +* sel_b [1:0] $end
+$var reg 1 ,* sel_imm $end
+$var reg 1 -* sig_syscall $end
+$var reg 1 .* sig_trap $end
+$var reg 1 /* spr_read $end
+$var reg 1 0* spr_write $end
+$var reg 2 1* wait_on [1:0] $end
+$var reg 32 2* wb_insn [31:0] $end
+$var reg 5 3* wb_rfaddrw [4:0] $end
+$upscope $end
+$scope module or1200_rf $end
+$var wire 5 4* addra [4:0] $end
+$var wire 5 5* addrb [4:0] $end
+$var wire 5 6* addrw [4:0] $end
+$var wire 1 6 clk $end
+$var wire 1 q' cy_we_i $end
+$var wire 1 r' cy_we_o $end
+$var wire 32 7* dataa [31:0] $end
+$var wire 32 8* datab [31:0] $end
+$var wire 32 9* dataw [31:0] $end
+$var wire 1 d$ du_read $end
+$var wire 1 A) flushpipe $end
+$var wire 32 :* from_rfa [31:0] $end
+$var wire 32 ;* from_rfb [31:0] $end
+$var wire 1 [( id_freeze $end
+$var wire 1 ") rda $end
+$var wire 1 #) rdb $end
+$var wire 5 <* rf_addra [4:0] $end
+$var wire 5 =* rf_addrw [4:0] $end
+$var wire 32 >* rf_dataw [31:0] $end
+$var wire 1 ?* rf_ena $end
+$var wire 1 @* rf_enb $end
+$var wire 1 A* rf_we $end
+$var wire 1 D rst $end
+$var wire 32 B* spr_addr [31:0] $end
+$var wire 1 C* spr_cs $end
+$var wire 1 D* spr_cs_fe $end
+$var wire 32 E* spr_dat_i [31:0] $end
+$var wire 32 F* spr_dat_o [31:0] $end
+$var wire 1 G* spr_valid $end
+$var wire 1 m% spr_write $end
+$var wire 1 H* supv $end
+$var wire 1 o% wb_freeze $end
+$var wire 1 I* we $end
+$var reg 5 J* addra_last [4:0] $end
+$var reg 1 K* rf_we_allow $end
+$var reg 1 L* spr_du_cs $end
+$scope module rf_a $end
+$var wire 5 M* addr_a [4:0] $end
+$var wire 5 N* addr_b [4:0] $end
+$var wire 1 ?* ce_a $end
+$var wire 1 A* ce_b $end
+$var wire 1 6 clk_a $end
+$var wire 1 6 clk_b $end
+$var wire 32 O* di_b [31:0] $end
+$var wire 32 P* do_a [31:0] $end
+$var wire 1 A* we_b $end
+$var reg 5 Q* addr_a_reg [4:0] $end
+$scope function get_gpr $end
+$var reg 32 R* get_gpr [31:0] $end
+$var reg 5 S* gpr_no [4:0] $end
+$upscope $end
+$scope function set_gpr $end
+$var reg 5 T* gpr_no [4:0] $end
+$var reg 32 U* set_gpr [31:0] $end
+$var reg 32 V* value [31:0] $end
+$upscope $end
+$upscope $end
+$scope module rf_b $end
+$var wire 5 W* addr_a [4:0] $end
+$var wire 5 X* addr_b [4:0] $end
+$var wire 1 @* ce_a $end
+$var wire 1 A* ce_b $end
+$var wire 1 6 clk_a $end
+$var wire 1 6 clk_b $end
+$var wire 32 Y* di_b [31:0] $end
+$var wire 32 Z* do_a [31:0] $end
+$var wire 1 A* we_b $end
+$var reg 5 [* addr_a_reg [4:0] $end
+$scope function get_gpr $end
+$var reg 32 \* get_gpr [31:0] $end
+$var reg 5 ]* gpr_no [4:0] $end
+$upscope $end
+$scope function set_gpr $end
+$var reg 5 ^* gpr_no [4:0] $end
+$var reg 32 _* set_gpr [31:0] $end
+$var reg 32 `* value [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module or1200_operandmuxes $end
+$var wire 1 6 clk $end
+$var wire 32 a* ex_forw [31:0] $end
+$var wire 1 m$ ex_freeze $end
+$var wire 1 [( id_freeze $end
+$var wire 32 b* rf_dataa [31:0] $end
+$var wire 32 c* rf_datab [31:0] $end
+$var wire 1 D rst $end
+$var wire 2 d* sel_a [1:0] $end
+$var wire 2 e* sel_b [1:0] $end
+$var wire 32 f* simm [31:0] $end
+$var wire 32 g* wb_forw [31:0] $end
+$var reg 32 h* muxed_a [31:0] $end
+$var reg 32 i* muxed_b [31:0] $end
+$var reg 32 j* operand_a [31:0] $end
+$var reg 32 k* operand_b [31:0] $end
+$var reg 1 l* saved_a $end
+$var reg 1 m* saved_b $end
+$upscope $end
+$scope module or1200_alu $end
+$var wire 32 n* a [31:0] $end
+$var wire 1 o* a_eq_b $end
+$var wire 1 p* a_lt_b $end
+$var wire 5 q* alu_op [4:0] $end
+$var wire 4 r* alu_op2 [3:0] $end
+$var wire 32 s* b [31:0] $end
+$var wire 32 t* b_mux [31:0] $end
+$var wire 1 m' carry $end
+$var wire 32 u* carry_in [31:0] $end
+$var wire 32 v* comp_a [31:0] $end
+$var wire 32 w* comp_b [31:0] $end
+$var wire 4 x* comp_op [3:0] $end
+$var wire 6 y* cust5_limm [5:0] $end
+$var wire 5 z* cust5_op [4:0] $end
+$var wire 1 {* cy_sub $end
+$var wire 1 |* cy_sum $end
+$var wire 1 C( flag $end
+$var wire 1 /( macrc_op $end
+$var wire 32 }* mult_mac_result [31:0] $end
+$var wire 1 ~* ov_sum $end
+$var wire 32 !+ result_and [31:0] $end
+$var wire 32 "+ result_sum [31:0] $end
+$var reg 1 #+ cy_we $end
+$var reg 1 $+ cyforw $end
+$var reg 32 %+ extended [31:0] $end
+$var reg 1 &+ flag_we $end
+$var reg 1 '+ flagcomp $end
+$var reg 1 (+ flagforw $end
+$var reg 1 )+ ov_we $end
+$var reg 1 *+ ovforw $end
+$var reg 32 ++ result [31:0] $end
+$var reg 32 ,+ shifted_rotated [31:0] $end
+$upscope $end
+$scope module or1200_fpu $end
+$var wire 32 -+ a [31:0] $end
+$var wire 1 .+ aeqb $end
+$var wire 1 /+ altb $end
+$var wire 32 0+ b [31:0] $end
+$var wire 1 1+ blta $end
+$var wire 1 6 clk $end
+$var wire 1 2+ dbz $end
+$var wire 1 3+ dbz_in $end
+$var wire 1 N( done $end
+$var wire 1 m$ ex_freeze $end
+$var wire 1 O( except_started $end
+$var wire 1 F( flag_we $end
+$var wire 1 I( flagforw $end
+$var wire 12 4+ fpcsr [11:0] $end
+$var wire 1 L( fpcsr_we $end
+$var wire 1 5+ fpu_arith_done $end
+$var wire 1 6+ fpu_check_op $end
+$var wire 1 7+ fpu_comp_done $end
+$var wire 1 8+ fpu_conv_done $end
+$var wire 8 9+ fpu_op [7:0] $end
+$var wire 1 :+ fpu_op_is_arith $end
+$var wire 1 ;+ fpu_op_is_comp $end
+$var wire 1 <+ fpu_op_is_conv $end
+$var wire 1 =+ fpu_op_r_is_arith $end
+$var wire 1 >+ fpu_op_r_is_comp $end
+$var wire 1 ?+ fpu_op_r_is_conv $end
+$var wire 1 @+ fpu_op_valid $end
+$var wire 1 A+ ine $end
+$var wire 1 B+ ine_conv $end
+$var wire 1 C+ inf $end
+$var wire 1 D+ inf_cmp $end
+$var wire 1 E+ inv_comp $end
+$var wire 1 F+ inv_conv $end
+$var wire 1 G+ inv_inf_op_in $end
+$var wire 1 H+ mul_z_inf $end
+$var wire 1 I+ nan_in $end
+$var wire 1 J+ overflow $end
+$var wire 1 K+ overflow_conv $end
+$var wire 1 L+ qnan $end
+$var wire 32 M+ result [31:0] $end
+$var wire 32 N+ result_arith [31:0] $end
+$var wire 32 O+ result_conv [31:0] $end
+$var wire 1 D rst $end
+$var wire 1 )) sig_fp $end
+$var wire 1 P+ snan $end
+$var wire 1 Q+ snan_conv $end
+$var wire 1 R+ snan_in $end
+$var wire 32 S+ spr_addr [31:0] $end
+$var wire 1 T+ spr_cs $end
+$var wire 32 U+ spr_dat_i [31:0] $end
+$var wire 32 V+ spr_dat_o [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 1 W+ underflow $end
+$var wire 1 X+ underflow_conv $end
+$var wire 1 Y+ unordered $end
+$var wire 1 Z+ zero $end
+$var wire 1 [+ zero_cmp $end
+$var wire 1 \+ zero_conv $end
+$var reg 1 ]+ a_b_sign_xor $end
+$var reg 1 ^+ a_is_inf $end
+$var reg 1 _+ a_is_qnan $end
+$var reg 1 `+ a_is_snan $end
+$var reg 1 a+ a_is_zero $end
+$var reg 1 b+ b_is_inf $end
+$var reg 1 c+ b_is_qnan $end
+$var reg 1 d+ b_is_snan $end
+$var reg 1 e+ b_is_zero $end
+$var reg 1 f+ flag $end
+$var reg 12 g+ fpcsr_r [11:0] $end
+$var reg 7 h+ fpu_conv_shr [6:0] $end
+$var reg 8 i+ fpu_op_r [7:0] $end
+$var reg 1 j+ fpu_op_valid_re $end
+$var reg 1 k+ fpu_op_valid_re_r $end
+$scope module fpu_arith $end
+$var wire 28 l+ addsub_fract_o [27:0] $end
+$var wire 1 m+ addsub_sign_o $end
+$var wire 1 6 clk_i $end
+$var wire 3 n+ fpu_op_i [2:0] $end
+$var wire 48 o+ mul_fract_48 [47:0] $end
+$var wire 1 p+ mul_sign $end
+$var wire 32 q+ opa_i [31:0] $end
+$var wire 32 r+ opb_i [31:0] $end
+$var wire 1 s+ post_norm_div_ine $end
+$var wire 32 t+ post_norm_div_output [31:0] $end
+$var wire 1 u+ post_norm_mul_ine $end
+$var wire 32 v+ post_norm_mul_output [31:0] $end
+$var wire 1 w+ postnorm_addsub_ine_o $end
+$var wire 32 x+ postnorm_addsub_output_o [31:0] $end
+$var wire 50 y+ pre_norm_div_dvdnd [49:0] $end
+$var wire 27 z+ pre_norm_div_dvsor [26:0] $end
+$var wire 10 {+ pre_norm_div_exp [9:0] $end
+$var wire 10 |+ pre_norm_mul_exp_10 [9:0] $end
+$var wire 24 }+ pre_norm_mul_fracta_24 [23:0] $end
+$var wire 24 ~+ pre_norm_mul_fractb_24 [23:0] $end
+$var wire 8 !, prenorm_addsub_exp_o [7:0] $end
+$var wire 28 ", prenorm_addsub_fracta_28_o [27:0] $end
+$var wire 28 #, prenorm_addsub_fractb_28_o [27:0] $end
+$var wire 2 $, rmode_i [1:0] $end
+$var wire 1 %, s_div_zero_o $end
+$var wire 1 &, s_inf_o $end
+$var wire 1 ', s_infa $end
+$var wire 1 (, s_infb $end
+$var wire 1 ), s_overflow_o $end
+$var wire 1 *, s_qnan_o $end
+$var wire 1 +, s_snan_o $end
+$var wire 1 ,, s_underflow_o $end
+$var wire 1 -, s_zero_o $end
+$var wire 1 ., serial_div_div_zero $end
+$var wire 27 /, serial_div_qutnt [26:0] $end
+$var wire 27 0, serial_div_rmndr [26:0] $end
+$var wire 1 1, serial_div_sign $end
+$var wire 48 2, serial_mul_fract_48 [47:0] $end
+$var wire 1 3, serial_mul_sign $end
+$var wire 1 4, start_i $end
+$var reg 1 5, div_zero_o $end
+$var reg 1 6, ine_o $end
+$var reg 1 7, inf_o $end
+$var reg 32 8, output_o [31:0] $end
+$var reg 1 9, overflow_o $end
+$var reg 1 :, qnan_o $end
+$var reg 1 ;, ready_o $end
+$var reg 6 <, s_count [5:0] $end
+$var reg 3 =, s_fpu_op_i [2:0] $end
+$var reg 1 >, s_ine_o $end
+$var reg 32 ?, s_opa_i [31:0] $end
+$var reg 32 @, s_opb_i [31:0] $end
+$var reg 32 A, s_output1 [31:0] $end
+$var reg 32 B, s_output_o [31:0] $end
+$var reg 2 C, s_rmode_i [1:0] $end
+$var reg 1 D, s_start_i $end
+$var reg 1 E, s_state $end
+$var reg 1 F, snan_o $end
+$var reg 1 G, underflow_o $end
+$var reg 1 H, zero_o $end
+$scope module fpu_prenorm_addsub $end
+$var wire 1 6 clk_i $end
+$var wire 32 I, opa_i [31:0] $end
+$var wire 32 J, opb_i [31:0] $end
+$var wire 8 K, s_expa [7:0] $end
+$var wire 1 L, s_expa_eq_expb $end
+$var wire 1 M, s_expa_gt_expb $end
+$var wire 8 N, s_expb [7:0] $end
+$var wire 28 O, s_fract_shr_28 [27:0] $end
+$var wire 28 P, s_fract_sm_28 [27:0] $end
+$var wire 23 Q, s_fracta [22:0] $end
+$var wire 1 R, s_fracta_1 $end
+$var wire 28 S, s_fracta_28 [27:0] $end
+$var wire 28 T, s_fracta_28_o [27:0] $end
+$var wire 23 U, s_fractb [22:0] $end
+$var wire 1 V, s_fractb_1 $end
+$var wire 28 W, s_fractb_28 [27:0] $end
+$var wire 28 X, s_fractb_28_o [27:0] $end
+$var wire 2 Y, s_mux_diff [1:0] $end
+$var wire 1 Z, s_mux_exp $end
+$var wire 1 [, s_op_dn $end
+$var wire 1 \, s_opa_dn $end
+$var wire 1 ], s_opb_dn $end
+$var wire 1 ^, s_sticky $end
+$var reg 8 _, exp_o [7:0] $end
+$var reg 28 `, fracta_28_o [27:0] $end
+$var reg 28 a, fractb_28_o [27:0] $end
+$var reg 8 b, s_exp_diff [7:0] $end
+$var reg 8 c, s_exp_o [7:0] $end
+$var reg 6 d, s_rzeros [5:0] $end
+$upscope $end
+$scope module fpu_addsub $end
+$var wire 1 6 clk_i $end
+$var wire 1 e, fpu_op_i $end
+$var wire 1 f, fracta_gt_fractb $end
+$var wire 28 g, fracta_i [27:0] $end
+$var wire 28 h, fractb_i [27:0] $end
+$var wire 1 i, s_addop $end
+$var wire 1 j, s_fpu_op_i $end
+$var wire 28 k, s_fract_o [27:0] $end
+$var wire 28 l, s_fracta_i [27:0] $end
+$var wire 28 m, s_fractb_i [27:0] $end
+$var wire 1 n, s_sign_o $end
+$var wire 1 o, s_signa_i $end
+$var wire 1 p, s_signb_i $end
+$var wire 1 q, signa_i $end
+$var wire 1 r, signb_i $end
+$var reg 28 s, fract_o [27:0] $end
+$var reg 1 t, sign_o $end
+$upscope $end
+$scope module fpu_postnorm_addsub $end
+$var wire 1 6 clk_i $end
+$var wire 8 u, exp_i [7:0] $end
+$var wire 1 v, fpu_op_i $end
+$var wire 28 w, fract_28_i [27:0] $end
+$var wire 32 x, opa_i [31:0] $end
+$var wire 32 y, opb_i [31:0] $end
+$var wire 2 z, rmode_i [1:0] $end
+$var wire 1 {, s_carry $end
+$var wire 10 |, s_exp10 [9:0] $end
+$var wire 8 }, s_exp_i [7:0] $end
+$var wire 9 ~, s_expo9_2 [8:0] $end
+$var wire 9 !- s_expo9_3 [8:0] $end
+$var wire 1 "- s_fpu_op_i $end
+$var wire 28 #- s_fract_28_i [27:0] $end
+$var wire 28 $- s_fracto28_2 [27:0] $end
+$var wire 28 %- s_fracto28_rnd [27:0] $end
+$var wire 1 &- s_ine_o $end
+$var wire 1 '- s_infa $end
+$var wire 1 (- s_infb $end
+$var wire 1 )- s_lost $end
+$var wire 1 *- s_nan_a $end
+$var wire 1 +- s_nan_b $end
+$var wire 1 ,- s_nan_in $end
+$var wire 1 -- s_nan_op $end
+$var wire 1 .- s_nan_sign $end
+$var wire 32 /- s_opa_i [31:0] $end
+$var wire 32 0- s_opb_i [31:0] $end
+$var wire 32 1- s_output_o [31:0] $end
+$var wire 1 2- s_overflow $end
+$var wire 2 3- s_rmode_i [1:0] $end
+$var wire 1 4- s_roundup $end
+$var wire 1 5- s_shr2 $end
+$var wire 1 6- s_sign_i $end
+$var wire 1 7- s_sticky $end
+$var wire 1 8- s_zero_fract $end
+$var wire 6 9- s_zeros [5:0] $end
+$var wire 1 m+ sign_i $end
+$var reg 1 :- ine_o $end
+$var reg 6 ;- lzeroes [5:0] $end
+$var reg 32 <- output_o [31:0] $end
+$var reg 9 =- s_expo9_1 [8:0] $end
+$var reg 28 >- s_fracto28_1 [27:0] $end
+$var reg 6 ?- s_shl1 [5:0] $end
+$var reg 6 @- s_shr1 [5:0] $end
+$upscope $end
+$scope module fpu_pre_norm_mul $end
+$var wire 1 6 clk_i $end
+$var wire 24 A- fracta_24_o [23:0] $end
+$var wire 24 B- fractb_24_o [23:0] $end
+$var wire 32 C- opa_i [31:0] $end
+$var wire 32 D- opb_i [31:0] $end
+$var wire 10 E- s_exp_10_o [9:0] $end
+$var wire 8 F- s_expa [7:0] $end
+$var wire 10 G- s_expa_in [9:0] $end
+$var wire 8 H- s_expb [7:0] $end
+$var wire 10 I- s_expb_in [9:0] $end
+$var wire 23 J- s_fracta [22:0] $end
+$var wire 23 K- s_fractb [22:0] $end
+$var wire 1 L- s_opa_dn $end
+$var wire 1 M- s_opb_dn $end
+$var reg 10 N- exp_10_o [9:0] $end
+$upscope $end
+$scope module fpu_mul $end
+$var wire 1 6 clk_i $end
+$var wire 24 O- fracta_i [23:0] $end
+$var wire 24 P- fractb_i [23:0] $end
+$var wire 1 Q- s_sign_o $end
+$var wire 24 R- s_tem_prod [23:0] $end
+$var wire 1 S- signa_i $end
+$var wire 1 T- signb_i $end
+$var wire 1 U- start_i $end
+$var wire 48 V- v_prod_shl [47:0] $end
+$var reg 48 W- fract_o [47:0] $end
+$var reg 1 X- ready_o $end
+$var reg 5 Y- s_count [4:0] $end
+$var reg 48 Z- s_fract_o [47:0] $end
+$var reg 24 [- s_fracta_i [23:0] $end
+$var reg 24 \- s_fractb_i [23:0] $end
+$var reg 1 ]- s_ready_o $end
+$var reg 1 ^- s_signa_i $end
+$var reg 1 _- s_signb_i $end
+$var reg 1 `- s_start_i $end
+$var reg 1 a- s_state $end
+$var reg 1 b- sign_o $end
+$upscope $end
+$scope module fpu_post_norm_mul $end
+$var wire 1 6 clk_i $end
+$var wire 10 c- exp_10_i [9:0] $end
+$var wire 48 d- fract_48_i [47:0] $end
+$var wire 32 e- opa_i [31:0] $end
+$var wire 32 f- opb_i [31:0] $end
+$var wire 2 g- rmode_i [1:0] $end
+$var wire 1 h- s_carry $end
+$var wire 10 i- s_exp_10a [9:0] $end
+$var wire 10 j- s_exp_10b [9:0] $end
+$var wire 9 k- s_expo2b [8:0] $end
+$var wire 9 l- s_expo3 [8:0] $end
+$var wire 25 m- s_frac3 [24:0] $end
+$var wire 1 n- s_guard $end
+$var wire 1 o- s_ine_o $end
+$var wire 1 p- s_infa $end
+$var wire 1 q- s_infb $end
+$var wire 1 r- s_lost $end
+$var wire 1 s- s_nan_a $end
+$var wire 1 t- s_nan_b $end
+$var wire 1 u- s_nan_in $end
+$var wire 1 v- s_nan_op $end
+$var wire 1 w- s_op_0 $end
+$var wire 32 x- s_output_o [31:0] $end
+$var wire 1 y- s_overflow $end
+$var wire 1 z- s_round $end
+$var wire 1 {- s_roundup $end
+$var wire 1 |- s_shr3 $end
+$var wire 1 }- s_sticky $end
+$var wire 1 p+ sign_i $end
+$var wire 10 ~- v_shl1 [9:0] $end
+$var wire 10 !. v_shr1 [9:0] $end
+$var reg 1 ". ine_o $end
+$var reg 32 #. output_o [31:0] $end
+$var reg 10 $. s_exp_10_i [9:0] $end
+$var reg 8 %. s_expa [7:0] $end
+$var reg 8 &. s_expb [7:0] $end
+$var reg 9 '. s_expo1 [8:0] $end
+$var reg 48 (. s_frac2a [47:0] $end
+$var reg 25 ). s_frac_rnd [24:0] $end
+$var reg 48 *. s_fract_48_i [47:0] $end
+$var reg 32 +. s_opa_i [31:0] $end
+$var reg 32 ,. s_opb_i [31:0] $end
+$var reg 6 -. s_r_zeros [5:0] $end
+$var reg 2 .. s_rmode_i [1:0] $end
+$var reg 6 /. s_shl2 [5:0] $end
+$var reg 6 0. s_shr2 [5:0] $end
+$var reg 1 1. s_sign_i $end
+$var reg 6 2. s_zeros [5:0] $end
+$upscope $end
+$scope module fpu_pre_norm_div $end
+$var wire 1 6 clk_i $end
+$var wire 50 3. dvdnd_50_o [49:0] $end
+$var wire 27 4. dvsor_27_o [26:0] $end
+$var wire 24 5. fracta_lshift_intermediate [23:0] $end
+$var wire 24 6. fractb_lshift_intermediate [23:0] $end
+$var wire 32 7. opa_i [31:0] $end
+$var wire 32 8. opb_i [31:0] $end
+$var wire 50 9. s_dvdnd_50_o [49:0] $end
+$var wire 27 :. s_dvsor_27_o [26:0] $end
+$var wire 8 ;. s_expa [7:0] $end
+$var wire 8 <. s_expb [7:0] $end
+$var wire 23 =. s_fracta [22:0] $end
+$var wire 24 >. s_fracta_24 [23:0] $end
+$var wire 23 ?. s_fractb [22:0] $end
+$var wire 24 @. s_fractb_24 [23:0] $end
+$var wire 1 A. s_opa_dn $end
+$var wire 1 B. s_opb_dn $end
+$var reg 10 C. exp_10_o [9:0] $end
+$var reg 6 D. s_div_zeros [5:0] $end
+$var reg 6 E. s_dvd_zeros [5:0] $end
+$var reg 10 F. s_exp_10_o [9:0] $end
+$var reg 10 G. s_expa_in [9:0] $end
+$var reg 10 H. s_expb_in [9:0] $end
+$upscope $end
+$scope module fpu_div $end
+$var wire 1 6 clk_i $end
+$var wire 1 ., div_zero_o $end
+$var wire 50 I. dvdnd_i [49:0] $end
+$var wire 27 J. dvsor_i [26:0] $end
+$var wire 27 K. qutnt_o [26:0] $end
+$var wire 1 L. ready_o $end
+$var wire 27 M. rmndr_o [26:0] $end
+$var wire 1 N. s_div_zero_o $end
+$var wire 1 O. s_sign_o $end
+$var wire 1 P. sign_div_i $end
+$var wire 1 Q. sign_dvd_i $end
+$var wire 1 1, sign_o $end
+$var wire 1 U- start_i $end
+$var wire 27 R. v_div [26:0] $end
+$var wire 27 S. v_div_minus_s_dvsor_i [26:0] $end
+$var reg 5 T. s_count [4:0] $end
+$var reg 27 U. s_dvd [26:0] $end
+$var reg 50 V. s_dvdnd_i [49:0] $end
+$var reg 27 W. s_dvsor_i [26:0] $end
+$var reg 27 X. s_qutnt_o [26:0] $end
+$var reg 1 Y. s_ready_o $end
+$var reg 27 Z. s_rmndr_o [26:0] $end
+$var reg 1 [. s_sign_div_i $end
+$var reg 1 \. s_sign_dvd_i $end
+$var reg 1 ]. s_start_i $end
+$var reg 1 ^. s_state $end
+$upscope $end
+$scope module fpu_post_norm_div $end
+$var wire 1 6 clk_i $end
+$var wire 10 _. exp_10_i [9:0] $end
+$var wire 32 `. opa_i [31:0] $end
+$var wire 32 a. opb_i [31:0] $end
+$var wire 27 b. qutnt_i [26:0] $end
+$var wire 27 c. rmndr_i [26:0] $end
+$var wire 2 d. rmode_i [1:0] $end
+$var wire 10 e. s_exp_10b [9:0] $end
+$var wire 9 f. s_expo2 [8:0] $end
+$var wire 25 g. s_frac_rnd [24:0] $end
+$var wire 1 h. s_guard $end
+$var wire 1 i. s_ine_o $end
+$var wire 1 j. s_inf_result $end
+$var wire 1 k. s_infa $end
+$var wire 1 l. s_infb $end
+$var wire 1 m. s_lost $end
+$var wire 1 n. s_nan_a $end
+$var wire 1 o. s_nan_b $end
+$var wire 1 p. s_nan_in $end
+$var wire 1 q. s_nan_op $end
+$var wire 1 r. s_op_0 $end
+$var wire 1 s. s_opa_dn $end
+$var wire 1 t. s_opab_0 $end
+$var wire 1 u. s_opb_0 $end
+$var wire 1 v. s_opb_dn $end
+$var wire 32 w. s_output_o [31:0] $end
+$var wire 1 x. s_overflow $end
+$var wire 1 y. s_qutdn $end
+$var wire 1 z. s_round $end
+$var wire 1 {. s_roundup $end
+$var wire 1 |. s_shr2 $end
+$var wire 1 }. s_sticky $end
+$var wire 1 1, sign_i $end
+$var wire 10 ~. v_shl [9:0] $end
+$var wire 10 !/ v_shr [9:0] $end
+$var reg 1 "/ ine_o $end
+$var reg 32 #/ output_o [31:0] $end
+$var reg 10 $/ s_exp_10_i [9:0] $end
+$var reg 8 %/ s_expa [7:0] $end
+$var reg 8 &/ s_expb [7:0] $end
+$var reg 9 '/ s_expo1 [8:0] $end
+$var reg 9 (/ s_expo3 [8:0] $end
+$var reg 27 )/ s_fraco1 [26:0] $end
+$var reg 25 */ s_fraco2 [24:0] $end
+$var reg 32 +/ s_opa_i [31:0] $end
+$var reg 32 ,/ s_opb_i [31:0] $end
+$var reg 27 -/ s_qutnt_i [26:0] $end
+$var reg 6 ./ s_r_zeros [5:0] $end
+$var reg 27 // s_rmndr_i [26:0] $end
+$var reg 2 0/ s_rmode_i [1:0] $end
+$var reg 6 1/ s_shl1 [5:0] $end
+$var reg 6 2/ s_shr1 [5:0] $end
+$var reg 1 3/ s_sign_i $end
+$upscope $end
+$upscope $end
+$scope module fpu_intfloat_conv $end
+$var wire 1 6 clk $end
+$var wire 1 4/ f2i_out_sign $end
+$var wire 1 5/ f2i_special_case_no_inv $end
+$var wire 3 6/ fpu_op [2:0] $end
+$var wire 48 7/ fract_denorm [47:0] $end
+$var wire 1 8/ ind_d $end
+$var wire 1 9/ ine_d $end
+$var wire 1 :/ ine_fasu $end
+$var wire 1 ;/ inf_d $end
+$var wire 1 F+ inv $end
+$var wire 1 </ inv_d $end
+$var wire 32 =/ opa [31:0] $end
+$var wire 1 >/ opa_00 $end
+$var wire 1 ?/ opa_dn $end
+$var wire 1 @/ opa_inf $end
+$var wire 1 A/ opa_nan $end
+$var wire 31 B/ out_d [30:0] $end
+$var wire 1 C/ out_d_00 $end
+$var wire 31 D/ out_fixed [30:0] $end
+$var wire 1 E/ output_zero_fasu $end
+$var wire 1 K+ overflow $end
+$var wire 1 F/ overflow_d $end
+$var wire 1 G/ qnan_d $end
+$var wire 2 H/ rmode [1:0] $end
+$var wire 1 I/ sign_d $end
+$var wire 1 J/ snan_d $end
+$var wire 1 X+ underflow $end
+$var wire 1 K/ underflow_d $end
+$var reg 8 L/ exp_r [7:0] $end
+$var reg 3 M/ fpu_op_r1 [2:0] $end
+$var reg 3 N/ fpu_op_r2 [2:0] $end
+$var reg 3 O/ fpu_op_r3 [2:0] $end
+$var reg 48 P/ fract_i2f [47:0] $end
+$var reg 1 Q/ ine $end
+$var reg 32 R/ opa_r [31:0] $end
+$var reg 31 S/ opa_r1 [30:0] $end
+$var reg 1 T/ opa_sign_r $end
+$var reg 1 U/ opas_r1 $end
+$var reg 1 V/ opas_r2 $end
+$var reg 32 W/ out [31:0] $end
+$var reg 2 X/ rmode_r1 [1:0] $end
+$var reg 2 Y/ rmode_r2 [1:0] $end
+$var reg 2 Z/ rmode_r3 [1:0] $end
+$var reg 1 [/ sign $end
+$var reg 1 \/ sign_fasu_r $end
+$var reg 1 ]/ snan $end
+$var reg 1 ^/ zero $end
+$scope module u0 $end
+$var wire 1 6 clk $end
+$var wire 8 _/ expa [7:0] $end
+$var wire 8 `/ expb [7:0] $end
+$var wire 23 a/ fracta [22:0] $end
+$var wire 23 b/ fractb [22:0] $end
+$var wire 32 c/ opa [31:0] $end
+$var wire 32 d/ opb [31:0] $end
+$var reg 1 e/ expa_00 $end
+$var reg 1 f/ expa_ff $end
+$var reg 1 g/ expb_00 $end
+$var reg 1 h/ expb_ff $end
+$var reg 1 i/ fracta_00 $end
+$var reg 1 j/ fractb_00 $end
+$var reg 1 k/ ind $end
+$var reg 1 l/ inf $end
+$var reg 1 m/ infa_f_r $end
+$var reg 1 n/ infb_f_r $end
+$var reg 1 o/ opa_00 $end
+$var reg 1 p/ opa_dn $end
+$var reg 1 q/ opa_inf $end
+$var reg 1 r/ opa_nan $end
+$var reg 1 s/ opb_00 $end
+$var reg 1 t/ opb_dn $end
+$var reg 1 u/ opb_inf $end
+$var reg 1 v/ opb_nan $end
+$var reg 1 w/ qnan $end
+$var reg 1 x/ qnan_r_a $end
+$var reg 1 y/ qnan_r_b $end
+$var reg 1 z/ snan $end
+$var reg 1 {/ snan_r_a $end
+$var reg 1 |/ snan_r_b $end
+$upscope $end
+$scope module u4 $end
+$var wire 1 6 clk $end
+$var wire 8 }/ conv_exp [7:0] $end
+$var wire 8 ~/ conv_shft [7:0] $end
+$var wire 1 !0 dn $end
+$var wire 8 "0 exp_f2i [7:0] $end
+$var wire 56 #0 exp_f2i_1 [55:0] $end
+$var wire 8 $0 exp_i2f [7:0] $end
+$var wire 8 %0 exp_in [7:0] $end
+$var wire 1 &0 exp_in_00 $end
+$var wire 1 '0 exp_in_80 $end
+$var wire 1 (0 exp_in_ff $end
+$var wire 1 )0 exp_in_lt_half $end
+$var wire 9 *0 exp_in_mi1 [8:0] $end
+$var wire 9 +0 exp_in_pl1 [8:0] $end
+$var wire 9 ,0 exp_next_mi [8:0] $end
+$var wire 8 -0 exp_out1 [7:0] $end
+$var wire 1 .0 exp_out1_co $end
+$var wire 8 /0 exp_out1_mi1 [7:0] $end
+$var wire 1 00 exp_out_00 $end
+$var wire 1 10 exp_out_fe $end
+$var wire 1 20 exp_out_ff $end
+$var wire 8 30 exp_out_final [7:0] $end
+$var wire 1 40 exp_out_final_ff $end
+$var wire 8 50 exp_out_mi1 [7:0] $end
+$var wire 8 60 exp_out_pl1 [7:0] $end
+$var wire 8 70 exp_out_rnd0 [7:0] $end
+$var wire 8 80 exp_out_rnd1 [7:0] $end
+$var wire 8 90 exp_out_rnd2 [7:0] $end
+$var wire 8 :0 exp_out_rnd2a [7:0] $end
+$var wire 1 ;0 exp_rnd_adj0 $end
+$var wire 1 <0 exp_rnd_adj2a $end
+$var wire 8 =0 f2i_emin [7:0] $end
+$var wire 1 >0 f2i_exp_gt_max $end
+$var wire 1 ?0 f2i_exp_lt_min $end
+$var wire 1 @0 f2i_ine $end
+$var wire 1 A0 f2i_max $end
+$var wire 1 4/ f2i_out_sign $end
+$var wire 8 B0 f2i_shft [7:0] $end
+$var wire 1 C0 f2i_zero $end
+$var wire 8 D0 fi_ldz_2 [7:0] $end
+$var wire 7 E0 fi_ldz_2a [6:0] $end
+$var wire 6 F0 fi_ldz_mi1 [5:0] $end
+$var wire 6 G0 fi_ldz_mi22 [5:0] $end
+$var wire 3 H0 fpu_op [2:0] $end
+$var wire 48 I0 fract_in [47:0] $end
+$var wire 48 J0 fract_in_shftl [47:0] $end
+$var wire 1 K0 fract_out_00 $end
+$var wire 1 L0 fract_out_7fffff $end
+$var wire 23 M0 fract_out_final [22:0] $end
+$var wire 24 N0 fract_out_pl1 [23:0] $end
+$var wire 23 O0 fract_out_rnd0 [22:0] $end
+$var wire 23 P0 fract_out_rnd1 [22:0] $end
+$var wire 23 Q0 fract_out_rnd2 [22:0] $end
+$var wire 23 R0 fract_out_rnd2a [22:0] $end
+$var wire 1 S0 g $end
+$var wire 1 9/ ine $end
+$var wire 1 </ inv $end
+$var wire 7 T0 ldz_all [6:0] $end
+$var wire 1 U0 op_div $end
+$var wire 1 V0 op_dn $end
+$var wire 1 W0 op_f2i $end
+$var wire 1 X0 op_i2f $end
+$var wire 1 Y0 op_mul $end
+$var wire 1 ?/ opa_dn $end
+$var wire 1 @/ opa_inf $end
+$var wire 1 A/ opa_nan $end
+$var wire 1 Z0 opas $end
+$var wire 1 [0 opb_dn $end
+$var wire 31 \0 out [30:0] $end
+$var wire 1 F/ overflow $end
+$var wire 1 ]0 ovf0 $end
+$var wire 1 ^0 ovf1 $end
+$var wire 1 _0 r $end
+$var wire 1 `0 r_sign $end
+$var wire 2 a0 rmode [1:0] $end
+$var wire 1 b0 rmode_00 $end
+$var wire 1 c0 rmode_01 $end
+$var wire 1 d0 rmode_10 $end
+$var wire 1 e0 rmode_11 $end
+$var wire 1 f0 round $end
+$var wire 1 g0 round2 $end
+$var wire 1 h0 round2_f2i $end
+$var wire 1 i0 round2_fasu $end
+$var wire 1 j0 round2a $end
+$var wire 1 k0 s $end
+$var wire 1 l0 sign $end
+$var wire 1 K/ underflow $end
+$var reg 8 m0 exp_out [7:0] $end
+$var reg 8 n0 exp_out_rnd [7:0] $end
+$var reg 6 o0 fi_ldz [5:0] $end
+$var reg 1 p0 fract_in_00 $end
+$var reg 23 q0 fract_out [22:0] $end
+$var reg 23 r0 fract_out_rnd [22:0] $end
+$var reg 25 s0 fract_trunc [24:0] $end
+$upscope $end
+$upscope $end
+$scope module fpu_fcmp $end
+$var wire 1 t0 all_zero $end
+$var wire 1 u0 exp_eq $end
+$var wire 1 v0 exp_gt $end
+$var wire 1 w0 exp_lt $end
+$var wire 8 x0 expa [7:0] $end
+$var wire 1 y0 expa_ff $end
+$var wire 8 z0 expb [7:0] $end
+$var wire 1 {0 expb_ff $end
+$var wire 1 |0 fract_eq $end
+$var wire 1 }0 fract_gt $end
+$var wire 1 ~0 fract_lt $end
+$var wire 23 !1 fracta [22:0] $end
+$var wire 1 "1 fracta_00 $end
+$var wire 23 #1 fractb [22:0] $end
+$var wire 1 $1 fractb_00 $end
+$var wire 1 D+ inf $end
+$var wire 32 %1 opa [31:0] $end
+$var wire 1 &1 opa_inf $end
+$var wire 1 '1 opa_zero $end
+$var wire 32 (1 opb [31:0] $end
+$var wire 1 )1 opb_inf $end
+$var wire 1 *1 opb_zero $end
+$var wire 1 +1 qnan $end
+$var wire 1 ,1 qnan_a $end
+$var wire 1 -1 qnan_b $end
+$var wire 1 .1 signa $end
+$var wire 1 /1 signb $end
+$var wire 1 01 snan $end
+$var wire 1 11 snan_a $end
+$var wire 1 21 snan_b $end
+$var wire 1 Y+ unordered $end
+$var wire 1 [+ zero $end
+$var reg 1 31 aeqb $end
+$var reg 1 41 altb $end
+$var reg 1 51 blta $end
+$upscope $end
+$upscope $end
+$scope module or1200_mult_mac $end
+$var wire 32 61 a [31:0] $end
+$var wire 5 71 alu_op [4:0] $end
+$var wire 1 81 alu_op_div $end
+$var wire 1 91 alu_op_mul $end
+$var wire 1 :1 alu_op_sdiv $end
+$var wire 1 ;1 alu_op_smul $end
+$var wire 1 <1 alu_op_udiv $end
+$var wire 1 =1 alu_op_umul $end
+$var wire 32 >1 b [31:0] $end
+$var wire 1 6 clk $end
+$var wire 1 ?1 div_by_zero $end
+$var wire 1 @1 div_stall $end
+$var wire 32 A1 div_tmp [31:0] $end
+$var wire 1 m$ ex_freeze $end
+$var wire 1 _( id_macrc_op $end
+$var wire 3 B1 mac_op [2:0] $end
+$var wire 1 /( macrc_op $end
+$var wire 64 C1 mul_prod [63:0] $end
+$var wire 1 D1 mul_stall $end
+$var wire 1 m( mult_mac_stall $end
+$var wire 1 D rst $end
+$var wire 32 E1 spr_addr [31:0] $end
+$var wire 1 F1 spr_cs $end
+$var wire 32 G1 spr_dat_i [31:0] $end
+$var wire 32 H1 spr_dat_o [31:0] $end
+$var wire 1 I1 spr_machi_we $end
+$var wire 1 J1 spr_maclo_we $end
+$var wire 1 m% spr_write $end
+$var wire 32 K1 x [31:0] $end
+$var wire 32 L1 y [31:0] $end
+$var reg 6 M1 div_cntr [5:0] $end
+$var reg 1 N1 div_free $end
+$var reg 64 O1 div_quot_r [63:0] $end
+$var reg 1 P1 ex_freeze_r $end
+$var reg 3 Q1 mac_op_r1 [2:0] $end
+$var reg 3 R1 mac_op_r2 [2:0] $end
+$var reg 3 S1 mac_op_r3 [2:0] $end
+$var reg 64 T1 mac_r [63:0] $end
+$var reg 1 U1 mac_stall_r $end
+$var reg 64 V1 mul_prod_r [63:0] $end
+$var reg 2 W1 mul_stall_count [1:0] $end
+$var reg 1 X1 ov_we $end
+$var reg 1 Y1 ovforw $end
+$var reg 32 Z1 result [31:0] $end
+$scope module or1200_gmultp2_32x32 $end
+$var wire 1 6 CLK $end
+$var wire 64 [1 P [63:0] $end
+$var wire 1 D RST $end
+$var wire 32 \1 X [31:0] $end
+$var wire 32 ]1 Y [31:0] $end
+$var reg 64 ^1 p0 [63:0] $end
+$var reg 64 _1 p1 [63:0] $end
+$var integer 32 `1 xi [31:0] $end
+$var integer 32 a1 yi [31:0] $end
+$upscope $end
+$upscope $end
+$scope module or1200_sprs $end
+$var wire 32 b1 addrbase [31:0] $end
+$var wire 16 c1 addrofs [15:0] $end
+$var wire 1 +$ boot_adr_sel_i $end
+$var wire 3 d1 branch_op [2:0] $end
+$var wire 1 m' carry $end
+$var wire 1 e1 cfgr_sel $end
+$var wire 1 6 clk $end
+$var wire 1 r' cy_we $end
+$var wire 1 s' cyforw $end
+$var wire 32 f1 dat_i [31:0] $end
+$var wire 1 z' dsx $end
+$var wire 1 g1 du_access $end
+$var wire 32 h1 du_addr [31:0] $end
+$var wire 32 i1 du_dat_cpu [31:0] $end
+$var wire 32 j1 du_dat_du [31:0] $end
+$var wire 1 d$ du_read $end
+$var wire 1 f$ du_write $end
+$var wire 32 k1 eear [31:0] $end
+$var wire 1 l1 eear_sel $end
+$var wire 1 '( eear_we $end
+$var wire 32 m1 epcr [31:0] $end
+$var wire 1 n1 epcr_sel $end
+$var wire 1 )( epcr_we $end
+$var wire 17 o1 esr [16:0] $end
+$var wire 1 p1 esr_sel $end
+$var wire 1 +( esr_we $end
+$var wire 1 2( ex_spr_read $end
+$var wire 1 3( ex_spr_write $end
+$var wire 1 >( except_started $end
+$var wire 1 C( flag $end
+$var wire 1 D( flag_we $end
+$var wire 1 G( flagforw $end
+$var wire 12 q1 fpcsr [11:0] $end
+$var wire 1 r1 fpcsr_sel $end
+$var wire 1 L( fpcsr_we $end
+$var wire 1 s1 npc_sel $end
+$var wire 1 t1 ov_we $end
+$var wire 1 u1 ovforw $end
+$var wire 1 x( pc_we $end
+$var wire 1 v1 ppc_sel $end
+$var wire 1 w1 rf_sel $end
+$var wire 1 D rst $end
+$var wire 32 x1 spr_addr [31:0] $end
+$var wire 32 y1 spr_cs [31:0] $end
+$var wire 32 z1 spr_dat_cfgr [31:0] $end
+$var wire 32 {1 spr_dat_dmmu [31:0] $end
+$var wire 32 |1 spr_dat_du [31:0] $end
+$var wire 32 }1 spr_dat_fpu [31:0] $end
+$var wire 32 ~1 spr_dat_immu [31:0] $end
+$var wire 32 !2 spr_dat_mac [31:0] $end
+$var wire 32 "2 spr_dat_npc [31:0] $end
+$var wire 32 #2 spr_dat_o [31:0] $end
+$var wire 32 $2 spr_dat_pic [31:0] $end
+$var wire 32 %2 spr_dat_pm [31:0] $end
+$var wire 32 &2 spr_dat_ppc [31:0] $end
+$var wire 32 '2 spr_dat_rf [31:0] $end
+$var wire 32 (2 spr_dat_tt [31:0] $end
+$var wire 1 m% spr_we $end
+$var wire 1 )2 sr_reg_bit_eph_muxed $end
+$var wire 1 *2 sr_sel $end
+$var wire 1 >) sr_we $end
+$var wire 32 +2 sys_data [31:0] $end
+$var wire 17 ,2 to_sr [16:0] $end
+$var reg 17 -2 sr [16:0] $end
+$var reg 17 .2 sr_reg [16:0] $end
+$var reg 1 /2 sr_reg_bit_eph $end
+$var reg 1 02 sr_reg_bit_eph_select $end
+$var reg 32 12 to_wbmux [31:0] $end
+$var reg 32 22 unqualified_cs [31:0] $end
+$upscope $end
+$scope module or1200_lsu $end
+$var wire 1 6 clk $end
+$var wire 1 7$ dcpu_ack_i $end
+$var wire 32 32 dcpu_adr_o [31:0] $end
+$var wire 1 9$ dcpu_cycstb_o $end
+$var wire 32 42 dcpu_dat_i [31:0] $end
+$var wire 32 52 dcpu_dat_o [31:0] $end
+$var wire 1 <$ dcpu_err_i $end
+$var wire 1 =$ dcpu_rty_i $end
+$var wire 4 62 dcpu_tag_i [3:0] $end
+$var wire 4 72 dcpu_tag_o [3:0] $end
+$var wire 1 A$ dcpu_we_o $end
+$var wire 1 e$ du_stall $end
+$var wire 32 82 ex_addrbase [31:0] $end
+$var wire 32 92 ex_addrofs [31:0] $end
+$var wire 1 m$ ex_freeze $end
+$var wire 1 5( except_dbuserr $end
+$var wire 1 6( except_dmmufault $end
+$var wire 1 7( except_dtlbmiss $end
+$var wire 1 q$ flushpipe $end
+$var wire 32 :2 id_addrbase [31:0] $end
+$var wire 32 ;2 id_addrofs [31:0] $end
+$var wire 1 [( id_freeze $end
+$var wire 4 <2 id_lsu_op [3:0] $end
+$var wire 3 =2 id_precalc_sum [2:0] $end
+$var wire 32 >2 lsu_datain [31:0] $end
+$var wire 32 ?2 lsu_dataout [31:0] $end
+$var wire 1 h( lsu_stall $end
+$var wire 1 i( lsu_unstall $end
+$var wire 1 D rst $end
+$var reg 3 @2 dcpu_adr_r [2:0] $end
+$var reg 4 A2 dcpu_sel_o [3:0] $end
+$var reg 4 B2 ex_lsu_op [3:0] $end
+$var reg 1 C2 except_align $end
+$scope module or1200_mem2reg $end
+$var wire 2 D2 addr [1:0] $end
+$var wire 4 E2 lsu_op [3:0] $end
+$var wire 32 F2 memdata [31:0] $end
+$var reg 32 G2 aligned [31:0] $end
+$var reg 32 H2 regdata [31:0] $end
+$upscope $end
+$scope module or1200_reg2mem $end
+$var wire 2 I2 addr [1:0] $end
+$var wire 4 J2 lsu_op [3:0] $end
+$var wire 32 K2 memdata [31:0] $end
+$var wire 32 L2 regdata [31:0] $end
+$var reg 8 M2 memdata_hh [7:0] $end
+$var reg 8 N2 memdata_hl [7:0] $end
+$var reg 8 O2 memdata_lh [7:0] $end
+$var reg 8 P2 memdata_ll [7:0] $end
+$upscope $end
+$upscope $end
+$scope module or1200_wbmux $end
+$var wire 1 6 clk $end
+$var wire 32 Q2 muxin_a [31:0] $end
+$var wire 32 R2 muxin_b [31:0] $end
+$var wire 32 S2 muxin_c [31:0] $end
+$var wire 32 T2 muxin_d [31:0] $end
+$var wire 32 U2 muxin_e [31:0] $end
+$var wire 4 V2 rfwb_op [3:0] $end
+$var wire 1 D rst $end
+$var wire 1 o% wb_freeze $end
+$var reg 32 W2 muxout [31:0] $end
+$var reg 32 X2 muxreg [31:0] $end
+$var reg 1 Y2 muxreg_valid $end
+$upscope $end
+$scope module or1200_freeze $end
+$var wire 1 )$ abort_ex $end
+$var wire 1 6 clk $end
+$var wire 1 e$ du_stall $end
+$var wire 1 m$ ex_freeze $end
+$var wire 1 B( extend_flush $end
+$var wire 1 A) flushpipe $end
+$var wire 1 J( force_dslot_fetch $end
+$var wire 1 N( fpu_done $end
+$var wire 1 Q( genpc_freeze $end
+$var wire 1 ~$ icpu_ack_i $end
+$var wire 1 %% icpu_err_i $end
+$var wire 1 [( id_freeze $end
+$var wire 1 c( if_freeze $end
+$var wire 1 f( if_stall $end
+$var wire 1 h( lsu_stall $end
+$var wire 1 i( lsu_unstall $end
+$var wire 1 m( mac_stall $end
+$var wire 1 k( mtspr_done $end
+$var wire 3 Z2 multicycle [2:0] $end
+$var wire 1 [2 multicycle_freeze $end
+$var wire 1 D rst $end
+$var wire 1 &) saving_if_insn $end
+$var wire 2 \2 wait_on [1:0] $end
+$var wire 1 o% wb_freeze $end
+$var reg 1 ]2 flushpipe_r $end
+$var reg 3 ^2 multicycle_cnt [2:0] $end
+$var reg 2 _2 waiting_on [1:0] $end
+$upscope $end
+$scope module or1200_except $end
+$var wire 1 )$ abort_ex $end
+$var wire 1 *$ abort_mvspr $end
+$var wire 3 `2 branch_op [2:0] $end
+$var wire 1 6 clk $end
+$var wire 32 a2 datain [31:0] $end
+$var wire 1 7$ dcpu_ack_i $end
+$var wire 1 <$ dcpu_err_i $end
+$var wire 1 b2 dmr1_bt $end
+$var wire 1 c2 dmr1_st $end
+$var wire 1 d2 dsr_te $end
+$var wire 25 e2 du_dmr1 [24:0] $end
+$var wire 14 f2 du_dsr [13:0] $end
+$var wire 1 `$ du_hwbkpt $end
+$var wire 1 a$ du_hwbkpt_ls_r $end
+$var wire 1 '( eear_we $end
+$var wire 1 )( epcr_we $end
+$var wire 1 +( esr_we $end
+$var wire 1 -( ex_branch_taken $end
+$var wire 1 q$ ex_flushpipe $end
+$var wire 1 m$ ex_freeze $end
+$var wire 1 p$ ex_void $end
+$var wire 1 8( except_flushpipe $end
+$var wire 1 =( except_start $end
+$var wire 1 >( except_started $end
+$var wire 14 g2 except_stop [13:0] $end
+$var wire 14 h2 except_trig [13:0] $end
+$var wire 1 i2 fp_pending $end
+$var wire 1 j2 fpcsr_fpee $end
+$var wire 1 Q( genpc_freeze $end
+$var wire 1 ~$ icpu_ack_i $end
+$var wire 1 %% icpu_err_i $end
+$var wire 1 Z( id_flushpipe $end
+$var wire 1 [( id_freeze $end
+$var wire 32 k2 if_pc [31:0] $end
+$var wire 1 f( if_stall $end
+$var wire 1 l2 int_pending $end
+$var wire 32 m2 lsu_addr [31:0] $end
+$var wire 1 x( pc_we $end
+$var wire 1 n2 range_pending $end
+$var wire 1 D rst $end
+$var wire 1 4( sig_align $end
+$var wire 1 5( sig_dbuserr $end
+$var wire 1 6( sig_dmmufault $end
+$var wire 1 7( sig_dtlbmiss $end
+$var wire 1 )) sig_fp $end
+$var wire 1 9( sig_ibuserr $end
+$var wire 1 :( sig_illegal $end
+$var wire 1 ;( sig_immufault $end
+$var wire 1 b% sig_int $end
+$var wire 1 <( sig_itlbmiss $end
+$var wire 1 *) sig_range $end
+$var wire 1 +) sig_syscall $end
+$var wire 1 F sig_tick $end
+$var wire 1 ,) sig_trap $end
+$var wire 32 o2 spr_dat_npc [31:0] $end
+$var wire 32 p2 spr_dat_ppc [31:0] $end
+$var wire 17 q2 sr [16:0] $end
+$var wire 1 r2 sr_ted $end
+$var wire 1 >) sr_we $end
+$var wire 1 s2 tick_pending $end
+$var wire 17 t2 to_sr [16:0] $end
+$var wire 1 u2 trace_cond $end
+$var wire 1 o% wb_freeze $end
+$var reg 1 v2 delayed1_ex_dslot $end
+$var reg 1 w2 delayed2_ex_dslot $end
+$var reg 3 x2 delayed_iee [2:0] $end
+$var reg 3 y2 delayed_tee [2:0] $end
+$var reg 32 z2 dl_pc [31:0] $end
+$var reg 1 {2 dmr1_bt_prev $end
+$var reg 1 |2 dmr1_st_prev $end
+$var reg 1 }2 dsr_te_prev $end
+$var reg 1 ~2 dsx $end
+$var reg 32 !3 eear [31:0] $end
+$var reg 32 "3 epcr [31:0] $end
+$var reg 17 #3 esr [16:0] $end
+$var reg 1 $3 ex_dslot $end
+$var reg 3 %3 ex_exceptflags [2:0] $end
+$var reg 1 &3 ex_freeze_prev $end
+$var reg 32 '3 ex_pc [31:0] $end
+$var reg 1 (3 ex_pc_val $end
+$var reg 4 )3 except_type [3:0] $end
+$var reg 1 *3 extend_flush $end
+$var reg 1 +3 extend_flush_last $end
+$var reg 3 ,3 id_exceptflags [2:0] $end
+$var reg 32 -3 id_pc [31:0] $end
+$var reg 1 .3 id_pc_val $end
+$var reg 1 /3 sr_ted_prev $end
+$var reg 3 03 state [2:0] $end
+$var reg 1 13 trace_trap $end
+$var reg 32 23 wb_pc [31:0] $end
+$upscope $end
+$scope module or1200_cfgr $end
+$var wire 32 33 spr_addr [31:0] $end
+$var reg 32 43 spr_dat_o [31:0] $end
+$upscope $end
+$upscope $end
+$scope module or1200_dmmu_top $end
+$var wire 1 6 clk $end
+$var wire 1 5$ dc_en $end
+$var wire 32 53 dcpu_adr_i [31:0] $end
+$var wire 1 9$ dcpu_cycstb_i $end
+$var wire 1 <$ dcpu_err_o $end
+$var wire 4 63 dcpu_tag_o [3:0] $end
+$var wire 1 A$ dcpu_we_i $end
+$var wire 1 X$ dmmu_en $end
+$var wire 1 73 dtlb_ci $end
+$var wire 32 83 dtlb_dat_o [31:0] $end
+$var wire 1 93 dtlb_en $end
+$var wire 1 :3 dtlb_hit $end
+$var wire 19 ;3 dtlb_ppn [31:13] $end
+$var wire 1 <3 dtlb_spr_access $end
+$var wire 1 =3 dtlb_sre $end
+$var wire 1 >3 dtlb_swe $end
+$var wire 1 ?3 dtlb_ure $end
+$var wire 1 @3 dtlb_uwe $end
+$var wire 1 A3 fault $end
+$var wire 1 B3 miss $end
+$var wire 32 C3 qmemdmmu_adr_o [31:0] $end
+$var wire 1 L% qmemdmmu_ci_o $end
+$var wire 1 M% qmemdmmu_cycstb_o $end
+$var wire 1 N% qmemdmmu_err_i $end
+$var wire 4 D3 qmemdmmu_tag_i [3:0] $end
+$var wire 1 D rst $end
+$var wire 32 E3 spr_addr [31:0] $end
+$var wire 1 F3 spr_cs $end
+$var wire 32 G3 spr_dat_i [31:0] $end
+$var wire 32 H3 spr_dat_o [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 1 n% supv $end
+$var reg 19 I3 dcpu_vpn_r [31:13] $end
+$var reg 1 J3 dtlb_done $end
+$scope module or1200_dmmu_tlb $end
+$var wire 1 73 ci $end
+$var wire 1 6 clk $end
+$var wire 1 :3 hit $end
+$var wire 19 K3 ppn [31:13] $end
+$var wire 1 D rst $end
+$var wire 32 L3 spr_addr [31:0] $end
+$var wire 1 <3 spr_cs $end
+$var wire 32 M3 spr_dat_i [31:0] $end
+$var wire 32 N3 spr_dat_o [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 1 =3 sre $end
+$var wire 1 >3 swe $end
+$var wire 1 93 tlb_en $end
+$var wire 6 O3 tlb_index [5:0] $end
+$var wire 1 P3 tlb_mr_en $end
+$var wire 14 Q3 tlb_mr_ram_in [13:0] $end
+$var wire 14 R3 tlb_mr_ram_out [13:0] $end
+$var wire 1 S3 tlb_mr_we $end
+$var wire 1 T3 tlb_tr_en $end
+$var wire 24 U3 tlb_tr_ram_in [23:0] $end
+$var wire 24 V3 tlb_tr_ram_out [23:0] $end
+$var wire 1 W3 tlb_tr_we $end
+$var wire 1 ?3 ure $end
+$var wire 1 @3 uwe $end
+$var wire 1 X3 v $end
+$var wire 32 Y3 vaddr [31:0] $end
+$var wire 13 Z3 vpn [31:19] $end
+$scope module dtlb_ram $end
+$var wire 6 [3 addr [5:0] $end
+$var wire 1 P3 ce $end
+$var wire 1 6 clk $end
+$var wire 14 \3 di [13:0] $end
+$var wire 14 ]3 doq [13:0] $end
+$var wire 1 S3 we $end
+$var reg 6 ^3 addr_reg [5:0] $end
+$upscope $end
+$scope module dtlb_tr_ram $end
+$var wire 6 _3 addr [5:0] $end
+$var wire 1 T3 ce $end
+$var wire 1 6 clk $end
+$var wire 24 `3 di [23:0] $end
+$var wire 24 a3 doq [23:0] $end
+$var wire 1 W3 we $end
+$var reg 6 b3 addr_reg [5:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module or1200_dc_top $end
+$var wire 1 6 clk $end
+$var wire 32 c3 dc_addr [31:0] $end
+$var wire 1 d3 dc_block_flush $end
+$var wire 1 e3 dc_block_invalidate $end
+$var wire 1 f3 dc_block_writeback $end
+$var wire 1 5$ dc_en $end
+$var wire 1 6$ dc_no_writethrough $end
+$var wire 1 g3 dcfsm_biu_do_sel $end
+$var wire 1 h3 dcfsm_biu_read $end
+$var wire 1 i3 dcfsm_biu_write $end
+$var wire 1 j3 dcfsm_burst $end
+$var wire 1 k3 dcfsm_dcram_di_sel $end
+$var wire 1 l3 dcfsm_first_hit_ack $end
+$var wire 1 m3 dcfsm_first_miss_ack $end
+$var wire 1 n3 dcfsm_first_miss_err $end
+$var wire 1 o3 dcfsm_tag_dirty $end
+$var wire 1 p3 dcfsm_tag_valid $end
+$var wire 1 q3 dcfsm_tag_we $end
+$var wire 1 B$ dcqmem_ack_o $end
+$var wire 32 r3 dcqmem_adr_i [31:0] $end
+$var wire 20 s3 dcqmem_adr_i_tag [31:12] $end
+$var wire 1 D$ dcqmem_ci_i $end
+$var wire 1 E$ dcqmem_cycstb_i $end
+$var wire 32 t3 dcqmem_dat_i [31:0] $end
+$var wire 32 u3 dcqmem_dat_o [31:0] $end
+$var wire 1 H$ dcqmem_err_o $end
+$var wire 1 I$ dcqmem_rty_o $end
+$var wire 4 v3 dcqmem_sel_i [3:0] $end
+$var wire 4 w3 dcqmem_tag_i [3:0] $end
+$var wire 4 x3 dcqmem_tag_o [3:0] $end
+$var wire 1 M$ dcqmem_we_i $end
+$var wire 4 y3 dcram_we [3:0] $end
+$var wire 1 N$ dcsb_ack_i $end
+$var wire 32 z3 dcsb_adr_o [31:0] $end
+$var wire 1 P$ dcsb_cab_o $end
+$var wire 1 Q$ dcsb_cyc_o $end
+$var wire 32 {3 dcsb_dat_i [31:0] $end
+$var wire 32 |3 dcsb_dat_o [31:0] $end
+$var wire 1 T$ dcsb_err_i $end
+$var wire 4 }3 dcsb_sel_o [3:0] $end
+$var wire 1 V$ dcsb_stb_o $end
+$var wire 1 W$ dcsb_we_o $end
+$var wire 8 ~3 dctag_addr [11:4] $end
+$var wire 1 !4 dctag_dirty $end
+$var wire 1 "4 dctag_en $end
+$var wire 1 #4 dctag_v $end
+$var wire 1 $4 dctag_we $end
+$var wire 1 %4 dirty $end
+$var wire 32 &4 from_dcram [31:0] $end
+$var wire 1 >% mtspr_dc_done $end
+$var wire 1 D rst $end
+$var wire 32 '4 spr_addr [31:0] $end
+$var wire 1 (4 spr_cs $end
+$var wire 32 )4 spr_dat_i [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 20 *4 tag [19:0] $end
+$var wire 1 +4 tag_v $end
+$var wire 32 ,4 to_dcram [31:0] $end
+$var reg 1 -4 tagcomp_miss $end
+$scope module or1200_dc_fsm $end
+$var wire 1 g3 biu_do_sel $end
+$var wire 1 h3 biu_read $end
+$var wire 1 i3 biu_write $end
+$var wire 1 T$ biudata_error $end
+$var wire 1 N$ biudata_valid $end
+$var wire 1 j3 burst $end
+$var wire 1 .4 cache_inhibit_with_eval $end
+$var wire 1 6 clk $end
+$var wire 32 /4 dc_addr [31:0] $end
+$var wire 1 d3 dc_block_flush $end
+$var wire 1 f3 dc_block_writeback $end
+$var wire 1 5$ dc_en $end
+$var wire 1 6$ dc_no_writethrough $end
+$var wire 1 D$ dcqmem_ci_i $end
+$var wire 1 E$ dcqmem_cycstb_i $end
+$var wire 4 04 dcqmem_sel_i [3:0] $end
+$var wire 1 M$ dcqmem_we_i $end
+$var wire 1 k3 dcram_di_sel $end
+$var wire 4 14 dcram_we [3:0] $end
+$var wire 1 24 dcram_we_after_line_load $end
+$var wire 1 34 dcram_we_during_line_load $end
+$var wire 1 %4 dirty $end
+$var wire 1 l3 first_hit_ack $end
+$var wire 1 m3 first_miss_ack $end
+$var wire 1 n3 first_miss_err $end
+$var wire 1 44 load_hit_ack $end
+$var wire 1 54 load_inhibit_ack $end
+$var wire 1 64 load_miss_ack $end
+$var wire 32 74 lsu_addr [31:0] $end
+$var wire 1 >% mtspr_dc_done $end
+$var wire 2 84 next_addr_word [1:0] $end
+$var wire 1 D rst $end
+$var wire 1 94 spr_cswe $end
+$var wire 32 :4 spr_dat_i [31:0] $end
+$var wire 1 ;4 store_hit_ack $end
+$var wire 1 <4 store_hit_writethrough_ack $end
+$var wire 1 =4 store_inhibit_ack $end
+$var wire 1 >4 store_miss_ack $end
+$var wire 1 ?4 store_miss_writethrough_ack $end
+$var wire 20 @4 tag [19:0] $end
+$var wire 1 o3 tag_dirty $end
+$var wire 1 +4 tag_v $end
+$var wire 1 p3 tag_valid $end
+$var wire 1 q3 tag_we $end
+$var wire 1 A4 tagcomp_miss $end
+$var wire 1 B4 tagram_dirty_bit_set $end
+$var wire 1 C4 tagram_we_end_of_loadstore_loop $end
+$var wire 1 D4 writethrough $end
+$var reg 32 E4 addr_r [31:0] $end
+$var reg 1 F4 cache_dirty_needs_writeback $end
+$var reg 1 G4 cache_inhibit $end
+$var reg 1 H4 cache_miss $end
+$var reg 1 I4 cache_spr_block_flush $end
+$var reg 1 J4 cache_spr_block_writeback $end
+$var reg 4 K4 cnt [3:0] $end
+$var reg 1 L4 did_early_load_ack $end
+$var reg 1 M4 hitmiss_eval $end
+$var reg 1 N4 load $end
+$var reg 3 O4 state [2:0] $end
+$var reg 1 P4 store $end
+$upscope $end
+$scope module or1200_dc_ram $end
+$var wire 10 Q4 addr [9:0] $end
+$var wire 1 6 clk $end
+$var wire 32 R4 datain [31:0] $end
+$var wire 32 S4 dataout [31:0] $end
+$var wire 1 5$ en $end
+$var wire 1 D rst $end
+$var wire 4 T4 we [3:0] $end
+$scope module dc_ram $end
+$var wire 10 U4 addr [9:0] $end
+$var wire 1 5$ ce $end
+$var wire 1 6 clk $end
+$var wire 32 V4 di [31:0] $end
+$var wire 32 W4 doq [31:0] $end
+$var wire 4 X4 we [3:0] $end
+$var reg 10 Y4 addr_reg [9:0] $end
+$upscope $end
+$upscope $end
+$scope module or1200_dc_tag $end
+$var wire 8 Z4 addr [7:0] $end
+$var wire 1 6 clk $end
+$var wire 22 [4 datain [21:0] $end
+$var wire 1 %4 dirty $end
+$var wire 1 "4 en $end
+$var wire 1 D rst $end
+$var wire 20 \4 tag [19:0] $end
+$var wire 1 +4 tag_v $end
+$var wire 1 $4 we $end
+$scope module dc_tag0 $end
+$var wire 8 ]4 addr [7:0] $end
+$var wire 1 "4 ce $end
+$var wire 1 6 clk $end
+$var wire 22 ^4 di [21:0] $end
+$var wire 22 _4 doq [21:0] $end
+$var wire 1 $4 we $end
+$var reg 8 `4 addr_reg [7:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module or1200_qmem_top $end
+$var wire 1 6 clk $end
+$var wire 1 B$ dcqmem_ack_i $end
+$var wire 32 a4 dcqmem_adr_o [31:0] $end
+$var wire 1 D$ dcqmem_ci_o $end
+$var wire 1 E$ dcqmem_cycstb_o $end
+$var wire 32 b4 dcqmem_dat_i [31:0] $end
+$var wire 32 c4 dcqmem_dat_o [31:0] $end
+$var wire 1 H$ dcqmem_err_i $end
+$var wire 1 I$ dcqmem_rty_i $end
+$var wire 4 d4 dcqmem_sel_o [3:0] $end
+$var wire 4 e4 dcqmem_tag_i [3:0] $end
+$var wire 4 f4 dcqmem_tag_o [3:0] $end
+$var wire 1 M$ dcqmem_we_o $end
+$var wire 1 *% icqmem_ack_i $end
+$var wire 32 g4 icqmem_adr_o [31:0] $end
+$var wire 1 ,% icqmem_ci_o $end
+$var wire 1 -% icqmem_cycstb_o $end
+$var wire 32 h4 icqmem_dat_i [31:0] $end
+$var wire 1 /% icqmem_err_i $end
+$var wire 1 0% icqmem_rty_i $end
+$var wire 4 i4 icqmem_sel_o [3:0] $end
+$var wire 4 j4 icqmem_tag_i [3:0] $end
+$var wire 4 k4 icqmem_tag_o [3:0] $end
+$var wire 1 7$ qmemdcpu_ack_o $end
+$var wire 32 l4 qmemdcpu_dat_i [31:0] $end
+$var wire 32 m4 qmemdcpu_dat_o [31:0] $end
+$var wire 1 =$ qmemdcpu_rty_o $end
+$var wire 4 n4 qmemdcpu_sel_i [3:0] $end
+$var wire 4 o4 qmemdcpu_tag_i [3:0] $end
+$var wire 1 A$ qmemdcpu_we_i $end
+$var wire 32 p4 qmemdmmu_adr_i [31:0] $end
+$var wire 1 L% qmemdmmu_ci_i $end
+$var wire 1 M% qmemdmmu_cycstb_i $end
+$var wire 1 N% qmemdmmu_err_o $end
+$var wire 4 q4 qmemdmmu_tag_o [3:0] $end
+$var wire 1 ~$ qmemicpu_ack_o $end
+$var wire 32 r4 qmemicpu_dat_o [31:0] $end
+$var wire 4 s4 qmemicpu_sel_i [3:0] $end
+$var wire 4 t4 qmemicpu_tag_i [3:0] $end
+$var wire 32 u4 qmemimmu_adr_i [31:0] $end
+$var wire 1 Q% qmemimmu_ci_i $end
+$var wire 1 R% qmemimmu_cycstb_i $end
+$var wire 1 S% qmemimmu_err_o $end
+$var wire 1 T% qmemimmu_rty_o $end
+$var wire 4 v4 qmemimmu_tag_o [3:0] $end
+$var wire 1 D rst $end
+$upscope $end
+$scope module or1200_sb $end
+$var wire 1 6 clk $end
+$var wire 1 N$ dcsb_ack_o $end
+$var wire 32 w4 dcsb_adr_i [31:0] $end
+$var wire 1 P$ dcsb_cab_i $end
+$var wire 1 Q$ dcsb_cyc_i $end
+$var wire 32 x4 dcsb_dat_i [31:0] $end
+$var wire 32 y4 dcsb_dat_o [31:0] $end
+$var wire 1 T$ dcsb_err_o $end
+$var wire 4 z4 dcsb_sel_i [3:0] $end
+$var wire 1 V$ dcsb_stb_i $end
+$var wire 1 W$ dcsb_we_i $end
+$var wire 1 D rst $end
+$var wire 1 W% sb_en $end
+$var wire 1 X% sbbiu_ack_i $end
+$var wire 32 {4 sbbiu_adr_o [31:0] $end
+$var wire 1 Z% sbbiu_cab_o $end
+$var wire 1 [% sbbiu_cyc_o $end
+$var wire 32 |4 sbbiu_dat_i [31:0] $end
+$var wire 32 }4 sbbiu_dat_o [31:0] $end
+$var wire 1 ^% sbbiu_err_i $end
+$var wire 4 ~4 sbbiu_sel_o [3:0] $end
+$var wire 1 `% sbbiu_stb_o $end
+$var wire 1 a% sbbiu_we_o $end
+$upscope $end
+$scope module or1200_du $end
+$var wire 3 !5 branch_op [2:0] $end
+$var wire 1 6 clk $end
+$var wire 32 "5 dbg_adr_i [31:0] $end
+$var wire 1 9 dbg_bp_o $end
+$var wire 32 #5 dbg_dat_i [31:0] $end
+$var wire 1 1$ dbg_ewt_i $end
+$var wire 4 $5 dbg_lss_o [3:0] $end
+$var wire 1 ? dbg_stall_i $end
+$var wire 1 @ dbg_stb_i $end
+$var wire 1 A dbg_we_i $end
+$var wire 11 %5 dbg_wp_o [10:0] $end
+$var wire 32 &5 dcpu_adr_i [31:0] $end
+$var wire 1 9$ dcpu_cycstb_i $end
+$var wire 32 '5 dcpu_dat_dc [31:0] $end
+$var wire 32 (5 dcpu_dat_lsu [31:0] $end
+$var wire 1 A$ dcpu_we_i $end
+$var wire 8 )5 dcr0 [7:0] $end
+$var wire 8 *5 dcr1 [7:0] $end
+$var wire 8 +5 dcr2 [7:0] $end
+$var wire 8 ,5 dcr3 [7:0] $end
+$var wire 8 -5 dcr4 [7:0] $end
+$var wire 8 .5 dcr5 [7:0] $end
+$var wire 8 /5 dcr6 [7:0] $end
+$var wire 8 05 dcr7 [7:0] $end
+$var wire 1 15 dmr1_sel $end
+$var wire 24 25 dmr2 [23:0] $end
+$var wire 1 35 drr_sel $end
+$var wire 1 45 dsr_sel $end
+$var wire 32 55 du_addr [31:0] $end
+$var wire 32 65 du_dat_i [31:0] $end
+$var wire 32 75 du_dat_o [31:0] $end
+$var wire 25 85 du_dmr1 [24:0] $end
+$var wire 14 95 du_dsr [13:0] $end
+$var wire 14 :5 du_except_stop [13:0] $end
+$var wire 1 `$ du_hwbkpt $end
+$var wire 1 d$ du_read $end
+$var wire 1 e$ du_stall $end
+$var wire 1 f$ du_write $end
+$var wire 32 ;5 dvr0 [31:0] $end
+$var wire 32 <5 dvr1 [31:0] $end
+$var wire 32 =5 dvr2 [31:0] $end
+$var wire 32 >5 dvr3 [31:0] $end
+$var wire 32 ?5 dvr4 [31:0] $end
+$var wire 32 @5 dvr5 [31:0] $end
+$var wire 32 A5 dvr6 [31:0] $end
+$var wire 32 B5 dvr7 [31:0] $end
+$var wire 32 C5 dwcr0 [31:0] $end
+$var wire 32 D5 dwcr1 [31:0] $end
+$var wire 1 m$ ex_freeze $end
+$var wire 32 E5 ex_insn [31:0] $end
+$var wire 1 #% icpu_cycstb_i $end
+$var wire 32 F5 id_pc [31:0] $end
+$var wire 32 G5 rf_dataw [31:0] $end
+$var wire 1 D rst $end
+$var wire 32 H5 spr_addr [31:0] $end
+$var wire 1 I5 spr_cs $end
+$var wire 32 J5 spr_dat_i [31:0] $end
+$var wire 32 K5 spr_dat_npc [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 32 L5 tbar_dat_o [31:0] $end
+$var wire 32 M5 tbia_dat_o [31:0] $end
+$var wire 32 N5 tbim_dat_o [31:0] $end
+$var wire 32 O5 tbts_dat_o [31:0] $end
+$var reg 1 P5 dbg_ack $end
+$var reg 1 Q5 dbg_ack_o $end
+$var reg 1 R5 dbg_bp_r $end
+$var reg 32 S5 dbg_dat_o [31:0] $end
+$var reg 2 T5 dbg_is_o [1:0] $end
+$var reg 25 U5 dmr1 [24:0] $end
+$var reg 14 V5 drr [13:0] $end
+$var reg 14 W5 dsr [13:0] $end
+$var reg 1 X5 du_hwbkpt_hold $end
+$var reg 1 Y5 ex_freeze_q $end
+$var reg 14 Z5 except_stop [13:0] $end
+$var reg 32 [5 spr_dat_o [31:0] $end
+$upscope $end
+$scope module or1200_pic $end
+$var wire 1 6 clk $end
+$var wire 1 b% intr $end
+$var wire 20 \5 pic_int [19:0] $end
+$var wire 1 @% pic_wakeup $end
+$var wire 1 ]5 picmr_sel $end
+$var wire 1 ^5 picsr_sel $end
+$var wire 1 D rst $end
+$var wire 32 _5 spr_addr [31:0] $end
+$var wire 1 `5 spr_cs $end
+$var wire 32 a5 spr_dat_i [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 20 b5 um_ints [19:0] $end
+$var reg 18 c5 picmr [19:2] $end
+$var reg 20 d5 picsr [19:0] $end
+$var reg 32 e5 spr_dat_o [31:0] $end
+$upscope $end
+$scope module or1200_tt $end
+$var wire 1 6 clk $end
+$var wire 1 e$ du_stall $end
+$var wire 1 F intr $end
+$var wire 1 f5 match $end
+$var wire 1 g5 restart $end
+$var wire 1 D rst $end
+$var wire 32 h5 spr_addr [31:0] $end
+$var wire 1 i5 spr_cs $end
+$var wire 32 j5 spr_dat_i [31:0] $end
+$var wire 1 m% spr_write $end
+$var wire 1 k5 stop $end
+$var wire 1 l5 ttcr_sel $end
+$var wire 1 m5 ttmr_sel $end
+$var reg 32 n5 spr_dat_o [31:0] $end
+$var reg 32 o5 ttcr [31:0] $end
+$var reg 32 p5 ttmr [31:0] $end
+$upscope $end
+$scope module or1200_pm $end
+$var wire 1 6 clk $end
+$var wire 1 @% pic_wakeup $end
+$var wire 4 q5 pm_clksd [3:0] $end
+$var wire 1 B% pm_cpu_gate $end
+$var wire 1 C% pm_cpustall $end
+$var wire 1 D% pm_dc_gate $end
+$var wire 1 E% pm_dmmu_gate $end
+$var wire 1 F% pm_ic_gate $end
+$var wire 1 G% pm_immu_gate $end
+$var wire 1 H% pm_lvolt $end
+$var wire 1 I% pm_tt_gate $end
+$var wire 1 J% pm_wakeup $end
+$var wire 1 D rst $end
+$var wire 32 r5 spr_addr [31:0] $end
+$var wire 32 s5 spr_dat_i [31:0] $end
+$var wire 32 t5 spr_dat_o [31:0] $end
+$var wire 1 m% spr_write $end
+$upscope $end
+$upscope $end
+$scope module dbg_if0 $end
+$var wire 1 7 cpu0_ack_i $end
+$var wire 32 u5 cpu0_addr_o [31:0] $end
+$var wire 1 9 cpu0_bp_i $end
+$var wire 1 6 cpu0_clk_i $end
+$var wire 1 v5 cpu0_crc_en $end
+$var wire 32 w5 cpu0_data_i [31:0] $end
+$var wire 32 x5 cpu0_data_o [31:0] $end
+$var wire 1 > cpu0_rst_o $end
+$var wire 1 y5 cpu0_shift_crc $end
+$var wire 1 ? cpu0_stall_o $end
+$var wire 1 @ cpu0_stb_o $end
+$var wire 1 z5 cpu0_tdi $end
+$var wire 1 {5 cpu0_tdo $end
+$var wire 1 A cpu0_we_o $end
+$var wire 1 |5 cpu1_crc_en $end
+$var wire 1 }5 cpu1_shift_crc $end
+$var wire 1 ~5 crc_cnt_end $end
+$var wire 1 !6 crc_en $end
+$var wire 1 "6 crc_en_dbg $end
+$var wire 1 #6 crc_en_wb $end
+$var wire 1 $6 crc_match $end
+$var wire 1 %6 crc_out $end
+$var wire 1 &6 data_cnt_end $end
+$var wire 1 '6 data_shift_en $end
+$var wire 1 - debug_select_i $end
+$var wire 1 (6 module_latch_en $end
+$var wire 1 2 pause_dr_i $end
+$var wire 1 I rst_i $end
+$var wire 1 )6 selecting_command $end
+$var wire 1 *6 shift_crc $end
+$var wire 1 +6 shift_crc_wb $end
+$var wire 1 3 shift_dr_i $end
+$var wire 1 ,6 status_cnt_end $end
+$var wire 1 / tck_i $end
+$var wire 1 4 tdi_i $end
+$var wire 1 -6 tdi_wb $end
+$var wire 1 .6 tdo_wb $end
+$var wire 1 5 update_dr_i $end
+$var wire 1 V wb_ack_i $end
+$var wire 32 /6 wb_adr_o [31:0] $end
+$var wire 2 06 wb_bte_o [1:0] $end
+$var wire 1 16 wb_cab_o $end
+$var wire 1 H wb_clk_i $end
+$var wire 3 26 wb_cti_o [2:0] $end
+$var wire 1 Z wb_cyc_o $end
+$var wire 32 36 wb_dat_i [31:0] $end
+$var wire 32 46 wb_dat_o [31:0] $end
+$var wire 1 ] wb_err_i $end
+$var wire 4 56 wb_sel_o [3:0] $end
+$var wire 1 ` wb_stb_o $end
+$var wire 1 a wb_we_o $end
+$var reg 1 66 cpu0_ce $end
+$var reg 1 76 cpu0_debug_module $end
+$var reg 6 86 crc_cnt [5:0] $end
+$var reg 1 96 crc_cnt_end_q $end
+$var reg 1 :6 crc_started $end
+$var reg 3 ;6 data_cnt [2:0] $end
+$var reg 5 <6 module_dr [4:0] $end
+$var reg 4 =6 module_id [3:0] $end
+$var reg 1 >6 module_select $end
+$var reg 1 ?6 module_select_error $end
+$var reg 3 @6 status_cnt [2:0] $end
+$var reg 1 A6 tdo_module_select $end
+$var reg 1 B6 tdo_o $end
+$var reg 1 C6 tdo_tmp $end
+$var reg 1 D6 wishbone_ce $end
+$var reg 1 E6 wishbone_module $end
+$scope module i_dbg_crc32_d1_in $end
+$var wire 1 / clk $end
+$var wire 1 $6 crc_match $end
+$var wire 1 F6 crc_out $end
+$var wire 1 4 data $end
+$var wire 1 3 enable $end
+$var wire 32 G6 new_crc [31:0] $end
+$var wire 1 I rst $end
+$var wire 1 H6 shift $end
+$var wire 1 5 sync_rst $end
+$var reg 32 I6 crc [31:0] $end
+$upscope $end
+$scope module i_dbg_crc32_d1_out $end
+$var wire 1 / clk $end
+$var wire 1 J6 crc_match $end
+$var wire 1 %6 crc_out $end
+$var wire 1 K6 data $end
+$var wire 1 !6 enable $end
+$var wire 32 L6 new_crc [31:0] $end
+$var wire 1 I rst $end
+$var wire 1 M6 shift $end
+$var wire 1 5 sync_rst $end
+$var reg 32 N6 crc [31:0] $end
+$upscope $end
+$scope module i_dbg_wb $end
+$var wire 1 O6 acc_type_16bit $end
+$var wire 1 P6 acc_type_32bit $end
+$var wire 1 Q6 acc_type_8bit $end
+$var wire 1 R6 acc_type_read $end
+$var wire 1 S6 acc_type_write $end
+$var wire 1 T6 addr_len_cnt_end $end
+$var wire 1 U6 byte $end
+$var wire 1 V6 cmd_cnt_en $end
+$var wire 1 W6 cmd_cnt_end $end
+$var wire 1 X6 crc_cnt_31 $end
+$var wire 1 Y6 crc_cnt_end $end
+$var wire 1 #6 crc_en_o $end
+$var wire 1 $6 crc_match_i $end
+$var wire 1 Z6 curr_cmd_go $end
+$var wire 1 [6 curr_cmd_rd_comm $end
+$var wire 1 \6 curr_cmd_wr_comm $end
+$var wire 1 ]6 data_cnt_end $end
+$var wire 1 ^6 enable $end
+$var wire 1 _6 fifo_empty $end
+$var wire 1 `6 fifo_full $end
+$var wire 1 a6 half $end
+$var wire 32 b6 input_data [31:0] $end
+$var wire 1 c6 len_eq_0 $end
+$var wire 1 d6 long $end
+$var wire 1 2 pause_dr_i $end
+$var wire 1 I rst_i $end
+$var wire 1 +6 shift_crc_o $end
+$var wire 1 3 shift_dr_i $end
+$var wire 1 e6 status_cnt_end $end
+$var wire 1 / tck_i $end
+$var wire 1 -6 tdi_i $end
+$var wire 1 5 update_dr_i $end
+$var wire 1 V wb_ack_i $end
+$var wire 32 f6 wb_adr_o [31:0] $end
+$var wire 2 g6 wb_bte_o [1:0] $end
+$var wire 1 16 wb_cab_o $end
+$var wire 1 H wb_clk_i $end
+$var wire 3 h6 wb_cti_o [2:0] $end
+$var wire 32 i6 wb_dat_i [31:0] $end
+$var wire 32 j6 wb_dat_o [31:0] $end
+$var wire 1 ] wb_err_i $end
+$var wire 4 k6 wb_sel_o [3:0] $end
+$var wire 1 ` wb_stb_o $end
+$var wire 1 a wb_we_o $end
+$var wire 1 l6 wishbone_ce_i $end
+$var reg 4 m6 acc_type [3:0] $end
+$var reg 6 n6 addr_len_cnt [5:0] $end
+$var reg 1 o6 addr_len_cnt_en $end
+$var reg 1 p6 addr_len_cnt_end_q $end
+$var reg 32 q6 adr [31:0] $end
+$var reg 1 r6 busy_csff $end
+$var reg 1 s6 busy_tck $end
+$var reg 1 t6 busy_wb $end
+$var reg 1 u6 byte_q $end
+$var reg 3 v6 cmd_cnt [2:0] $end
+$var reg 1 w6 cmd_cnt_end_q $end
+$var reg 6 x6 crc_cnt [5:0] $end
+$var reg 1 y6 crc_cnt_en $end
+$var reg 1 z6 crc_cnt_end_q $end
+$var reg 1 {6 crc_match_reg $end
+$var reg 4 |6 curr_cmd [3:0] $end
+$var reg 1 }6 curr_cmd_go_q $end
+$var reg 20 ~6 data_cnt [19:0] $end
+$var reg 1 !7 data_cnt_en $end
+$var reg 1 "7 data_cnt_end_q $end
+$var reg 17 #7 data_cnt_limit [16:0] $end
+$var reg 52 $7 dr [51:0] $end
+$var reg 3 %7 fifo_cnt [2:0] $end
+$var reg 1 &7 half_q $end
+$var reg 1 '7 latch_data $end
+$var reg 16 (7 len [15:0] $end
+$var reg 17 )7 len_var [16:0] $end
+$var reg 1 *7 long_q $end
+$var reg 3 +7 mem_ptr_dsff [2:0] $end
+$var reg 1 ,7 mem_ptr_init $end
+$var reg 2 -7 ptr [1:0] $end
+$var reg 1 .7 rd_tck_started $end
+$var reg 1 /7 set_addr $end
+$var reg 1 07 set_addr_csff $end
+$var reg 1 17 set_addr_wb $end
+$var reg 1 27 set_addr_wb_q $end
+$var reg 1 37 start_rd_csff $end
+$var reg 1 47 start_rd_tck $end
+$var reg 1 57 start_wb_rd $end
+$var reg 1 67 start_wb_rd_q $end
+$var reg 1 77 start_wb_wr $end
+$var reg 1 87 start_wb_wr_q $end
+$var reg 1 97 start_wr_csff $end
+$var reg 1 :7 start_wr_tck $end
+$var reg 4 ;7 status [3:0] $end
+$var reg 3 <7 status_cnt [2:0] $end
+$var reg 1 =7 status_cnt_en $end
+$var reg 1 >7 tdo_o $end
+$var reg 1 ?7 underrun_tck $end
+$var reg 1 @7 update_dr_csff $end
+$var reg 1 A7 update_dr_wb $end
+$var reg 32 B7 wb_adr_dsff [31:0] $end
+$var reg 1 C7 wb_cyc_o $end
+$var reg 32 D7 wb_dat_dsff [31:0] $end
+$var reg 32 E7 wb_dat_tmp [31:0] $end
+$var reg 1 F7 wb_end $end
+$var reg 1 G7 wb_end_csff $end
+$var reg 1 H7 wb_end_rst $end
+$var reg 1 I7 wb_end_rst_csff $end
+$var reg 1 J7 wb_end_tck $end
+$var reg 1 K7 wb_end_tck_q $end
+$var reg 1 L7 wb_error $end
+$var reg 1 M7 wb_error_csff $end
+$var reg 1 N7 wb_error_tck $end
+$var reg 1 O7 wb_overrun $end
+$var reg 1 P7 wb_overrun_csff $end
+$var reg 1 Q7 wb_overrun_tck $end
+$var reg 4 R7 wb_sel_dsff [3:0] $end
+$var reg 1 S7 wb_we_dsff $end
+$var reg 1 T7 wishbone_ce_csff $end
+$upscope $end
+$scope module i_dbg_cpu_or1k $end
+$var wire 1 U7 acc_type_read $end
+$var wire 1 V7 acc_type_write $end
+$var wire 1 W7 addr_len_cnt_end $end
+$var wire 1 X7 cmd_cnt_en $end
+$var wire 1 Y7 cmd_cnt_end $end
+$var wire 1 7 cpu_ack_i $end
+$var wire 32 Z7 cpu_addr_o [31:0] $end
+$var wire 1 9 cpu_bp_i $end
+$var wire 1 [7 cpu_ce_i $end
+$var wire 1 6 cpu_clk_i $end
+$var wire 32 \7 cpu_data_i [31:0] $end
+$var wire 32 ]7 cpu_data_o [31:0] $end
+$var wire 2 ^7 cpu_reg_data_i [1:0] $end
+$var wire 1 _7 cpu_reg_stall $end
+$var wire 1 `7 cpu_reg_we $end
+$var wire 1 > cpu_rst_o $end
+$var wire 1 ? cpu_stall_o $end
+$var wire 1 A cpu_we_o $end
+$var wire 1 a7 crc_cnt_31 $end
+$var wire 1 b7 crc_cnt_end $end
+$var wire 1 v5 crc_en_o $end
+$var wire 1 $6 crc_match_i $end
+$var wire 2 c7 ctrl_reg [1:0] $end
+$var wire 1 d7 curr_cmd_go $end
+$var wire 1 e7 curr_cmd_rd_comm $end
+$var wire 1 f7 curr_cmd_rd_ctrl $end
+$var wire 1 g7 curr_cmd_wr_comm $end
+$var wire 1 h7 curr_cmd_wr_ctrl $end
+$var wire 1 i7 data_cnt_end $end
+$var wire 1 j7 enable $end
+$var wire 1 k7 half $end
+$var wire 32 l7 input_data [31:0] $end
+$var wire 1 m7 len_eq_0 $end
+$var wire 1 n7 long $end
+$var wire 1 2 pause_dr_i $end
+$var wire 1 I rst_i $end
+$var wire 1 y5 shift_crc_o $end
+$var wire 1 3 shift_dr_i $end
+$var wire 1 o7 status_cnt_end $end
+$var wire 1 / tck_i $end
+$var wire 1 z5 tdi_i $end
+$var wire 1 5 update_dr_i $end
+$var reg 4 p7 acc_type [3:0] $end
+$var reg 6 q7 addr_len_cnt [5:0] $end
+$var reg 1 r7 addr_len_cnt_en $end
+$var reg 1 s7 addr_len_cnt_end_q $end
+$var reg 32 t7 adr [31:0] $end
+$var reg 1 u7 busy_cpu $end
+$var reg 1 v7 busy_csff $end
+$var reg 1 w7 busy_tck $end
+$var reg 3 x7 cmd_cnt [2:0] $end
+$var reg 1 y7 cmd_cnt_end_q $end
+$var reg 1 z7 cpu_ack_csff $end
+$var reg 1 {7 cpu_ack_q $end
+$var reg 1 |7 cpu_ack_tck $end
+$var reg 32 }7 cpu_addr_dsff [31:0] $end
+$var reg 1 ~7 cpu_ce_csff $end
+$var reg 32 !8 cpu_dat_tmp [31:0] $end
+$var reg 32 "8 cpu_data_dsff [31:0] $end
+$var reg 1 #8 cpu_end $end
+$var reg 1 $8 cpu_end_csff $end
+$var reg 1 %8 cpu_end_rst $end
+$var reg 1 &8 cpu_end_rst_csff $end
+$var reg 1 '8 cpu_end_tck $end
+$var reg 1 (8 cpu_end_tck_q $end
+$var reg 1 )8 cpu_overrun $end
+$var reg 1 *8 cpu_overrun_csff $end
+$var reg 1 +8 cpu_overrun_tck $end
+$var reg 1 ,8 cpu_stb_o $end
+$var reg 1 -8 cpu_we_dsff $end
+$var reg 6 .8 crc_cnt [5:0] $end
+$var reg 1 /8 crc_cnt_en $end
+$var reg 1 08 crc_cnt_end_q $end
+$var reg 1 18 crc_match_reg $end
+$var reg 4 28 curr_cmd [3:0] $end
+$var reg 1 38 curr_cmd_go_q $end
+$var reg 20 48 data_cnt [19:0] $end
+$var reg 1 58 data_cnt_en $end
+$var reg 1 68 data_cnt_end_q $end
+$var reg 17 78 data_cnt_limit [16:0] $end
+$var reg 52 88 dr [51:0] $end
+$var reg 1 98 fifo_full $end
+$var reg 1 :8 half_q $end
+$var reg 1 ;8 latch_data $end
+$var reg 16 <8 len [15:0] $end
+$var reg 17 =8 len_var [16:0] $end
+$var reg 1 >8 long_q $end
+$var reg 1 ?8 mem_ptr_init $end
+$var reg 1 @8 rd_tck_started $end
+$var reg 1 A8 set_addr $end
+$var reg 1 B8 set_addr_cpu $end
+$var reg 1 C8 set_addr_cpu_q $end
+$var reg 1 D8 set_addr_csff $end
+$var reg 1 E8 start_cpu_rd $end
+$var reg 1 F8 start_cpu_rd_q $end
+$var reg 1 G8 start_cpu_wr $end
+$var reg 1 H8 start_cpu_wr_q $end
+$var reg 1 I8 start_rd_csff $end
+$var reg 1 J8 start_rd_tck $end
+$var reg 1 K8 start_wr_csff $end
+$var reg 1 L8 start_wr_tck $end
+$var reg 4 M8 status [3:0] $end
+$var reg 3 N8 status_cnt [2:0] $end
+$var reg 1 O8 status_cnt_en $end
+$var reg 1 P8 tdo_o $end
+$var reg 1 Q8 underrun_tck $end
+$var reg 1 R8 update_dr_cpu $end
+$var reg 1 S8 update_dr_csff $end
+$scope module i_dbg_cpu_registers $end
+$var wire 1 9 bp_i $end
+$var wire 1 6 cpu_clk_i $end
+$var wire 1 _7 cpu_stall_o $end
+$var wire 2 T8 ctrl_reg_o [1:0] $end
+$var wire 2 U8 data_i [1:0] $end
+$var wire 1 I rst_i $end
+$var wire 1 / tck_i $end
+$var wire 1 `7 we_i $end
+$var reg 1 V8 cpu_reset $end
+$var reg 1 W8 cpu_reset_csff $end
+$var reg 1 X8 cpu_rst_o $end
+$var reg 1 Y8 stall_bp $end
+$var reg 1 Z8 stall_bp_csff $end
+$var reg 1 [8 stall_bp_tck $end
+$var reg 1 \8 stall_reg $end
+$var reg 1 ]8 stall_reg_cpu $end
+$var reg 1 ^8 stall_reg_csff $end
+$upscope $end
+$upscope $end
+$upscope $end
