@@ -19,35 +19,17 @@ def read_in_csv(name):
 # Description:  find the amount of time between two clock strings 
 # Example: time_calc("11:30-1:00") = 90
 def time_calc(time_str):
-	times = time_str.split("-")
-	for i in range(2):
-		times[i] = times[i].split(":")
-		for j in range(2):
-			times[i][j] = int(times[i][j])
-		times[i] = times[i][0] * 60 + times[i][1]
-	duration = times[1] - times[0]
-	if duration < 0:
-		duration = duration + 12 * 60
+	times = time_str.split("-") # split into two times, times[0] start time and times[1] end time (as strings)
+	for i in range(2): # for each time
+		times[i] = times[i].split(":") # split the time into hours and minutes
+		for j in range(2): # for both hours and minutes in a time
+			times[i][j] = int(times[i][j]) # convert the hours and minutes, both as strings, into integers
+		times[i] = times[i][0] * 60 + times[i][1] # replace list of two integers, hours and minutes, with the total in minutes
+	duration = times[1] - times[0] # subtract start time from end time to get difference
+	if duration < 0: # if the answer is negative, that is, if the time range crosses 12:00...
+		duration = duration + 12 * 60 # add 12 hours worth of minutes to get the actual duration
 #print(duration)
-	return duration
-	
-# Name: time_calc_hours
-# In: a string of two times joined by a dash
-# Out:  a float, the duration in hours between the two times
-# Description:  find the amount of time between two clock strings 
-# Example: time_calc("11:30-1:00") = 1.5
-def time_calc_hours(time_str):
-	times = time_str.split("-")
-	for i in range(2):
-		times[i] = times[i].split(":")
-		for j in range(2):
-			times[i][j] = int(times[i][j])
-		times[i] = times[i][0] + times[i][1]/60
-	duration = times[1] - times[0]
-	if duration < 0:
-		duration = duration + 12
-#print(duration)
-	return duration
+	return duration # return the calculated duration as an integer
 	
 # Name: Old Line to New Line
 # In: a line from the original csv file in the following formatting
@@ -70,8 +52,7 @@ def old_line_to_new_line(line):
 	area = length * width # calculating the area
 	# print(area) # this can be used for debugging
 	duration = time_calc(splits[3].replace("\n","")) # sets duration as the final field and removes the "newline" character
-	duration_hours = duration/60
-	return roomname + "," + str(area) + "," + str(duration) + "," + str(duration_hours)
+	return roomname + "," + str(area) + "," + str(duration)
 	# return the fields combined, converted to strings, and separated by commas
 	
 	
