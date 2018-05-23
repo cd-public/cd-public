@@ -13,6 +13,42 @@ def read_in_csv(name):
 	file.close() # says you won't use the file anymore
 	return lines
 	
+# Name: time_calc
+# In: a string of two times joined by a dash
+# Out:  an int, the duration in minutes between the two times
+# Description:  find the amount of time between two clock strings 
+# Example: time_calc("11:30-1:00") = 90
+def time_calc(time_str):
+	times = time_str.split("-")
+	for i in range(2):
+		times[i] = times[i].split(":")
+		for j in range(2):
+			times[i][j] = int(times[i][j])
+		times[i] = times[i][0] * 60 + times[i][1]
+	duration = times[1] - times[0]
+	if duration < 0:
+		duration = duration + 12 * 60
+#print(duration)
+	return duration
+	
+# Name: time_calc_hours
+# In: a string of two times joined by a dash
+# Out:  a float, the duration in hours between the two times
+# Description:  find the amount of time between two clock strings 
+# Example: time_calc("11:30-1:00") = 1.5
+def time_calc_hours(time_str):
+	times = time_str.split("-")
+	for i in range(2):
+		times[i] = times[i].split(":")
+		for j in range(2):
+			times[i][j] = int(times[i][j])
+		times[i] = times[i][0] + times[i][1]/60
+	duration = times[1] - times[0]
+	if duration < 0:
+		duration = duration + 12
+#print(duration)
+	return duration
+	
 # Name: Old Line to New Line
 # In: a line from the original csv file in the following formatting
 #		* <RoomName>,<Length>,<Width>,<Time>
@@ -33,21 +69,20 @@ def old_line_to_new_line(line):
 	width = int(splits[2]) # same as with length
 	area = length * width # calculating the area
 	# print(area) # this can be used for debugging
-	# duration left unaltered - instructor privelege
-	duration = splits[3].replace("\n","") # sets duration as the final field and removes the "newline" character
-	return roomname + "," + str(area) + "," + duration # return the fields combined, converted to strings, and separated by commas
+	duration = time_calc(splits[3].replace("\n","")) # sets duration as the final field and removes the "newline" character
+	duration_hours = duration/60
+	return roomname + "," + str(area) + "," + str(duration) + "," + str(duration_hours)
+	# return the fields combined, converted to strings, and separated by commas
 	
 	
-def function():
+def csv_converter():
+	file = open("new.csv", "w") # creates a way to access the file of name "new.csv" and opens it for writing because of the "w"
 	lines = read_in_csv("rooms.csv") # convert a csv file to a list of strings corresponding to lines
 	for line in lines: # for each line (a string corresponding to a csv file line) present in list called lines...
-		print(old_line_to_new_line(line)) # convert a line to the new format and print
+		file.write(old_line_to_new_line(line) + "\n") # write the altered line to the file
+	file.close()
 		
-function()
-		
-		
-		
-		
+csv_converter()
 		
 		
 		
