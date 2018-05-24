@@ -19,17 +19,35 @@ def read_in_csv(name):
 # Description:  find the amount of time between two clock strings 
 # Example: time_calc("11:30-1:00") = 90
 def time_calc(time_str):
-	times = time_str.split("-") # split into two times, times[0] start time and times[1] end time (as strings)
-	for i in range(2): # for each time
-		times[i] = times[i].split(":") # split the time into hours and minutes
-		for j in range(2): # for both hours and minutes in a time
-			times[i][j] = int(times[i][j]) # convert the hours and minutes, both as strings, into integers
-		times[i] = times[i][0] * 60 + times[i][1] # replace list of two integers, hours and minutes, with the total in minutes
-	duration = times[1] - times[0] # subtract start time from end time to get difference
-	if duration < 0: # if the answer is negative, that is, if the time range crosses 12:00...
-		duration = duration + 12 * 60 # add 12 hours worth of minutes to get the actual duration
+	times = time_str.split("-")
+	for i in range(2):
+		times[i] = times[i].split(":")
+		for j in range(2):
+			times[i][j] = int(times[i][j])
+		times[i] = times[i][0] * 60 + times[i][1]
+	duration = times[1] - times[0]
+	if duration < 0:
+		duration = duration + 12 * 60
 #print(duration)
-	return duration # return the calculated duration as an integer
+	return duration
+	
+# Name: time_calc_hours
+# In: a string of two times joined by a dash
+# Out:  a float, the duration in hours between the two times
+# Description:  find the amount of time between two clock strings 
+# Example: time_calc("11:30-1:00") = 1.5
+def time_calc_hours(time_str):
+	times = time_str.split("-")
+	for i in range(2):
+		times[i] = times[i].split(":")
+		for j in range(2):
+			times[i][j] = int(times[i][j])
+		times[i] = times[i][0] + times[i][1]/60
+	duration = times[1] - times[0]
+	if duration < 0:
+		duration = duration + 12
+#print(duration)
+	return duration
 	
 # Name: Old Line to New Line
 # In: a line from the original csv file in the following formatting
@@ -52,18 +70,26 @@ def old_line_to_new_line(line):
 	area = length * width # calculating the area
 	# print(area) # this can be used for debugging
 	duration = time_calc(splits[3].replace("\n","")) # sets duration as the final field and removes the "newline" character
-	return roomname + "," + str(area) + "," + str(duration)
+	duration_hours = duration/60
+	return roomname + "," + str(area) + "," + str(duration) + "," + str(duration_hours)
 	# return the fields combined, converted to strings, and separated by commas
 	
-	
-def csv_converter():
-	file = open("new.csv", "w") # creates a way to access the file of name "new.csv" and opens it for writing because of the "w"
-	lines = read_in_csv("rooms.csv") # convert a csv file to a list of strings corresponding to lines
+# Name:  CSV Converter
+# In:  two file names, input and output
+#       - input should be a csv file as formatted for Old Line to New Line
+#       - output should be a (possibly new) csv file as formatted by Old Line to New Line
+# Out:  returns True on successful
+# Description:  This is an example csv file generating program
+# Example:  csv_converter("rooms.csv","new.csv") is how new.csv was generated
+def csv_converter(input, output):
+	file = open(output, "w") # creates a way to access the file of name "new.csv" and opens it for writing because of the "w"
+	lines = read_in_csv(input) # convert a csv file to a list of strings corresponding to lines
 	for line in lines: # for each line (a string corresponding to a csv file line) present in list called lines...
 		file.write(old_line_to_new_line(line) + "\n") # write the altered line to the file
-	file.close()
+	file.close() # close the file in accordance with best practice
+	return True # return true on successful completion
 		
-csv_converter()
+csv_converter("rooms.csv","new.csv") # run csv_converter with default arguments
 		
 		
 		
