@@ -4,8 +4,8 @@
 
 # usage:
 # import bst
-# tree = bst.new() # initialize
-# tree = tree.<operation> # use the tree
+# tree = bst.BST() # initialize
+# tree.<operation> # use the tree
 
 class Node:
 
