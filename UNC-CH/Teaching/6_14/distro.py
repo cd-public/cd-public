@@ -29,7 +29,7 @@ class complex_plane:
 		j *= (self.size / (2 * self.range))
 		i = int(i)
 		j = int(j)
-		self.pixels[i][j][color] = (self.pixels[i][j][color] + 255) / 2
+		self.pixels[i][j] = [255,255,255]
 		return
 		
 	def save(self,filename):
@@ -50,7 +50,7 @@ def random_c(range):
 def irr_seq(c):
 	i = c.real
 	j = c.imag
-	if (random.random() > .5):
+	if (abs(i) < abs(j)):
 		return complex((i+j)/2,i)
 	else:
 		return complex(j,(i+j)/2)
@@ -61,7 +61,7 @@ def one_val(plane, iters):
 	# for each mirror, check if it escapes
 	for index in range(2):
 		c = c_orig
-		for _ in range(iters[index]):
+		for _ in range(iters):
 			plane.inc(c,index)
 			c = irr_seq(c)
 			
@@ -75,7 +75,7 @@ def imager():
 	plane = complex_plane(size, r)
 	
 	for _ in range(640):
-		one_val(plane, [5,10,20])
+		one_val(plane, 5)
 		
 				
 	plane.save("image.png")
