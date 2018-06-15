@@ -20,7 +20,7 @@ class complex_plane:
 		self.size = size
 		
 	# c is a complex value
-	def inc(self,c,color):
+	def inc(self,c):
 		i = c.real
 		j = c.imag
 		i += self.range
