@@ -56,14 +56,12 @@ def irr_seq(c):
 		return complex(j,(i+j)/2)
 		
 def one_val(plane, iters):
-	c_orig = random_c(plane.range)
+	c = random_c(plane.range)
 	# no mirroring
 	# for each mirror, check if it escapes
-	for index in range(2):
-		c = c_orig
-		for _ in range(iters):
-			plane.inc(c,index)
-			c = irr_seq(c)
+	for _ in range(iters):
+		plane.inc(c)
+		c = irr_seq(c)
 			
 	
 def imager():
