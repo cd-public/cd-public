@@ -1,0 +1,34 @@
+vision37(62)% ifv -R
+ifv(64): 15.20-s030: (c) Copyright 1995-2017 Cadence Design Systems, Inc.
+formalverifier: *F,NSLICN: Unable to check out license for Incisive_Formal_Verifier (15.20). Run 'lic_error -15' for details.
+vision37(63)% lic_error -15
+ERROR (LM -15): license server communication error - try longer timeout
+
+The process could not read data from the daemon within the timeout
+interval.
+
+1. Increase the timeout between the license server and the application
+   client with CDS_LIC_TIMEOUT.  The default timeout is ten seconds.
+
+      Platform            Command
+      --------            -------
+      UNIX                setenv CDS_LIC_TIMEOUT <seconds>
+      Windows             set CDS_LIC_TIMEOUT=<seconds>
+
+2. For fault-tolerant license servers, increase the timeout between the
+   license servers by starting the license daemons with the -t option.
+   The default timeout is ten seconds. To increase the timeout, follow
+   these steps:
+
+   - Modify the startup file, rc.lic, to specify the -t option of lmgrd.
+     Refer to the "lmgrd" man page or the lmgrd description in the
+     'Cadence License Manager' in CDSDoc for more information.
+
+   - Restart the daemons.  See the "Stopping and Starting the License
+     Daemon" section in the 'Cadence License Manager' in CDSDoc for
+     more information.
+vision37(64)% echo CDS_LIC_TIMEOUT
+CDS_LIC_TIMEOUT
+vision37(65)% echo $CDS_LIC_TIMEOUT
+10
+vision37(66)%
