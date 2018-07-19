@@ -1,3 +1,26 @@
+// Sample LTL Translation
+
+// Bug 14 from SPECS:  Exception return updates state correctly
+
+// next(INSN = l.RFE, (SR = ESR) && (PC = EPCR), 1)
+
+property NAIVE_S14;
+	@(posedge clk)
+((~((or1200_ctrl.ex_insn & 'hFFFF0000) >> 16 == 8192)) || (or1200_except.except_trig != 0));
+endproperty
+
+property ASSERT_S14;
+	@(posedge clk)
+((~((wb_insn[27:24] == 1 && wb_insn[31:28] == 8)) || (except_trig != 0));
+endproperty //translated
+ 
+// Recall - this is the LTL application we discussed with instructions
+// Cadence can't to my knowledge handle "Next" inside of statements, so I can't test, but template should be
+ 
+// G(X(a & b)->c)
+
+// Translations from SCIFinder
+
 property ASSERT_B01;  // bug is in except
 	@(posedge clk)
 ((~((wb_insn[27:24] == 1 && wb_insn[31:28] == 8))) || id_pc != epcr);
