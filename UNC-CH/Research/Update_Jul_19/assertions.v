@@ -27,6 +27,8 @@ endproperty //translated
 
 // Translations from SCIFinder
 
+ // Using the SPECS style above, exactly half of these are LTL properties including a "Next"
+ 
 property ASSERT_B01;  // bug is in except
 	@(posedge clk)
 ((~((wb_insn[27:24] == 1 && wb_insn[31:28] == 8))) || id_pc != epcr);
