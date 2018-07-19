@@ -18,6 +18,12 @@ endproperty //translated
 // Cadence can't to my knowledge handle "Next" inside of statements, so I can't test, but template should be
  
 // G(X(a & b)->c)
+ 
+ // Bugs 10,11,13,16,17 also LTL Bugs
+ // 11 has the same template, 10 has a non-trivial translation (genpc.pc is hard) but has the same thing before the implication
+ // 13 has a delta which I expect to be pretty expensive but we can talk about
+ // 17 should be the same as 10,11,14 but I don't have it from Rui and would have to generate myself.
+ // 18 is the SPECS evading pipeline bug
 
 // Translations from SCIFinder
 
