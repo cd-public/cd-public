@@ -72,8 +72,8 @@ endproperty //translated
 
 property ASSERT_B13;
 	@(posedge clk)
-((~(ex_insn[27:24] == 4 && ex_insn[31:28] == 0 && (rf_addrw != 9))) || (rf_dataw - ex_pc == 8));
-endproperty //translated //need to think about how to handle a subtraction
+(~(ex_insn[27:24] == 4 && ex_insn[31:28] == 0 && (rf_addrw != 9)));;
+endproperty //translated
 
 property ASSERT_B15;
 	@(posedge clk)
@@ -90,7 +90,10 @@ endproperty //translated
 // G((a & b) -> (c | d | e | f | g | h | i | j))
 // G((a & b) -> !c)
 // G(a -> b)
-// G(a & b & c)
+// G(a & b & !c)
+// G((a & b) -> c)
+
+ // Doing bytes instead of nibs brings both 13 and 15 to two prop assertions.
  
 // REFERENCE 
  
