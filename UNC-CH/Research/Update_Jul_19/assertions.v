@@ -48,3 +48,67 @@ property ASSERT_B15;
 	@(posedge clk)
 ((~((wb_insn[27:24] == 1 && wb_insn[31:28] == 8)) || (spr_dat_npc == epcr));
 endproperty //translated
+
+// TEMPLATES
+
+// G((a & b) -> c)
+// G(((a | b) & (c | d | e | f) & (g | h | i | j) & (k | l)) -> m)
+// G((a & b) -> c)
+// G((a & b) -> !c)
+// G((a & b & c) -> (d | e | f | g | h | i | j | k))
+// G((a & b) -> (c | d | e | f | g | h | i | j))
+// G((a & b) -> !c)
+// G(a -> b)
+// G(a & b & c)
+ 
+// REFERENCE 
+ 
+ property ASSERT_B01;  // bug is in except
+	@(posedge clk)
+((~((or1200_ctrl.wb_insn & 'hFFFF0000) >> 16 == 8192)) || or1200_except.id_pc != or1200_except.epcr);
+endproperty
+
+property ASSERT_B03;  // bug is in alu
+	@(posedge clk)
+((~((or1200_ctrl.ex_insn & 'hFC0003CF) == 'hE000000D)) || (or1200_rf.rf_dataw == operand_a));
+endproperty
+
+property ASSERT_B04;
+	@(posedge clk)
+((~((or1200_ctrl.wb_insn & 'hFFFF0000) >> 16 == 8192)) || (or1200_except.lsu_addr == or1200_except.eear));
+endproperty
+
+property ASSERT_B05;  // bug is in except
+	@(posedge clk)
+((~((or1200_ctrl.wb_insn & 'hFFFF0000) >> 16 == 8192)) || or1200_except.id_pc != or1200_except.epcr);
+endproperty
+
+property ASSERT_B06;  // bug is in alu
+	@(posedge clk)
+((~((or1200_ctrl.ex_insn & 'hFFE00000) >> 21 == 1826) && (operand_a > operand_b)) || (or1200_sprs.to_sr[9] == 1));
+endproperty
+
+property ASSERT_B07;  // bug is in alu
+	@(posedge clk)
+((~((or1200_ctrl.ex_insn & 'hFFE00000) >> 21 == 1829) && (operand_a <= operand_b)) || (or1200_sprs.to_sr[9] == 1));
+endproperty
+
+property ASSERT_B09;  // bug is in except
+	@(posedge clk)
+((~((or1200_ctrl.wb_insn & 'hFFFF0000) >> 16 == 8192)) || or1200_except.id_pc != or1200_except.epcr);
+endproperty
+
+property ASSERT_B10;  // bug is in rf
+   @(posedge clk)
+((~((or1200_rf.rf_we == 1) && (or1200_rf.rf_addrw == 0))) || (or1200_rf.rf_dataw == 0));
+endproperty
+
+property ASSERT_B13;
+	@(posedge clk)
+((~((or1200_ctrl.ex_insn & 'hFC000000) >> 26 == 1) && (or1200_rf.rf_addrw != 9 )) || (or1200_rf.rf_dataw - or1200_except.ex_pc == 8));
+endproperty
+
+property ASSERT_B15;
+	@(posedge clk)
+((~((or1200_ctrl.wb_insn & 'hFFFF0000) >> 16 == 8192)) || (or1200_except.spr_dat_npc == or1200_except.epcr));
+endproperty
