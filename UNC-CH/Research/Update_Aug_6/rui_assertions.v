@@ -177,3 +177,9 @@ assert property ((or1200_lsu.dcpu_dat_i == or1200_lsu.or1200_mem2reg.memdata) ||
 assert property (dcpu_dat_i == dcpu_dat_o);
 // t
 // same restrictive
+  
+// Security checkers - only property is:
+// assert never [((mem_source(0)=’1’) and not
+// ((opcode>39) and (opcode<44))] @rose(clk)
+// which is of the same form as ours - op restrictions in an implication with, in their case, an inequality
+  
