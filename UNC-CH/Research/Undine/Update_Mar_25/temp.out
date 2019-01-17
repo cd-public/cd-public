@@ -1,0 +1,24 @@
+G(!("addr != 0" & "addr == 0") & ("addr != 0" | "addr == 0")) & G(!("data != 0" & "data == 0") & ("data != 0" | "data == 0")) & G(!("we != 1" & "we == 1") & ("we != 1" | "we == 1")) & G(("addr == 0" & "data != 0") -> "we != 1")
+   support: 1234333
+   support potential: 1234333
+   confidence: 1
+G(!("addr != 0" & "addr == 0") & ("addr != 0" | "addr == 0")) & G(!("we != 1" & "we == 1") & ("we != 1" | "we == 1")) & G(!("data != 0" & "data == 0") & ("data != 0" | "data == 0")) & G(("addr == 0" & "we == 1") -> "data == 0")
+   support: 1234333
+   support potential: 1234333
+   confidence: 1
+G(!("data != 0" & "data == 0") & ("data != 0" | "data == 0")) & G(!("addr != 0" & "addr == 0") & ("addr != 0" | "addr == 0")) & G(!("we != 1" & "we == 1") & ("we != 1" | "we == 1")) & G(("addr == 0" & "data != 0") -> "we != 1")
+   support: 1234333
+   support potential: 1234333
+   confidence: 1
+G(!("data != 0" & "data == 0") & ("data != 0" | "data == 0")) & G(!("we != 1" & "we == 1") & ("we != 1" | "we == 1")) & G(!("addr != 0" & "addr == 0") & ("addr != 0" | "addr == 0")) & G(("data != 0" & "we == 1") -> "addr != 0")
+   support: 1234333
+   support potential: 1234333
+   confidence: 1
+G(!("we != 1" & "we == 1") & ("we != 1" | "we == 1")) & G(!("addr != 0" & "addr == 0") & ("addr != 0" | "addr == 0")) & G(!("data != 0" & "data == 0") & ("data != 0" | "data == 0")) & G(("addr == 0" & "we == 1") -> "data == 0")
+   support: 1234333
+   support potential: 1234333
+   confidence: 1
+G(!("we != 1" & "we == 1") & ("we != 1" | "we == 1")) & G(!("data != 0" & "data == 0") & ("data != 0" | "data == 0")) & G(!("addr != 0" & "addr == 0") & ("addr != 0" | "addr == 0")) & G(("data != 0" & "we == 1") -> "addr != 0")
+   support: 1234333
+   support potential: 1234333
+   confidence: 1

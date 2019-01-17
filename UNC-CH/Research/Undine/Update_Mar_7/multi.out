@@ -1,0 +1,96 @@
+G(("addr != 0" & "addr == 0") -> "data != 0")
+   support: 16066
+   support potential: 16066
+   confidence: 1
+G(("addr != 0" & "addr == 0") -> "data == 0")
+   support: 43600
+   support potential: 43600
+   confidence: 1
+G(("addr != 0" & "addr == 0") -> "we != 1")
+   support: 37992
+   support potential: 37992
+   confidence: 1
+G(("addr != 0" & "addr == 0") -> "we == 1")
+   support: 44401
+   support potential: 44401
+   confidence: 1
+G(("addr != 0" & "addr == 0") -> "data != 0")
+   support: 16066
+   support potential: 16066
+   confidence: 1
+G(("addr != 0" & "addr == 0") -> "data == 0")
+   support: 43600
+   support potential: 43600
+   confidence: 1
+G(("addr != 0" & "addr == 0") -> "we != 1")
+   support: 37992
+   support potential: 37992
+   confidence: 1
+G(("addr != 0" & "addr == 0") -> "we == 1")
+   support: 44401
+   support potential: 44401
+   confidence: 1
+G(("addr == 0" & "we == 1") -> "data == 0")
+   support: 17461
+   support potential: 17461
+   confidence: 1
+G(("addr == 0" & "we == 1") -> "we != 1")
+   support: 17039
+   support potential: 17039
+   confidence: 1
+G(("data != 0" & "data == 0") -> "addr == 0")
+   support: 46385
+   support potential: 46385
+   confidence: 1
+G(("data != 0" & "data == 0") -> "we != 1")
+   support: 40208
+   support potential: 40208
+   confidence: 1
+G(("data != 0" & "data == 0") -> "we == 1")
+   support: 40832
+   support potential: 40832
+   confidence: 1
+G(("data != 0" & "data == 0") -> "addr == 0")
+   support: 46385
+   support potential: 46385
+   confidence: 1
+G(("data != 0" & "data == 0") -> "we != 1")
+   support: 40208
+   support potential: 40208
+   confidence: 1
+G(("data != 0" & "data == 0") -> "we == 1")
+   support: 40832
+   support potential: 40832
+   confidence: 1
+G(("we != 1" & "we == 1") -> "addr == 0")
+   support: 25817
+   support potential: 25817
+   confidence: 1
+G(("we != 1" & "we == 1") -> "data != 0")
+   support: 11023
+   support potential: 11023
+   confidence: 1
+G(("we != 1" & "we == 1") -> "data == 0")
+   support: 25561
+   support potential: 25561
+   confidence: 1
+G(("addr == 0" & "we == 1") -> "data == 0")
+   support: 17461
+   support potential: 17461
+   confidence: 1
+G(("addr == 0" & "we == 1") -> "we != 1")
+   support: 17039
+   support potential: 17039
+   confidence: 1
+G(("we != 1" & "we == 1") -> "addr == 0")
+   support: 25817
+   support potential: 25817
+   confidence: 1
+G(("we != 1" & "we == 1") -> "data != 0")
+   support: 11023
+   support potential: 11023
+   confidence: 1
+G(("we != 1" & "we == 1") -> "data == 0")
+   support: 25561
+   support potential: 25561
+   confidence: 1

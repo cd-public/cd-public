@@ -1,0 +1,19 @@
+texada@texada-VirtualBox:~/texada$ time ./texada -l -f 'x' --log-file test1.in --parse-mult-prop --conf-threshold 1 --sup-threshold 1 --print-stats --out-file test1_x.out
+
+real    0m0.043s
+user    0m0.016s
+sys    0m0.003s
+texada@texada-VirtualBox:~/texada$ time ./texada -l -f 'G(x)' --log-file test1.in --parse-mult-prop --conf-threshold 1 --sup-threshold 1 --print-stats --out-file test1_Gx.out
+
+real    0m0.035s
+user    0m0.004s
+sys    0m0.015s
+
+Gx -> x must hold in every event
+x  -> x must hold in every trace
+
+Support potential is the # of times a property could be falsified.
+
+Support is the # of times a property could be falsified that it isn't.  
+
+Any non-temporal formula is true on a trace if it is true on the first event of the trace.

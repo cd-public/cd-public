@@ -1,0 +1,64 @@
+Trying to compile a logging marss for current linux
+
+go to https://github.com/avadhpatel/marss
+
+see README ln 32-35
+"
+Default compile disables debugging and logging functionalities, to compile with
+logging functions enable give following command:
+
+    $ scons -Q debug=1
+"
+
+I installed qemu first (just in case I needed it), then went through the installation process picking up any needed packages naively with Google.  Once I got to compilation, I had to start working on the code to advance through the compilation process.  I am using g(cc/++) 7 and gnutls 30.  There was an issue that resolved after getting gnutls-dev but I'm not sure if the installation solved the problem or it was something else.
+
+Edits:
+
+mars/qemu/SConstruct ln 30 && mars/ptylsim/SConstruct ln 38
+GCC_MAJOR_MINOR_VERSION = GCC_VERSION #re.match(r'\d*\.\d+',GCC_VERSION).group() #e.g. returns 4.2 for 4.2.2
+
+mars/ptlsim/core/ooo-core/ooo.h ln 939
+return 0; //invalidate(tagof(virtaddr, threadid)); calvin edit
+
+Next Issue touches on object-oriented design so I have to do some education
+
+ptlsim/build/tests/stats-tests.cpp: In member function 'virtual void {anonymous}::Stats_StatString_Test::TestBody()':
+ptlsim/build/tests/stats-tests.cpp:185:46: error: use of deleted function 'YAML::Emitter& YAML::Emitter::operator=(const YAML::Emitter&)'
+             out = st.st1.dump(out, user_stats);
+                                              ^
+In file included from ptlsim/lib/yaml/yaml.h:10:0,
+                 from ptlsim/stats/statsBuilder.h:17,
+                 from ptlsim/sim/ptlsim.h:18,
+                 from ptlsim/build/tests/stats-tests.cpp:6:
+ptlsim/lib/yaml/emitter.h:18:8: note: 'YAML::Emitter& YAML::Emitter::operator=(const YAML::Emitter&)' is implicitly deleted because the default definition would be ill-formed:
+  class Emitter
+        ^~~~~~~
+ptlsim/lib/yaml/emitter.h:18:8: error: use of deleted function 'std::unique_ptr<_Tp, _Dp>& std::unique_ptr<_Tp, _Dp>::operator=(const std::unique_ptr<_Tp, _Dp>&) [with _Tp = YAML::EmitterState; _Dp = std::default_delete<YAML::EmitterState>]'
+In file included from /usr/include/c++/7/bits/locale_conv.h:41:0,
+                 from /usr/include/c++/7/locale:43,
+                 from /usr/include/c++/7/iomanip:43,
+                 from ptlsim/lib/gtest/include/gtest/internal/gtest-internal.h:51,
+                 from ptlsim/lib/gtest/include/gtest/gtest.h:57,
+                 from ptlsim/build/tests/stats-tests.cpp:2:
+/usr/include/c++/7/bits/unique_ptr.h:389:19: note: declared here
+       unique_ptr& operator=(const unique_ptr&) = delete;
+                   ^~~~~~~~
+ptlsim/build/tests/stats-tests.cpp:195:46: error: use of deleted function 'YAML::Emitter& YAML::Emitter::operator=(const YAML::Emitter&)'
+             out = st.st2.dump(out, user_stats);
+                                              ^
+ptlsim/build/tests/stats-tests.cpp:208:46: error: use of deleted function 'YAML::Emitter& YAML::Emitter::operator=(const YAML::Emitter&)'
+             out = st.st2.dump(out, user_stats);
+                                              ^
+ptlsim/build/tests/stats-tests.cpp: In member function 'virtual void {anonymous}::Stats_ObjFormulaAdd_Test::TestBody()':
+ptlsim/build/tests/stats-tests.cpp:232:42: error: use of deleted function 'YAML::Emitter& YAML::Emitter::operator=(const YAML::Emitter&)'
+         out = st.sum.dump(out, user_stats);
+                                          ^
+ptlsim/build/tests/stats-tests.cpp: In member function 'virtual void {anonymous}::Stats_ObjFormulaDiv_Test::TestBody()':
+ptlsim/build/tests/stats-tests.cpp:260:42: error: use of deleted function 'YAML::Emitter& YAML::Emitter::operator=(const YAML::Emitter&)'
+         out = st.div.dump(out, user_stats);
+                                          ^
+scons: *** [ptlsim/build/tests/stats-tests.o] Error 1
+
+
+
+

@@ -1,0 +1,20 @@
+EDIT:  A note before we begin.
+
+I incorrectly stated that the "--parse-mult-prop" flag refers to parsing multiple properties at our last meeting.  In fact, it refers to parsing multiple *propositions* and this is clarified in the documentation.
+
+Commands:
+
+texada@texada-VirtualBox:~/texada$ time ./texada -l -f 'G(!(a & x) & (a | x)) & G(!(b & y) & (b | y)) & G(!(c & z) & (c | z)) & G((a & b) -> c)' --log-file trc.out --parse-mult-prop --print-stats --out-file temp.out
+Multi-parser printing enabled.
+
+real    0m9.121s
+user    0m8.582s
+sys    0m0.040s
+
+texada@texada-VirtualBox:~/texada$ head -n 1000 trc.out >trc1000.out
+
+I modified the preprocessor to remove all instances in which GPR0 was not true.  This did remove some lines.  There may be a problem with preprocessing or with trace generation which is what I'm onto next.
+
+Nevertheless, when fed a trace that both (1) specifies every register at every time period and (2) adheres to the GPRO policy, I can find GPR0 and equivalent properties.
+
+I use the rather drawn out LTL formulation to ensure that there are no mutually exclusive possibilities.  The first three clauses form XORs over each element of the final clause that is of the form seen in GPR0.
