@@ -1,6 +1,0 @@
-This week I did a preprocessing stage using par.py to ensure all variables were specified at every event point.  Over the course of a number of manipulations, I was still unable to find GPR0.  I still can't *precisely* define how Texada reaches across event boundaries in a scalable manner (I can only tell on much smaller examples).  I can get GPRO at 97.6% confidence but get GPRnot0 at 97.7% by the same method.
-
-trc1000.out is the first 1000 lines of the (5.8 million line) trc.out preprocessed trace.
-preprocessed.out is the standard mining.
-
-Also, I successfully went into Texada, changed something (I just added a print statement to condition branch in the parser), recompiled it, and ran it successfully.  It seems like further changes to Texada will be non-trivial from an execution standpoint and the only difficulty will come in more completely understanding Texada and how to edit it.  

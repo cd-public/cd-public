@@ -1,4 +1,0 @@
-Preprocessor options - break registers at nibs, no flags, no equality
-
-2103362 / 238327380 = .0088 in 234 seconds, length 002
-2177000 / 241803744 = .0090 in 252 seconds, length 010
