@@ -1,0 +1,11 @@
+Quick Summary:
+
+Last week:  Got traces working
+This week:  Got Daikon working
+Next week:  Get a Daikon frontend for the traces
+
+This week I continued to work on the engineering challenges that stand in the way of having a system that produces invariants for x86 processors.  Last week I shared how I had the ability to generate ISA level traces across multiple different processor architectures using QEMU and further efforts would involve ensuring these traces provided coverage over Michael's properties, getting the traces in an efficient manner, and then passing traces to Daikon.
+
+With the current trace type already suitable for at least some subset of Michael's properties, we decided to move forward with Daikon to try and go end-to-end on at least a single property.  To that end, this week I worked on installing and getting Daikon to run as intended, in which I was successful.  I also learned more about the way Daikon runs and now better understand what it means to construct a new front end.  I understand the next step to be converting the traces generated from QEMU to a .dtrace format that can be processed by Daikon and I do not think there's existing front ends to Daikon that accommodate this need.  More on the file formats used by Daikon, including .dtrace and .decls, which are produced by existing front ends, can be see in the documentation (https://plse.cs.washington.edu/daikon/download/doc/developer/File-formats.html).  I started to play around with generating a frontend this week already but still don't have a great feel for how challenging it will or won't be but I am hoping to handle this in the next week which hopefully will be calmer given spring break.
+
+These efforts are contextualized in the broader effort to use Daikon to generate on the order of 10s or 100s of thousands of properties over the traces for which we will then use machine learning and an intentional categorization scheme over known security critical properties to sort these properties into 10s of security critical properties.  To demonstrate the security critical of these properties, the plan is to show exploits for some subset to start explore how they could be security critical and proceed from that understanding.
