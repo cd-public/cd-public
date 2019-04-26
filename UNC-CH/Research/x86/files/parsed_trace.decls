@@ -8,192 +8,192 @@ ppt ..clock():::ENTER
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::ARG1
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::ARG2
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::EAX
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EBX
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::ECX
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EDX
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EIP
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EFL
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CPL
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::II
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::A20
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::SMM
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::HLT
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::ES
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::CS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::SS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::DS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::FS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::GS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::LDT
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::TR
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::DGT
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::IDT
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::CR0
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CR2
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CR3
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CR4
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR0
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR1
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR2
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR3
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR6
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR7
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CCS
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CCD
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CC0
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EFER
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2
+    rep-type int
+    dec-type int
+    comparability 1
 	
 ppt ..clock():::EXIT0
   ppt-type subexit
@@ -201,189 +201,189 @@ ppt ..clock():::EXIT0
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::ARG1
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::ARG2
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::EAX
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EBX
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::ECX
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EDX
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EIP
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EFL
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CPL
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::II
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::A20
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::SMM
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::HLT
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::ES
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::CS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::SS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::DS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::FS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::GS
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::LDT
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::TR
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::DGT
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::IDT
 	var-kind variable
     rep-type string
     dec-type char*
-    comparability 2 
+    comparability 2
   variable ::CR0
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CR2
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CR3
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CR4
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR0
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR1
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR2
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR3
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR6
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::DR7
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CCS
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CCD
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::CC0
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2 
+    rep-type int
+    dec-type int
+    comparability 1 
   variable ::EFER
 	var-kind variable
-    rep-type string
-    dec-type char*
-    comparability 2
+    rep-type int
+    dec-type int
+    comparability 1

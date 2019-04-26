@@ -21,7 +21,7 @@
 # CCS=00000000 CCD=00000000 CCO=EFLAGS  
 # EFER=0000000000000000
 
-vars = [["inst", ""], ["arg1", ""], ["arg2", ""], ["eax", ""], ["ebx", ""], ["ecx", ""], ["edx", ""], ["eip", ""], ["efl", ""], ["cpl", ""], ["ii", ""], ["a20", ""], ["smm", ""], ["hlt", ""], ["es", ""], ["cs", ""], ["ss", ""], ["ds", ""], ["fs", ""], ["gs", ""], ["ldt", ""], ["tr", ""], ["dgt", ""], ["idt", ""], ["cr0", ""], ["cr2", ""], ["cr3", ""], ["cr4", ""], ["dr0", ""], ["dr1", ""], ["dr2", ""], ["dr3", ""], ["dr6", ""], ["dr7", ""], ["ccs", ""], ["ccd", ""], ["cc0", ""], ["efer", ""]]
+vars = [["inst", ""], ["arg1", ""], ["arg2", ""], ["eax", "0"], ["ebx", "0"], ["ecx", "0"], ["edx", "0"], ["eip", "0"], ["efl", "0"], ["cpl", "0"], ["ii", "0"], ["a20", "0"], ["smm", "0"], ["hlt", "0"], ["es", "0"], ["cs", "0"], ["ss", "0"], ["ds", "0"], ["fs", "0"], ["gs", "0"], ["ldt", "0"], ["tr", "0"], ["gdt", "0"], ["idt", "0"], ["cr0", "0"], ["cr2", "0"], ["cr3", "0"], ["cr4", "0"], ["dr0", "0"], ["dr1", "0"], ["dr2", "0"], ["dr3", "0"], ["dr6", "0"], ["dr7", "0"], ["ccs", "0"], ["ccd", "0"], ["cc0", "0"], ["efer", "0"]]
 
 def print_vars(vars):
 	print("\nVariables:\n")
@@ -41,7 +41,7 @@ def parse():
 	# variables
 	count = -1
 	#print_vars(vars)
-	outf = open("parsed_trace.dtrace","w")
+	outf = open("in_trace.dtrace","w")
 	outf.write("input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n") # header
 	for line in open("trace_head.txt", "r"):
 		if len(line) == 0 or line[0:2] == "IN":  # no information in line case
@@ -68,9 +68,15 @@ def parse():
 				if count >= 0:
 					outf.write("\n\n..clock():::EXIT0\nthis_invocation_nonce\n" + str(count))	
 					for var in vars:
-						outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")		
+						if var[0] in ["inst", "arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
+							outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+						else:
+							outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")		
 				count = count + 1						
 				outf.write("\n\n..clock():::ENTER\nthis_invocation_nonce\n" + str(count))	
 				for var in vars:
-					outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+					if var[0] in ["inst", "arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
+						outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+					else:
+						outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
 parse()
