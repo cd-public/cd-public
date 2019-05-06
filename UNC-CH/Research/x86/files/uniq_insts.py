@@ -4,10 +4,13 @@ a = "	var-kind variable\n" + "	rep-type string\n" + "	dec-type char*\n" + "	comp
 
 def parse():
 	uniq_insts = set()
-	for line in open("trace_head.txt", "r"):
+	for line in open("cs.txt", "r"):
 		if line[0] == "0" and line[1] == "x" and len(line) > 39:
 			#print(line)
 			uniq_insts.add(line[38:].replace("rep ","").split()[0])
+		if "Servicing hardware INT=" in line: # interrupt start case
+			uniq_insts.add(line.replace("Servicing hardware INT=", "").rstrip())
+			print(line)
 	#print(uniq_insts)
 	#special cases
 	for spec in ["calll","jmp","ret"]:

@@ -25,7 +25,6 @@ import re, uniq_insts
 
 vars = [["inst", ""], ["arg1", ""], ["arg2", ""], ["addr", "-1"], ["eax", "0"], ["ebx", "0"], ["ecx", "0"], ["edx", "0"], ["eip", "0"], ["efl", "0"], ["cpl", "0"], ["ii", "0"], ["a20", "0"], ["smm", "0"], ["hlt", "0"], ["es", "0"], ["cs", "0"], ["ss", "0"], ["ds", "0"], ["fs", "0"], ["gs", "0"], ["ldt", "0"], ["tr", "0"], ["gdt", "0"], ["idt", "0"], ["cr0", "0"], ["cr2", "0"], ["cr3", "0"], ["cr4", "0"], ["dr0", "0"], ["dr1", "0"], ["dr2", "0"], ["dr3", "0"], ["dr6", "0"], ["dr7", "0"], ["ccs", "0"], ["ccd", "0"], ["cc0", "0"], ["efer", "0"]]
 
-
 # [["popfl",0],["ljmpw",0],["movw",0],["subl",0],["calll",0],["int",0],["iretw",0],["lretw",0],["nop",0],["jb",0],["movsb",0],["jle",0],["sti",0],["movsl",0],["retl",0],["rsm",0],["jmp",0],["jae",0],["jbe",0],["jns",0],["jmpl",0],["jne",0],["jge",0],["insb",0],["jg",0],["ljmpl",0],["js",0],["jl",0],["je",0],["ja",0],["movl",0]]#,["movsbl",0],["leal",0],["cmpb",0],["movb",0],["cli",0]]
 
 def print_vars(vars):
@@ -48,6 +47,38 @@ def get_nonce(s, uniq):
 			i[1] = i[1] + 1
 			return str(i[1])
 
+def printer(for_next,vars,uniq,outf,nonce):
+	if for_next == "":
+		nonce = get_nonce(vars[0][1], uniq)
+		outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
+		for var in vars:
+			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
+				outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+			elif "inst" not in var[0]:
+			
+				#print(var[0])
+				#print(var[1])
+				outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
+	#print_vars(vars)
+	else:
+		#print(vars)
+		#print(nonce)
+		outf.write("\n\n.." + for_next + "():::EXIT0\nthis_invocation_nonce\n" + nonce)	
+		for var in vars:
+			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
+				outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+			elif "inst" not in var[0]:
+				outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
+		nonce = get_nonce(vars[0][1], uniq)
+		outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
+		for var in vars:
+			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
+				outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+			elif "inst" not in var[0]:
+				outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")
+	return nonce
+
+			
 def parse():
 	uniq = [[i,0] for i in uniq_insts.parse()]
 	#print("in in_parse")
@@ -63,14 +94,16 @@ def parse():
 	outf = open("in_trace.dtrace","w")
 	outf.write("input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n") # header
 	line = ""
-	do_print = False
 	nonce = 1
-	for new_line in open("trace_head.txt", "r"):
-		do_print = False
+	in_int = False
+	for new_line in open("cs.txt", "r"):
 		if len(line) == 0 or line[0:2] == "IN" or line[0] == "-":  # no information in line case
 			1 == 1;
+		elif "Servicing hardware INT=" in line: # interrupt start case
+			in_int = True
+			save("INST", line.replace("Servicing hardware INT=", "").rstrip(), vars)
 		elif line[0:2] == "0x": # instruction case
-			do_print = True
+			in_int = False
 			temp = line[38:].replace("rep ","")
 			splits = temp.split()
 			#print(temp)
@@ -99,43 +132,17 @@ def parse():
 					save(reg.upper(),"-1",vars) # -1 value in reg denotes dummy value
 			# now we also do address
 			save("ADDR", line[2:10].split()[0], vars)
+			nonce = printer(for_next,vars,uniq,outf,nonce)
+			for_next = vars[0][1]
 		elif line[0:3] in ["ES ", "CS ", "SS ", "DS ", "FS ", "GS ", "LDT", "TR ", "GDT", "IDT"]:  # single register case
 			save(line[0:3].replace(" ",""),line[4:].split("DPL")[0].replace(" ","").replace("\n",""),vars)
 		elif line[0:3] in ["EAX", "ESI", "EIP", "CR0", "DR0", "DR6", "CCS", "EFE"]: # multi register case
+			if "EAX" in line and in_int: # within interrupts we dont have insts so print at first register
+				nonce = printer(for_next,vars,uniq,outf,nonce)
+				for_next = vars[0][1]
 			for reg in line.split():
 				splits = reg.split("=")
 				if len(splits) == 2:
 					save(splits[0],splits[1],vars)
-		if do_print: # print case
-			if for_next == "":
-				nonce = get_nonce(vars[0][1], uniq)
-				outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
-				for var in vars:
-					if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
-						outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
-					elif "inst" not in var[0]:
-					
-						#print(var[0])
-						#print(var[1])
-						outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
-				for_next = vars[0][1]
-			#print_vars(vars)
-			else:
-				#print(vars)
-				#print(nonce)
-				outf.write("\n\n.." + for_next + "():::EXIT0\nthis_invocation_nonce\n" + nonce)	
-				for var in vars:
-					if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
-						outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
-					elif "inst" not in var[0]:
-						outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
-				nonce = get_nonce(vars[0][1], uniq)
-				outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
-				for var in vars:
-					if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
-						outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
-					elif "inst" not in var[0]:
-						outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")
-				for_next = vars[0][1]
 		line = new_line
 parse()
