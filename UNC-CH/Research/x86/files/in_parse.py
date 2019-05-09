@@ -23,7 +23,7 @@
 
 import re, uniq_insts
 
-vars = [["inst", ""], ["arg1", ""], ["arg2", ""], ["addr", "-1"], ["eax", "0"], ["ebx", "0"], ["ecx", "0"], ["edx", "0"], ["eip", "0"], ["efl", "0"], ["cpl", "0"], ["ii", "0"], ["a20", "0"], ["smm", "0"], ["hlt", "0"], ["es", "0"], ["cs", "0"], ["ss", "0"], ["ds", "0"], ["fs", "0"], ["gs", "0"], ["ldt", "0"], ["tr", "0"], ["gdt", "0"], ["idt", "0"], ["cr0", "0"], ["cr2", "0"], ["cr3", "0"], ["cr4", "0"], ["dr0", "0"], ["dr1", "0"], ["dr2", "0"], ["dr3", "0"], ["dr6", "0"], ["dr7", "0"], ["ccs", "0"], ["ccd", "0"], ["cc0", "0"], ["efer", "0"]]
+vars = [["inst", ""], ["arg1", ""], ["arg2", ""], ["addr", "-1"], ["eax", "0"], ["ebx", "0"], ["ecx", "0"], ["edx", "0"], ["eip", "0"], ["efl", "0"], ["cpl", "0"], ["ii", "0"], ["a20", "0"], ["smm", "0"], ["hlt", "0"], ["es", "0"], ["cs", "0"], ["ss", "0"], ["ds", "0"], ["fs", "0"], ["gs", "0"], ["ldt", "0"], ["tr", "0"], ["es_dpl", 0], ["cs_dpl", 0], ["ss_dpl", 0], ["ds_dpl", 0], ["fs_dpl", 0], ["gs_dpl", 0], ["ldt_dpl", 0], ["tr_dpl", 0], ["gdt", "0"], ["idt", "0"], ["cr0", "0"], ["cr2", "0"], ["cr3", "0"], ["cr4", "0"], ["dr0", "0"], ["dr1", "0"], ["dr2", "0"], ["dr3", "0"], ["dr6", "0"], ["dr7", "0"], ["ccs", "0"], ["ccd", "0"], ["cc0", "0"], ["efer", "0"]]
 
 # [["popfl",0],["ljmpw",0],["movw",0],["subl",0],["calll",0],["int",0],["iretw",0],["lretw",0],["nop",0],["jb",0],["movsb",0],["jle",0],["sti",0],["movsl",0],["retl",0],["rsm",0],["jmp",0],["jae",0],["jbe",0],["jns",0],["jmpl",0],["jne",0],["jge",0],["insb",0],["jg",0],["ljmpl",0],["js",0],["jl",0],["je",0],["ja",0],["movl",0]]#,["movsbl",0],["leal",0],["cmpb",0],["movb",0],["cli",0]]
 
@@ -54,6 +54,8 @@ def printer(for_next,vars,uniq,outf,nonce):
 		for var in vars:
 			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
 				outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+			elif "dpl" in var[0]:
+				outf.write("\n::" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
 			elif "inst" not in var[0]:
 			
 				#print(var[0])
@@ -67,6 +69,8 @@ def printer(for_next,vars,uniq,outf,nonce):
 		for var in vars:
 			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
 				outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+			elif "dpl" in var[0]:
+				outf.write("\n::" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
 			elif "inst" not in var[0]:
 				outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
 		nonce = get_nonce(vars[0][1], uniq)
@@ -74,6 +78,8 @@ def printer(for_next,vars,uniq,outf,nonce):
 		for var in vars:
 			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
 				outf.write("\n::" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+			elif "dpl" in var[0]:
+				outf.write("\n::" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
 			elif "inst" not in var[0]:
 				outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")
 	return nonce
@@ -136,6 +142,10 @@ def parse():
 			for_next = vars[0][1]
 		elif line[0:3] in ["ES ", "CS ", "SS ", "DS ", "FS ", "GS ", "LDT", "TR ", "GDT", "IDT"]:  # single register case
 			save(line[0:3].replace(" ",""),line[4:].split("DPL")[0].replace(" ","").replace("\n",""),vars)
+			if "DPL" in line:
+				#print(line)
+				#print(line[4:].split("DPL=")[1][0:1])
+				save(line[0:3].replace(" ","") + "_DPL", int(line[4:].split("DPL=")[1][0:1]), vars)
 		elif line[0:3] in ["EAX", "ESI", "EIP", "CR0", "DR0", "DR6", "CCS", "EFE"]: # multi register case
 			if "EAX" in line and in_int: # within interrupts we dont have insts so print at first register
 				nonce = printer(for_next,vars,uniq,outf,nonce)

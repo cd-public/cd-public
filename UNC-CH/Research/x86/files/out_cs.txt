@@ -9,7 +9,13 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 
 ===========================================================================
 ..0x31():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::SMM == ::HLT
+::SMM == ::FS_DPL
+::SMM == ::GS_DPL
+::SMM == ::LDT_DPL
+::SMM == ::TR_DPL
 ::SMM == ::DR0
 ::SMM == ::DR1
 ::SMM == ::DR2
@@ -17,6 +23,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::SMM == ::CC0
 ::SMM == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX >= 0
 ::ECX >= 0
 ::EDX >= 0
@@ -32,6 +39,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -70,6 +78,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::II
 ::ADDR > ::A20
 ::ADDR > ::SMM
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -81,6 +90,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != ::ECX
 ::EAX != ::EIP
 ::EAX >= ::SMM
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -90,6 +100,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EBX != ::EIP
 ::EBX >= ::CPL
 ::EBX >= ::SMM
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -109,6 +120,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX != ::DR7
 ::EDX != ::EIP
 ::EDX >= ::SMM
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -120,6 +132,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP > ::II
 ::EIP > ::A20
 ::EIP > ::SMM
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR2
 ::EIP > ::CR3
@@ -132,6 +145,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL > ::II
 ::EFL > ::A20
 ::EFL > ::SMM
+::EFL != ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -142,6 +156,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL != ::CCD
 ::CPL != ::A20
 ::CPL >= ::SMM
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -152,6 +167,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::CPL <= ::CCD
 ::II <= ::A20
 ::II >= ::SMM
+::II < ::ES_DPL
 ::II < ::CR0
 ::II < ::CR2
 ::II < ::CR3
@@ -198,6 +214,8 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -221,8 +239,14 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 59848 * ::CPL + 179544 * ::II + 3 * ::CR2 - 9.257995632E9 == 0
 ===========================================================================
 ..0x31():::EXIT
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::A20 == orig(::A20)
 ::SMM == ::HLT
+::SMM == ::FS_DPL
+::SMM == ::GS_DPL
+::SMM == ::LDT_DPL
+::SMM == ::TR_DPL
 ::SMM == ::DR0
 ::SMM == ::DR1
 ::SMM == ::DR2
@@ -231,6 +255,10 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::SMM == ::EFER
 ::SMM == orig(::SMM)
 ::SMM == orig(::HLT)
+::SMM == orig(::FS_DPL)
+::SMM == orig(::GS_DPL)
+::SMM == orig(::LDT_DPL)
+::SMM == orig(::TR_DPL)
 ::SMM == orig(::DR0)
 ::SMM == orig(::DR1)
 ::SMM == orig(::DR2)
@@ -243,6 +271,9 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::FS == orig(::FS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -264,6 +295,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -310,6 +342,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::II
 ::ADDR > ::A20
 ::ADDR > ::SMM
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR > ::CR3
 ::ADDR > ::CR4
@@ -328,6 +361,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR != orig(::CCS)
 ::ADDR != orig(::CCD)
 ::EAX != ::EIP
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -338,6 +372,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != orig(::EIP)
 ::EAX != orig(::CR2)
 ::EBX != ::EIP
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -361,6 +396,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX != orig(::EFL)
 ::ECX != orig(::CR2)
 ::EDX != ::EIP
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -375,6 +411,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP > ::II
 ::EIP > ::A20
 ::EIP > ::SMM
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP >= ::CR2
 ::EIP > ::CR3
@@ -398,6 +435,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL > ::II
 ::EFL > ::A20
 ::EFL > ::SMM
+::EFL != ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -417,6 +455,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL != orig(::CCD)
 ::CPL != ::A20
 ::CPL >= ::SMM
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -433,6 +472,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::CPL <= orig(::CCD)
 ::II <= ::A20
 ::II >= ::SMM
+::II < ::ES_DPL
 ::II < ::CR0
 ::II < ::CR2
 ::II < ::CR3
@@ -536,6 +576,18 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::TR > orig(::CS)
 ::TR > orig(::SS)
 ::TR != orig(::GS)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EAX)
+::ES_DPL != orig(::EBX)
+::ES_DPL != orig(::EDX)
+::ES_DPL < orig(::EIP)
+::ES_DPL != orig(::EFL)
+::ES_DPL >= orig(::CPL)
+::ES_DPL > orig(::II)
+::ES_DPL < orig(::CR2)
+::ES_DPL != orig(::CCD)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
@@ -671,6 +723,12 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ..0xef():::ENTER
 ::CPL == ::SMM
 ::CPL == ::HLT
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::FS_DPL
+::CPL == ::GS_DPL
+::CPL == ::LDT_DPL
+::CPL == ::TR_DPL
 ::CPL == ::DR0
 ::CPL == ::DR1
 ::CPL == ::DR2
@@ -678,6 +736,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::CPL == ::CC0
 ::CPL == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX >= 0
 ::EBX >= 0
 ::ECX >= 0
@@ -693,6 +752,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -730,6 +790,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -742,6 +803,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != ::EIP
 ::EAX >= ::CPL
 ::EAX >= ::II
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -752,6 +814,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EBX != ::EIP
 ::EBX >= ::CPL
 ::EBX >= ::II
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -763,6 +826,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX != ::EFL
 ::ECX >= ::CPL
 ::ECX >= ::II
+::ECX != ::ES_DPL
 ::ECX != ::CR0
 ::ECX != ::CR2
 ::ECX != ::CR3
@@ -772,6 +836,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EDX != ::EIP
 ::EDX != ::EFL
 ::EDX >= ::CPL
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -782,6 +847,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR2
 ::EIP > ::CR3
@@ -806,6 +872,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::CPL <= ::CCS
 ::CPL <= ::CCD
 ::II <= ::A20
+::II < ::ES_DPL
 ::II < ::CR0
 ::II < ::CR2
 ::II < ::CR3
@@ -850,6 +917,8 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -871,8 +940,14 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 964 * ::ADDR + 21208 * ::II - 1775 * ::CR2 + 2.502671834452E12 == 0
 ===========================================================================
 ..0xef():::EXIT
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::A20 == orig(::A20)
 ::SMM == ::HLT
+::SMM == ::FS_DPL
+::SMM == ::GS_DPL
+::SMM == ::LDT_DPL
+::SMM == ::TR_DPL
 ::SMM == ::DR0
 ::SMM == ::DR1
 ::SMM == ::DR2
@@ -882,6 +957,12 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::SMM == orig(::CPL)
 ::SMM == orig(::SMM)
 ::SMM == orig(::HLT)
+::SMM == orig(::CS_DPL)
+::SMM == orig(::SS_DPL)
+::SMM == orig(::FS_DPL)
+::SMM == orig(::GS_DPL)
+::SMM == orig(::LDT_DPL)
+::SMM == orig(::TR_DPL)
 ::SMM == orig(::DR0)
 ::SMM == orig(::DR1)
 ::SMM == orig(::DR2)
@@ -894,6 +975,9 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::FS == orig(::FS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -915,6 +999,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -963,6 +1048,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::II
 ::ADDR > ::A20
 ::ADDR > ::SMM
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -983,6 +1069,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != ::ECX
 ::EAX != ::EDX
 ::EAX != ::EIP
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -995,6 +1082,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != orig(::EIP)
 ::EAX != orig(::CCS)
 ::EBX != ::EIP
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -1007,6 +1095,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX != ::EDX
 ::ECX != ::EIP
 ::ECX != ::EFL
+::ECX != ::ES_DPL
 ::ECX != ::CR0
 ::ECX != ::CR2
 ::ECX != ::CR3
@@ -1019,6 +1108,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EDX != ::EIP
 ::EDX != ::EFL
 ::EDX >= ::SMM
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -1033,6 +1123,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP > ::II
 ::EIP > ::A20
 ::EIP > ::SMM
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR2
 ::EIP > ::CR3
@@ -1071,6 +1162,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL != orig(::CCD)
 ::CPL != ::A20
 ::CPL >= ::SMM
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -1088,6 +1180,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::CPL <= orig(::CCD)
 ::II <= ::A20
 ::II >= ::SMM
+::II < ::ES_DPL
 ::II < ::CR0
 ::II < ::CR2
 ::II < ::CR3
@@ -1192,6 +1285,16 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::TR > orig(::CS)
 ::TR > orig(::SS)
 ::TR != orig(::GS)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EAX)
+::ES_DPL != orig(::EBX)
+::ES_DPL != orig(::ECX)
+::ES_DPL != orig(::EDX)
+::ES_DPL < orig(::EIP)
+::ES_DPL > orig(::II)
+::ES_DPL != orig(::CCD)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
@@ -1301,8 +1404,14 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 1775 * ::CR2 - 964 * orig(::ADDR) - 21208 * orig(::II) - 2.502671834452E12 == 0
 ===========================================================================
 ..addl():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -1310,6 +1419,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX >= -1
 ::EBX one of { -1, 3086034988L }
 ::ECX one of { -1, 0, 3 }
@@ -1324,6 +1434,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -1360,6 +1471,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR > ::CR2
 ::ADDR > ::CR3
@@ -1373,6 +1485,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != ::CPL
 ::EAX != ::II
 ::EAX != ::A20
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -1386,6 +1499,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -1398,6 +1512,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX < ::EFL
 ::ECX <= ::CPL
 ::ECX != ::A20
+::ECX <= ::ES_DPL
 ::ECX < ::CR0
 ::ECX < ::CR2
 ::ECX < ::CR3
@@ -1410,6 +1525,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EDX != ::EFL
 ::EDX != ::CPL
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -1422,6 +1538,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP >= ::CR2
 ::EIP > ::CR3
@@ -1433,6 +1550,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -1443,6 +1561,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL != ::CCD
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -1490,6 +1609,9 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -1521,9 +1643,17 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX == orig(::ECX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -1533,6 +1663,10 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -1549,6 +1683,9 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS == orig(::GS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -1573,6 +1710,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -1612,6 +1750,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR > ::CR2
 ::ADDR > ::CR3
@@ -1627,6 +1766,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != ::CPL
 ::EAX != ::II
 ::EAX != ::A20
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -1641,6 +1781,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -1654,6 +1795,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX < ::EFL
 ::ECX <= ::CPL
 ::ECX != ::A20
+::ECX <= ::ES_DPL
 ::ECX < ::CR0
 ::ECX < ::CR2
 ::ECX < ::CR3
@@ -1667,6 +1809,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EDX != ::EFL
 ::EDX != ::CPL
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -1681,6 +1824,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP >= ::CR2
 ::EIP > ::CR3
@@ -1694,6 +1838,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -1706,6 +1851,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL != orig(::EDX)
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -1772,6 +1918,11 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::TR < ::IDT
 ::TR > orig(::ARG1)
 ::TR > orig(::ARG2)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EDX)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
@@ -1827,8 +1978,16 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX == ::EBX
 ::EAX == ::ECX
 ::EAX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -1874,9 +2033,21 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -1886,6 +2057,10 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -1943,8 +2118,16 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EBX == ::ECX
 ::EBX == ::EDX
 ::EIP == ::CR2
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -1990,9 +2173,21 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP == orig(::EIP)
 ::EIP == orig(::CR2)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -2002,6 +2197,10 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -2055,8 +2254,14 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::CCD == 3240296420L
 ===========================================================================
 ..calll_far():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -2064,6 +2269,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX >= -1
 ::EBX one of { -1, 3086022069L, 3086034988L }
 ::ECX one of { -1, 0, 3 }
@@ -2078,6 +2284,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -2113,6 +2320,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -2127,6 +2335,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != ::CPL
 ::EAX != ::II
 ::EAX != ::A20
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -2140,6 +2349,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -2153,6 +2363,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX < ::EFL
 ::ECX != ::CPL
 ::ECX != ::A20
+::ECX <= ::ES_DPL
 ::ECX < ::CR0
 ::ECX < ::CR2
 ::ECX < ::CR3
@@ -2164,6 +2375,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EDX < ::EIP
 ::EDX != ::EFL
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -2176,6 +2388,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR3
 ::EIP > ::CR4
@@ -2186,6 +2399,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -2196,6 +2410,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL != ::CCD
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -2244,6 +2459,9 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -2272,8 +2490,14 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 229752 * ::EIP + 1.0440991961896E13 * ::CPL - 249 * ::CR2 - 7.39558162467624E14 == 0
 ===========================================================================
 ..calll_far():::EXIT
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::A20 == orig(::A20)
 ::SMM == ::HLT
+::SMM == ::FS_DPL
+::SMM == ::GS_DPL
+::SMM == ::LDT_DPL
+::SMM == ::TR_DPL
 ::SMM == ::DR0
 ::SMM == ::DR1
 ::SMM == ::DR2
@@ -2283,6 +2507,10 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::SMM == orig(::II)
 ::SMM == orig(::SMM)
 ::SMM == orig(::HLT)
+::SMM == orig(::FS_DPL)
+::SMM == orig(::GS_DPL)
+::SMM == orig(::LDT_DPL)
+::SMM == orig(::TR_DPL)
 ::SMM == orig(::DR0)
 ::SMM == orig(::DR1)
 ::SMM == orig(::DR2)
@@ -2295,6 +2523,9 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::FS == orig(::FS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -2315,6 +2546,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -2360,6 +2592,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::II
 ::ADDR > ::A20
 ::ADDR > ::SMM
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR > ::CR3
 ::ADDR > ::CR4
@@ -2383,6 +2616,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != ::EIP
 ::EAX != ::EFL
 ::EAX >= ::SMM
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -2407,6 +2641,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EBX != ::II
 ::EBX != ::A20
 ::EBX != ::SMM
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -2448,6 +2683,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EDX >= ::II
 ::EDX != ::A20
 ::EDX >= ::SMM
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -2467,6 +2703,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP > ::II
 ::EIP > ::A20
 ::EIP > ::SMM
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP >= ::CR2
 ::EIP > ::CR3
@@ -2489,6 +2726,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL > ::II
 ::EFL > ::A20
 ::EFL > ::SMM
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -2509,6 +2747,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL != orig(::CCD)
 ::CPL != ::A20
 ::CPL >= ::SMM
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -2529,6 +2768,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::CPL != orig(::CCD)
 ::II <= ::A20
 ::II >= ::SMM
+::II < ::ES_DPL
 ::II < ::CR0
 ::II < ::CR2
 ::II < ::CR3
@@ -2639,6 +2879,20 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::TR > orig(::CS)
 ::TR > orig(::SS)
 ::TR != orig(::GS)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EAX)
+::ES_DPL != orig(::EBX)
+::ES_DPL >= orig(::ECX)
+::ES_DPL != orig(::EDX)
+::ES_DPL < orig(::EIP)
+::ES_DPL < orig(::EFL)
+::ES_DPL >= orig(::CPL)
+::ES_DPL < orig(::CR2)
+::ES_DPL != orig(::CCS)
+::ES_DPL != orig(::CCD)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
@@ -2790,12 +3044,20 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX == ::II
 ::EAX == ::SMM
 ::EAX == ::HLT
+::EAX == ::FS_DPL
+::EAX == ::GS_DPL
+::EAX == ::LDT_DPL
+::EAX == ::TR_DPL
 ::EAX == ::DR0
 ::EAX == ::DR1
 ::EAX == ::DR2
 ::EAX == ::DR3
 ::EAX == ::CC0
 ::EAX == ::EFER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::ES == ::SS
 ::ES == ::DS
 ::FS == ::GS
@@ -2830,9 +3092,21 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX == orig(::ECX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -2843,6 +3117,10 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -2902,8 +3180,16 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ..cmovnel():::ENTER
 ::EAX == ::ECX
 ::EAX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -2948,9 +3234,21 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EBX == orig(::EBX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -2960,6 +3258,10 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -3015,8 +3317,16 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::CCD == 4294967290L
 ===========================================================================
 ..cmpb():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -3057,9 +3367,21 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EDX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -3069,6 +3391,10 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -3121,8 +3447,14 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::DR7 == 1024
 ===========================================================================
 ..cmpl():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -3130,6 +3462,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX one of { -1, 134578588, 3218687360L }
 ::EBX one of { -1, 3086034988L }
 ::ECX >= -1
@@ -3144,6 +3477,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -3179,6 +3513,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -3192,6 +3527,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != ::CPL
 ::EAX != ::II
 ::EAX != ::A20
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -3205,6 +3541,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -3216,6 +3553,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ECX != ::EIP
 ::ECX != ::EFL
 ::ECX != ::A20
+::ECX != ::ES_DPL
 ::ECX != ::CR0
 ::ECX != ::CR2
 ::ECX != ::CR3
@@ -3228,6 +3566,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EDX != ::CPL
 ::EDX != ::II
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -3240,6 +3579,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR3
 ::EIP > ::CR4
@@ -3250,6 +3590,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -3260,6 +3601,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EFL != ::CCD
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -3309,6 +3651,9 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -3338,9 +3683,17 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EDX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -3350,6 +3703,10 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -3366,6 +3723,9 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS == orig(::GS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -3390,6 +3750,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -3428,6 +3789,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -3445,6 +3807,7 @@ End of report for procedures not returned from.  Unmatched entries are ignored!
 ::EAX != ::CPL
 ::EAX != ::II
 ::EAX != ::A20
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -3461,6 +3824,7 @@ orig(::EAX) % ::EAX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -3473,6 +3837,7 @@ orig(::EAX) % ::EAX == 0
 ::ECX != ::EIP
 ::ECX != ::EFL
 ::ECX != ::A20
+::ECX != ::ES_DPL
 ::ECX != ::CR0
 ::ECX != ::CR2
 ::ECX != ::CR3
@@ -3486,6 +3851,7 @@ orig(::EAX) % ::EAX == 0
 ::EDX != ::CPL
 ::EDX != ::II
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -3499,6 +3865,7 @@ orig(::EAX) % ::EAX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR3
 ::EIP > ::CR4
@@ -3511,6 +3878,7 @@ orig(::EAX) % ::EAX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -3523,6 +3891,7 @@ orig(::EAX) % ::EAX == 0
 ::EFL != orig(::EAX)
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -3592,6 +3961,11 @@ orig(::EAX) % ::EAX == 0
 ::TR < ::IDT
 ::TR != orig(::ARG1)
 ::TR > orig(::ARG2)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EAX)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
@@ -3639,8 +4013,16 @@ orig(::EAX) % ::EAX == 0
 ===========================================================================
 ..divl():::ENTER
 ::EAX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -3686,9 +4068,21 @@ orig(::EAX) % ::EAX == 0
 ::ECX == orig(::ECX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -3698,6 +4092,10 @@ orig(::EAX) % ::EAX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -3754,8 +4152,16 @@ orig(::EAX) % ::EAX == 0
 ::CCD one of { 3240296420L, 4294967290L }
 ===========================================================================
 ..incl():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -3952,9 +4358,21 @@ orig(::EAX) % ::EAX == 0
 ::EBX == orig(::EBX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -3964,6 +4382,10 @@ orig(::EAX) % ::EAX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -4261,6 +4683,12 @@ orig(::EDX) % ::EDX == 0
 ::CPL == ::II
 ::CPL == ::SMM
 ::CPL == ::HLT
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::FS_DPL
+::CPL == ::GS_DPL
+::CPL == ::LDT_DPL
+::CPL == ::TR_DPL
 ::CPL == ::DR0
 ::CPL == ::DR1
 ::CPL == ::DR2
@@ -4268,6 +4696,7 @@ orig(::EDX) % ::EDX == 0
 ::CPL == ::CC0
 ::CPL == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::ARG1 == "$0x80"
 ::ARG2 == "%eax"
 ::ADDR == 3086015298L
@@ -4283,6 +4712,7 @@ orig(::EDX) % ::EDX == 0
 ::GS == "00d8c110a0000000000f00009300"
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -4302,6 +4732,12 @@ orig(::EDX) % ::EDX == 0
 ::ECX == ::II
 ::ECX == ::SMM
 ::ECX == ::HLT
+::ECX == ::CS_DPL
+::ECX == ::SS_DPL
+::ECX == ::FS_DPL
+::ECX == ::GS_DPL
+::ECX == ::LDT_DPL
+::ECX == ::TR_DPL
 ::ECX == ::DR0
 ::ECX == ::DR1
 ::ECX == ::DR2
@@ -4312,6 +4748,12 @@ orig(::EDX) % ::EDX == 0
 ::ECX == orig(::II)
 ::ECX == orig(::SMM)
 ::ECX == orig(::HLT)
+::ECX == orig(::CS_DPL)
+::ECX == orig(::SS_DPL)
+::ECX == orig(::FS_DPL)
+::ECX == orig(::GS_DPL)
+::ECX == orig(::LDT_DPL)
+::ECX == orig(::TR_DPL)
 ::ECX == orig(::DR0)
 ::ECX == orig(::DR1)
 ::ECX == orig(::DR2)
@@ -4330,6 +4772,9 @@ orig(::EDX) % ::EDX == 0
 ::GS == orig(::GS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -4356,6 +4801,7 @@ orig(::EDX) % ::EDX == 0
 ::GS == "00d8c110a0000000000f00009300"
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -4373,6 +4819,12 @@ orig(::EDX) % ::EDX == 0
 ::CPL == ::II
 ::CPL == ::SMM
 ::CPL == ::HLT
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::FS_DPL
+::CPL == ::GS_DPL
+::CPL == ::LDT_DPL
+::CPL == ::TR_DPL
 ::CPL == ::DR0
 ::CPL == ::DR1
 ::CPL == ::DR2
@@ -4380,6 +4832,7 @@ orig(::EDX) % ::EDX == 0
 ::CPL == ::CC0
 ::CPL == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::ARG1 == "0xb7f0e0c7"
 ::ARG2 == "%eax"
 ::ADDR == 3086016708L
@@ -4396,6 +4849,7 @@ orig(::EDX) % ::EDX == 0
 ::GS == "00d8c110a0000000000f00009300"
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -4411,8 +4865,18 @@ orig(::EDX) % ::EDX == 0
 ::ARG1 == orig(::ARG1)
 ::ARG2 == orig(::ARG2)
 ::ECX == orig(::ECX)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
+::CPL == orig(::ES_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -4423,6 +4887,12 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::CS_DPL)
+::II == orig(::SS_DPL)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -4475,8 +4945,14 @@ orig(::EDX) % ::EDX == 0
 ::CCD == 3240296420L
 ===========================================================================
 ..jae():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -4484,6 +4960,7 @@ orig(::EDX) % ::EDX == 0
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::ARG2 one of { "%eax", "%edi", "-0x68(%ebp)" }
 ::EAX one of { -1, 134515128 }
 ::EBX one of { -1, 3086034988L }
@@ -4499,6 +4976,7 @@ orig(::EDX) % ::EDX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -4534,6 +5012,7 @@ orig(::EDX) % ::EDX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR > ::CR2
 ::ADDR > ::CR3
@@ -4548,6 +5027,7 @@ orig(::EDX) % ::EDX == 0
 ::EAX != ::CPL
 ::EAX != ::II
 ::EAX != ::A20
+::EAX != ::ES_DPL
 ::EAX < ::CR0
 ::EAX < ::CR2
 ::EAX != ::CR3
@@ -4561,6 +5041,7 @@ orig(::EDX) % ::EDX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -4575,6 +5056,7 @@ orig(::EDX) % ::EDX == 0
 ::ECX <= ::CPL
 ::ECX <= ::II
 ::ECX < ::A20
+::ECX < ::ES_DPL
 ::ECX < ::CR0
 ::ECX < ::CR2
 ::ECX < ::CR3
@@ -4588,6 +5070,7 @@ orig(::EDX) % ::EDX == 0
 ::EDX != ::CPL
 ::EDX != ::II
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX < ::CR0
 ::CR2 % ::EDX == 0
 ::EDX < ::CR2
@@ -4602,6 +5085,7 @@ orig(::EDX) % ::EDX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP >= ::CR2
 ::EIP > ::CR3
@@ -4613,6 +5097,7 @@ orig(::EDX) % ::EDX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -4623,6 +5108,7 @@ orig(::EDX) % ::EDX == 0
 ::EFL < ::CCD
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -4671,6 +5157,9 @@ orig(::EDX) % ::EDX == 0
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL < ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -4702,8 +5191,14 @@ orig(::EDX) % ::EDX == 0
 399 * ::EIP + 161664 * ::EFL + 1.8103204754E10 * ::CPL - 1.285713804975E12 == 0
 ===========================================================================
 ..jae():::EXIT
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -4713,6 +5208,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -4726,6 +5225,9 @@ orig(::EDX) % ::EDX == 0
 ::FS == orig(::FS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -4744,6 +5246,7 @@ orig(::EDX) % ::EDX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -4791,6 +5294,7 @@ orig(::EDX) % ::EDX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR > ::CR2
 ::ADDR > ::CR3
@@ -4816,6 +5320,7 @@ orig(::EDX) % ::EDX == 0
 ::EAX > ::CPL
 ::EAX > ::II
 ::EAX > ::A20
+::EAX > ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -4841,6 +5346,7 @@ orig(::EDX) % ::EDX == 0
 ::EBX > ::CPL
 ::EBX > ::II
 ::EBX > ::A20
+::EBX > ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -4887,6 +5393,7 @@ orig(::EDX) % ::EDX == 0
 ::EDX != ::CPL
 ::EDX >= ::II
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -4911,6 +5418,7 @@ orig(::EDX) % ::EDX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR2
 ::EIP > ::CR3
@@ -4934,6 +5442,7 @@ orig(::EDX) % ::EDX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -4955,6 +5464,7 @@ orig(::EDX) % ::EDX == 0
 ::EFL < orig(::CCD)
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -5067,6 +5577,20 @@ orig(::EDX) % ::EDX == 0
 ::TR > orig(::CS)
 ::TR > orig(::SS)
 ::TR != orig(::GS)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EAX)
+::ES_DPL != orig(::EBX)
+::ES_DPL > orig(::ECX)
+::ES_DPL != orig(::EDX)
+::ES_DPL < orig(::EIP)
+::ES_DPL < orig(::EFL)
+::ES_DPL >= orig(::CPL)
+::ES_DPL < orig(::CR2)
+::ES_DPL != orig(::CCS)
+::ES_DPL < orig(::CCD)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
@@ -5260,8 +5784,16 @@ orig(::EDX) % ::EDX == 0
 ..jb():::ENTER
 ::EAX == ::ECX
 ::EAX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -5299,9 +5831,21 @@ orig(::EDX) % ::EDX == 0
 ===========================================================================
 ..jb():::EXIT
 ::EBX == orig(::EBX)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -5311,6 +5855,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -5368,8 +5916,16 @@ orig(::EDX) % ::EDX == 0
 ..jbe():::ENTER
 ::EAX == ::ECX
 ::EAX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -5410,9 +5966,21 @@ orig(::EDX) % ::EDX == 0
 ::EBX == orig(::ECX)
 ::EBX == orig(::EDX)
 ::ECX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -5423,6 +5991,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -5476,8 +6048,16 @@ orig(::EDX) % ::EDX == 0
 ::DR7 == 1024
 ===========================================================================
 ..je():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -5655,9 +6235,21 @@ orig(::EDX) % ::EDX == 0
 213044 * ::EIP - 24637912 * ::EFL - 383035 * ::CR2 + 5.24590725575424E14 == 0
 ===========================================================================
 ..je():::EXIT
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -5667,6 +6259,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -6015,8 +6611,16 @@ orig(::EDX) % ::EDX == 0
 383035 * ::CR2 - 213044 * orig(::EIP) + 24637912 * orig(::EFL) - 5.24590725575424E14 == 0
 ===========================================================================
 ..jmp_far():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -6051,9 +6655,21 @@ orig(::EDX) % ::EDX == 0
 6682312 * ::EIP - 2.789080576E9 * ::EFL - 8379853 * ::CR2 + 5.240044356006104E15 == 0
 ===========================================================================
 ..jmp_far():::EXIT
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -6063,6 +6679,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -6130,8 +6750,16 @@ orig(::EDX) % ::EDX == 0
 8379853 * ::CR2 - 6682312 * orig(::EIP) + 2.789080576E9 * orig(::EFL) - 5.240044356006104E15 == 0
 ===========================================================================
 ..jne():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -6311,9 +6939,21 @@ orig(::EDX) % ::EDX == 0
 10218 * ::ADDR + 9120 * ::EIP - 3241483 * ::EFL - 5.9674293349662E13 == 0
 ===========================================================================
 ..jne():::EXIT
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -6323,6 +6963,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -6674,8 +7318,16 @@ orig(::EDX) % ::EDX == 0
 ===========================================================================
 ..js():::ENTER
 ::EBX == ::ECX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -6719,9 +7371,21 @@ orig(::EDX) % ::EDX == 0
 ::EBX == orig(::ECX)
 ::EDX == orig(::EDX)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -6731,6 +7395,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -6787,8 +7455,14 @@ orig(::EDX) % ::EDX == 0
 ::CCD == 4294967295L
 ===========================================================================
 ..leal():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -6796,6 +7470,7 @@ orig(::EDX) % ::EDX == 0
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX >= -1
 ::EBX one of { -1, 3085991425L, 3086034988L }
 ::ECX >= -1
@@ -6810,6 +7485,7 @@ orig(::EDX) % ::EDX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -6847,6 +7523,7 @@ orig(::EDX) % ::EDX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR > ::CR2
 ::ADDR > ::CR3
@@ -6859,6 +7536,7 @@ orig(::EDX) % ::EDX == 0
 ::EAX != ::EFL
 ::EAX != ::CPL
 ::EAX != ::A20
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -6870,6 +7548,7 @@ orig(::EDX) % ::EDX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -6893,6 +7572,7 @@ orig(::EDX) % ::EDX == 0
 ::EDX != ::EIP
 ::EDX != ::EFL
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -6904,6 +7584,7 @@ orig(::EDX) % ::EDX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP >= ::CR2
 ::EIP > ::CR3
@@ -6915,6 +7596,7 @@ orig(::EDX) % ::EDX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -6925,6 +7607,7 @@ orig(::EDX) % ::EDX == 0
 ::EFL != ::CCD
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -6973,6 +7656,9 @@ orig(::EDX) % ::EDX == 0
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -6999,9 +7685,17 @@ orig(::EDX) % ::EDX == 0
 ::ECX == orig(::ECX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -7011,6 +7705,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -7027,6 +7725,9 @@ orig(::EDX) % ::EDX == 0
 ::GS == orig(::GS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -7051,6 +7752,7 @@ orig(::EDX) % ::EDX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -7090,6 +7792,7 @@ orig(::EDX) % ::EDX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR > ::CR2
 ::ADDR > ::CR3
@@ -7106,6 +7809,7 @@ orig(::EDX) % ::EDX == 0
 ::EAX != ::EFL
 ::EAX != ::CPL
 ::EAX != ::A20
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -7121,6 +7825,7 @@ orig(::EDX) % ::EDX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -7148,6 +7853,7 @@ orig(::EBX) % ::EBX == 0
 ::EDX != ::EIP
 ::EDX != ::EFL
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -7161,6 +7867,7 @@ orig(::EBX) % ::EBX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP >= ::CR2
 ::EIP > ::CR3
@@ -7175,6 +7882,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -7189,6 +7897,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL != orig(::EDX)
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -7260,6 +7969,13 @@ orig(::EBX) % ::EBX == 0
 ::TR < ::IDT
 ::TR != orig(::ARG1)
 ::TR > orig(::ARG2)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EAX)
+::ES_DPL != orig(::EBX)
+::ES_DPL != orig(::EDX)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
@@ -7319,8 +8035,16 @@ orig(::EBX) % ::EBX == 0
 3133 * ::EFL - 551408 * ::CPL + 2 * ::CR2 - 6.172300347E9 == 0
 ===========================================================================
 ..movb():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -7509,9 +8233,21 @@ orig(::EBX) % ::EBX == 0
 ::EDX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -7521,6 +8257,10 @@ orig(::EBX) % ::EBX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -7792,8 +8532,14 @@ orig(::EBX) % ::EBX == 0
 561153 * ::EIP + 212953102 * ::EFL - 342329 * orig(::ADDR) - 6.75404186330365E14 == 0
 ===========================================================================
 ..movl():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -7801,6 +8547,7 @@ orig(::EBX) % ::EBX == 0
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX >= -1
 ::EBX one of { -1, 3085991425L, 3086034988L }
 ::EBX != 0
@@ -7816,6 +8563,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -7853,6 +8601,7 @@ orig(::EBX) % ::EBX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -7864,6 +8613,7 @@ orig(::EBX) % ::EBX == 0
 ::EAX != ::EIP
 ::EAX != ::EFL
 ::EAX != ::CPL
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -7874,6 +8624,7 @@ orig(::EBX) % ::EBX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -7893,6 +8644,7 @@ orig(::EBX) % ::EBX == 0
 ::ECX != ::DR7
 ::EDX != ::EIP
 ::EDX != ::EFL
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -7903,6 +8655,7 @@ orig(::EBX) % ::EBX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR3
 ::EIP > ::CR4
@@ -7913,6 +8666,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -7923,6 +8677,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL != ::CCD
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -7970,6 +8725,9 @@ orig(::EBX) % ::EBX == 0
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -7993,9 +8751,17 @@ orig(::EBX) % ::EBX == 0
 ..movl():::EXIT
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -8005,6 +8771,10 @@ orig(::EBX) % ::EBX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -8021,6 +8791,9 @@ orig(::EBX) % ::EBX == 0
 ::GS == orig(::GS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -8046,6 +8819,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -8084,6 +8858,7 @@ orig(::EBX) % ::EBX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -8100,6 +8875,7 @@ orig(::EBX) % ::EBX == 0
 ::EAX != ::EIP
 ::EAX != ::EFL
 ::EAX != ::CPL
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -8112,6 +8888,7 @@ orig(::EBX) % ::EBX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -8136,6 +8913,7 @@ orig(::EBX) % ::EBX == 0
 ::ECX <= orig(::ECX)
 ::EDX != ::EIP
 ::EDX != ::EFL
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -8148,6 +8926,7 @@ orig(::EBX) % ::EBX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR3
 ::EIP > ::CR4
@@ -8162,6 +8941,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -8177,6 +8957,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL != orig(::EDX)
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -8246,6 +9027,13 @@ orig(::EBX) % ::EBX == 0
 ::TR < ::IDT
 ::TR != orig(::ARG1)
 ::TR != orig(::ARG2)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EAX)
+::ES_DPL != orig(::EBX)
+::ES_DPL != orig(::EDX)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
@@ -8311,8 +9099,16 @@ orig(::EBX) % ::EBX == 0
 ..movw():::ENTER
 ::EAX == ::ECX
 ::EAX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -8357,9 +9153,21 @@ orig(::EBX) % ::EBX == 0
 ::EBX == orig(::EBX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -8370,6 +9178,10 @@ orig(::EBX) % ::EBX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -8426,8 +9238,16 @@ orig(::EBX) % ::EBX == 0
 ..movzbl():::ENTER
 ::EAX == ::EBX
 ::EAX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -8472,9 +9292,21 @@ orig(::EBX) % ::EBX == 0
 ::EAX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -8484,6 +9316,10 @@ orig(::EBX) % ::EBX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -8538,7 +9374,13 @@ orig(::EBX) % ::EBX == 0
 ::CCD one of { 0, 3240296420L }
 ===========================================================================
 ..new0x31():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::SMM == ::HLT
+::SMM == ::FS_DPL
+::SMM == ::GS_DPL
+::SMM == ::LDT_DPL
+::SMM == ::TR_DPL
 ::SMM == ::DR0
 ::SMM == ::DR1
 ::SMM == ::DR2
@@ -8546,6 +9388,7 @@ orig(::EBX) % ::EBX == 0
 ::SMM == ::CC0
 ::SMM == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EBX >= 2
 ::EDX >= 0
 ::CPL one of { 0, 3 }
@@ -8559,6 +9402,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -8595,6 +9439,7 @@ orig(::EBX) % ::EBX == 0
 ::ADDR > ::II
 ::ADDR > ::A20
 ::ADDR > ::SMM
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -8609,6 +9454,7 @@ orig(::EBX) % ::EBX == 0
 ::EAX != ::CPL
 ::EAX >= ::II
 ::EAX >= ::SMM
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -8621,6 +9467,7 @@ orig(::EBX) % ::EBX == 0
 ::EBX > ::II
 ::EBX > ::A20
 ::EBX > ::SMM
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -8636,6 +9483,7 @@ orig(::EBX) % ::EBX == 0
 ::ECX >= ::II
 ::ECX != ::A20
 ::ECX >= ::SMM
+::ECX != ::ES_DPL
 ::ECX != ::CR0
 ::ECX != ::CR2
 ::ECX != ::CR3
@@ -8647,6 +9495,7 @@ orig(::EBX) % ::EBX == 0
 ::EDX != ::EIP
 ::EDX != ::EFL
 ::EDX >= ::SMM
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -8660,6 +9509,7 @@ orig(::EBX) % ::EBX == 0
 ::EIP > ::II
 ::EIP > ::A20
 ::EIP > ::SMM
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR2
 ::EIP > ::CR3
@@ -8672,6 +9522,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL > ::II
 ::EFL > ::A20
 ::EFL > ::SMM
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -8682,6 +9533,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL != ::CCD
 ::CPL != ::A20
 ::CPL >= ::SMM
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -8692,6 +9544,7 @@ orig(::EBX) % ::EBX == 0
 ::CPL != ::CCD
 ::II <= ::A20
 ::II >= ::SMM
+::II < ::ES_DPL
 ::II < ::CR0
 ::II < ::CR2
 ::II < ::CR3
@@ -8741,6 +9594,9 @@ orig(::EBX) % ::EBX == 0
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL <= ::CCS
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -8775,6 +9631,12 @@ orig(::EBX) % ::EBX == 0
 ::CPL == ::II
 ::CPL == ::SMM
 ::CPL == ::HLT
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::FS_DPL
+::CPL == ::GS_DPL
+::CPL == ::LDT_DPL
+::CPL == ::TR_DPL
 ::CPL == ::DR0
 ::CPL == ::DR1
 ::CPL == ::DR2
@@ -8783,6 +9645,10 @@ orig(::EBX) % ::EBX == 0
 ::CPL == ::EFER
 ::CPL == orig(::SMM)
 ::CPL == orig(::HLT)
+::CPL == orig(::FS_DPL)
+::CPL == orig(::GS_DPL)
+::CPL == orig(::LDT_DPL)
+::CPL == orig(::TR_DPL)
 ::CPL == orig(::DR0)
 ::CPL == orig(::DR1)
 ::CPL == orig(::DR2)
@@ -8796,6 +9662,9 @@ orig(::EBX) % ::EBX == 0
 ::FS == orig(::FS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -8816,6 +9685,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -8856,6 +9726,7 @@ orig(::EBX) % ::EBX == 0
 ::ADDR > ::EFL
 ::ADDR > ::CPL
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -8875,6 +9746,7 @@ orig(::EBX) % ::EBX == 0
 ::EAX != ::EIP
 ::EAX != ::EFL
 ::EAX >= ::CPL
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -8890,6 +9762,7 @@ orig(::EBX) % ::EBX == 0
 ::EBX != ::EFL
 ::EBX > ::CPL
 ::EBX > ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -8908,6 +9781,7 @@ orig(::EBX) % ::EBX == 0
 ::ECX != ::EFL
 ::ECX >= ::CPL
 ::ECX != ::A20
+::ECX != ::ES_DPL
 ::ECX != ::CR0
 ::ECX != ::CR2
 ::ECX != ::CR3
@@ -8924,6 +9798,7 @@ orig(::EBX) % ::EBX == 0
 ::EDX != ::EIP
 ::EDX != ::EFL
 ::EDX >= ::CPL
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -8948,6 +9823,7 @@ orig(::EBX) % ::EBX == 0
 ::EIP != orig(::CCD)
 ::EFL > ::CPL
 ::EFL > ::A20
+::EFL != ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -9036,6 +9912,15 @@ orig(::EBX) % ::EBX == 0
 ::TR > orig(::CS)
 ::TR > orig(::SS)
 ::TR != orig(::GS)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::EIP)
+::ES_DPL < orig(::EFL)
+::ES_DPL >= orig(::CPL)
+::ES_DPL > orig(::II)
+::ES_DPL <= orig(::CCS)
+::ES_DPL != orig(::CCD)
 ::GDT > ::IDT
 ::GDT > orig(::CS)
 ::GDT > orig(::SS)
@@ -9119,7 +10004,13 @@ orig(::EBX) % ::EBX == 0
 15844155 * ::CR2 + 30848 * ::CCS - 6.109537016E9 * orig(::EFL) - 4.8890535271476232E16 == 0
 ===========================================================================
 ..new0xef():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::SMM == ::HLT
+::SMM == ::FS_DPL
+::SMM == ::GS_DPL
+::SMM == ::LDT_DPL
+::SMM == ::TR_DPL
 ::SMM == ::DR0
 ::SMM == ::DR1
 ::SMM == ::DR2
@@ -9127,6 +10018,7 @@ orig(::EBX) % ::EBX == 0
 ::SMM == ::CC0
 ::SMM == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX >= 0
 ::ECX >= 0
 ::EDX >= 0
@@ -9141,6 +10033,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -9178,6 +10071,7 @@ orig(::EBX) % ::EBX == 0
 ::ADDR > ::II
 ::ADDR > ::A20
 ::ADDR > ::SMM
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -9190,6 +10084,7 @@ orig(::EBX) % ::EBX == 0
 ::EAX != ::EIP
 ::EAX != ::EFL
 ::EAX >= ::SMM
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -9202,6 +10097,7 @@ orig(::EBX) % ::EBX == 0
 ::EBX > ::II
 ::EBX > ::A20
 ::EBX > ::SMM
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -9215,6 +10111,7 @@ orig(::EBX) % ::EBX == 0
 ::ECX >= ::II
 ::ECX != ::A20
 ::ECX >= ::SMM
+::ECX != ::ES_DPL
 ::ECX != ::CR0
 ::ECX != ::CR2
 ::ECX != ::CR3
@@ -9224,6 +10121,7 @@ orig(::EBX) % ::EBX == 0
 ::EDX != ::EIP
 ::EDX != ::EFL
 ::EDX >= ::SMM
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -9235,6 +10133,7 @@ orig(::EBX) % ::EBX == 0
 ::EIP > ::II
 ::EIP > ::A20
 ::EIP > ::SMM
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP >= ::CR2
 ::EIP > ::CR3
@@ -9247,6 +10146,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL > ::II
 ::EFL > ::A20
 ::EFL > ::SMM
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -9257,6 +10157,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL != ::CCD
 ::CPL != ::A20
 ::CPL >= ::SMM
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -9267,6 +10168,7 @@ orig(::EBX) % ::EBX == 0
 ::CPL != ::CCD
 ::II <= ::A20
 ::II >= ::SMM
+::II < ::ES_DPL
 ::II < ::CR0
 ::II < ::CR2
 ::II < ::CR3
@@ -9315,6 +10217,8 @@ orig(::EBX) % ::EBX == 0
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -9357,6 +10261,12 @@ orig(::EBX) % ::EBX == 0
 ::CPL == ::II
 ::CPL == ::SMM
 ::CPL == ::HLT
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::FS_DPL
+::CPL == ::GS_DPL
+::CPL == ::LDT_DPL
+::CPL == ::TR_DPL
 ::CPL == ::DR0
 ::CPL == ::DR1
 ::CPL == ::DR2
@@ -9365,6 +10275,10 @@ orig(::EBX) % ::EBX == 0
 ::CPL == ::EFER
 ::CPL == orig(::SMM)
 ::CPL == orig(::HLT)
+::CPL == orig(::FS_DPL)
+::CPL == orig(::GS_DPL)
+::CPL == orig(::LDT_DPL)
+::CPL == orig(::TR_DPL)
 ::CPL == orig(::DR0)
 ::CPL == orig(::DR1)
 ::CPL == orig(::DR2)
@@ -9378,6 +10292,9 @@ orig(::EBX) % ::EBX == 0
 ::FS == orig(::FS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -9399,6 +10316,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -9440,6 +10358,7 @@ orig(::EBX) % ::EBX == 0
 ::ADDR > ::EFL
 ::ADDR > ::CPL
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -9458,6 +10377,7 @@ orig(::EBX) % ::EBX == 0
 ::EAX != ::EIP
 ::EAX != ::EFL
 ::EAX >= ::CPL
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -9471,6 +10391,7 @@ orig(::EBX) % ::EBX == 0
 ::EBX != ::EFL
 ::EBX > ::CPL
 ::EBX > ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -9489,6 +10410,7 @@ orig(::EBX) % ::EBX == 0
 ::ECX != ::EFL
 ::ECX >= ::CPL
 ::ECX != ::A20
+::ECX != ::ES_DPL
 ::ECX != ::CR0
 ::ECX != ::CR2
 ::ECX != ::CR3
@@ -9501,6 +10423,7 @@ orig(::EBX) % ::EBX == 0
 ::EDX != ::EIP
 ::EDX != ::EFL
 ::EDX >= ::CPL
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -9606,6 +10529,14 @@ orig(::EBX) % ::EBX == 0
 ::TR > orig(::CS)
 ::TR > orig(::SS)
 ::TR != orig(::GS)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::EIP)
+::ES_DPL < orig(::EFL)
+::ES_DPL >= orig(::CPL)
+::ES_DPL > orig(::II)
+::ES_DPL != orig(::CCD)
 ::GDT > ::IDT
 ::GDT > orig(::CS)
 ::GDT > orig(::SS)
@@ -9702,8 +10633,16 @@ orig(::EBX) % ::EBX == 0
 ::EAX == ::EBX
 ::EAX == ::ECX
 ::EAX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -9748,9 +10687,21 @@ orig(::EBX) % ::EBX == 0
 ::EAX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -9760,6 +10711,10 @@ orig(::EBX) % ::EBX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -9817,8 +10772,16 @@ orig(::EBX) % ::EBX == 0
 ::EAX == ::EBX
 ::EAX == ::ECX
 ::EAX == ::EDX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -9863,9 +10826,21 @@ orig(::EBX) % ::EBX == 0
 ::EAX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -9875,6 +10850,10 @@ orig(::EBX) % ::EBX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -9929,8 +10908,16 @@ orig(::EBX) % ::EBX == 0
 ::CCD one of { 0, 3240296420L }
 ===========================================================================
 ..orl():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -10119,9 +11106,21 @@ orig(::EBX) % ::EBX == 0
 ::EDX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -10131,6 +11130,10 @@ orig(::EBX) % ::EBX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -10366,8 +11369,14 @@ orig(::EBX) % ::EBX == 0
 49591 * ::EIP - 91925 * ::EFL + 29695 * orig(::ADDR) - 2.44677959841425E14 == 0
 ===========================================================================
 ..popl():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -10375,6 +11384,7 @@ orig(::EBX) % ::EBX == 0
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::ARG2 one of { "%eax", "%esp" }
 ::EAX one of { -1, 4294967294L }
 ::EBX == -1
@@ -10392,6 +11402,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -10412,9 +11423,17 @@ orig(::EBX) % ::EBX == 0
 ::EDX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -10424,6 +11443,10 @@ orig(::EBX) % ::EBX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -10440,6 +11463,9 @@ orig(::EBX) % ::EBX == 0
 ::GS == orig(::GS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -10466,6 +11492,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -10480,8 +11507,14 @@ orig(::EBX) % ::EBX == 0
 ::ECX % orig(::EAX) == 0
 ===========================================================================
 ..pushl():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -10489,6 +11522,7 @@ orig(::EBX) % ::EBX == 0
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX one of { 1, 3086022069L, 3086035512L }
 ::EBX one of { -1, 3086034988L }
 ::EDX one of { 0, 3218687872L }
@@ -10504,6 +11538,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -10542,6 +11577,7 @@ orig(::EBX) % ::EBX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR >= ::CR2
 ::ADDR > ::CR3
@@ -10559,6 +11595,7 @@ orig(::EBX) % ::EBX == 0
 ::EAX != ::CPL
 ::EAX > ::II
 ::EAX >= ::A20
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -10573,6 +11610,7 @@ orig(::EBX) % ::EBX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -10596,6 +11634,7 @@ orig(::EBX) % ::EBX == 0
 ::EDX != ::EFL
 ::EDX >= ::II
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -10608,6 +11647,7 @@ orig(::EBX) % ::EBX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR2
 ::EIP > ::CR3
@@ -10619,6 +11659,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -10629,6 +11670,7 @@ orig(::EBX) % ::EBX == 0
 ::EFL != ::CCD
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -10678,6 +11720,9 @@ orig(::EBX) % ::EBX == 0
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 > ::CCS
@@ -10702,9 +11747,17 @@ orig(::EBX) % ::EBX == 0
 ..pushl():::EXIT
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -10714,6 +11767,10 @@ orig(::EBX) % ::EBX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -10730,6 +11787,9 @@ orig(::EBX) % ::EBX == 0
 ::GS == orig(::GS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -10756,6 +11816,7 @@ orig(::EBX) % ::EBX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -10796,6 +11857,7 @@ orig(::EBX) % ::EBX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR > ::CR2
 ::ADDR > ::CR3
@@ -10818,6 +11880,7 @@ orig(::EBX) % ::EBX == 0
 ::EAX != ::CPL
 ::EAX != ::II
 ::EAX != ::A20
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -10838,6 +11901,7 @@ orig(::EAX) % ::EAX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -10867,6 +11931,7 @@ orig(::EAX) % ::EAX == 0
 ::EDX < ::EIP
 ::EDX != ::EFL
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -10882,6 +11947,7 @@ orig(::EAX) % ::EAX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP > ::CR2
 ::EIP > ::CR3
@@ -10898,6 +11964,7 @@ orig(::EAX) % ::EAX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -10913,6 +11980,7 @@ orig(::EAX) % ::EAX == 0
 ::EFL != orig(::EDX)
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -10989,6 +12057,13 @@ orig(::EAX) % ::EAX == 0
 ::TR < ::IDT
 ::TR > orig(::ARG1)
 ::TR > orig(::ARG2)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EAX)
+::ES_DPL != orig(::EBX)
+::ES_DPL != orig(::EDX)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
@@ -11062,8 +12137,16 @@ orig(::EAX) % ::EAX == 0
 ..rdtsc():::ENTER
 ::EAX == ::CCD
 ::EBX == ::ECX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11108,9 +12191,21 @@ orig(::EAX) % ::EAX == 0
 ::EDX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11120,6 +12215,10 @@ orig(::EAX) % ::EAX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -11176,8 +12275,16 @@ orig(::EAX) % ::EAX == 0
 ===========================================================================
 ..repe():::ENTER
 ::EAX == ::ECX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11214,9 +12321,21 @@ orig(::EAX) % ::EAX == 0
 ::CCD one of { 0, 134578524, 4294967290L }
 ===========================================================================
 ..repe():::EXIT
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11226,6 +12345,10 @@ orig(::EAX) % ::EAX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -11274,8 +12397,16 @@ orig(::EAX) % ::EAX == 0
 ::DR7 == 1024
 ===========================================================================
 ..retl():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11309,9 +12440,21 @@ orig(::EAX) % ::EAX == 0
 799256 * ::EIP + 685522062 * ::EFL + 74741 * ::CR2 - 2.697520482188732E15 == 0
 ===========================================================================
 ..retl():::EXIT
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11321,6 +12464,10 @@ orig(::EAX) % ::EAX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -11390,8 +12537,16 @@ orig(::EDX) % ::EDX == 0
 ..sete():::ENTER
 ::EAX == ::EBX
 ::EAX == ::ECX
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11436,9 +12591,21 @@ orig(::EDX) % ::EDX == 0
 ::EAX == orig(::ECX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11448,6 +12615,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -11502,8 +12673,16 @@ orig(::EDX) % ::EDX == 0
 ::CCD == 134578588
 ===========================================================================
 ..shll():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11694,9 +12873,21 @@ orig(::EDX) % ::EDX == 0
 ::EDX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11706,6 +12897,10 @@ orig(::EDX) % ::EDX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -11963,8 +13158,14 @@ orig(::ECX) % ::ECX == 0
 1917 * ::CR2 - 6266 * orig(::ADDR) + 30101017 * orig(::ECX) + 1.3420887777787E13 == 0
 ===========================================================================
 ..subl():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -11972,6 +13173,7 @@ orig(::ECX) % ::ECX == 0
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::ARG2 one of { "%edx", "%esp" }
 ::EAX one of { -1, 3086022069L, 3086035512L }
 ::EBX one of { -1, 3086034988L }
@@ -11989,6 +13191,7 @@ orig(::ECX) % ::ECX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -12005,9 +13208,17 @@ orig(::ECX) % ::ECX == 0
 ::ECX == orig(::ECX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -12017,6 +13228,10 @@ orig(::ECX) % ::ECX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -12033,6 +13248,9 @@ orig(::ECX) % ::ECX == 0
 ::GS == orig(::GS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -12060,6 +13278,7 @@ orig(::ECX) % ::ECX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -12072,8 +13291,16 @@ orig(::ECX) % ::ECX == 0
 ::CCD one of { 4093, 3240296420L, 4294966272L }
 ===========================================================================
 ..testb():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -12122,9 +13349,21 @@ orig(::ECX) % ::ECX == 0
 ::EDX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -12134,6 +13373,10 @@ orig(::ECX) % ::ECX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -12202,8 +13445,16 @@ orig(::ECX) % ::ECX == 0
 130536 * ::EFL - 3427 * ::CCS + 1389276 * orig(::ADDR) - 4.287330433569708E15 == 0
 ===========================================================================
 ..testl():::ENTER
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -12388,9 +13639,21 @@ orig(::ECX) % ::ECX == 0
 ::EDX == orig(::EDX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::ES_DPL
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
+::CPL == ::DS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::ES_DPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
+::CPL == orig(::DS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -12400,6 +13663,10 @@ orig(::ECX) % ::ECX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -12637,8 +13904,14 @@ orig(::ECX) % ::ECX == 0
 6008 * ::EIP + 378584 * ::EFL + 1570681 * orig(::ADDR) - 4.865605879927946E15 == 0
 ===========================================================================
 ..xorl():::ENTER
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -12646,6 +13919,7 @@ orig(::ECX) % ::ECX == 0
 ::II == ::CC0
 ::II == ::EFER
 ::ES == ::DS
+::ES_DPL == ::DS_DPL
 ::EAX >= -1
 ::EBX one of { -1, 3086034988L }
 ::ECX >= -1
@@ -12660,6 +13934,7 @@ orig(::ECX) % ::ECX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -12697,6 +13972,7 @@ orig(::ECX) % ::ECX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -12708,6 +13984,7 @@ orig(::ECX) % ::ECX == 0
 ::EAX != ::EIP
 ::EAX != ::EFL
 ::EAX != ::CPL
+::EAX != ::ES_DPL
 ::EAX != ::CR0
 ::EAX != ::CR2
 ::EAX != ::CR3
@@ -12720,6 +13997,7 @@ orig(::ECX) % ::ECX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -12745,6 +14023,7 @@ orig(::ECX) % ::ECX == 0
 ::EDX != ::CPL
 ::EDX != ::II
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -12757,6 +14036,7 @@ orig(::ECX) % ::ECX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP != ::CR2
 ::EIP > ::CR3
@@ -12768,6 +14048,7 @@ orig(::ECX) % ::ECX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -12778,6 +14059,7 @@ orig(::ECX) % ::ECX == 0
 ::EFL != ::CCD
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -12825,6 +14107,9 @@ orig(::ECX) % ::ECX == 0
 ::LDT < ::IDT
 ::TR < ::GDT
 ::TR < ::IDT
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
 ::GDT > ::IDT
 ::CR0 < ::CR2
 ::CR0 != ::CCS
@@ -12852,9 +14137,17 @@ orig(::ECX) % ::ECX == 0
 ::EBX == orig(::EBX)
 ::EIP == orig(::EIP)
 ::EFL == orig(::EFL)
+::CPL == ::CS_DPL
+::CPL == ::SS_DPL
 ::CPL == orig(::CPL)
+::CPL == orig(::CS_DPL)
+::CPL == orig(::SS_DPL)
 ::II == ::SMM
 ::II == ::HLT
+::II == ::FS_DPL
+::II == ::GS_DPL
+::II == ::LDT_DPL
+::II == ::TR_DPL
 ::II == ::DR0
 ::II == ::DR1
 ::II == ::DR2
@@ -12864,6 +14157,10 @@ orig(::ECX) % ::ECX == 0
 ::II == orig(::II)
 ::II == orig(::SMM)
 ::II == orig(::HLT)
+::II == orig(::FS_DPL)
+::II == orig(::GS_DPL)
+::II == orig(::LDT_DPL)
+::II == orig(::TR_DPL)
 ::II == orig(::DR0)
 ::II == orig(::DR1)
 ::II == orig(::DR2)
@@ -12880,6 +14177,9 @@ orig(::ECX) % ::ECX == 0
 ::GS == orig(::GS)
 ::LDT == orig(::LDT)
 ::TR == orig(::TR)
+::ES_DPL == ::DS_DPL
+::ES_DPL == orig(::ES_DPL)
+::ES_DPL == orig(::DS_DPL)
 ::GDT == orig(::GDT)
 ::IDT == orig(::IDT)
 ::CR0 == orig(::CR0)
@@ -12904,6 +14204,7 @@ orig(::ECX) % ::ECX == 0
 ::GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" }
 ::LDT == "0000000000000000000000008200"
 ::TR == "0080c1100a800000207300008900"
+::ES_DPL == 3
 ::GDT == "c1109000000000ff"
 ::IDT == "c049f000000007ff"
 ::CR0 == 2147811387L
@@ -12943,6 +14244,7 @@ orig(::ECX) % ::ECX == 0
 ::ADDR > ::CPL
 ::ADDR > ::II
 ::ADDR > ::A20
+::ADDR > ::ES_DPL
 ::ADDR > ::CR0
 ::ADDR != ::CR2
 ::ADDR > ::CR3
@@ -12958,6 +14260,7 @@ orig(::ECX) % ::ECX == 0
 ::EAX < ::EIP
 ::EAX != ::EFL
 ::EAX != ::CPL
+::EAX != ::ES_DPL
 ::EAX < ::CR0
 ::EAX < ::CR2
 ::EAX != ::CR3
@@ -12972,6 +14275,7 @@ orig(::ECX) % ::ECX == 0
 ::EBX != ::CPL
 ::EBX != ::II
 ::EBX != ::A20
+::EBX != ::ES_DPL
 ::EBX != ::CR0
 ::EBX != ::CR2
 ::EBX != ::CR3
@@ -13001,6 +14305,7 @@ orig(::ECX) % ::ECX == 0
 ::EDX != ::CPL
 ::EDX != ::II
 ::EDX != ::A20
+::EDX != ::ES_DPL
 ::EDX != ::CR0
 ::EDX != ::CR2
 ::EDX != ::CR3
@@ -13016,6 +14321,7 @@ orig(::EDX) % ::EDX == 0
 ::EIP > ::CPL
 ::EIP > ::II
 ::EIP > ::A20
+::EIP > ::ES_DPL
 ::EIP > ::CR0
 ::EIP != ::CR2
 ::EIP > ::CR3
@@ -13031,6 +14337,7 @@ orig(::EDX) % ::EDX == 0
 ::EFL > ::CPL
 ::EFL > ::II
 ::EFL > ::A20
+::EFL > ::ES_DPL
 ::EFL < ::CR0
 ::EFL < ::CR2
 ::EFL < ::CR3
@@ -13045,6 +14352,7 @@ orig(::EDX) % ::EDX == 0
 ::EFL != orig(::EDX)
 ::CPL >= ::II
 ::CPL != ::A20
+::CPL <= ::ES_DPL
 ::CPL < ::CR0
 ::CPL < ::CR2
 ::CPL < ::CR3
@@ -13115,6 +14423,12 @@ orig(::EDX) % ::EDX == 0
 ::TR < ::IDT
 ::TR > orig(::ARG1)
 ::TR > orig(::ARG2)
+::ES_DPL < ::CR2
+::ES_DPL != ::CCS
+::ES_DPL != ::CCD
+::ES_DPL < orig(::ADDR)
+::ES_DPL != orig(::EAX)
+::ES_DPL != orig(::EDX)
 ::GDT > ::IDT
 ::GDT > orig(::ARG1)
 ::GDT > orig(::ARG2)
