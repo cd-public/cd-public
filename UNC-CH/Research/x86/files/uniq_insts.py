@@ -10,6 +10,7 @@ def parse():
 			uniq_insts.add(line[38:].replace("rep ","").split()[0])
 		if "Servicing hardware INT=" in line: # interrupt start case
 			uniq_insts.add(line.replace("Servicing hardware INT=", "").rstrip())
+			uniq_insts.add("new" + line.replace("Servicing hardware INT=", "").rstrip())
 			print(line)
 	#print(uniq_insts)
 	#special cases

@@ -101,7 +101,7 @@ def parse():
 			1 == 1;
 		elif "Servicing hardware INT=" in line: # interrupt start case
 			in_int = True
-			save("INST", line.replace("Servicing hardware INT=", "").rstrip(), vars)
+			save("INST", "new" + line.replace("Servicing hardware INT=", "").rstrip(), vars)
 		elif line[0:2] == "0x": # instruction case
 			in_int = False
 			temp = line[38:].replace("rep ","")
@@ -140,6 +140,7 @@ def parse():
 			if "EAX" in line and in_int: # within interrupts we dont have insts so print at first register
 				nonce = printer(for_next,vars,uniq,outf,nonce)
 				for_next = vars[0][1]
+				vars[0][1] = vars[0][1].replace("new","")
 			for reg in line.split():
 				splits = reg.split("=")
 				if len(splits) == 2:
