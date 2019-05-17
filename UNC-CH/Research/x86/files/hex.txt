@@ -1,0 +1,572 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading declaration files .
+(read 0x1 decls file)
+Processing trace data; reading 0x1 dtrace file:
+
+No return from procedure observed 0x1 time. Unmatched entries are ignored!
+Unterminated calls:
+..jae() : 0x1 invocation
+End of report for procedures not returned from. Unmatched entries are ignored!
+
+===========================================================================
+..0x31():::ENTER
+0x187a * ::ADDR - 0xfa8098 * ::CPL - 0x34b9 * ::CR2 + 0x144b74b3e5a6 == 0x0
+0x187a * ::ADDR - 0x2ef81c8 * ::II - 0x34b9 * ::CR2 + 0x144b74b3e5a6 == 0x0
+0xe9c8 * ::CPL + 0x2bd58 * ::II + 0x3 * ::CR2 - 0x227d1cd70 == 0x0
+===========================================================================
+..0x31():::EXIT
+0x3c4 * ::ADDR - 0x1e20 * ::CPL - 0x6ef * ::CR2 + 0x246b2ddf02c == 0x0
+0x3c4 * ::ADDR - 0x1e20 * ::CPL - 0x6ef * orig(::CR2) + 0x246b2ddf02c == 0x0
+0x496e * ::ADDR - 0x9e2b * ::CR2 - 0x2efb2bc * orig(::CPL) + 0x3ce25e1bb0f2 == 0x0
+0x496e * ::ADDR - 0x2efb2bc * orig(::CPL) - 0x9e2b * orig(::CR2) + 0x3ce25e1bb0f2 == 0x0
+0xe9c8 * ::CPL + 0x2bd58 * ::II + 0x3 * ::CR2 - 0x227d1cd70 == 0x0
+0xe9c8 * ::CPL + 0x2bd58 * ::II + 0x3 * orig(::CR2) - 0x227d1cd70 == 0x0
+0xfa8098 * ::CPL + 0x34b9 * ::CR2 - 0x187a * orig(::ADDR) - 0x144b74b3e5a6 == 0x0
+0xe9c8 * ::CPL + 0x3 * ::CR2 - 0xe9c8 * orig(::CPL) - 0x227cf1018 == 0x0
+0xe9c8 * ::CPL + 0x3 * ::CR2 + 0x2bd58 * orig(::II) - 0x227d1cd70 == 0x0
+0xfa8098 * ::CPL - 0x187a * orig(::ADDR) + 0x34b9 * orig(::CR2) - 0x144b74b3e5a6 == 0x0
+0x61e8 * ::CPL + 0x61e8 * orig(::CPL) + 0x3 * orig(::CR2) - 0x227d035d0 == 0x0
+0xe9c8 * ::CPL + 0x2bd58 * orig(::II) + 0x3 * orig(::CR2) - 0x227d1cd70 == 0x0
+0x2ef81c8 * ::II + 0x34b9 * ::CR2 - 0x187a * orig(::ADDR) - 0x144b74b3e5a6 == 0x0
+0xe9c8 * ::II + ::CR2 + 0xe9c8 * orig(::II) - 0xb7f099d0 == 0x0
+0x2ef81c8 * ::II - 0x187a * orig(::ADDR) + 0x34b9 * orig(::CR2) - 0x144b74b3e5a6 == 0x0
+0x2bd58 * ::II + 0xe9c8 * orig(::CPL) + 0x3 * orig(::CR2) - 0x227d1cd70 == 0x0
+0xe9c8 * ::II + 0xe9c8 * orig(::II) + orig(::CR2) - 0xb7f099d0 == 0x0
+0x34b9 * ::CR2 - 0x187a * orig(::ADDR) + 0xfa8098 * orig(::CPL) - 0x144b74b3e5a6 == 0x0
+0x34b9 * ::CR2 - 0x187a * orig(::ADDR) + 0x2ef81c8 * orig(::II) - 0x144b74b3e5a6 == 0x0
+===========================================================================
+..0xef():::ENTER
+0x3c4 * ::ADDR + 0x52d8 * ::II - 0x6ef * ::CR2 + 0x246b2dd9d54 == 0x0
+===========================================================================
+..0xef():::EXIT
+0x61e8 * ::CPL + 0x125b8 * ::II - 0x3 * ::CR2 + 0x227cf1018 == 0x0
+0xb446 * ::CPL + 0x21cd2 * ::II - 0x3 * orig(::ADDR) + 0x227d03909 == 0x0
+0x61e8 * ::CPL - 0x3 * ::CR2 + 0x125b8 * orig(::II) + 0x227cf1018 == 0x0
+0xb446 * ::CPL - 0x3 * orig(::ADDR) + 0x21cd2 * orig(::II) + 0x227d03909 == 0x0
+0xb446 * ::II - orig(::ADDR) + 0xb446 * orig(::II) + 0xb7f01303 == 0x0
+0x6ef * ::CR2 - 0x3c4 * orig(::ADDR) - 0x52d8 * orig(::II) - 0x246b2dd9d54 == 0x0
+===========================================================================
+..addl():::ENTER
+0x11304 * ::ADDR - 0x112cb * ::EIP - 0x2e844ac2801 * ::CPL + 0x88fd95ff56f == 0x0
+0x51 * ::ADDR - 0x3080 * ::EFL + 0x214f90 * ::CPL - 0x3a32dc650f == 0x0
+0xc0 * ::EIP + 0x35d9 * ::EFL + 0x207f362f3 * ::CPL - 0x900c3e6e2f == 0x0
+0x57ab * ::EIP + 0xed77ad12e1 * ::CPL - 0x44c1 * ::CR2 - 0x105f73c470c3 == 0x0
+0xc3d * ::EFL - 0x869f0 * ::CPL + 0x2 * ::CR2 - 0x16fe5d43b == 0x0
+===========================================================================
+..addl():::EXIT
+0x2472 * ::ADDR - 0x245d * ::EIP - 0x627d22bb89 * ::CPL + 0x11860b1ef99 == 0x0
+0xe13098e00 * ::ADDR - 0x1b0 * ::EIP - 0xe11e063ef * orig(::ADDR) - 0xd582a59c90ed18 == 0x0
+0x51 * ::ADDR - 0x307c * ::EFL + 0x214ceb * ::CPL - 0x3a32dc681e == 0x0
+0x1efa68 * ::ADDR - 0x128aec60 * ::EFL - 0x2eec1 * ::CR2 - 0x14267284ce5340 == 0x0
+0x214f90 * ::ADDR + 0xfc0 * ::EFL - 0x214ceb * orig(::ADDR) - 0x1e66e4e24ab == 0x0
+0xc20 * ::ADDR + 0x3f0 * ::CPL - 0xc1f * orig(::ADDR) - 0xb7f0373f == 0x0
+0xc0 * ::EIP + 0x35d9 * ::EFL + 0x207f362f3 * ::CPL - 0x900c3e6e2f == 0x0
+0x57ab * ::EIP + 0xed77ad12e1 * ::CPL - 0x44c1 * ::CR2 - 0x105f73c470c3 == 0x0
+0x112cb * ::EIP + 0x2e844ac2801 * ::CPL - 0x11304 * orig(::ADDR) - 0x88fd95ff56f == 0x0
+0xc3d * ::EFL - 0x869f0 * ::CPL + 0x2 * ::CR2 - 0x16fe5d43b == 0x0
+0x3080 * ::EFL - 0x214f90 * ::CPL - 0x51 * orig(::ADDR) + 0x3a32dc650f == 0x0
+===========================================================================
+..andb():::ENTER
+===========================================================================
+..andb():::EXIT
+===========================================================================
+..andl():::ENTER
+===========================================================================
+..andl():::EXIT
+===========================================================================
+..calll_far():::ENTER
+0x2071a55 * ::ADDR - 0x1f7e0a3bf77 * ::ECX + 0xca72 * ::EIP - 0x1758dae189eeee0 == 0x0
+0x40 * ::ADDR - 0x3e1fdc * ::ECX + 0x69 * ::EFL - 0x2dfc37da92 == 0x0
+0x3 * ::ADDR - 0x2e857 * ::ECX - 0x329c8 * ::CPL - 0x227c9148f == 0x0
+0x63b8 * ::ADDR - 0x607ca560 * ::ECX - 0x23 * ::CR2 - 0x478d33fe6ec8 == 0x0
+0xd11 * ::ADDR - 0xd0f * ::EIP - 0x235c1d74bc * ::CPL + 0x68a4763213 == 0x0
+0xf843 * ::ECX - ::EIP - 0x2b4231c * ::CPL + 0xc00d4498 == 0x0
+0x40 * ::EIP + 0x53 * ::EFL + 0xad5b57b1 * ::CPL - 0x30040b8405 == 0x0
+0x38178 * ::EIP + 0x97efb9df328 * ::CPL - 0xf9 * ::CR2 - 0x2a09fcd908b28 == 0x0
+===========================================================================
+..calll_far():::EXIT
+0x8215a9b * ::ADDR - 0x69 * ::EIP - 0x85f2fe14dfb * orig(::ECX) - 0x5d77e333bca9440 == 0x0
+0x1bf * ::ADDR + 0xf800 * ::EFL - 0x18a67a5 * orig(::ECX) - 0x1412f9be875 == 0x0
+0x1860df20 * ::ADDR + 0x7dec59770e1 * ::CPL - 0x22413 * orig(::EIP) - 0x1182a563ceed8bfc == 0x0
+0xcde8 * ::ADDR - 0x69 * ::CR2 - 0xd38b5010 * orig(::ECX) - 0x93a72c8f7048 == 0x0
+0x2db5 * ::ADDR - 0x3e00 * orig(::ADDR) + 0xd066669 * orig(::ECX) + 0xbb4ee80f579 == 0x0
+0x40 * ::ADDR - 0x41ff5c * orig(::ECX) + 0x69 * orig(::EFL) - 0x2dfc3bba12 == 0x0
+0x3 * ::ADDR - 0x316d1 * orig(::ECX) - 0x367bb * orig(::CPL) - 0x227c88930 == 0x0
+0x63b8 * ::ADDR - 0x668581f0 * orig(::ECX) - 0x23 * orig(::CR2) - 0x478d3a074b58 == 0x0
+0x2246d * ::ADDR - 0x2e800 * orig(::EIP) - 0x7dec59770e1 * orig(::CPL) + 0xa421a90abf33 == 0x0
+0x17f * ::EIP - 0x11059 * ::EFL + 0x40e0e36b7 * ::CPL - 0x11f57a44530 == 0x0
+0xc * ::EIP + 0x20856a6c * ::CPL - 0x22413 * orig(::ECX) - 0x900d108cb == 0x0
+0x1860df20 * ::EIP + 0x42115cdbd78cbc * ::CPL - 0x22413 * orig(::EIP) - 0x1248c1dc733f0e00 == 0x0
+0x53d * ::EIP + 0xe320f8865 * ::CPL + 0x22413 * orig(::EFL) - 0x3ee1ea555c4 == 0x0
+0x3 * ::EIP + 0x8215a9b * ::CPL + 0xb6b1 * orig(::CPL) - 0x24035dd41 == 0x0
+0x9594 * ::EIP + 0x1952eab72ac * ::CPL - 0x7c17 * orig(::CR2) - 0x170fe2160038 == 0x0
+0xcde8 * ::EIP - 0x8215a9b * ::CR2 + 0x97f726b7188 * orig(::ECX) + 0x5d6ea0d3b302f3c == 0x0
+0x69 * ::EIP - 0x8215a9b * orig(::ADDR) + 0x7e13b27a0b1 * orig(::ECX) + 0x5d77db54710e6fc == 0x0
+0x12b28 * ::EIP + 0x97f1804b008 * orig(::ECX) - 0x8215a9b * orig(::CR2) + 0x5d6a70cbf4e6304 == 0x0
+0x3 * ::EIP - 0x4b3acb * orig(::EIP) - 0xcbc68430dcaf * orig(::CPL) + 0x3870d71ab5287c == 0x0
+0xc420 * ::EFL - 0x1cfe8d8 * ::CPL - 0x47d * orig(::CR2) + 0x339927aedb0 == 0x0
+0x63b8 * ::EFL + 0x95 * ::CR2 - 0x93a168 * orig(::ECX) - 0x6b0ff7ca60 == 0x0
+0x69 * ::EFL + 0x40 * orig(::ADDR) - 0x3deb5c * orig(::ECX) - 0x2dfc37a612 == 0x0
+0xf87f7 * ::EFL + 0x800 * orig(::ADDR) - 0xf7ad7 * orig(::EFL) - 0x5bf7f3756c0 == 0x0
+0x53 * ::EFL + 0x40 * orig(::EIP) + 0xad5b8800 * orig(::CPL) - 0x30040c14f2 == 0x0
+0xc7155fe0 * ::CPL + 0x2e857 * ::CR2 - 0x38178 * orig(::ADDR) + 0x6e0454317c28 == 0x0
+0x63b8 * ::CPL + ::CR2 - 0x12b28 * orig(::ECX) - 0xb7f20658 == 0x0
+0xd12710cf65 * ::CPL + 0x30c1be4 * ::CR2 - 0x57ab * orig(::EIP) - 0x23045cc833a14a0 == 0x0
+0x23 * ::CPL + orig(::ADDR) - 0xf81d * orig(::ECX) - 0xb7f0dbb6 == 0x0
+0x63b8 * ::CPL - 0x12b28 * orig(::ECX) + orig(::CR2) - 0xb7f20658 == 0x0
+0x53 * ::CPL + 0x3 * orig(::EIP) + 0x8204a60 * orig(::CPL) - 0x24030891c == 0x0
+0x12fdf73be65 * ::CPL - 0x57ab * orig(::EIP) + 0x30c1be4 * orig(::CR2) - 0x23046e8ac62e1a0 == 0x0
+0x69 * ::CR2 - 0xcde8 * orig(::ADDR) + 0xc7155fe0 * orig(::ECX) + 0x93a720198018 == 0x0
+0x2565 * ::CR2 - 0xd9f0a40 * orig(::ECX) - 0x19bd * orig(::CR2) - 0x8600f7ae780 == 0x0
+0xf9 * ::CR2 - 0x269b8 * orig(::EIP) - 0x68938867b28 * orig(::CPL) + 0x1cebe1ff9cb68 == 0x0
+===========================================================================
+..cld():::ENTER
+===========================================================================
+..cld():::EXIT
+===========================================================================
+..cmovnel():::ENTER
+===========================================================================
+..cmovnel():::EXIT
+===========================================================================
+..cmpb():::ENTER
+===========================================================================
+..cmpb():::EXIT
+===========================================================================
+..cmpl():::ENTER
+0xc3d00 * ::ADDR + 0x4eaf723 * ::EFL - 0x19b7c0 * ::CR2 + 0x9af56cae62d8b == 0x0
+0x92dc * ::ADDR + 0x2757b918 * ::CPL - 0x1349d * ::CR2 + 0x743830a1ae0c == 0x0
+0xc3 * ::EIP + 0x10b * ::EFL + 0x21026236a * ::CPL - 0x924c531db0 == 0x0
+===========================================================================
+..cmpl():::EXIT
+orig(::EAX) % ::EAX == 0x0
+0x187a00 * ::ADDR + 0x9d612fd * ::EFL - 0x337040 * ::CR2 + 0x135f37894c1095 == 0x0
+0x125b8 * ::ADDR + 0x4eb097e8 * ::CPL - 0x26943 * ::CR2 + 0xe876d8ae40f0 == 0x0
+0xc3 * ::EIP + 0x10b * ::EFL + 0x21026236a * ::CPL - 0x924c531db0 == 0x0
+0x4eaf723 * ::EFL - 0x19b7c0 * ::CR2 + 0xc3d00 * orig(::ADDR) + 0x9af56cae62d8b == 0x0
+0x2757b918 * ::CPL - 0x1349d * ::CR2 + 0x92dc * orig(::ADDR) + 0x743830a1ae0c == 0x0
+===========================================================================
+..divl():::ENTER
+===========================================================================
+..divl():::EXIT
+===========================================================================
+..incl():::ENTER
+0x6e29f89 * ::ADDR - 0x6dbf157 * ::EIP - 0x255bef * ::CCS - 0x4ccc9eb727326 == 0x0
+0xb83a4 * ::ADDR - 0x6dbf157 * ::EFL - 0x42571b * ::CCS - 0x845d4bc2dd80f == 0x0
+0x3d68c * ::EIP - 0x24b8a83 * ::EFL - 0x161dab * ::CCS - 0x2c1f18e152623 == 0x0
+===========================================================================
+..incl():::EXIT
+orig(::ECX) % ::ECX == 0x0
+orig(::EDX) % ::EDX == 0x0
+0xb7f1282d * ::ADDR + 0x5 * ::EBX - 0xb7f1282d * orig(::ADDR) - 0x44fa6f109 == 0x0
+0x37167bd * ::ADDR - 0x20c65 * ::ECX - 0x3710cb4 * orig(::ADDR) - 0x4168d1afca30 == 0x0
+0x24242425 * ::ADDR + 0x6d4e4e40c4e * ::EDX - 0x6d4e4e50e74 * orig(::EDX) - 0x19f7b3967fdb1304 == 0x0
+0x6e29f89 * ::ADDR - 0x6db3b63 * ::EIP - 0x297464 * ::CCS - 0x54f860080ca47 == 0x0
+0xb83a4 * ::ADDR - 0x6db3b63 * ::EFL - 0x42571b * ::CCS - 0x845d4be10969f == 0x0
+0x6dbf157 * ::ADDR - 0x41857 * ::CCS - 0x6db3b63 * orig(::ADDR) - 0x82bc15119d37 == 0x0
+0x6d59998c102 * ::EDX + 0x24242425 * orig(::ADDR) - 0x6d59999c32d * orig(::EDX) - 0x19f7b395a70239fe == 0x0
+0x3d68c * ::EIP - 0x24b8a83 * ::EFL - 0x161dab * ::CCS - 0x2c1f18e152623 == 0x0
+0x6dbf157 * ::EIP + 0x255bef * ::CCS - 0x6e29f89 * orig(::ADDR) + 0x4ccc9eb727326 == 0x0
+0x6dbf157 * ::EFL + 0x42571b * ::CCS - 0xb83a4 * orig(::ADDR) + 0x845d4bc2dd80f == 0x0
+===========================================================================
+..int():::ENTER
+===========================================================================
+..int():::EXIT
+===========================================================================
+..ja():::ENTER
+===========================================================================
+..ja():::EXIT
+===========================================================================
+..jae():::ENTER
+0x3edcfc1c * ::ADDR - 0x312e143fcbc4 * ::ECX + 0xd20b * ::CCD - 0x2d2bef489284a800 == 0x0
+0x18f * ::ADDR + 0x27621 * ::EFL - 0x1a41600 * ::CPL - 0x11eb079ed14 == 0x0
+0x1bae438 * ::ADDR - 0x545d4f60 * ::EFL - 0x128811d * ::CR2 - 0x692e663c510020 == 0x0
+0x38178 * ::ADDR - 0x545d4f60 * ::CPL - 0x258d5 * ::CR2 - 0xd5239c2635c0 == 0x0
+0x5d7db5ac68 * ::ECX - 0x3c4 * ::EIP - 0x500109 * ::CR2 + 0x397ed6243dc5f4 == 0x0
+0x991578 * ::ECX + 0x337a * ::EFL - 0x83 * ::CR2 + 0x5e2025043a == 0x0
+0xfacf6a99418 * ::ECX - 0xd6a0dc7 * ::CR2 - 0x12b8 * ::CCD + 0x9a3817a68f0f1fc == 0x0
+0x12b2bdef48 * ::EDX - 0x3c4 * ::EIP - 0x500109 * ::CR2 + 0x397e8b594608d4 == 0x0
+0x991578 * ::EDX + 0x10162 * ::EFL - 0x28f * ::CR2 + 0x1d69e54bf42 == 0x0
+0x18f * ::EIP + 0x27780 * ::EFL + 0x43708fb92 * ::CPL - 0x12b5a83beaf == 0x0
+===========================================================================
+..jae():::EXIT
+0x175b * ::ADDR - 0x1757 * ::EIP - 0x3f60e86ed7 * ::CPL + 0xbb42f42b6e == 0x0
+0x824a816 * ::ADDR + 0xd211 * ::EIP - 0x23a682be58f * orig(::CPL) - 0x5da6e0f5630ca42 == 0x0
+0xc0 * ::ADDR + 0x2762d * ::EFL + 0x41a430 * ::CPL - 0x89fa6bda9e == 0x0
+0x260c18 * ::ADDR + 0x15187a26 * ::EFL - 0x181013 * ::CR2 - 0xa0c84bc9939f4 == 0x0
+0x7b38 * ::ADDR + 0xd2107b * ::EFL - 0x20d218 * orig(::EFL) - 0x588a61ea3d12 == 0x0
+0x1b0 * ::ADDR + 0x27633 * ::EFL - 0x41a430 * orig(::CPL) - 0x1366ab8d062 == 0x0
+0x1ec318 * ::ADDR + 0x15184b86 * ::EFL - 0x18d361 * orig(::CR2) - 0x444268c27ff14 == 0x0
+0x117c0 * ::ADDR - 0x5461e898 * ::CPL + 0x1d55 * ::CR2 - 0xde13d24ce1e8 == 0x0
+0xcc * ::ADDR + 0x41a428 * ::CPL + 0x2762d * ::CCS - 0x9294bb7868 == 0x0
+0x471 * ::ADDR - 0x1a420f6 * ::CPL - 0x2762d * orig(::EFL) - 0x330eb0bc498 == 0x0
+0x3 * ::ADDR - 0xd211 * ::CPL - 0xd20f * orig(::CPL) - 0x227cdc2dc == 0x0
+0x273740 * ::ADDR - 0x18d85d * ::CR2 + 0x15187a26 * ::CCS - 0xa5364185c50d0 == 0x0
+0x80321c * ::ADDR - 0x9e09c7 * ::CR2 - 0x2a30f44c * orig(::EFL) + 0x1571552bb2dff8 == 0x0
+0x7f38 * ::ADDR + 0xd2107b * ::CCS - 0x20d214 * orig(::EFL) - 0x5b687c713c38 == 0x0
+0x1bc * ::ADDR + 0x27633 * ::CCS - 0x41a428 * orig(::CPL) - 0x13f05086238 == 0x0
+0x1fee40 * ::ADDR + 0x15184b86 * ::CCS - 0x199ba9 * orig(::CR2) - 0x48b07582a6990 == 0x0
+0x4100d75 * ::ADDR - 0x32daf0730e8 * orig(::ECX) - orig(::EIP) - 0x2eb4c2574f6f5c0 == 0x0
+0x3edcfc1c * ::ADDR - 0x312e531cc7e0 * orig(::ECX) + 0xd20f * orig(::CCD) - 0x2d2bef4d4f1b8c28 == 0x0
+0x4100d75 * ::ADDR - 0xa2bc9b09c8 * orig(::EDX) - orig(::EIP) - 0x2eb499a828acec0 == 0x0
+0x18f * ::ADDR + 0x27633 * orig(::EFL) - 0x1a420f6 * orig(::CPL) - 0x11eb079f9b0 == 0x0
+0x375c87 * ::ADDR - 0xa8c25c3 * orig(::EFL) - 0x251053 * orig(::CR2) - 0xd25aabdbc5736 == 0x0
+0x702f * ::ADDR - 0xa8c25c3 * orig(::CPL) - 0x4b1b * orig(::CR2) - 0x1aa42e8bc513 == 0x0
+0x12b28 * ::EBX - 0x47a676dc05d0 * ::CPL + 0x3277 * ::CR2 - 0x244253d1fd28 == 0x0
+0x38178 * ::EBX - 0xd6f351473e98 * ::CPL + 0x9765 * orig(::CR2) - 0x6cc7355c7000 == 0x0
+0xe4d2888 * ::EBX - 0x1ade6a28e7d3 * ::CR2 + 0x1ade6c92822e * orig(::CR2) - 0xc026071b90099fe == 0x0
+0x4d * ::EIP - 0x6b31 * ::EFL + 0xd10c1837 * ::CPL - 0x39c5663fcf == 0x0
+0x4aca * ::EIP + 0xcb164e87de * ::CPL - 0x321d * ::CR2 - 0x141c25420ed2 == 0x0
+0x4d * ::EIP + 0xd10c1837 * ::CPL - 0x6b31 * ::CCS - 0x39c63d7831 == 0x0
+0xd20b * ::EIP + 0x23a5d4eb661 * ::CPL - 0xd233 * orig(::ADDR) - 0x6925a3f527a == 0x0
+0x5 * ::EIP + 0xd93cbcf * ::CPL - 0xc874 * orig(::EDX) - 0x3c06c89f1 == 0x0
+0x2b53a7b * ::EIP + 0x75a0f5ebb36b7 * ::CPL + 0x23bb * orig(::EIP) - 0x2083fe44fe336e0 == 0x0
+0x20c * ::EIP + 0x58e9ff924 * ::CPL - 0x6b31 * orig(::EFL) - 0x1892b0de655 == 0x0
+0xe05e * ::EIP + 0x2612fc13052 * ::CPL - 0x9657 * orig(::CR2) - 0x3c543646f69e == 0x0
+0xd20b * ::EIP + 0x824a816 * orig(::ADDR) - 0x23a5d4eb661 * orig(::CPL) - 0x5da6e0af6470942 == 0x0
+0x61e8 * ::EIP + 0x984bf04c148 * orig(::ECX) - 0x8257a49 * orig(::CR2) + 0x5da2e2d74b7e6fc == 0x0
+0x1e988 * ::EIP + 0x984bf04c148 * orig(::EDX) - 0x28bb636d * orig(::CR2) + 0x1d42c0d04b847e02 == 0x0
+0xbf1 * ::EIP + 0xe7ac58 * orig(::EIP) + 0x2735a74e9123d * orig(::CPL) - 0xadd87a50646b28 == 0x0
+0x4aca * ::EFL + 0x7ca60 * ::CPL - 0xf * ::CR2 + 0xac649ea1c == 0x0
+0x27621 * ::EFL + 0x41a370 * ::CPL + 0xc0 * orig(::ADDR) - 0x89fa6bbb96 == 0x0
+0x18ee0 * ::EFL - 0x50 * ::CR2 - 0x3e53 * orig(::EFL) + 0x39777d0f05 == 0x0
+0x4aca * ::EFL - 0xf * ::CR2 - 0x7ca60 * orig(::CPL) + 0xac661493c == 0x0
+0x1a4160 * ::EFL + 0xf67 * orig(::ADDR) - 0x41a37 * orig(::EFL) - 0xb114c3ba074 == 0x0
+0x27621 * ::EFL + 0x1b0 * orig(::ADDR) - 0x41a370 * orig(::CPL) - 0x1366ab8a416 == 0x0
+0x19bd * ::EFL - 0xf618c * orig(::ECX) + 0x8 * orig(::CR2) - 0x5bfc7657a == 0x0
+0x80b1 * ::EFL - 0xf618c * orig(::EDX) + 0x28 * orig(::CR2) - 0x1cbea77532 == 0x0
+0x198394 * ::EFL - 0x1bd07 * orig(::EFL) - 0x51e * orig(::CR2) + 0x3ad03705529 == 0x0
+0x4aca * ::EFL + 0xa4108 * orig(::CPL) - 0xf * orig(::CR2) + 0xac661493c == 0x0
+0x7ca60 * ::CPL - 0xf * ::CR2 + 0x4aca * ::CCS + 0xac6e013b0 == 0x0
+0x3dc70 * ::CPL + 0x2511 * ::CCS + 0xc * orig(::ADDR) - 0x89f5651f8 == 0x0
+0x1a41600 * ::CPL - 0x471 * orig(::ADDR) + 0x27621 * orig(::EFL) + 0x330eb0be2ec == 0x0
+0xd20b * ::CPL - 0x3 * orig(::ADDR) + 0xd20b * orig(::CPL) + 0x227cdc2e8 == 0x0
+0x23d3 * ::CPL - orig(::EIP) - 0x2b53a7b * orig(::CPL) + 0xc00fc1e8 == 0x0
+0x7a4f * ::CR2 - 0x67d54e * ::CCS - 0xc110 * orig(::ADDR) + 0x32d6bc82a1d0 == 0x0
+0x50 * ::CR2 - 0x18ee0 * ::CCS + 0x3e53 * orig(::EFL) - 0x397a9decc5 == 0x0
+0xf * ::CR2 - 0x4aca * ::CCS + 0x7ca60 * orig(::CPL) - 0xac6f772d0 == 0x0
+0xbc1b * ::CR2 + 0x13118b6 * ::CCS - 0xf94c * orig(::CR2) + 0x2bf700c80930 == 0x0
+0x13c091d * ::CR2 - 0x1006438 * orig(::ADDR) + 0x545d4f60 * orig(::EFL) - 0x2adb29be197fe0 == 0x0
+0x258d5 * ::CR2 - 0x38178 * orig(::ADDR) + 0x545d4f60 * orig(::CPL) + 0xd5239c2635c0 == 0x0
+0xd6a0dc7 * ::CR2 - 0xfacf6a99418 * orig(::ECX) + 0x12b8 * orig(::CCD) - 0x9a3817a68f0f1fc == 0x0
+0x1a4160 * ::CCS + 0xfe7 * orig(::ADDR) - 0x41a37 * orig(::EFL) - 0xb6d0f8ddf34 == 0x0
+0x27621 * ::CCS + 0x1bc * orig(::ADDR) - 0x41a370 * orig(::CPL) - 0x13f050859f8 == 0x0
+0x337a * ::CCS - 0x1fee40 * orig(::ECX) + 0x11 * orig(::CR2) - 0xc37184b30 == 0x0
+0x10162 * ::CCS - 0x1fee40 * orig(::EDX) + 0x55 * orig(::CR2) - 0x3d12f9bef0 == 0x0
+0x198394 * ::CCS - 0x1bd07 * orig(::EFL) - 0x51e * orig(::CR2) + 0x3ad36aa8451 == 0x0
+0x18ee * ::CCS + 0x38c40 * orig(::CPL) - 0x5 * orig(::CR2) + 0x397a7d0f0 == 0x0
+===========================================================================
+..jb():::ENTER
+===========================================================================
+..jb():::EXIT
+===========================================================================
+..jbe():::ENTER
+===========================================================================
+..jbe():::EXIT
+===========================================================================
+..je():::ENTER
+0x2b25 * ::ADDR - 0x12d3b * ::EIP + 0x402ec57 * ::EFL + 0xb96672233b34 == 0x0
+0x34034 * ::EIP - 0x177f1d8 * ::EFL - 0x5d83b * ::CR2 + 0x1dd1ccbd9b300 == 0x0
+===========================================================================
+..je():::EXIT
+0x702d * ::ADDR + 0xa8fe723 * ::EFL - 0x30f19 * orig(::EIP) + 0x1e1f757cf6c0c == 0x0
+0x702d * ::ADDR - 0x30f19 * orig(::EIP) + 0xa8fe723 * orig(::EFL) + 0x1e1f757cf6c0c == 0x0
+0x123df3 * ::EIP + 0xae8ff * ::EFL - 0x12483e * orig(::ADDR) + 0x765302dd39c == 0x0
+0x230e1 * ::EIP + 0x3427ef57 * ::EFL - 0xf4d44 * orig(::EIP) + 0x96b1d4bc1abd4 == 0x0
+0x451 * ::EIP + 0x3176d * ::EFL - 0x12483e * orig(::EFL) - 0x319cfe7b7fc == 0x0
+0x230e1 * ::EIP - 0xf4d44 * orig(::EIP) + 0x3427ef57 * orig(::EFL) + 0x96b1d4bc1abd4 == 0x0
+0x1a01a0 * ::EFL - 0x4519 * ::CR2 + 0x32dd88 * orig(::EFL) + 0x31a4e8ff7258 == 0x0
+0x3131c * ::EFL + 0x451 * orig(::ADDR) - 0x123df3 * orig(::EFL) - 0x319cff6ecb8 == 0x0
+0x2e36 * ::EFL + 0x41 * orig(::EIP) - 0x12c84 * orig(::EFL) - 0x2eb1a65b24 == 0x0
+0x5d83b * ::CR2 - 0x34034 * orig(::EIP) + 0x177f1d8 * orig(::EFL) - 0x1dd1ccbd9b300 == 0x0
+===========================================================================
+..jmp_far():::ENTER
+0xbb0d * ::ADDR - 0x3d * ::EIP - 0x2d94f6e * ::EFL - 0x86335243ba5b == 0x0
+0x3a43e * ::ADDR - 0x594e01e * ::EFL - 0x40d25 * ::CR2 + 0x4b6b078a43b6 == 0x0
+0x65f6c8 * ::EIP - 0xa63dfe00 * ::EFL - 0x7fddcd * ::CR2 + 0x129dcae67270d8 == 0x0
+===========================================================================
+..jmp_far():::EXIT
+0x39db19 * ::ADDR - 0x27311e * ::EIP + 0x52b50e8d * ::EFL - 0xd69b889769f60 == 0x0
+0xae32c * ::ADDR - 0x3632bd * ::EIP + 0xa56a1d1a * orig(::EFL) + 0x1f1d028204ed6d == 0x0
+0x18c50 * ::ADDR + 0x65f09fe * ::EFL + 0x291b * ::CR2 - 0x13a57d2d1f5cc == 0x0
+0x73d60f * ::ADDR + 0xa5e2169b * ::EFL - 0x4e623c * orig(::ADDR) - 0x1aea56fa31839e == 0x0
+0x7e60f1 * ::ADDR + 0xb696702d * ::EFL - 0x4e280c * orig(::EIP) - 0x22a77ac7dfb49e == 0x0
+0x891 * ::ADDR + 0x1ffd21 * ::EFL - 0xa46c * orig(::EFL) - 0x627f536b176 == 0x0
+0xac712 * ::ADDR - 0x3632bd * orig(::ADDR) + 0xa5e2169b * orig(::EFL) + 0x1f31325c65d257 == 0x0
+0xb1bb0 * ::ADDR - 0x3630fd * orig(::EIP) + 0xb696702d * orig(::EFL) + 0x1ef2f9ee21bcac == 0x0
+0x197db2 * ::EIP - 0x26f3576a * ::EFL - 0x1c5455 * ::CR2 + 0x20a685d2880c0 == 0x0
+0x73de5f * ::EIP + 0x6c9fa6 * ::EFL - 0x73c439 * orig(::ADDR) - 0x12ca9ea7d9bd == 0x0
+0xd0840 * ::EIP + 0x2d8bc6d1 * ::EFL - 0x72c * orig(::EIP) - 0x9585d62e7434e == 0x0
+0x2db * ::EIP + 0x9cfb3 * ::EFL - 0x36a7 * orig(::EFL) - 0x20d50078d3e == 0x0
+0x197db2 * ::EIP - 0x1c5455 * ::CR2 - 0x26f3576a * orig(::EFL) + 0x20a685d2880c0 == 0x0
+0xbb0d0 * ::EIP - 0x66f * orig(::EIP) - 0x2d8bc6d1 * orig(::EFL) - 0x861531adb9c1c == 0x0
+0x3a69 * ::EFL + 0x11 * orig(::ADDR) - 0x143 * orig(::EFL) - 0xc37715001 == 0x0
+0x2bdf73 * ::EFL + 0xb6c * orig(::EIP) + 0x84d0 * orig(::EFL) - 0x8354cdb152a == 0x0
+0x40d25 * ::CR2 - 0x3a43e * orig(::ADDR) + 0x594e01e * orig(::EFL) - 0x4b6b078a43b6 == 0x0
+0x7fddcd * ::CR2 - 0x65f6c8 * orig(::EIP) + 0xa63dfe00 * orig(::EFL) - 0x129dcae67270d8 == 0x0
+===========================================================================
+..jne():::ENTER
+0x27ea * ::ADDR + 0x23a0 * ::EIP - 0x31760b * ::EFL - 0x3646010ead1e == 0x0
+===========================================================================
+..jne():::EXIT
+0x50 * ::ADDR - 0xcb2 * ::EIP + 0xa183b * orig(::EFL) + 0x8e5917f38ae == 0x0
+0x12fa0 * ::ADDR + 0xf75b85 * ::EFL - 0x20a40 * orig(::EIP) + 0x9d1333fcd9a2 == 0x0
+0x96 * ::ADDR - 0x104e9 * ::EFL - 0x7a67 * orig(::EFL) - 0x6bc327484c == 0x0
+0xf0 * ::ADDR - 0x2616 * orig(::ADDR) + 0x1e4dc5 * orig(::EFL) + 0x1ab0b4734f42 == 0x0
+0x4286 * ::ADDR + 0x3b60 * orig(::EIP) - 0x5273d7 * orig(::EFL) - 0x5a74ac643b22 == 0x0
+0x16f17 * ::EIP - 0x30dc * ::EFL - 0x16edb * orig(::ADDR) - 0x2b1bbe8920 == 0x0
+0x12fa0 * ::EIP + 0xf7339b * ::EFL - 0x209c0 * orig(::EIP) + 0x9cb73c68055e == 0x0
+0x96 * ::EIP - 0x104bd * ::EFL - 0x7a49 * orig(::EFL) - 0x6bc327eaac == 0x0
+0x30e7b * ::EIP - 0x30e37 * orig(::ADDR) + 0x30dc * orig(::EFL) - 0x30dc0eca50 == 0x0
+0x4286 * ::EIP + 0x3b60 * orig(::EIP) - 0x526689 * orig(::EFL) - 0x5a74ac7fe13a == 0x0
+0x9c7f * ::EFL - 0x5a * orig(::ADDR) + 0x496b * orig(::EFL) + 0x40a84aef04 == 0x0
+0x305df * ::EFL - 0x5c2 * orig(::EIP) + 0x16c1a * orig(::EFL) + 0x42309ded77a == 0x0
+===========================================================================
+..js():::ENTER
+===========================================================================
+..js():::EXIT
+===========================================================================
+..leal():::ENTER
+0xc3 * ::EIP + 0x10b * ::EFL + 0x21026236a * ::CPL - 0x924c531db0 == 0x0
+0x125b8 * ::EIP + 0x31b87290468 * ::CPL + 0x10b * ::CR2 - 0xdd1c668d3b10 == 0x0
+0xc3d * ::EFL - 0x869f0 * ::CPL + 0x2 * ::CR2 - 0x16fe5d43b == 0x0
+===========================================================================
+..leal():::EXIT
+orig(::EBX) % ::EBX == 0x0
+0xf4baef9065 * ::ADDR + 0x3c0e * ::EIP - 0xf4b6dfbf34 * orig(::ADDR) - 0x2eb4e8c683b9260 == 0x0
+0x4ba01621b * ::ADDR - 0x2d6f * ::CCD - 0x4c9b84222 * orig(::ADDR) + 0xb4aa40bdfb63502 == 0x0
+0xc3 * ::EIP + 0x10b * ::EFL + 0x21026236a * ::CPL - 0x924c531db0 == 0x0
+0x125b8 * ::EIP + 0x31b87290468 * ::CPL + 0x10b * ::CR2 - 0xdd1c668d3b10 == 0x0
+0xc3d * ::EFL - 0x869f0 * ::CPL + 0x2 * ::CR2 - 0x16fe5d43b == 0x0
+===========================================================================
+..movb():::ENTER
+0x53939 * ::ADDR - 0x89001 * ::EIP - 0xcb1680e * ::EFL + 0x26646ca9b24fd == 0x0
+===========================================================================
+..movb():::EXIT
+0x40a4db904c5 * ::ADDR - 0x1c * ::EDX - 0x40a3dae029b * orig(::ADDR) - 0xb86ff470e03df7c == 0x0
+0x66dd * ::ADDR - 0xa89b * ::EIP - 0xf9f06f * ::EFL + 0x2f3ea4a10209 == 0x0
+0x89001 * ::ADDR + 0x7 * ::EFL - 0x88fdf * orig(::ADDR) - 0x186e0f8e5e == 0x0
+0x407c * ::ADDR - 0x407b * orig(::ADDR) - 0x5220 * orig(::EAX) - 0xb7f1b7cf == 0x0
+0xa4f58 * ::ECX + 0x2a9d858 * ::EFL - 0xfefb * ::CR2 + 0xb72e1a91ff20 == 0x0
+0x89001 * ::EIP + 0xcb1680e * ::EFL - 0x53939 * orig(::ADDR) - 0x26646ca9b24fd == 0x0
+===========================================================================
+..movl():::ENTER
+0xc3 * ::EIP + 0x10b * ::EFL + 0x21026236a * ::CPL - 0x924c531db0 == 0x0
+===========================================================================
+..movl():::EXIT
+orig(::EBX) % ::EBX == 0x0
+0x3 * ::ADDR - 0x5a7 * ::EIP - 0xf4dd34d21 * ::CPL + 0x43b739ddd0a == 0x0
+0x5bd16deb886 * ::ADDR + 0x31faf * ::EIP - 0x5bd2f3cec60 * orig(::ADDR) + 0x117fe155e6dcd300 == 0x0
+0x169ba00 * ::ADDR - 0x31faf * ::EFL - 0x169c000 * orig(::ADDR) + 0x44fa416af49 == 0x0
+0x3 * ::ADDR + 0x44c1 * ::CPL - 0x2 * orig(::ADDR) - 0xb7f0e0c3 == 0x0
+0xc3 * ::EIP + 0x10b * ::EFL + 0x21026236a * ::CPL - 0x924c531db0 == 0x0
+===========================================================================
+..movw():::ENTER
+===========================================================================
+..movw():::EXIT
+===========================================================================
+..movzbl():::ENTER
+===========================================================================
+..movzbl():::EXIT
+===========================================================================
+..new0x31():::ENTER
+0x162e9 * ::ADDR + 0x190cdc * ::EFL - 0x30d1c * ::CR2 + 0x13238e7f352cb == 0x0
+0x187a * ::ADDR + 0xfa8098 * ::CPL - 0x34b9 * ::CR2 + 0x144b71c463de == 0x0
+0x609 * ::EIP - 0x101f28 * ::EFL + 0x1061f452ab * ::CPL - 0x487185ffa71 == 0x0
+===========================================================================
+..new0x31():::EXIT
+0x61e80 * ::ADDR - 0x2ef81c8 * ::EFL - 0xb3b53 * ::CR2 + 0x3ac636d215ec8 == 0x0
+0x311ba7fc * ::ADDR - 0x9f5494a3ff * ::EFL + 0x346b8f * ::CCS - 0x2348a137a1913008 == 0x0
+0x7eb3 * ::ADDR - 0x16e2520 * ::EFL - 0x2ced4c * orig(::EFL) - 0x5b07eccff717 == 0x0
+0xc3 * ::ADDR - 0x278ac * ::EFL - 0x346b8f * orig(::CPL) - 0x8c1a7ce73a == 0x0
+0x162e9 * ::ADDR - 0x30d1c * ::CR2 + 0x190cdc * orig(::EFL) + 0x13238e7f352cb == 0x0
+0x187a * ::ADDR - 0x34b9 * ::CR2 + 0xfa8098 * orig(::CPL) + 0x144b71c463de == 0x0
+0x16c2822f8 * ::EFL - 0xf1c33b * ::CR2 - 0x7880 * ::CCS + 0xadb4871c021c08 == 0x0
+0xc4f5b8 * ::EFL + 0x1d3d * ::CR2 - 0x61e80 * orig(::EFL) - 0x15025ea2f4b8 == 0x0
+0xf1c33b * ::CR2 + 0x7880 * ::CCS - 0x16c2822f8 * orig(::EFL) - 0xadb1aecbbc2c08 == 0x0
+===========================================================================
+..new0xef():::ENTER
+0x1203b570 * ::ADDR - 0x34b9 * ::ECX - 0x280b03b92bc6 * ::II - 0xcf1637a2e1a7282 == 0x0
+0x1e139 * ::ADDR + 0xb430 * ::EIP + 0x1e8791410a0 * ::CPL - 0x1e0f3bdfd3e71 == 0x0
+0x2b55e1b * ::ADDR - 0x3c10 * ::EIP + 0x1e8791410a0 * ::II - 0x1f205597c8940b0 == 0x0
+0x21a7c * ::ADDR - 0x1f5013 * ::EFL - 0x487e6 * ::CR2 + 0x1be7c17f8f649 == 0x0
+0x187a * ::ADDR - 0xfa8098 * ::CPL - 0x34b9 * ::CR2 + 0x144b74b3e5a6 == 0x0
+0x187a * ::ADDR - 0x2ef81c8 * ::II - 0x34b9 * ::CR2 + 0x144b74b3e5a6 == 0x0
+0xc3d * ::ECX + 0x93aea1dc786 * ::II - 0x7dd93ff * ::CR2 + 0x5a6b8d61e9f0ffc == 0x0
+0xdb * ::EIP - 0xce3d * ::EFL + 0x251bca81c * ::CPL - 0xa44d6a0fd0 == 0x0
+0x125b8 * ::EIP + 0x31c4a6c46e8 * ::CPL + 0x5a3ab * ::CR2 - 0x4e9a5a2086e08 == 0x0
+0xc3d * ::EIP - 0x63894d88dd * ::II - 0x10406fd * ::CR2 + 0xbacba91a71fe10 == 0x0
+0x63b8 * ::CPL + 0x12b28 * ::II + ::CR2 - 0xb7f0db30 == 0x0
+===========================================================================
+..new0xef():::EXIT
+0x1203b570 * ::ADDR - 0x34b9 * ::ECX - 0x280b03b92bc6 * orig(::II) - 0xcf1637a2e1a7282 == 0x0
+0x14a6f * ::ADDR - 0x7d404c * ::EFL - 0x2749a * ::CR2 + 0xd63bb22defcd == 0x0
+0x417a355 * ::ADDR - 0xd470bc325 * ::EFL + 0x3be71 * ::CCS - 0x2f0b819f822ae80 == 0x0
+0x2cb * ::ADDR - 0x90fcc * ::EFL + 0x13a4d * orig(::EFL) - 0x201b95b02ea == 0x0
+0x41 * ::ADDR - 0xd2e4 * ::EFL + 0x13a4d0 * orig(::CPL) - 0x2eb3b3634d == 0x0
+0x21a7c * ::ADDR - 0x487e6 * ::CR2 - 0x1f5013 * orig(::EFL) + 0x1be7c17f8f649 == 0x0
+0x187a * ::ADDR - 0x34b9 * ::CR2 - 0xfa8098 * orig(::CPL) + 0x144b74b3e5a6 == 0x0
+0x187a * ::ADDR - 0x34b9 * ::CR2 - 0x2ef81c8 * orig(::II) + 0x144b74b3e5a6 == 0x0
+0x3edd0015 * ::ADDR + 0xb430 * ::CCD + 0x2c4c6d4ea2b0 * orig(::II) - 0x2d2ba31fa141a408 == 0x0
+0x1e139 * ::ADDR + 0xb430 * orig(::EIP) + 0x1e8791410a0 * orig(::CPL) - 0x1e0f3bdfd3e71 == 0x0
+0x2b55e1b * ::ADDR - 0x3c10 * orig(::EIP) + 0x1e8791410a0 * orig(::II) - 0x1f205597c8940b0 == 0x0
+0xc3d * ::ECX - 0x7dd93ff * ::CR2 + 0x93aea1dc786 * orig(::II) + 0x5a6b8d61e9f0ffc == 0x0
+0x16c2822f8 * ::EFL - 0xf1c33b * ::CR2 - 0x7880 * ::CCS + 0xadb4871c021c08 == 0x0
+0xa5b0 * ::EFL - 0x6e * ::CR2 - 0x196b * orig(::EFL) + 0x4f08ddbcbd == 0x0
+0x788 * ::EFL - 0x5 * ::CR2 - 0xcb58 * orig(::CPL) + 0x397ac60f8 == 0x0
+0x3edd0015 * ::CR2 + 0x61e8 * ::CCD + 0x1811e8478aa8 * orig(::II) - 0x2d2b3883fd8ec404 == 0x0
+0x5a3ab * ::CR2 + 0x125b8 * orig(::EIP) + 0x31c4a6c46e8 * orig(::CPL) - 0x4e9a5a2086e08 == 0x0
+0x10406fd * ::CR2 - 0xc3d * orig(::EIP) + 0x63894d88dd * orig(::II) - 0xbacba91a71fe10 == 0x0
+0x1e139 * ::CCS - 0xc1693c * orig(::EIP) - 0x20bd8f8a8e257 * orig(::CPL) + 0x911b25dc089898 == 0x0
+===========================================================================
+..nop():::ENTER
+===========================================================================
+..nop():::EXIT
+===========================================================================
+..orb():::ENTER
+===========================================================================
+..orb():::EXIT
+===========================================================================
+..orl():::ENTER
+0x73ff * ::ADDR + 0xc1b7 * ::EIP - 0x16715 * ::EFL - 0xde8886e17691 == 0x0
+0x17500 * ::EIP - 0x1baf0 * ::EFL - 0x1733 * ::CR2 - 0xfb56b9f37690 == 0x0
+===========================================================================
+..orl():::EXIT
+0x2f9af1ba7 * ::ADDR - 0x59d71 * ::EAX - 0x2c993e151 * ::EIP - 0x22908e88752bae00 == 0x0
+0x80489b9 * ::ADDR - 0x3 * ::EAX - 0x80489b9 * orig(::ADDR) - 0x180d9d2e == 0x0
+0x24242425 * ::ADDR - 0x3 * ::EDX - 0x24242425 * orig(::ADDR) - 0x6c6c6c72 == 0x0
+0x1cffc * ::ADDR + 0x307cc * ::EIP - 0x59d71 * ::EFL - 0x37ace8d652c4e == 0x0
+0x74900 * ::ADDR - 0x81ad0 * ::EFL + 0xc1f3 * ::CR2 - 0x5c764ccec35f0 == 0x0
+0x306dc * ::ADDR + 0x10b * ::EFL - 0x307cc * orig(::ADDR) + 0xac71c27f36 == 0x0
+0xfffff001 * ::ADDR + 0x3 * ::CCS - 0xfffff001 * orig(::ADDR) - 0x5ffffa006 == 0x0
+0x5095969f63 * ::ADDR - 0x10b * ::CCD - 0x50ada43c8b * orig(::ADDR) + 0x11485bc607742ffc == 0x0
+0x17500 * ::EIP - 0x1baf0 * ::EFL - 0x1733 * ::CR2 - 0xfb56b9f37690 == 0x0
+0xc1b7 * ::EIP - 0x16715 * ::EFL + 0x73ff * orig(::ADDR) - 0xde8886e17691 == 0x0
+===========================================================================
+..popl():::ENTER
+===========================================================================
+..popl():::EXIT
+===========================================================================
+..pushl():::ENTER
+0x430098a088c * ::ADDR + 0x25679c0 * ::EAX - 0x430083903cb * ::CR2 - 0x2a02bd3c7dad400 == 0x0
+===========================================================================
+..pushl():::EXIT
+orig(::EAX) % ::EAX == 0x0
+0x430098a1434 * ::ADDR + 0x25679c0 * ::EAX - 0x43008390f73 * ::CR2 - 0x2a03003d164e820 == 0x0
+0x3483 * ::ADDR - 0x218041c81e58 * ::EAX + 0x218041c87b98 * orig(::EAX) - 0x68bb92464c53 == 0x0
+0x430098a088c * ::ADDR - 0x430083903cb * ::CR2 + 0x25679c0 * orig(::EAX) - 0x2a03003d164dc80 == 0x0
+0x25679c0 * ::EAX - 0x43008390f73 * ::CR2 + 0x430098a1434 * orig(::ADDR) - 0x2a02bd3c7dad400 == 0x0
+0x218041c81e58 * ::EAX - 0x3483 * orig(::ADDR) - 0x218041c87b98 * orig(::EAX) + 0x68bb924617d0 == 0x0
+0x430083903cb * ::CR2 - 0x430098a088c * orig(::ADDR) - 0x25679c0 * orig(::EAX) + 0x2a02bd3c7dad400 == 0x0
+===========================================================================
+..rdtsc():::ENTER
+===========================================================================
+..rdtsc():::EXIT
+===========================================================================
+..repe():::ENTER
+===========================================================================
+..repe():::EXIT
+===========================================================================
+..retl():::ENTER
+0x12445 * ::ADDR - 0x2c96 * ::EIP + 0x31990f2 * ::EFL - 0xb1fd6c458c4c == 0x0
+0x6190c * ::ADDR + 0x13ac6d88 * ::EFL + 0x164b * ::CR2 - 0x471d0bda761c8 == 0x0
+0xc3218 * ::EIP + 0x28dc3c8e * ::EFL + 0x123f5 * ::CR2 - 0x995616e1d7dbc == 0x0
+===========================================================================
+..retl():::EXIT
+orig(::EDX) % ::EDX == 0x0
+0x599324 * ::ADDR - 0x33e4a0 * ::EIP + 0x88b287a5 * ::EFL - 0x1b144393a4bbf2 == 0x0
+0x599324 * ::ADDR - 0x33e4a0 * ::EIP + 0x88b287a5 * orig(::EFL) - 0x1b144393a4bbf2 == 0x0
+0x134814 * ::ADDR + 0x243e1471 * ::EFL - 0x67c94 * ::CR2 - 0x931cb03b1458a == 0x0
+0x2cc434 * ::ADDR + 0x44518909 * ::EFL - 0x19f250 * orig(::ADDR) - 0xd86467b465c5a == 0x0
+0x55b3c4 * ::ADDR + 0x876e970d * ::EFL - 0x33e4a0 * orig(::EIP) - 0x184bf1d1d6e4c2 == 0x0
+0x4284 * ::ADDR + 0x67748 * ::EFL + 0x768f55 * orig(::EFL) - 0x2fcbebc38182 == 0x0
+0x134814 * ::ADDR - 0x67c94 * ::CR2 + 0x243e1471 * orig(::EFL) - 0x931cb03b1458a == 0x0
+0x2cc434 * ::ADDR - 0x19f250 * orig(::ADDR) + 0x44518909 * orig(::EFL) - 0xd86467b465c5a == 0x0
+0x55b3c4 * ::ADDR - 0x33e4a0 * orig(::EIP) + 0x876e970d * orig(::EFL) - 0x184bf1d1d6e4c2 == 0x0
+0x6d1876 * ::EIP - 0x39432 * ::EFL - 0x6d2749 * orig(::ADDR) + 0xaa6d0dfa190 == 0x0
+0x694369 * ::EIP + 0xc647f19 * ::EFL - 0x6d2749 * orig(::EIP) + 0x2cb6ed692a580 == 0x0
+0x204 * ::EIP - 0xa90 * ::EFL + 0x66bb9 * orig(::EFL) - 0x172ce68557e == 0x0
+0x6190c * ::EIP + 0x1672 * ::CR2 + 0x13af84ef * orig(::EFL) - 0x471ecc97b77c2 == 0x0
+0x16621a * ::EIP - 0x1664c9 * orig(::ADDR) + 0x65df * orig(::EFL) + 0x1ed9efcbb62 == 0x0
+0x49114 * ::EIP - 0xb390 * orig(::EIP) + 0xc647f19 * orig(::EFL) - 0x2c7157ff050be == 0x0
+0x592c * ::EFL - 0x1122 * orig(::ADDR) - 0x368c3b * orig(::EFL) + 0xc4fda69617a == 0x0
+0x49114 * ::EFL - 0x2244 * orig(::EIP) - 0x694369 * orig(::EFL) + 0x189fa348891e == 0x0
+0x164b * ::CR2 + 0x6190c * orig(::ADDR) + 0x13ac6d88 * orig(::EFL) - 0x471d0bda761c8 == 0x0
+0x123f5 * ::CR2 + 0xc3218 * orig(::EIP) + 0x28dc3c8e * orig(::EFL) - 0x995616e1d7dbc == 0x0
+===========================================================================
+..sete():::ENTER
+===========================================================================
+..sete():::EXIT
+===========================================================================
+..shll():::ENTER
+0x187a * ::ADDR - 0x1cb4e19 * ::ECX - 0x77d * ::CR2 - 0xc34cb3fa1fb == 0x0
+0x187a00 * ::EIP - 0x731dc8 * ::EFL - 0x6eb53 * ::CR2 - 0xc9d73921750b8 == 0x0
+===========================================================================
+..shll():::EXIT
+orig(::ECX) % ::ECX == 0x0
+0x61e80 * ::ADDR - 0x1a6388 * ::EFL - 0x1bc7b * ::CR2 - 0x3262d889574f8 == 0x0
+0x187a * ::ADDR - 0x77d * ::CR2 - 0x1cb4e19 * orig(::ECX) - 0xc34cb3feb69 == 0x0
+0x187a00 * ::EIP - 0x731dc8 * ::EFL - 0x6eb53 * ::CR2 - 0xc9d73921750b8 == 0x0
+0x77d * ::CR2 - 0x187a * orig(::ADDR) + 0x1cb4e19 * orig(::ECX) + 0xc34cb3fa1fb == 0x0
+===========================================================================
+..subl():::ENTER
+===========================================================================
+..subl():::EXIT
+===========================================================================
+..testb():::ENTER
+0x153371 * ::ADDR - 0x11d1 * ::ECX + 0x1fdf6 * ::EFL - 0xf3bb8f61b0b18 == 0x0
+0x52473e4 * ::ADDR - 0x1fdff * ::ECX - 0x33b63 * ::CCS - 0x3b1e59cb172db00 == 0x0
+0xbc2cc * ::ADDR - 0x4c9 * ::EIP - 0xb58a * ::EFL - 0x86fe0c586af4e == 0x0
+0x72d5cab * ::ADDR - 0xfeef * ::EIP - 0x64de9 * ::CCS - 0x527770230381000 == 0x0
+0x1532dc * ::ADDR + 0x1fde8 * ::EFL - 0xd63 * ::CCS - 0xf3b4de78713ac == 0x0
+0x3acdfc * ::ECX - 0x1532a5 * ::EIP + 0x29b4e * ::EFL + 0xf3b1dfcd78bda == 0x0
+0x2647439 * ::ECX - 0xdb5693 * ::EIP - 0x3c1da * ::CCS + 0x9d98f1be3d7310 == 0x0
+0x9ab4f * ::EIP + 0xe5ab956 * ::EFL - 0x3ac6b5 * ::CCS - 0x6f2ab88b3f025 == 0x0
+===========================================================================
+..testb():::EXIT
+0xb458e * ::ADDR - 0x64de9 * ::ECX + 0x2406d * ::EIP - 0x9b77f39fddc51 == 0x0
+0x153371 * ::ADDR - 0x11d1 * ::ECX + 0x1fdf6 * ::EFL - 0xf3bb8f64571fa == 0x0
+0x52473e4 * ::ADDR - 0x1fdff * ::ECX - 0x33b63 * ::CCS - 0x3b1e59cbbbbc2c0 == 0x0
+0x4a8a8a8c5 * ::ADDR + 0xc9bd2 * ::EDX - 0x4848484a0 * ::EIP - 0x19f99feb7cd62502 == 0x0
+0xbc2cc * ::ADDR - 0x4c9 * ::EIP - 0xb58a * ::EFL - 0x86fe0c59e34e6 == 0x0
+0x72d5cab * ::ADDR - 0xfeef * ::EIP - 0x64de9 * ::CCS - 0x52777023e92c97e == 0x0
+0x1532dc * ::ADDR + 0x1fde8 * ::EFL - 0xd63 * ::CCS - 0xf3b4de7b17964 == 0x0
+0x3acdfc * ::ECX - 0x1532a5 * ::EIP + 0x29b4e * ::EFL + 0xf3b1dfcd78bda == 0x0
+0x2647439 * ::ECX - 0xdb5693 * ::EIP - 0x3c1da * ::CCS + 0x9d98f1be3d7310 == 0x0
+0x11d1 * ::ECX - 0x1fdf6 * ::EFL - 0x153371 * orig(::ADDR) + 0xf3bb8f61b0b18 == 0x0
+0x1fdff * ::ECX + 0x33b63 * ::CCS - 0x52473e4 * orig(::ADDR) + 0x3b1e59cb172db00 == 0x0
+0x9ab4f * ::EIP + 0xe5ab956 * ::EFL - 0x3ac6b5 * ::CCS - 0x6f2ab88b3f025 == 0x0
+0x4c9 * ::EIP + 0xb58a * ::EFL - 0xbc2cc * orig(::ADDR) + 0x86fe0c586af4e == 0x0
+0xfeef * ::EIP + 0x64de9 * ::CCS - 0x72d5cab * orig(::ADDR) + 0x527770230381000 == 0x0
+0x1fde8 * ::EFL - 0xd63 * ::CCS + 0x1532dc * orig(::ADDR) - 0xf3b4de78713ac == 0x0
+===========================================================================
+..testl():::ENTER
+0x3d * ::ADDR + 0x1716 * ::EAX + 0xaf6 * ::EFL - 0x2bd4500786 == 0x0
+0x17f779 * ::ADDR + 0x1778 * ::EIP + 0x5c6d8 * ::EFL - 0x11493e2617148a == 0x0
+0xc3d0 * ::EIP + 0x125b8 * ::EFL - 0x168e9 * ::CR2 + 0x769f24b2fdf8 == 0x0
+===========================================================================
+..testl():::EXIT
+0x2ac913 * ::ADDR + 0x1b1dd2 * ::EAX + 0x36ce * ::EIP - 0x1ee53cfdf21b3c == 0x0
+0x3d * ::ADDR + 0x1716 * ::EAX + 0xaf6 * ::EFL - 0x2bd4500800 == 0x0
+0xbaa24 * ::ADDR + 0x74438 * ::EAX + 0x1b67 * ::CR2 - 0x87540698bd708 == 0x0
+0x17f779 * ::ADDR + 0x1778 * ::EIP + 0x5c6d8 * ::EFL - 0x11493e2647037c == 0x0
+0x187a00 * ::ADDR - 0x434f8 * ::EFL + 0x39b7 * ::CR2 - 0x11bfa20bf01bc8 == 0x0
+0x1716 * ::EAX + 0xaf6 * ::EFL + 0x3d * orig(::ADDR) - 0x2bd4500786 == 0x0
+0xc3d0 * ::EIP + 0x125b8 * ::EFL - 0x168e9 * ::CR2 + 0x769f24b2fdf8 == 0x0
+0x1778 * ::EIP + 0x5c6d8 * ::EFL + 0x17f779 * orig(::ADDR) - 0x11493e2617148a == 0x0
+===========================================================================
+..xorl():::ENTER
+0x6c2a * ::ADDR - 0x6459 * ::EIP - 0x10fc9d7b840 * ::CPL - 0x26e5e0d071d == 0x0
+0xc3 * ::EIP + 0x10b * ::EFL + 0x21026236a * ::CPL - 0x924c531db0 == 0x0
+0x12b28 * ::EIP + 0x32a41592b38 * ::CPL - 0xd7fb * ::CR2 - 0x454242af1250 == 0x0
+0xc3d * ::EFL - 0x869f0 * ::CPL + 0x2 * ::CR2 - 0x16fe5d43b == 0x0
+===========================================================================
+..xorl():::EXIT
+orig(::ECX) % ::ECX == 0x0
+orig(::EDX) % ::EDX == 0x0
+0xaaf418 * ::ADDR - 0x68068 * ::EFL + 0xbd67 * ::CR2 - 0x7b5ce4a240c078 == 0x0
+0x24b7 * ::ECX - 0x61e8 * ::CPL + 0x3 * ::CR2 - 0x227ceeb61 == 0x0
+0xc3 * ::EIP + 0x10b * ::EFL + 0x21026236a * ::CPL - 0x924c531db0 == 0x0
+0x12b28 * ::EIP + 0x32a41592b38 * ::CPL - 0xd7fb * ::CR2 - 0x454242af1250 == 0x0
+0x6459 * ::EIP + 0x10fc9d7b840 * ::CPL - 0x6c2a * orig(::ADDR) + 0x26e5e0d071d == 0x0
+0xc3d * ::EFL - 0x869f0 * ::CPL + 0x2 * ::CR2 - 0x16fe5d43b == 0x0
+Exiting Daikon.
