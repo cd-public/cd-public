@@ -85,7 +85,7 @@ def printer(for_next,vars,uniq,outf,nonce):
 	return nonce
 
 			
-def parse():
+def parse(name):
 	uniq = [[i,0] for i in uniq_insts.parse()]
 	#print("in in_parse")
 	#print(uniq)
@@ -97,17 +97,18 @@ def parse():
 	count = -1
 	#print_vars(vars)
 	names = ["INST","ARG1","ARG2"]
-	outf = open("in_trace.dtrace","w")
+	outf = open(name + ".dtrace","w")
 	outf.write("input-language C/C++\ndecl-version 2.0\nvar-comparability implicit\n") # header
 	line = ""
 	nonce = 1
 	in_int = False
-	for new_line in open("cs.txt", "r"):
+	for new_line in open(name + ".txt", "r"):
 		if len(line) == 0 or line[0:2] == "IN" or line[0] == "-":  # no information in line case
 			1 == 1;
 		elif "Servicing hardware INT=" in line: # interrupt start case
 			in_int = True
 			save("INST", "new" + line.replace("Servicing hardware INT=", "").rstrip(), vars)
+			save("ADDR","-1",vars)
 		elif line[0:2] == "0x": # instruction case
 			in_int = False
 			temp = line[38:].replace("rep ","")
@@ -156,4 +157,5 @@ def parse():
 				if len(splits) == 2:
 					save(splits[0],splits[1],vars)
 		line = new_line
-parse()
+		
+parse("cs2")
