@@ -158,4 +158,6 @@ def parse(name):
 					save(splits[0],splits[1],vars)
 		line = new_line
 		
+parse("cs")		
 parse("cs2")
+parse("boot")
