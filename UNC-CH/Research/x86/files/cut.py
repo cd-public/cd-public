@@ -1,11 +1,14 @@
 def make_cut():
 	for line in open("out_w_b1m.txt","r"):
-		if "::ELF ==" in line and orig not in line:
+		if "::EFL ==" in line and "orig" not in line:
+			print(line.rstrip())
+		elif ".." in line:
 			print(line.rstrip())
 		elif "::" in line[0:2]:
 			1 == 1
 		else:
-			print(line.rstrip())
+			1 == 1
+			#print(line.rstrip())
 			
 def dec_to_hex():
 	for line in open("cut.txt","r"):
