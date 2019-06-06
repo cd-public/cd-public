@@ -61,6 +61,11 @@ def printer(for_next,vars,uniq,outf,nonce):
 				#print(var[0])
 				#print(var[1])
 				outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
+		value = bin(int(vars[9][1],16))
+		if len(value) <  16: # IOPL necessarily 0
+			outf.write("\n::" + "IOPL" + "\n" + "0" + "\n" + "1")
+		if len(value) >= 16: # have to check
+			outf.write("\n::" + "IOPL" + "\n" + str(int(value[-14:-12],2)) + "\n" + "1")
 	#print_vars(vars)
 	else:
 		#print(vars)
@@ -73,6 +78,11 @@ def printer(for_next,vars,uniq,outf,nonce):
 				outf.write("\n::" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
 			elif "inst" not in var[0]:
 				outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
+		value = bin(int(vars[9][1],16))
+		if len(value) <  16: # IOPL necessarily 0
+			outf.write("\n::" + "IOPL" + "\n" + "0" + "\n" + "1")
+		if len(value) >= 16: # have to check
+			outf.write("\n::" + "IOPL" + "\n" + str(int(value[-14:-12],2)) + "\n" + "1")
 		nonce = get_nonce(vars[0][1], uniq)
 		outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
 		for var in vars:
@@ -82,6 +92,13 @@ def printer(for_next,vars,uniq,outf,nonce):
 				outf.write("\n::" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
 			elif "inst" not in var[0]:
 				outf.write("\n::" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")
+		# take care of IOPL
+		#print(vars[9][1])
+		value = bin(int(vars[9][1],16))
+		if len(value) <  16: # IOPL necessarily 0
+			outf.write("\n::" + "IOPL" + "\n" + "0" + "\n" + "1")
+		if len(value) >= 16: # have to check
+			outf.write("\n::" + "IOPL" + "\n" + str(int(value[-14:-12],2)) + "\n" + "1")
 	return nonce
 
 			
