@@ -1,0 +1,632 @@
+
+
+PPT_ NAME std.shrb
+CPL==0
+
+
+PPT_ NAME std.mull
+CPL==0
+
+
+PPT_ NAME std.sgdtl
+CPL==0
+
+
+PPT_ NAME std.testl
+CPL==0
+
+
+PPT_ NAME std.movsb
+CPL==0
+
+
+PPT_ NAME std.decb
+CPL==0
+
+
+PPT_ NAME std.subl
+CPL==0
+
+
+PPT_ NAME std.jns
+CPL==0
+
+
+PPT_ NAME std.je
+CPL==0
+
+
+PPT_ NAME std.movl
+CPL==0
+
+
+PPT_ NAME std.shldl
+CPL==0
+
+
+PPT_ NAME std.popl
+CPL==0
+
+
+PPT_ NAME std.adcb
+CPL==0
+
+
+PPT_ NAME std.stosl
+CPL==0
+
+
+PPT_ NAME std.subb
+CPL==0
+
+
+PPT_ NAME std..byte
+CPL==0
+
+
+PPT_ NAME std.int
+CPL==0
+
+
+PPT_ NAME std.popfw
+CPL==0
+
+
+PPT_ NAME std.movzbw
+CPL==0
+
+
+PPT_ NAME std.sbbb
+CPL==0
+
+
+PPT_ NAME std.rorl
+CPL==0
+
+
+PPT_ NAME std.divb
+CPL==0
+
+
+PPT_ NAME std.setg
+CPL==0
+
+
+PPT_ NAME std.leal
+CPL==0
+
+
+PPT_ NAME std.outb
+CPL==0
+
+
+PPT_ NAME std.jmp_near
+CPL==0
+
+
+PPT_ NAME std.mulb
+CPL==0
+
+
+PPT_ NAME std.incl
+CPL==0
+
+
+PPT_ NAME std.jge
+CPL==0
+
+
+PPT_ NAME std.seta
+CPL==0
+
+
+PPT_ NAME std.addl
+CPL==0
+
+
+PPT_ NAME std.pushal
+CPL==0
+
+
+PPT_ NAME std.inl
+CPL==0
+
+
+PPT_ NAME std.cli
+CPL==0
+
+
+PPT_ NAME std.movb
+CPL==0
+
+
+PPT_ NAME std.jmp_far
+CPL==0
+
+
+PPT_ NAME std.insl
+CPL==0
+
+
+PPT_ NAME std.jmpl
+CPL==0
+
+
+PPT_ NAME std.wrmsr
+CPL==0
+
+
+PPT_ NAME std.decw
+CPL==0
+
+
+PPT_ NAME std.movzbl
+CPL==0
+
+
+PPT_ NAME std.lidtw
+CPL==0
+
+
+PPT_ NAME std.lodsw
+CPL==0
+
+
+PPT_ NAME std.0x08
+CPL==0
+
+
+PPT_ NAME std.cmpb
+CPL==0
+
+
+PPT_ NAME std.imulw
+CPL==0
+
+
+PPT_ NAME std.leaw
+CPL==0
+
+
+PPT_ NAME std.popaw
+CPL==0
+
+
+PPT_ NAME std.movw
+CPL==0
+
+
+PPT_ NAME std.shrl
+CPL==0
+
+
+PPT_ NAME std.testw
+CPL==0
+
+
+PPT_ NAME std.stosb
+CPL==0
+
+
+PPT_ NAME std.retl
+CPL==0
+
+
+PPT_ NAME std.calll_far
+CPL==0
+
+
+PPT_ NAME std.pushw
+CPL==0
+
+
+PPT_ NAME std.testb
+CPL==0
+
+
+PPT_ NAME std.jmpw
+CPL==0
+
+
+PPT_ NAME std.lodsb
+CPL==0
+
+
+PPT_ NAME std.js
+CPL==0
+
+
+PPT_ NAME std.setge
+CPL==0
+
+
+PPT_ NAME std.adcl
+CPL==0
+
+
+PPT_ NAME std.rdtsc
+CPL==0
+
+
+PPT_ NAME std.lgdtl
+CPL==0
+
+
+PPT_ NAME std.popfl
+CPL==0
+
+
+PPT_ NAME std.decl
+CPL==0
+
+
+PPT_ NAME std.btl
+CPL==0
+
+
+PPT_ NAME std.rorb
+CPL==0
+
+
+PPT_ NAME std.ljmpw
+CPL==0
+
+
+PPT_ NAME std.andl
+CPL==0
+
+
+PPT_ NAME std.insb
+CPL==0
+
+
+PPT_ NAME std.sarl
+CPL==0
+
+
+PPT_ NAME std.calll_near
+CPL==0
+
+
+PPT_ NAME std.wbinvd
+CPL==0
+
+
+PPT_ NAME std.imull
+CPL==0
+
+
+PPT_ NAME std.addb
+CPL==0
+
+
+PPT_ NAME std.nop
+CPL==0
+
+
+PPT_ NAME std.sti
+CPL==0
+
+
+PPT_ NAME std.lcallw
+CPL==0
+
+
+PPT_ NAME std.bswapl
+CPL==0
+
+
+PPT_ NAME std.shlw
+CPL==0
+
+
+PPT_ NAME std.andb
+CPL==0
+
+
+PPT_ NAME std.xorl
+CPL==0
+
+
+PPT_ NAME std.shll
+CPL==0
+
+
+PPT_ NAME std.iretw
+CPL==0
+
+
+PPT_ NAME std.pause
+CPL==0
+
+
+PPT_ NAME std.new0x08
+CPL==0
+
+
+PPT_ NAME std.inw
+CPL==0
+
+
+PPT_ NAME std.repe
+CPL==0
+
+
+PPT_ NAME std.rsm
+CPL==0
+
+
+PPT_ NAME std.negl
+CPL==0
+
+
+PPT_ NAME std.divw
+CPL==0
+
+
+PPT_ NAME std.popal
+CPL==0
+
+
+PPT_ NAME std.cmpw
+CPL==0
+
+
+PPT_ NAME std.movsl
+CPL==0
+
+
+PPT_ NAME std.cltd
+CPL==0
+
+
+PPT_ NAME std.outl
+CPL==0
+
+
+PPT_ NAME std.incb
+CPL==0
+
+
+PPT_ NAME std.movsw
+CPL==0
+
+
+PPT_ NAME std.0x76
+CPL==0
+
+
+PPT_ NAME std.jae
+CPL==0
+
+
+PPT_ NAME std.cld
+CPL==0
+
+
+PPT_ NAME std.ljmpl
+CPL==0
+
+
+PPT_ NAME std.ja
+CPL==0
+
+
+PPT_ NAME std.subw
+CPL==0
+
+
+PPT_ NAME std.divl
+CPL==0
+
+
+PPT_ NAME std.idivl
+CPL==0
+
+
+PPT_ NAME std.addw
+CPL==0
+
+
+PPT_ NAME std.andw
+CPL==0
+
+
+PPT_ NAME std.lretw
+CPL==0
+
+
+PPT_ NAME std.jg
+CPL==0
+
+
+PPT_ NAME std.rdmsr
+CPL==0
+
+
+PPT_ NAME std.callw
+CPL==0
+
+
+PPT_ NAME std.ldsw
+CPL==0
+
+
+PPT_ NAME std.cpuid
+CPL==0
+
+
+PPT_ NAME std.shrdl
+CPL==0
+
+
+PPT_ NAME std.lgdtw
+CPL==0
+
+
+PPT_ NAME std.movsbl
+CPL==0
+
+
+PPT_ NAME std.sbbl
+CPL==0
+
+
+PPT_ NAME std.new0x76
+CPL==0
+
+
+PPT_ NAME std.cmpl
+CPL==0
+
+
+PPT_ NAME std.orb
+CPL==0
+
+
+PPT_ NAME std.jl
+CPL==0
+
+
+PPT_ NAME std.xchgb
+CPL==0
+
+
+PPT_ NAME std.pushaw
+CPL==0
+
+
+PPT_ NAME std.loop
+CPL==0
+
+
+PPT_ NAME std.cmovnel
+CPL==0
+
+
+PPT_ NAME std.orw
+CPL==0
+
+
+PPT_ NAME std.outsl
+CPL==0
+
+
+PPT_ NAME std.jbe
+CPL==0
+
+
+PPT_ NAME std.inb
+CPL==0
+
+
+PPT_ NAME std.xorw
+CPL==0
+
+
+PPT_ NAME std.stc
+CPL==0
+
+
+PPT_ NAME std.stosw
+CPL==0
+
+
+PPT_ NAME std.0xef
+CPL==0
+
+
+PPT_ NAME std.0x31
+CPL==0
+
+
+PPT_ NAME std.pushfl
+CPL==0
+
+
+PPT_ NAME std.shrw
+CPL==0
+
+
+PPT_ NAME std.new0x31
+CPL==0
+
+
+PPT_ NAME std.sete
+CPL==0
+
+
+PPT_ NAME std.orl
+CPL==0
+
+
+PPT_ NAME std.new0xef
+CPL==0
+
+
+PPT_ NAME std.shlb
+CPL==0
+
+
+PPT_ NAME std.setne
+CPL==0
+
+
+PPT_ NAME std.pushfw
+CPL==0
+
+
+PPT_ NAME std.xorb
+CPL==0
+
+
+PPT_ NAME std.xchgw
+CPL==0
+
+
+PPT_ NAME std.jle
+CPL==0
+
+
+PPT_ NAME std.pushl
+CPL==0
+
+
+PPT_ NAME std.adcw
+CPL==0
+
+
+PPT_ NAME std.popw
+CPL==0
+
+
+PPT_ NAME std.das
+CPL==0
+
+
+PPT_ NAME std.jb
+CPL==0
+
+
+PPT_ NAME std.jne
+CPL==0
+
+
+PPT_ NAME std.incw
+CPL==0
+
+
+PPT_ NAME std.notl
+CPL==0
+
+
+PPT_ NAME std.outw
+CPL==0
+
+
+PPT_ NAME std.retw
+CPL==0
+
+
+PPT_ NAME std.movzwl
+CPL==0

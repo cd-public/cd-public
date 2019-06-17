@@ -1,0 +1,23 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading splitter info files (read 1 spinfo file, 1 splitter)
+Reading declaration files ...helper: 1 of 1 splitters successful
+(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+..helper():::ENTER
+===========================================================================
+..helper():::EXIT
+(return == 1)  ==>  (orig(in) == 5)
+return one of { 0, 1 }
+===========================================================================
+..helper():::EXIT;condition="in==5"
+return == 1
+orig(in) == 5
+===========================================================================
+..helper():::EXIT;condition="not(in==5)"
+return == 0
+===========================================================================
+..main():::EXIT
+return == 0
+Exiting Daikon.
