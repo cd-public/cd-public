@@ -21,7 +21,8 @@
 # CCS=00000000 CCD=00000000 CCO=EFLAGS  
 # EFER=0000000000000000
 
-import re, uniq_insts
+import re
+from uniq import parse_uniq
 
 vars = [["inst", ""], ["arg1", ""], ["arg2", ""], ["addr", "-1"], ["eax", "0"], ["ebx", "0"], ["ecx", "0"], ["edx", "0"], ["eip", "0"], ["efl", "0"], ["cpl", "0"], ["ii", "0"], ["a20", "0"], ["smm", "0"], ["hlt", "0"], ["es", "0"], ["cs", "0"], ["ss", "0"], ["ds", "0"], ["fs", "0"], ["gs", "0"], ["ldt", "0"], ["tr", "0"], ["es_dpl", 0], ["cs_dpl", 0], ["ss_dpl", 0], ["ds_dpl", 0], ["fs_dpl", 0], ["gs_dpl", 0], ["ldt_dpl", 0], ["tr_dpl", 0], ["gdt", "0"], ["idt", "0"], ["cr0", "0"], ["cr2", "0"], ["cr3", "0"], ["cr4", "0"], ["dr0", "0"], ["dr1", "0"], ["dr2", "0"], ["dr3", "0"], ["dr6", "0"], ["dr7", "0"], ["ccs", "0"], ["ccd", "0"], ["cc0", "0"], ["efer", "0"]]
 
@@ -56,48 +57,71 @@ def print_help(vars,outf):
 
 
 def printer(for_next,vars,uniq,outf,nonce):
+	do_it = False
+	#print(vars[0][1])
 	if for_next == "":
+		if "popf" in vars[0][1] or "iret" in vars[0][1]:
+			do_it = True
 		nonce = get_nonce(vars[0][1], uniq)
-		outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
+		do_it = False
+		if do_it:
+			outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
 		for var in vars:
 			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
-				outf.write("\n" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+				if "cpl" in var[0] and do_it:
+					outf.write("\n" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
 			elif "dpl" in var[0]:
-				outf.write("\n" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
+				if "cpl" in var[0] and do_it:
+					outf.write("\n" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
 			elif "inst" not in var[0]:
-			
-				#print(var[0])
-				#print(var[1])
-				outf.write("\n" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
+				if "cpl" in var[0] and do_it:
+					outf.write("\n" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
+		if do_it:
 			print_help(vars,outf)
 	#print_vars(vars)
 	else:
+		do_it = False
+		if "popf" in for_next or "iret" in for_next:
+			do_it = True
 		#print(vars)
 		#print(nonce)
-		outf.write("\n\n.." + for_next + "():::EXIT0\nthis_invocation_nonce\n" + nonce)	
+		if do_it:
+			outf.write("\n\n.." + for_next + "():::EXIT0\nthis_invocation_nonce\n" + nonce)	
 		for var in vars:
 			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
-				outf.write("\n" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+				if "cpl" in var[0] and do_it:
+					outf.write("\n" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
 			elif "dpl" in var[0]:
-				outf.write("\n" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
+				if "cpl" in var[0] and do_it:
+					outf.write("\n" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
 			elif "inst" not in var[0]:
-				outf.write("\n" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
+				if "cpl" in var[0] and do_it:
+					outf.write("\n" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
+		if do_it:
 			print_help(vars,outf)
 		nonce = get_nonce(vars[0][1], uniq)
-		outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
+		do_it = False
+		if "popf" in vars[0][1] or "iret" in vars[0][1]:
+			do_it = True
+		if do_it:
+			outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
 		for var in vars:
 			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
-				outf.write("\n" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
-			elif "dpl" in var[0]:
-				outf.write("\n" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
+				if "cpl" in var[0] and do_it:
+					outf.write("\n" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
+			elif "dpl" in var[0] and do_it:
+				if "cpl" in var[0] and do_it:
+					outf.write("\n" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
 			elif "inst" not in var[0]:
-				outf.write("\n" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")
+				if "cpl" in var[0] and do_it:
+					outf.write("\n" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
+		if do_it:
 			print_help(vars,outf)
 	return nonce
 
 			
 def parse(name):
-	uniq = [[i,0] for i in uniq_insts.parse()]
+	uniq = [[i,0] for i in parse_uniq()]
 	#print("in in_parse")
 	#print(uniq)
 	#exit()
@@ -169,6 +193,6 @@ def parse(name):
 					save(splits[0],splits[1],vars)
 		line = new_line
 		
-parse("cs")		
+#parse("cs")		
 #parse("cs2")
-#parse("boot")
+parse("boot")

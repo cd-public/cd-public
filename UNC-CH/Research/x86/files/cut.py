@@ -1,6 +1,6 @@
 def make_cut():
-	for line in open("out_w_b1m.txt","r"):
 		if "::CPL ==" in line and "orig" not in line and "== ::" not in line:
+	for line in open("out_w_b1m.txt","r"):
 			print(line.rstrip())
 		elif ".." in line:
 			print(line.rstrip())

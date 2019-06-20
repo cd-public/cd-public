@@ -1,632 +1,632 @@
 
 
-PPT_ NAME std.shrb
+PPT_ NAME ..shrb
 CPL==0
 
 
-PPT_ NAME std.mull
+PPT_ NAME ..mull
 CPL==0
 
 
-PPT_ NAME std.sgdtl
+PPT_ NAME ..sgdtl
 CPL==0
 
 
-PPT_ NAME std.testl
+PPT_ NAME ..testl
 CPL==0
 
 
-PPT_ NAME std.movsb
+PPT_ NAME ..movsb
 CPL==0
 
 
-PPT_ NAME std.decb
+PPT_ NAME ..decb
 CPL==0
 
 
-PPT_ NAME std.subl
+PPT_ NAME ..subl
 CPL==0
 
 
-PPT_ NAME std.jns
+PPT_ NAME ..jns
 CPL==0
 
 
-PPT_ NAME std.je
+PPT_ NAME ..je
 CPL==0
 
 
-PPT_ NAME std.movl
+PPT_ NAME ..movl
 CPL==0
 
 
-PPT_ NAME std.shldl
+PPT_ NAME ..shldl
 CPL==0
 
 
-PPT_ NAME std.popl
+PPT_ NAME ..popl
 CPL==0
 
 
-PPT_ NAME std.adcb
+PPT_ NAME ..adcb
 CPL==0
 
 
-PPT_ NAME std.stosl
+PPT_ NAME ..stosl
 CPL==0
 
 
-PPT_ NAME std.subb
+PPT_ NAME ..subb
 CPL==0
 
 
-PPT_ NAME std..byte
+PPT_ NAME ...byte
 CPL==0
 
 
-PPT_ NAME std.int
+PPT_ NAME ..int
 CPL==0
 
 
-PPT_ NAME std.popfw
+PPT_ NAME ..popfw
 CPL==0
 
 
-PPT_ NAME std.movzbw
+PPT_ NAME ..movzbw
 CPL==0
 
 
-PPT_ NAME std.sbbb
+PPT_ NAME ..sbbb
 CPL==0
 
 
-PPT_ NAME std.rorl
+PPT_ NAME ..rorl
 CPL==0
 
 
-PPT_ NAME std.divb
+PPT_ NAME ..divb
 CPL==0
 
 
-PPT_ NAME std.setg
+PPT_ NAME ..setg
 CPL==0
 
 
-PPT_ NAME std.leal
+PPT_ NAME ..leal
 CPL==0
 
 
-PPT_ NAME std.outb
+PPT_ NAME ..outb
 CPL==0
 
 
-PPT_ NAME std.jmp_near
+PPT_ NAME ..jmp_near
 CPL==0
 
 
-PPT_ NAME std.mulb
+PPT_ NAME ..mulb
 CPL==0
 
 
-PPT_ NAME std.incl
+PPT_ NAME ..incl
 CPL==0
 
 
-PPT_ NAME std.jge
+PPT_ NAME ..jge
 CPL==0
 
 
-PPT_ NAME std.seta
+PPT_ NAME ..seta
 CPL==0
 
 
-PPT_ NAME std.addl
+PPT_ NAME ..addl
 CPL==0
 
 
-PPT_ NAME std.pushal
+PPT_ NAME ..pushal
 CPL==0
 
 
-PPT_ NAME std.inl
+PPT_ NAME ..inl
 CPL==0
 
 
-PPT_ NAME std.cli
+PPT_ NAME ..cli
 CPL==0
 
 
-PPT_ NAME std.movb
+PPT_ NAME ..movb
 CPL==0
 
 
-PPT_ NAME std.jmp_far
+PPT_ NAME ..jmp_far
 CPL==0
 
 
-PPT_ NAME std.insl
+PPT_ NAME ..insl
 CPL==0
 
 
-PPT_ NAME std.jmpl
+PPT_ NAME ..jmpl
 CPL==0
 
 
-PPT_ NAME std.wrmsr
+PPT_ NAME ..wrmsr
 CPL==0
 
 
-PPT_ NAME std.decw
+PPT_ NAME ..decw
 CPL==0
 
 
-PPT_ NAME std.movzbl
+PPT_ NAME ..movzbl
 CPL==0
 
 
-PPT_ NAME std.lidtw
+PPT_ NAME ..lidtw
 CPL==0
 
 
-PPT_ NAME std.lodsw
+PPT_ NAME ..lodsw
 CPL==0
 
 
-PPT_ NAME std.0x08
+PPT_ NAME ..0x08
 CPL==0
 
 
-PPT_ NAME std.cmpb
+PPT_ NAME ..cmpb
 CPL==0
 
 
-PPT_ NAME std.imulw
+PPT_ NAME ..imulw
 CPL==0
 
 
-PPT_ NAME std.leaw
+PPT_ NAME ..leaw
 CPL==0
 
 
-PPT_ NAME std.popaw
+PPT_ NAME ..popaw
 CPL==0
 
 
-PPT_ NAME std.movw
+PPT_ NAME ..movw
 CPL==0
 
 
-PPT_ NAME std.shrl
+PPT_ NAME ..shrl
 CPL==0
 
 
-PPT_ NAME std.testw
+PPT_ NAME ..testw
 CPL==0
 
 
-PPT_ NAME std.stosb
+PPT_ NAME ..stosb
 CPL==0
 
 
-PPT_ NAME std.retl
+PPT_ NAME ..retl
 CPL==0
 
 
-PPT_ NAME std.calll_far
+PPT_ NAME ..calll_far
 CPL==0
 
 
-PPT_ NAME std.pushw
+PPT_ NAME ..pushw
 CPL==0
 
 
-PPT_ NAME std.testb
+PPT_ NAME ..testb
 CPL==0
 
 
-PPT_ NAME std.jmpw
+PPT_ NAME ..jmpw
 CPL==0
 
 
-PPT_ NAME std.lodsb
+PPT_ NAME ..lodsb
 CPL==0
 
 
-PPT_ NAME std.js
+PPT_ NAME ..js
 CPL==0
 
 
-PPT_ NAME std.setge
+PPT_ NAME ..setge
 CPL==0
 
 
-PPT_ NAME std.adcl
+PPT_ NAME ..adcl
 CPL==0
 
 
-PPT_ NAME std.rdtsc
+PPT_ NAME ..rdtsc
 CPL==0
 
 
-PPT_ NAME std.lgdtl
+PPT_ NAME ..lgdtl
 CPL==0
 
 
-PPT_ NAME std.popfl
+PPT_ NAME ..popfl
 CPL==0
 
 
-PPT_ NAME std.decl
+PPT_ NAME ..decl
 CPL==0
 
 
-PPT_ NAME std.btl
+PPT_ NAME ..btl
 CPL==0
 
 
-PPT_ NAME std.rorb
+PPT_ NAME ..rorb
 CPL==0
 
 
-PPT_ NAME std.ljmpw
+PPT_ NAME ..ljmpw
 CPL==0
 
 
-PPT_ NAME std.andl
+PPT_ NAME ..andl
 CPL==0
 
 
-PPT_ NAME std.insb
+PPT_ NAME ..insb
 CPL==0
 
 
-PPT_ NAME std.sarl
+PPT_ NAME ..sarl
 CPL==0
 
 
-PPT_ NAME std.calll_near
+PPT_ NAME ..calll_near
 CPL==0
 
 
-PPT_ NAME std.wbinvd
+PPT_ NAME ..wbinvd
 CPL==0
 
 
-PPT_ NAME std.imull
+PPT_ NAME ..imull
 CPL==0
 
 
-PPT_ NAME std.addb
+PPT_ NAME ..addb
 CPL==0
 
 
-PPT_ NAME std.nop
+PPT_ NAME ..nop
 CPL==0
 
 
-PPT_ NAME std.sti
+PPT_ NAME ..sti
 CPL==0
 
 
-PPT_ NAME std.lcallw
+PPT_ NAME ..lcallw
 CPL==0
 
 
-PPT_ NAME std.bswapl
+PPT_ NAME ..bswapl
 CPL==0
 
 
-PPT_ NAME std.shlw
+PPT_ NAME ..shlw
 CPL==0
 
 
-PPT_ NAME std.andb
+PPT_ NAME ..andb
 CPL==0
 
 
-PPT_ NAME std.xorl
+PPT_ NAME ..xorl
 CPL==0
 
 
-PPT_ NAME std.shll
+PPT_ NAME ..shll
 CPL==0
 
 
-PPT_ NAME std.iretw
+PPT_ NAME ..iretw
 CPL==0
 
 
-PPT_ NAME std.pause
+PPT_ NAME ..pause
 CPL==0
 
 
-PPT_ NAME std.new0x08
+PPT_ NAME ..new0x08
 CPL==0
 
 
-PPT_ NAME std.inw
+PPT_ NAME ..inw
 CPL==0
 
 
-PPT_ NAME std.repe
+PPT_ NAME ..repe
 CPL==0
 
 
-PPT_ NAME std.rsm
+PPT_ NAME ..rsm
 CPL==0
 
 
-PPT_ NAME std.negl
+PPT_ NAME ..negl
 CPL==0
 
 
-PPT_ NAME std.divw
+PPT_ NAME ..divw
 CPL==0
 
 
-PPT_ NAME std.popal
+PPT_ NAME ..popal
 CPL==0
 
 
-PPT_ NAME std.cmpw
+PPT_ NAME ..cmpw
 CPL==0
 
 
-PPT_ NAME std.movsl
+PPT_ NAME ..movsl
 CPL==0
 
 
-PPT_ NAME std.cltd
+PPT_ NAME ..cltd
 CPL==0
 
 
-PPT_ NAME std.outl
+PPT_ NAME ..outl
 CPL==0
 
 
-PPT_ NAME std.incb
+PPT_ NAME ..incb
 CPL==0
 
 
-PPT_ NAME std.movsw
+PPT_ NAME ..movsw
 CPL==0
 
 
-PPT_ NAME std.0x76
+PPT_ NAME ..0x76
 CPL==0
 
 
-PPT_ NAME std.jae
+PPT_ NAME ..jae
 CPL==0
 
 
-PPT_ NAME std.cld
+PPT_ NAME ..cld
 CPL==0
 
 
-PPT_ NAME std.ljmpl
+PPT_ NAME ..ljmpl
 CPL==0
 
 
-PPT_ NAME std.ja
+PPT_ NAME ..ja
 CPL==0
 
 
-PPT_ NAME std.subw
+PPT_ NAME ..subw
 CPL==0
 
 
-PPT_ NAME std.divl
+PPT_ NAME ..divl
 CPL==0
 
 
-PPT_ NAME std.idivl
+PPT_ NAME ..idivl
 CPL==0
 
 
-PPT_ NAME std.addw
+PPT_ NAME ..addw
 CPL==0
 
 
-PPT_ NAME std.andw
+PPT_ NAME ..andw
 CPL==0
 
 
-PPT_ NAME std.lretw
+PPT_ NAME ..lretw
 CPL==0
 
 
-PPT_ NAME std.jg
+PPT_ NAME ..jg
 CPL==0
 
 
-PPT_ NAME std.rdmsr
+PPT_ NAME ..rdmsr
 CPL==0
 
 
-PPT_ NAME std.callw
+PPT_ NAME ..callw
 CPL==0
 
 
-PPT_ NAME std.ldsw
+PPT_ NAME ..ldsw
 CPL==0
 
 
-PPT_ NAME std.cpuid
+PPT_ NAME ..cpuid
 CPL==0
 
 
-PPT_ NAME std.shrdl
+PPT_ NAME ..shrdl
 CPL==0
 
 
-PPT_ NAME std.lgdtw
+PPT_ NAME ..lgdtw
 CPL==0
 
 
-PPT_ NAME std.movsbl
+PPT_ NAME ..movsbl
 CPL==0
 
 
-PPT_ NAME std.sbbl
+PPT_ NAME ..sbbl
 CPL==0
 
 
-PPT_ NAME std.new0x76
+PPT_ NAME ..new0x76
 CPL==0
 
 
-PPT_ NAME std.cmpl
+PPT_ NAME ..cmpl
 CPL==0
 
 
-PPT_ NAME std.orb
+PPT_ NAME ..orb
 CPL==0
 
 
-PPT_ NAME std.jl
+PPT_ NAME ..jl
 CPL==0
 
 
-PPT_ NAME std.xchgb
+PPT_ NAME ..xchgb
 CPL==0
 
 
-PPT_ NAME std.pushaw
+PPT_ NAME ..pushaw
 CPL==0
 
 
-PPT_ NAME std.loop
+PPT_ NAME ..loop
 CPL==0
 
 
-PPT_ NAME std.cmovnel
+PPT_ NAME ..cmovnel
 CPL==0
 
 
-PPT_ NAME std.orw
+PPT_ NAME ..orw
 CPL==0
 
 
-PPT_ NAME std.outsl
+PPT_ NAME ..outsl
 CPL==0
 
 
-PPT_ NAME std.jbe
+PPT_ NAME ..jbe
 CPL==0
 
 
-PPT_ NAME std.inb
+PPT_ NAME ..inb
 CPL==0
 
 
-PPT_ NAME std.xorw
+PPT_ NAME ..xorw
 CPL==0
 
 
-PPT_ NAME std.stc
+PPT_ NAME ..stc
 CPL==0
 
 
-PPT_ NAME std.stosw
+PPT_ NAME ..stosw
 CPL==0
 
 
-PPT_ NAME std.0xef
+PPT_ NAME ..0xef
 CPL==0
 
 
-PPT_ NAME std.0x31
+PPT_ NAME ..0x31
 CPL==0
 
 
-PPT_ NAME std.pushfl
+PPT_ NAME ..pushfl
 CPL==0
 
 
-PPT_ NAME std.shrw
+PPT_ NAME ..shrw
 CPL==0
 
 
-PPT_ NAME std.new0x31
+PPT_ NAME ..new0x31
 CPL==0
 
 
-PPT_ NAME std.sete
+PPT_ NAME ..sete
 CPL==0
 
 
-PPT_ NAME std.orl
+PPT_ NAME ..orl
 CPL==0
 
 
-PPT_ NAME std.new0xef
+PPT_ NAME ..new0xef
 CPL==0
 
 
-PPT_ NAME std.shlb
+PPT_ NAME ..shlb
 CPL==0
 
 
-PPT_ NAME std.setne
+PPT_ NAME ..setne
 CPL==0
 
 
-PPT_ NAME std.pushfw
+PPT_ NAME ..pushfw
 CPL==0
 
 
-PPT_ NAME std.xorb
+PPT_ NAME ..xorb
 CPL==0
 
 
-PPT_ NAME std.xchgw
+PPT_ NAME ..xchgw
 CPL==0
 
 
-PPT_ NAME std.jle
+PPT_ NAME ..jle
 CPL==0
 
 
-PPT_ NAME std.pushl
+PPT_ NAME ..pushl
 CPL==0
 
 
-PPT_ NAME std.adcw
+PPT_ NAME ..adcw
 CPL==0
 
 
-PPT_ NAME std.popw
+PPT_ NAME ..popw
 CPL==0
 
 
-PPT_ NAME std.das
+PPT_ NAME ..das
 CPL==0
 
 
-PPT_ NAME std.jb
+PPT_ NAME ..jb
 CPL==0
 
 
-PPT_ NAME std.jne
+PPT_ NAME ..jne
 CPL==0
 
 
-PPT_ NAME std.incw
+PPT_ NAME ..incw
 CPL==0
 
 
-PPT_ NAME std.notl
+PPT_ NAME ..notl
 CPL==0
 
 
-PPT_ NAME std.outw
+PPT_ NAME ..outw
 CPL==0
 
 
-PPT_ NAME std.retw
+PPT_ NAME ..retw
 CPL==0
 
 
-PPT_ NAME std.movzwl
+PPT_ NAME ..movzwl
 CPL==0

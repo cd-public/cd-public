@@ -1,0 +1,186 @@
+Daikon version 5.7.2, released November 7, 2018; http://plse.cs.washington.edu/daikon.
+Reading splitter info files (read 1 spinfo file, 3 splitters)
+Reading declaration files ...iretw: 1 of 1 splitters successful
+..popfl: 1 of 1 splitters successful
+..popfw: 1 of 1 splitters successful
+(read 1 decls file)
+Processing trace data; reading 1 dtrace file:
+
+===========================================================================
+..iretw():::ENTER
+IOPL == IOPL
+IOPL == CPL
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..iretw():::EXIT
+IOPL == IOPL
+IOPL == CPL
+IOPL == orig(IOPL)
+IOPL == orig(CPL)
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..iretw():::EXIT;condition="CPL==0"
+IOPL == IOPL
+IOPL == CPL
+IOPL == orig(IOPL)
+IOPL == orig(CPL)
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..popfl():::ENTER
+IOPL == IOPL
+IOPL == CPL
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..popfl():::ENTER;condition="CPL==0"
+IOPL == IOPL
+IOPL == CPL
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..popfl():::EXIT
+IOPL == IOPL
+IOPL == CPL
+IOPL == orig(IOPL)
+IOPL == orig(CPL)
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..popfl():::EXIT;condition="CPL==0"
+IOPL == IOPL
+IOPL == CPL
+IOPL == orig(IOPL)
+IOPL == orig(CPL)
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..popfw():::ENTER
+IOPL == IOPL
+IOPL == CPL
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..popfw():::ENTER;condition="CPL==0"
+IOPL == IOPL
+IOPL == CPL
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..popfw():::EXIT
+IOPL == IOPL
+IOPL == CPL
+IOPL == orig(IOPL)
+IOPL == orig(CPL)
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+===========================================================================
+..popfw():::EXIT;condition="CPL==0"
+IOPL == IOPL
+IOPL == CPL
+IOPL == orig(IOPL)
+IOPL == orig(CPL)
+IOPL == 0
+0 <= IOPL <= 63
+IOPL <= 0
+IOPL == 0
+IOPL >= 0
+IOPL >= 0
+IOPL is boolean
+IOPL == IOPL**2
+IOPL == IOPL**2
+warning: too few samples for daikon.inv.binary.twoScalar.LinearBinary invariant: 0 * IOPL+ 0 * IOPL + 0 == 0
+warning: too few samples for daikon.inv.ternary.threeScalar.LinearTernary invariant: (IOPL, IOPL, IOPL)
+Exiting Daikon.

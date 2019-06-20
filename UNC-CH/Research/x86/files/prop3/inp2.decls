@@ -1,0 +1,82 @@
+input-language C/C++
+decl-version 2.0
+var-comparability implicit
+
+ppt ..iretw():::ENTER
+  ppt-type enter
+  variable IOPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1 
+  variable CPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1
+
+ppt ..iretw():::EXIT0
+  ppt-type subexit
+  variable IOPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1 
+  variable CPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1
+
+ppt ..popfl():::ENTER
+  ppt-type enter
+  variable IOPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1 
+  variable CPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1
+
+ppt ..popfl():::EXIT0
+  ppt-type subexit
+  variable IOPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1 
+  variable CPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1
+
+ppt ..popfw():::ENTER
+  ppt-type enter
+  variable IOPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1 
+  variable CPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1
+
+ppt ..popfw():::EXIT0
+  ppt-type subexit
+  variable IOPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1 
+  variable CPL
+	var-kind variable
+	rep-type int
+	dec-type int
+	comparability 1
+

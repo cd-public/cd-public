@@ -25,7 +25,7 @@ def parse():
 	#exit()
 	for i in list(uniq_insts):
 		#print(i)
-		out.write("\n\nPPT_ NAME std."+ i + '\n' + s)
+		out.write("\n\nPPT_NAME .."+ i + '\n' + s)
 		
 	return
 			
