@@ -2,6 +2,52 @@
 # 0x000fe05b:  2e 66 83 3e c8 5e 00     cmpl     $0, %cs:0x5ec8
 # 0x000fe062:  0f 85 65 f0              jne      0xd0cb
 # 
+# General Purpose Registers
+#
+# EAX=00000000 EBX=00000000 ECX=00000000 EDX=000306a9
+# ESI=00000000 EDI=00000000 EBP=00000000 ESP=00000000
+#
+# Instruction pointer, Flags, CPL, Interrupt Index?, Gate 20, SMM check, Halt check
+#
+# EIP=0000e05b EFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
+#
+# Segments & Descriptor Privelege Levels
+#
+# ES =0010 00000000 ffffffff 00cf9300 DPL=0 DS   [-WA]
+# CS =0008 00000000 ffffffff 00cf9b00 DPL=0 CS32 [-RA]
+# SS =0010 00000000 ffffffff 00cf9300 DPL=0 DS   [-WA]
+# DS =0010 00000000 ffffffff 00cf9300 DPL=0 DS   [-WA]
+# FS =0010 00000000 ffffffff 00cf9300 DPL=0 DS   [-WA]
+# GS =0010 00000000 ffffffff 00cf9300 DPL=0 DS   [-WA]
+# LDT=0000 00000000 0000ffff 00008200 DPL=0 LDT
+# TR =0000 00000000 0000ffff 00008b00 DPL=0 TSS32-busy
+#
+# Local and Global Descriptor Tables
+#
+# GDT=     000f5e80 00000037
+# IDT=     000f5ebe 00000000
+#
+# Control Registers
+#
+# CR0=60000010 CR2=00000000 CR3=00000000 CR4=00000000
+#
+# Debug Registers
+#
+# DR0=0000000000000000 DR1=0000000000000000 DR2=0000000000000000 DR3=0000000000000000 
+# DR6=00000000ffff0ff0 DR7=0000000000000400
+#
+# Unclear
+#
+# CCS=00000000 CCD=00000000 CCO=EFLAGS  
+#
+# Another Control Register
+#
+# EFER=0000000000000000
+
+# IN: 
+# 0x000fe05b:  2e 66 83 3e c8 5e 00     cmpl     $0, %cs:0x5ec8
+# 0x000fe062:  0f 85 65 f0              jne      0xd0cb
+# 
 # EAX=00000000 EBX=00000000 ECX=00000000 EDX=000306a9
 # ESI=00000000 EDI=00000000 EBP=00000000 ESP=00000000
 # EIP=0000e05b EFL=00000002 [-------] CPL=0 II=0 A20=1 SMM=0 HLT=0
