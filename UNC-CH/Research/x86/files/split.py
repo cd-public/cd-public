@@ -1,4 +1,23 @@
-s = "CPL==0" + '\n'
+# Mode Flags
+
+# CR0[0] (Protected Mode) "PE"
+# EFER[8] (Long Mode Enable) "LME"
+# EFER[10] (Long Mode Active) "LMA"
+# EFLAGS[17] (Virtual Mode) "VM"
+
+# Protections
+
+# CR4[20] "SMEP"
+# CR4[21] "SMAP"
+
+# Insn Flags
+
+# EFLAGS[21] (CPUID enable) "CPUIDXE"
+# CR4[2] (RDTSC -> CPL==0) "TSD"
+# CR4[11] (SGDT, SIDT, SLDT, SMSW and STR -> CPL==0) "UMIP"
+# CR4[13] (VM* enable) "VMXE"
+
+s = "CPL==0" + '\n' + "PE==0" + '\n' + "LME==0" + '\n' + "LMA==0" + '\n' + "VM==0" + '\n' + "CPUIDXE==0" + '\n' + "TSD==0" + '\n' + "UMIP==0" + '\n' + "VMXE==0" + '\n'
 
 a = ""
 
