@@ -1,0 +1,3892 @@
+===========================================================================
+CONDITION:  0x31()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['1', 'A20', 'PE']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['0']
+EAX != _x_ for all _x_ in  ['ECX']
+ECX >= _x_ for all _x_ in  ['0']
+EDX >= _x_ for all _x_ in  ['0']
+EFL >= _x_ for all _x_ in  ['2']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+II <= _x_ for all _x_ in  ['A20']
+II >= _x_ for all _x_ in  ['SMM']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  0x31();condition="CPL==0"
+== begin equality sets ==
+['0', 'CPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['0']
+EAX != _x_ for all _x_ in  ['ECX']
+ECX >= _x_ for all _x_ in  ['0']
+EDX >= _x_ for all _x_ in  ['0']
+CPL <= _x_ for all _x_ in  ['orig(CPL)']
+ES > _x_ for all _x_ in  ['SS']
+CS <= _x_ for all _x_ in  ['orig(CS)', 'orig(SS)']
+SS <= _x_ for all _x_ in  ['orig(SS)']
+GS >= _x_ for all _x_ in  ['orig(GS)']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  0x31();condition="not(CPL==0)"
+== begin equality sets ==
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['3086034988L', 'EBX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(DS_DPL)', 'orig(ES_DPL)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CR2', 'orig(CR2)']
+['"007300000000ffffffff00cffa00"', 'CS']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL < ES_DPL)', '(CPL == 0)', '(CPL == 0) ', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(ES > SS)', '(SS == "006800000000ffffffff00cf9300")']
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(ES == SS)', '(SS == "007b00000000ffffffff00cff300")']
+== end equivalence sets ==
+== begin inequality properties ==
+EAX != _x_ for all _x_ in  ['EBX', 'orig(EBX)', 'orig(ECX)']
+EAX >= _x_ for all _x_ in  ['-1']
+EAX <= _x_ for all _x_ in  ['orig(EAX)']
+EBX > _x_ for all _x_ in  ['ECX']
+EBX != _x_ for all _x_ in  ['ECX', 'EDX', 'orig(EAX)', 'orig(ECX)', 'orig(EDX)']
+EBX >= _x_ for all _x_ in  ['-1']
+EBX <= _x_ for all _x_ in  ['orig(EBX)']
+ECX >= _x_ for all _x_ in  ['-1']
+ECX != _x_ for all _x_ in  ['orig(EAX)']
+ECX < _x_ for all _x_ in  ['orig(EBX)']
+ECX <= _x_ for all _x_ in  ['orig(ECX)']
+CCS >= _x_ for all _x_ in  ['0']
+CCS < _x_ for all _x_ in  ['orig(CCS)']
+CCD >= _x_ for all _x_ in  ['0']
+CCD != _x_ for all _x_ in  ['orig(CCD)']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL', 'orig(CPL)']
+II <= _x_ for all _x_ in  ['A20']
+II >= _x_ for all _x_ in  ['SMM']
+A20 >= _x_ for all _x_ in  ['orig(II)']
+SMM <= _x_ for all _x_ in  ['orig(II)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT', 'orig(CS)']
+ES >= _x_ for all _x_ in  ['SS', 'orig(CPL)', 'orig(SS)']
+ES != _x_ for all _x_ in  ['GS', 'orig(GS)']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS', 'orig(GS)', 'orig(SS)']
+CS >= _x_ for all _x_ in  ['orig(CS)']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS', 'orig(CS)', 'orig(GS)']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR', 'orig(CPL)', 'orig(CS)', 'orig(GS)', 'orig(SS)']
+GS != _x_ for all _x_ in  ['LDT', 'TR', 'orig(CS)', 'orig(SS)']
+LDT < _x_ for all _x_ in  ['TR', 'orig(CS)', 'orig(SS)']
+LDT != _x_ for all _x_ in  ['orig(GS)']
+TR > _x_ for all _x_ in  ['orig(CS)', 'orig(SS)']
+TR != _x_ for all _x_ in  ['orig(GS)']
+GDT > _x_ for all _x_ in  ['IDT']
+CR2 >= _x_ for all _x_ in  ['orig(CR2)']
+EDX != _x_ for all _x_ in  ['orig(EBX)']
+EDX <= _x_ for all _x_ in  ['orig(EDX)']
+EIP <= _x_ for all _x_ in  ['orig(EIP)']
+EFL >= _x_ for all _x_ in  ['orig(EFL)']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 0) ==>  _x_ for all _x_ in  ['(CPL <= orig(CPL))', '(CS < orig(SS))', '(CS <= orig(CS))', '(EAX != ECX)', '(EAX >= 0)', '(ECX >= 0)', '(EDX >= 0)', '(GS >= orig(GS))', '(GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" })', '(II one of { 0, 1 })', '(SS <= orig(SS))', '(orig(EFL) >= 2)', '(orig(II) one of { 0, 1 })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  0xef()
+== begin equality sets ==
+['0', 'CC0', 'CPL', 'CPUIDXE', 'CS_DPL', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'SS_DPL', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['0']
+EAX != _x_ for all _x_ in  ['ECX']
+EBX >= _x_ for all _x_ in  ['0']
+ECX >= _x_ for all _x_ in  ['0']
+EDX >= _x_ for all _x_ in  ['0']
+EFL >= _x_ for all _x_ in  ['2']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+II <= _x_ for all _x_ in  ['A20']
+II >= _x_ for all _x_ in  ['SMM']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT', 'SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  0xef();condition="CPL==0"
+== begin equality sets ==
+['0', 'CPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(SS_DPL)', 'orig(TR_DPL)']
+['"006000000000ffffffff00cf9a00"', 'CS', 'orig(CS)']
+['"006800000000ffffffff00cf9300"', 'SS', 'orig(SS)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['0']
+EBX >= _x_ for all _x_ in  ['0']
+ES > _x_ for all _x_ in  ['SS']
+GS >= _x_ for all _x_ in  ['orig(GS)']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  0xef();condition="not(CPL==0)"
+== begin equality sets ==
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPL)', 'orig(CPUIDXE)', 'orig(CS_DPL)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(SS_DPL)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['3086034988L', 'EBX']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"0000000000000000000000000000"', '"00d8c110a0000000000f00009300"', 'FS', 'GS', 'orig(FS)']
+['1027', 'CCS']
+['3240296420L', '4294966272L', 'CCD']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(DS_DPL)', 'orig(ES_DPL)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['ECX', 'orig(ECX)']
+['EDX', 'orig(EDX)']
+['"007300000000ffffffff00cffa00"', 'CS']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EDX >= _x_ for all _x_ in  ['0']
+EFL >= _x_ for all _x_ in  ['2']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+EAX != _x_ for all _x_ in  ['ECX', 'EDX', 'orig(ECX)']
+ECX != _x_ for all _x_ in  ['EDX']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+II <= _x_ for all _x_ in  ['A20']
+II >= _x_ for all _x_ in  ['SMM']
+A20 >= _x_ for all _x_ in  ['orig(II)']
+SMM <= _x_ for all _x_ in  ['orig(II)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT', 'orig(CS)', 'orig(SS)']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS', 'orig(GS)']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS', 'orig(GS)', 'orig(SS)']
+CS >= _x_ for all _x_ in  ['orig(CS)']
+SS > _x_ for all _x_ in  ['FS', 'LDT', 'orig(CS)']
+SS != _x_ for all _x_ in  ['GS', 'orig(GS)']
+SS < _x_ for all _x_ in  ['TR']
+SS >= _x_ for all _x_ in  ['orig(SS)']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR', 'orig(CS)', 'orig(GS)', 'orig(SS)']
+GS != _x_ for all _x_ in  ['LDT', 'TR', 'orig(CS)', 'orig(SS)']
+LDT < _x_ for all _x_ in  ['TR', 'orig(CS)', 'orig(SS)']
+LDT != _x_ for all _x_ in  ['orig(GS)']
+TR > _x_ for all _x_ in  ['orig(CS)', 'orig(SS)']
+TR != _x_ for all _x_ in  ['orig(GS)']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  addl()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(EBX one of { -1, 3086034988L })', '(ECX one of { -1, 0, 3 })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  addl();condition="CPL==0"
+== begin equality sets ==
+['-1', 'EAX', 'ECX', 'EDX', 'orig(ECX)', 'orig(EDX)']
+['0', 'CPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['"$4,"', '"%eax,"', 'ARG1']
+['"%eax"', '"-0x18(%ebp)"', 'ARG2']
+['3085963999L', '3085964002L', 'ADDR']
+['3086034988L', 'EBX']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['3085938696L', 'CR2']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  addl();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['EAX', 'orig(EAX)']
+['EBX', 'orig(EBX)']
+['ECX', 'orig(ECX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+EDX <= _x_ for all _x_ in  ['orig(EDX)']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG1)', 'orig(ARG2)']
+ARG2 != _x_ for all _x_ in  ['orig(ARG1)']
+ADDR != _x_ for all _x_ in  ['EIP']
+ADDR > _x_ for all _x_ in  ['orig(ADDR)']
+EIP != _x_ for all _x_ in  ['orig(ADDR)']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(EBX one of { -1, 3086034988L })', '(ECX one of { -1, 0, 3 })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  andb()
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  andb();condition="not(CPL==0)"
+== begin equality sets ==
+['ARG2', 'orig(ARG2)']
+['-1', 'EAX', 'EBX', 'ECX', 'EDX', 'orig(EAX)', 'orig(EBX)', 'orig(ECX)', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  andl()
+== begin equality sets ==
+['-1', 'EBX', 'ECX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"$0xfffffff0,"', 'ARG1']
+['"%edx"', 'ARG2']
+['3085991447L', 'ADDR']
+['3086035512L', 'EAX']
+['3085991408L', 'CR2', 'EIP']
+['659', 'EFL']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+['145', 'CCS']
+['3240296420L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  andl();condition="not(CPL==0)"
+== begin equality sets ==
+['3086035512L', 'EAX', 'orig(EAX)']
+['-1', 'EBX', 'ECX', 'EDX', 'orig(EBX)', 'orig(ECX)', 'orig(EDX)']
+['3085991408L', 'CR2', 'EIP', 'orig(CR2)', 'orig(EIP)']
+['659', 'EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['145', 'CCS', 'orig(CCS)']
+['3240296420L', 'CCD', 'orig(CCD)']
+['"%esp,"', 'ARG1']
+['"-0x5c(%ebp)"', 'ARG2']
+['3085991450L', 'ADDR']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  calll_far()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1', 'ECX']
+EDX >= _x_ for all _x_ in  ['-1']
+ARG1 > _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+ECX <= _x_ for all _x_ in  ['EDX']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  calll_far();condition="CPL==0"
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX']
+['0', '3', 'CPL', 'DS_DPL', 'ES_DPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(SS_DPL)', 'orig(TR_DPL)']
+['"006800000000ffffffff00cf9300"', 'ES', 'SS', 'orig(SS)']
+['"00d8c110a0000000000f00009300"', 'FS', 'GS', 'orig(GS)']
+['"006000000000ffffffff00cf9a00"', '"007300000000ffffffff00cffa00"', 'CS']
+['ARG2', 'orig(ARG2)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  calll_far();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(DS_DPL)', 'orig(ES_DPL)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EAX % orig(EAX)', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CR2', 'orig(CR2)']
+['"007300000000ffffffff00cffa00"', 'CS']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CCD one of { 0, 4093, 3240296420L })', '(CPL == 3)', '(CPL == ES_DPL)', '(CR2 == orig(CR2))', '(CS == "007300000000ffffffff00cffa00")', '(EFL one of { 514, 582, 659 })', '(EFL one of { 514, 582, 659 }) ', '(ES == SS)', '(FS == GS)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")']
+[' (CCD one of { 512, 4294966272L })', '(CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL one of { 135, 518 })', '(EIP one of { 3222285665L, 3222355386L })', '(EIP one of { 3222285665L, 3222355386L }) ', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+ADDR >= _x_ for all _x_ in  ['-1']
+ADDR != _x_ for all _x_ in  ['EIP', 'orig(ADDR)', 'orig(EIP)']
+EDX >= _x_ for all _x_ in  ['0', 'orig(ECX)', 'orig(EDX)']
+EDX != _x_ for all _x_ in  ['orig(EAX)', 'orig(EBX)']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG2)']
+ARG1 <= _x_ for all _x_ in  ['orig(ARG1)']
+ARG2 < _x_ for all _x_ in  ['orig(ARG1)']
+EAX != _x_ for all _x_ in  ['EBX', 'ECX', 'orig(EBX)', 'orig(EDX)']
+EAX >= _x_ for all _x_ in  ['orig(EAX)', 'orig(ECX)']
+EBX != _x_ for all _x_ in  ['ECX', 'EDX']
+EBX >= _x_ for all _x_ in  ['orig(EBX)']
+ECX != _x_ for all _x_ in  ['orig(EAX)', 'orig(EBX)']
+EIP != _x_ for all _x_ in  ['orig(EIP)']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+II <= _x_ for all _x_ in  ['A20']
+II >= _x_ for all _x_ in  ['SMM']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT', 'orig(CS)']
+ES >= _x_ for all _x_ in  ['SS', 'orig(CPL)', 'orig(SS)']
+ES != _x_ for all _x_ in  ['GS', 'orig(GS)']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS', 'orig(GS)', 'orig(SS)']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS', 'orig(CS)', 'orig(GS)']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR', 'orig(CPL)', 'orig(CS)', 'orig(GS)', 'orig(SS)']
+GS != _x_ for all _x_ in  ['LDT', 'TR', 'orig(CS)', 'orig(SS)']
+LDT < _x_ for all _x_ in  ['TR', 'orig(CS)', 'orig(SS)']
+LDT != _x_ for all _x_ in  ['orig(GS)']
+TR > _x_ for all _x_ in  ['orig(CS)', 'orig(SS)']
+TR != _x_ for all _x_ in  ['orig(GS)']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(EFL one of { 514, 582, 659 }) ==>  _x_ for all _x_ in  ['(EDX one of { 0, 4, 3218687872L })', '(II == 0)', '(II == SMM)', '(orig(CPL) one of { 0, 3 })', '(orig(CS) one of { "006000000000ffffffff00cf9a00", "007300000000ffffffff00cffa00" })', '(orig(EBX) one of { -1, 3086022069L, 3086034988L })', '(orig(ECX) one of { -1, 0, 3 })', '(orig(GS) one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" })', '(orig(SS) one of { "006800000000ffffffff00cf9300", "007b00000000ffffffff00cff300" })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  cld()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['0', 'EAX']
+['3086034988L', 'EBX']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3085938696L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  cld();condition="not(CPL==0)"
+== begin equality sets ==
+['ECX', 'orig(ECX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085938696L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+['-1', 'EBX']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  cmovnel()
+== begin equality sets ==
+['-1', 'EAX', 'ECX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"%edx,"', 'ARG1']
+['"%eax"', 'ARG2']
+['3085964071L', 'ADDR']
+['3086034988L', 'EBX']
+['3085964048L', 'EIP']
+['663', 'EFL']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3085938696L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+['8', 'CCS']
+['4294967290L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  cmovnel();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'EAX', 'ECX', 'EDX', 'orig(EAX)', 'orig(ECX)', 'orig(EDX)']
+['3086034988L', 'EBX', 'orig(EBX)']
+['3085964048L', 'EIP', 'orig(EIP)']
+['663', 'EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085938696L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['8', 'CCS', 'orig(CCS)']
+['4294967290L', 'CCD', 'orig(CCD)']
+['"%eax,"', 'ARG1']
+['"(%ecx)"', 'ARG2']
+['3085964074L', 'ADDR']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  cmpb()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['3086034988L', 'EBX']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  cmpb();condition="not(CPL==0)"
+== begin equality sets ==
+['ARG2', 'orig(ARG2)']
+['EAX', 'orig(EAX)']
+['3086034988L', 'EBX', 'orig(EBX)']
+['ECX', 'orig(ECX)']
+['EDX', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  cmpl()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+ARG1 != _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(EAX one of { -1, 134578588, 3218687360L })', '(EBX one of { -1, 3086034988L })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  cmpl();condition="CPL==0"
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'orig(EAX)', 'orig(EBX)']
+['0', 'CPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['"%eax"', 'ARG2', 'orig(ARG2)']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  cmpl();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['EBX', 'orig(EBX)']
+['ECX', 'orig(ECX)']
+['EDX', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EDX % EAX', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EAX) % EAX', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG1)', 'orig(ARG2)']
+ARG2 != _x_ for all _x_ in  ['orig(ARG1)']
+ADDR != _x_ for all _x_ in  ['EIP']
+ADDR > _x_ for all _x_ in  ['orig(ADDR)']
+EAX <= _x_ for all _x_ in  ['EDX', 'orig(EAX)']
+EIP != _x_ for all _x_ in  ['orig(ADDR)']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(EAX one of { -1, 3218687360L })', '(EBX one of { -1, 3086034988L })', '(orig(EAX) one of { -1, 134578588, 3218687360L })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  divl()
+== begin equality sets ==
+['-1', 'EAX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"%eax"', 'ARG2']
+['3086034988L', 'EBX']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3085938696L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  divl();condition="not(CPL==0)"
+== begin equality sets ==
+['"%eax"', 'ARG2', 'orig(ARG2)']
+['-1', 'EAX', 'EDX', 'orig(EAX)', 'orig(EDX)']
+['3086034988L', 'EBX', 'orig(EBX)']
+['ECX', 'orig(ECX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085938696L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  incl()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+ECX >= _x_ for all _x_ in  ['-1']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+ADDR > _x_ for all _x_ in  ['EIP']
+EAX <= _x_ for all _x_ in  ['EBX', 'EDX']
+EBX >= _x_ for all _x_ in  ['ECX', 'EDX']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  incl();condition="not(CPL==0)"
+== begin equality sets ==
+['EAX', 'orig(EAX)']
+['EBX', 'orig(EBX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(ECX) % ECX', 'orig(EDX) % EDX', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+ECX >= _x_ for all _x_ in  ['-1']
+ECX <= _x_ for all _x_ in  ['EDX', 'orig(ECX)', 'orig(EDX)']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG1)', 'orig(ARG2)']
+ARG2 <= _x_ for all _x_ in  ['orig(ARG1)']
+ADDR > _x_ for all _x_ in  ['EIP', 'orig(ADDR)']
+EAX <= _x_ for all _x_ in  ['EBX', 'EDX', 'orig(EDX)']
+EBX >= _x_ for all _x_ in  ['ECX', 'EDX', 'orig(ECX)', 'orig(EDX)']
+EDX <= _x_ for all _x_ in  ['orig(EDX)']
+EIP < _x_ for all _x_ in  ['orig(ADDR)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  int()
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX']
+['0', 'CC0', 'CPL', 'CPUIDXE', 'CS_DPL', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'SS_DPL', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"$0x80"', 'ARG1']
+['"%eax"', 'ARG2']
+['3086015298L', 'ADDR']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"0000000000000000000000000000"', 'FS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3086015280L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  int();condition="CPL==0"
+== begin equality sets ==
+['"$0x80"', 'ARG1', 'orig(ARG1)']
+['"%eax"', 'ARG2', 'orig(ARG2)']
+['3222285665L', 'EIP', 'orig(EIP)']
+['135', 'EFL', 'orig(EFL)']
+['0', 'CC0', 'CPL', 'CPUIDXE', 'CS_DPL', 'DR0', 'DR1', 'DR2', 'DR3', 'ECX', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'SS_DPL', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPL)', 'orig(CPUIDXE)', 'orig(CS_DPL)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(SS_DPL)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'orig(DS)', 'orig(ES)']
+['"006000000000ffffffff00cf9a00"', 'CS', 'orig(CS)']
+['"006800000000ffffffff00cf9300"', 'SS', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'orig(FS)']
+['"00d8c110a0000000000f00009300"', 'GS', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['3', 'DS_DPL', 'ES_DPL', 'orig(DS_DPL)', 'orig(ES_DPL)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3086015280L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['4294966272L', 'CCD', 'orig(CCD)']
+['4294967294L', 'EAX']
+['3086022069L', 'EBX']
+['4', 'EDX']
+['133', 'CCS']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  ja()
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'EDX']
+['0', 'CC0', 'CPL', 'CPUIDXE', 'CS_DPL', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'SS_DPL', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0xb7f0e0c7"', 'ARG1']
+['"%eax"', 'ARG2']
+['3086016708L', 'ADDR']
+['4294967288L', 'ECX']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"0000000000000000000000000000"', 'FS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3085963760L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  ja();condition="not(CPL==0)"
+== begin equality sets ==
+['"0xb7f0e0c7"', 'ARG1', 'orig(ARG1)']
+['"%eax"', 'ARG2', 'orig(ARG2)']
+['4294967288L', 'ECX', 'orig(ECX)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(DS_DPL)', 'orig(ES_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPL)', 'orig(CPUIDXE)', 'orig(CS_DPL)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(SS_DPL)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085963760L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['3086016710L', 'ADDR']
+['3085938688L', 'EAX']
+['3218687440L', 'EBX']
+['3086034988L', 'EDX']
+['3086016701L', 'EIP']
+['518', 'EFL']
+['"007300000000ffffffff00cffa00"', 'CS']
+['4', 'CCS']
+['3240296420L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jae()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CCS == 3086036992L)', '(CR2 == 3085963760L)', '(EIP == 3085963895L)', '(EIP == 3085963895L) ']
+== end equivalence sets ==
+== begin inequality properties ==
+ARG1 > _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+EAX <= _x_ for all _x_ in  ['EBX']
+ECX <= _x_ for all _x_ in  ['EDX']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CR2 one of { 3085938696L, 3085991408L, 3086015280L }) ==>  _x_ for all _x_ in  ['(ARG2 one of { "%eax", "%edi", "-0x68(%ebp)" })', '(CPL one of { 0, 3 })', '(CS one of { "006000000000ffffffff00cf9a00", "007300000000ffffffff00cffa00" })', '(EAX one of { -1, 134515128 })', '(EBX one of { -1, 3086034988L })', '(ECX one of { -1, 0 })', '(EDX one of { -1, 4 })', '(GS one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" })', '(SS one of { "006800000000ffffffff00cf9300", "007b00000000ffffffff00cff300" })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jae();condition="CPL==0"
+== begin equality sets ==
+['-1', '3239272448L', '3353441528L', '647', '662', 'EAX', 'EBX', 'ECX', 'EDX', 'EFL']
+['0', '3', 'CPL', 'DS_DPL', 'ES_DPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(SS_DPL)', 'orig(TR_DPL)']
+['"006800000000ffffffff00cf9300"', 'ES', 'SS', 'orig(SS)']
+['"00d8c110a0000000000f00009300"', 'FS', 'GS', 'orig(GS)']
+['"0xb7f0131b"', 'ARG1', 'orig(ARG1)']
+['"%eax"', 'ARG2', 'orig(ARG2)']
+['3085964035L', 'ADDR']
+['3085963895L', '3222637849L', 'EIP']
+['"006000000000ffffffff00cf9a00"', '"007300000000ffffffff00cffa00"', 'CS']
+['3085938696L', '3085963760L', 'CR2']
+['148', '3086036992L', 'CCS']
+['12', '4294868992L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jae();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(DS_DPL)', 'orig(ES_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EAX % orig(EAX)', 'EBX % orig(EBX)', 'ECX % orig(EDX)', 'EDX % orig(EDX)', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CR2', 'orig(CR2)']
+['"007300000000ffffffff00cffa00"', 'CS']
+== end equality sets ==
+== begin equivalence sets ==
+[' (ADDR > EIP)', '(ADDR > orig(ADDR))', '(ARG1 != orig(ARG1))', '(CCD one of { 0, 134515128, 3240296420L })', '(CPL == 3)', '(CPL == ES_DPL)', '(CPL > FS_DPL)', '(CPL >= orig(CPL))', '(CR2 == orig(CR2))', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(CS >= orig(CS))', '(EAX != EBX)', '(EBX > ECX)', '(EBX > EDX)', '(EBX one of { 3085991425L, 3086022069L, 3086034988L })', '(EBX one of { 3085991425L, 3086022069L, 3086034988L }) ', '(EIP < orig(ADDR))', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS < orig(CS))', '(GS < orig(SS))', '(GS <= orig(GS))', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)', '(SS > orig(CS))', '(SS >= orig(SS))', '(orig(CR2) one of { 3085938696L, 3085991408L, 3086015280L })']
+== end equivalence sets ==
+== begin inequality properties ==
+ECX >= _x_ for all _x_ in  ['-1', 'orig(ECX)']
+ECX != _x_ for all _x_ in  ['EDX', 'orig(EBX)']
+CCS >= _x_ for all _x_ in  ['0']
+CCS <= _x_ for all _x_ in  ['orig(CCS)']
+CCD >= _x_ for all _x_ in  ['0']
+CCD <= _x_ for all _x_ in  ['orig(CCD)']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG1)', 'orig(ARG2)']
+ARG2 < _x_ for all _x_ in  ['orig(ARG1)']
+ARG2 >= _x_ for all _x_ in  ['orig(ARG2)']
+ADDR != _x_ for all _x_ in  ['EIP', 'orig(ADDR)', 'orig(EIP)']
+ADDR > _x_ for all _x_ in  ['EIP', 'orig(ADDR)']
+EAX != _x_ for all _x_ in  ['EBX', 'ECX', 'EDX', 'orig(EBX)']
+EAX >= _x_ for all _x_ in  ['orig(EAX)', 'orig(ECX)', 'orig(EDX)']
+EBX != _x_ for all _x_ in  ['ECX', 'EDX']
+EBX > _x_ for all _x_ in  ['ECX', 'EDX', 'orig(EAX)', 'orig(ECX)', 'orig(EDX)']
+EBX >= _x_ for all _x_ in  ['orig(EBX)']
+EDX > _x_ for all _x_ in  ['orig(EAX)', 'orig(ECX)']
+EDX != _x_ for all _x_ in  ['orig(EBX)']
+EDX >= _x_ for all _x_ in  ['orig(EDX)']
+EIP != _x_ for all _x_ in  ['orig(ADDR)', 'orig(EIP)']
+EIP < _x_ for all _x_ in  ['orig(ADDR)']
+EFL >= _x_ for all _x_ in  ['orig(EFL)']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL', 'orig(CPL)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT', 'orig(CS)']
+ES >= _x_ for all _x_ in  ['SS', 'orig(CPL)', 'orig(SS)']
+ES != _x_ for all _x_ in  ['GS', 'orig(GS)']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS', 'orig(GS)', 'orig(SS)']
+CS >= _x_ for all _x_ in  ['orig(CS)']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS', 'orig(CS)', 'orig(GS)']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR', 'orig(CPL)', 'orig(CS)', 'orig(GS)', 'orig(SS)']
+GS != _x_ for all _x_ in  ['LDT', 'TR', 'orig(CS)', 'orig(SS)']
+LDT < _x_ for all _x_ in  ['TR', 'orig(CS)', 'orig(SS)']
+LDT != _x_ for all _x_ in  ['orig(GS)']
+TR > _x_ for all _x_ in  ['orig(CS)', 'orig(SS)']
+TR != _x_ for all _x_ in  ['orig(GS)']
+GDT > _x_ for all _x_ in  ['IDT']
+CR2 <= _x_ for all _x_ in  ['orig(CR2)']
+== end inequality properties ==
+== begin implication properties ==
+(EBX one of { 3085991425L, 3086022069L, 3086034988L }) ==>  _x_ for all _x_ in  ['(CR2 one of { 3085938696L, 3085991408L, 3086015280L })', '(ECX >= -1)', '(orig(ARG2) one of { "%eax", "%edi", "-0x68(%ebp)" })', '(orig(CPL) one of { 0, 3 })', '(orig(CS) one of { "006000000000ffffffff00cf9a00", "007300000000ffffffff00cffa00" })', '(orig(EAX) one of { -1, 134515128 })', '(orig(EBX) one of { -1, 3086034988L })', '(orig(ECX) one of { -1, 0 })', '(orig(EDX) one of { -1, 4 })', '(orig(GS) one of { "0000000000000000000000000000", "00d8c110a0000000000f00009300" })', '(orig(SS) one of { "006800000000ffffffff00cf9300", "007b00000000ffffffff00cff300" })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jb()
+== begin equality sets ==
+['-1', 'EAX', 'ECX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"0xb7f01310"', 'ARG1']
+['"%eax"', 'ARG2']
+['3085964057L', 'ADDR']
+['3086034988L', 'EBX']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3085938696L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jb();condition="not(CPL==0)"
+== begin equality sets ==
+['3086034988L', 'EBX', 'orig(EBX)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085938696L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['3085938688L', 'ECX']
+['8', 'CCS']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jbe()
+== begin equality sets ==
+['-1', 'EAX', 'ECX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"0xb7f012d0"', 'ARG1']
+['"%edi"', 'ARG2']
+['3085964084L', 'ADDR']
+['3086034988L', 'EBX']
+['3085964048L', 'EIP']
+['663', 'EFL']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3085938696L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+['8', 'CCS']
+['4294967290L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jbe();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'EBX', 'orig(EAX)', 'orig(ECX)', 'orig(EDX)']
+['3085938748L', 'ECX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CCD', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'CCS', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085938696L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['"-0x4cc(%ebx),"', 'ARG1']
+['"%esi"', 'ARG2']
+['3085964086L', 'ADDR']
+['60', 'EAX']
+['3085963984L', 'EIP']
+['582', 'EFL']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  je()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 > _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  je();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+ADDR >= _x_ for all _x_ in  ['-1']
+ADDR != _x_ for all _x_ in  ['EIP', 'orig(ADDR)', 'orig(EIP)']
+EAX >= _x_ for all _x_ in  ['-1']
+EAX != _x_ for all _x_ in  ['ECX']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG2)']
+ARG1 <= _x_ for all _x_ in  ['orig(ARG1)']
+ARG2 < _x_ for all _x_ in  ['orig(ARG1)']
+EBX >= _x_ for all _x_ in  ['orig(EBX)']
+ECX != _x_ for all _x_ in  ['EDX', 'orig(EAX)', 'orig(EBX)', 'orig(EDX)']
+EDX >= _x_ for all _x_ in  ['orig(EDX)']
+EIP <= _x_ for all _x_ in  ['orig(ADDR)']
+EIP != _x_ for all _x_ in  ['orig(EIP)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jmp_far()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EDX % EAX', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jmp_far();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EDX % orig(EAX)', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jne()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+ECX >= _x_ for all _x_ in  ['-1']
+ECX != _x_ for all _x_ in  ['EDX']
+EDX >= _x_ for all _x_ in  ['-1']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 > _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  jne();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+ADDR >= _x_ for all _x_ in  ['-1']
+ADDR != _x_ for all _x_ in  ['EIP', 'orig(ADDR)', 'orig(EIP)']
+EAX >= _x_ for all _x_ in  ['-1']
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+EDX != _x_ for all _x_ in  ['orig(EBX)']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG2)']
+ARG2 < _x_ for all _x_ in  ['orig(ARG1)']
+EBX != _x_ for all _x_ in  ['EDX', 'orig(EDX)']
+EBX >= _x_ for all _x_ in  ['orig(EAX)']
+EIP < _x_ for all _x_ in  ['orig(ADDR)']
+EIP != _x_ for all _x_ in  ['orig(EIP)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  js()
+== begin equality sets ==
+['3086034988L', 'EBX', 'ECX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"0xb7f09a3b"', 'ARG1']
+['"%esi"', 'ARG2']
+['3085998605L', 'ADDR']
+['-1', 'EAX']
+['2', 'EDX']
+['3086015308L', 'EIP']
+['646', 'EFL']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3086015280L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+['4294967294L', 'CCS']
+['4294967295L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  js();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'EAX', 'orig(EAX)']
+['3086034988L', 'EBX', 'ECX', 'orig(EBX)', 'orig(ECX)']
+['2', 'EDX', 'orig(EDX)']
+['646', 'EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3086015280L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['4294967294L', 'CCS', 'orig(CCS)']
+['4294967295L', 'CCD', 'orig(CCD)']
+['"-0x80(%ebp),"', 'ARG1']
+['"%eax"', 'ARG2']
+['3085998651L', 'ADDR']
+['3085998601L', 'EIP']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  leal()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 > _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(CR2 one of { 3085938696L, 3085963760L, 3085991408L })', '(EBX one of { -1, 3085991425L, 3086034988L })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  leal();condition="CPL==0"
+== begin equality sets ==
+['0', 'CPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['-1', 'ECX']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+['EAX', 'orig(EAX)']
+['EBX', 'orig(EBX)']
+['EDX', 'orig(EDX)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  leal();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['ECX', 'orig(ECX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EBX) % EBX', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+EAX <= _x_ for all _x_ in  ['orig(EAX)']
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+EDX <= _x_ for all _x_ in  ['orig(EDX)']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG2)']
+ARG2 != _x_ for all _x_ in  ['orig(ARG1)']
+ADDR != _x_ for all _x_ in  ['EIP']
+ADDR > _x_ for all _x_ in  ['orig(ADDR)']
+EBX <= _x_ for all _x_ in  ['orig(EBX)']
+EIP != _x_ for all _x_ in  ['orig(ADDR)']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(CR2 one of { 3085938696L, 3085963760L, 3085991408L })', '(orig(EBX) one of { -1, 3085991425L, 3086034988L })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  movb()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EDX >= _x_ for all _x_ in  ['-1']
+ARG1 != _x_ for all _x_ in  ['ARG2']
+ADDR > _x_ for all _x_ in  ['EIP']
+EAX <= _x_ for all _x_ in  ['EBX', 'ECX', 'EDX']
+EBX >= _x_ for all _x_ in  ['EDX']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  movb();condition="not(CPL==0)"
+== begin equality sets ==
+['EBX', 'orig(EBX)']
+['EDX', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+['-1', 'EAX']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+ECX >= _x_ for all _x_ in  ['-1']
+ECX <= _x_ for all _x_ in  ['EDX', 'orig(ECX)']
+EDX >= _x_ for all _x_ in  ['-1', 'orig(EAX)']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG1)', 'orig(ARG2)']
+ARG2 != _x_ for all _x_ in  ['orig(ARG1)', 'orig(ARG2)']
+ADDR > _x_ for all _x_ in  ['EIP', 'orig(ADDR)']
+EAX <= _x_ for all _x_ in  ['EBX', 'ECX', 'EDX', 'orig(EAX)', 'orig(ECX)']
+EBX >= _x_ for all _x_ in  ['ECX', 'EDX', 'orig(EAX)']
+EIP < _x_ for all _x_ in  ['orig(ADDR)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  movl_nocr()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL < ES_DPL)', '(CPL == 0)', '(CPL == FS_DPL)', '(CS < GS)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(ES < GS)', '(ES > SS)', '(FS < GS)', '(GS == "00d8c110a0000000000f00009300")', '(GS > LDT)', '(GS > TR)', '(SS < GS)', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+EBX != _x_ for all _x_ in  ['0']
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(EBX one of { -1, 3085991425L, 3086034988L })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  movl_nocr();condition="CPL==0"
+== begin equality sets ==
+['0', 'CPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(EAX) % EAX', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+ADDR < _x_ for all _x_ in  ['EIP']
+ES > _x_ for all _x_ in  ['SS']
+ES < _x_ for all _x_ in  ['GS']
+CS < _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['GS']
+FS < _x_ for all _x_ in  ['GS']
+GS > _x_ for all _x_ in  ['LDT', 'TR']
+EIP > _x_ for all _x_ in  ['orig(ADDR)']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  movl_nocr();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EBX) % EBX', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL < ES_DPL)', '(CPL == 0)', '(CPL == FS_DPL)', '(CS < GS)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(ES < GS)', '(ES > SS)', '(FS < GS)', '(GS == "00d8c110a0000000000f00009300")', '(GS > LDT)', '(GS > TR)', '(SS < GS)', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+EAX <= _x_ for all _x_ in  ['orig(EAX)']
+EBX != _x_ for all _x_ in  ['0']
+EBX <= _x_ for all _x_ in  ['orig(EBX)']
+ECX >= _x_ for all _x_ in  ['-1']
+ECX <= _x_ for all _x_ in  ['orig(ECX)']
+EDX >= _x_ for all _x_ in  ['-1']
+EDX <= _x_ for all _x_ in  ['orig(EDX)']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG2)']
+ADDR != _x_ for all _x_ in  ['EIP']
+ADDR > _x_ for all _x_ in  ['orig(ADDR)']
+EIP != _x_ for all _x_ in  ['orig(ADDR)']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+ARG2 != _x_ for all _x_ in  ['orig(ARG1)']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(ARG2 != orig(ARG1))', '(EBX one of { -1, 3085991425L, 3086034988L })', '(orig(EBX) one of { -1, 3085991425L, 3086034988L })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  movw()
+== begin equality sets ==
+['-1', 'EAX', 'ECX', 'EDX', 'orig(EAX)', 'orig(ECX)', 'orig(EDX)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CCD', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CCD)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR2)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'CCS', 'PE', 'orig(A20)', 'orig(CCS)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"$3,"', '"%cx,"', 'ARG1']
+['"%al"', '"%dx"', 'ARG2']
+['3086017712L', '3086017715L', 'ADDR']
+['3086034988L', 'EBX', 'orig(EBX)']
+['3085991882L', 'EIP', 'orig(EIP)']
+['582', 'EFL', 'orig(EFL)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085991408L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  movzbl()
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  movzbl();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX', 'orig(EAX)', 'orig(EBX)', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  new0x31()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['1', 'A20', 'PE']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EBX >= _x_ for all _x_ in  ['2']
+EDX >= _x_ for all _x_ in  ['0']
+EAX != _x_ for all _x_ in  ['ECX', 'EDX']
+ECX != _x_ for all _x_ in  ['EDX']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+II <= _x_ for all _x_ in  ['A20']
+II >= _x_ for all _x_ in  ['SMM']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  new0x31();condition="CPL==0"
+== begin equality sets ==
+['EAX', 'orig(EAX)']
+['EBX', 'orig(EBX)']
+['ECX', 'orig(ECX)']
+['EDX', 'orig(EDX)']
+['0', 'CC0', 'CPL', 'CPUIDXE', 'CS_DPL', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'SS_DPL', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'orig(DS)', 'orig(ES)']
+['"0000000000000000000000000000"', 'FS', 'orig(FS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['3', 'DS_DPL', 'ES_DPL', 'orig(DS_DPL)', 'orig(ES_DPL)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['3222285972L', 'EIP']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EBX >= _x_ for all _x_ in  ['2']
+EDX >= _x_ for all _x_ in  ['0']
+EAX != _x_ for all _x_ in  ['ECX', 'EDX']
+ECX != _x_ for all _x_ in  ['EDX']
+EIP != _x_ for all _x_ in  ['orig(EIP)']
+EFL < _x_ for all _x_ in  ['orig(EFL)']
+CPL <= _x_ for all _x_ in  ['orig(CPL)']
+II <= _x_ for all _x_ in  ['orig(II)']
+A20 >= _x_ for all _x_ in  ['orig(II)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT', 'SS', 'orig(CS)']
+ES != _x_ for all _x_ in  ['GS', 'orig(GS)']
+ES < _x_ for all _x_ in  ['TR']
+ES >= _x_ for all _x_ in  ['orig(CPL)', 'orig(SS)']
+CS < _x_ for all _x_ in  ['SS', 'TR', 'orig(SS)']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS', 'orig(GS)']
+CS <= _x_ for all _x_ in  ['orig(CS)']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS', 'orig(CS)', 'orig(GS)']
+SS < _x_ for all _x_ in  ['TR']
+SS <= _x_ for all _x_ in  ['orig(SS)']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR', 'orig(CS)', 'orig(GS)', 'orig(SS)']
+GS != _x_ for all _x_ in  ['LDT', 'TR', 'orig(CS)', 'orig(SS)']
+GS <= _x_ for all _x_ in  ['orig(GS)']
+LDT < _x_ for all _x_ in  ['TR', 'orig(CS)', 'orig(SS)']
+LDT != _x_ for all _x_ in  ['orig(GS)']
+TR > _x_ for all _x_ in  ['orig(CS)', 'orig(SS)']
+TR != _x_ for all _x_ in  ['orig(GS)']
+GDT > _x_ for all _x_ in  ['IDT']
+CCD <= _x_ for all _x_ in  ['orig(CCD)']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  new0xef()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['1', 'A20', 'PE']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['0']
+EAX != _x_ for all _x_ in  ['ECX']
+ECX >= _x_ for all _x_ in  ['0']
+EDX >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+II <= _x_ for all _x_ in  ['A20']
+II >= _x_ for all _x_ in  ['SMM']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  new0xef();condition="CPL==0"
+== begin equality sets ==
+['EAX', 'orig(EAX)']
+['EBX', 'orig(EBX)']
+['ECX', 'orig(ECX)']
+['EDX', 'orig(EDX)']
+['0', 'CC0', 'CPL', 'CPUIDXE', 'CS_DPL', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'SS_DPL', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'orig(DS)', 'orig(ES)']
+['"0000000000000000000000000000"', 'FS', 'orig(FS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['3', 'DS_DPL', 'ES_DPL', 'orig(DS_DPL)', 'orig(ES_DPL)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['3222288268L', 'EIP']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['0']
+EAX != _x_ for all _x_ in  ['ECX']
+ECX >= _x_ for all _x_ in  ['0']
+EDX >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+CCD <= _x_ for all _x_ in  ['orig(CCD)']
+EIP != _x_ for all _x_ in  ['orig(EIP)']
+CPL <= _x_ for all _x_ in  ['orig(CPL)']
+II <= _x_ for all _x_ in  ['orig(II)']
+A20 >= _x_ for all _x_ in  ['orig(II)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT', 'SS', 'orig(CS)']
+ES != _x_ for all _x_ in  ['GS', 'orig(GS)']
+ES < _x_ for all _x_ in  ['TR']
+ES >= _x_ for all _x_ in  ['orig(CPL)', 'orig(SS)']
+CS < _x_ for all _x_ in  ['SS', 'TR', 'orig(SS)']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS', 'orig(GS)']
+CS <= _x_ for all _x_ in  ['orig(CS)']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS', 'orig(CS)', 'orig(GS)']
+SS < _x_ for all _x_ in  ['TR']
+SS <= _x_ for all _x_ in  ['orig(SS)']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR', 'orig(CS)', 'orig(GS)', 'orig(SS)']
+GS != _x_ for all _x_ in  ['LDT', 'TR', 'orig(CS)', 'orig(SS)']
+GS <= _x_ for all _x_ in  ['orig(GS)']
+LDT < _x_ for all _x_ in  ['TR', 'orig(CS)', 'orig(SS)']
+LDT != _x_ for all _x_ in  ['orig(GS)']
+TR > _x_ for all _x_ in  ['orig(CS)', 'orig(SS)']
+TR != _x_ for all _x_ in  ['orig(GS)']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  nop()
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"%eax,"', 'ARG1']
+['"-0x24(%ebp)"', 'ARG2']
+['3085963976L', 'ADDR']
+['3085963895L', 'EIP']
+['647', 'EFL']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3085963760L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+['3086036992L', 'CCS']
+['4294868992L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  nop();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX', 'orig(EAX)', 'orig(EBX)', 'orig(ECX)', 'orig(EDX)']
+['3085963895L', 'EIP', 'orig(EIP)']
+['647', 'EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085963760L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['3086036992L', 'CCS', 'orig(CCS)']
+['4294868992L', 'CCD', 'orig(CCD)']
+['"(%esi),"', 'ARG1']
+['"%esi"', 'ARG2']
+['3085963977L', 'ADDR']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  orb()
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  orb();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX', 'orig(EAX)', 'orig(EBX)', 'orig(ECX)', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  orl()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['3086034988L', 'EBX']
+['-1', 'ECX']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+ARG1 < _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+EAX < _x_ for all _x_ in  ['EBX']
+EAX >= _x_ for all _x_ in  ['ECX']
+EAX <= _x_ for all _x_ in  ['EDX']
+EBX > _x_ for all _x_ in  ['EDX']
+ECX <= _x_ for all _x_ in  ['EDX']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  orl();condition="not(CPL==0)"
+== begin equality sets ==
+['ARG2', 'orig(ARG2)']
+['EAX', 'orig(EAX)']
+['3086034988L', 'EBX', 'orig(EBX)']
+['-1', 'ECX', 'orig(ECX)']
+['EDX', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+ARG1 >= _x_ for all _x_ in  ['ARG2', 'orig(ARG1)']
+ARG2 > _x_ for all _x_ in  ['orig(ARG1)']
+ADDR != _x_ for all _x_ in  ['EIP']
+ADDR > _x_ for all _x_ in  ['orig(ADDR)']
+EAX < _x_ for all _x_ in  ['EBX']
+EAX >= _x_ for all _x_ in  ['ECX']
+EAX <= _x_ for all _x_ in  ['EDX']
+EBX > _x_ for all _x_ in  ['EDX']
+ECX <= _x_ for all _x_ in  ['EDX']
+EIP != _x_ for all _x_ in  ['orig(ADDR)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  popl()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'ECX % EAX', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['-1', 'EBX']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+[' (ADDR == 3086015300L)', '(ARG2 == "%eax")', '(ARG2 == "%eax") ', '(CCD == 4294966272L)', '(CCS == 1027)', '(CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EAX == 4294967294L)', '(ECX == 0)', '(EDX == 4)', '(EFL == 135)', '(EIP == 3222285665L)', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+[' (CCD one of { 0, 4294967295L })', '(ARG2 == "%esp")', '(ARG2 == "%esp") ', '(CCS one of { 1, 4294967294L })', '(CPL == 3)', '(CPL == ES_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(EAX == -1)', '(EAX == EBX)', '(ECX one of { 3086034988L, 3086036176L })', '(EDX one of { 0, 2 })', '(EFL one of { 582, 646 })', '(EIP one of { 3085964152L, 3085998601L })', '(ES == SS)', '(FS == GS)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")']
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+(ARG2 == "%eax") ==>  _x_ for all _x_ in  ['(ARG1 == "%ebx")', '(CR2 == 3086015280L)']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  popl();condition="CPL==0"
+== begin equality sets ==
+['0', 'CPL', 'ECX', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['"$0xfffff001,"', '"%ebx"', 'ARG1']
+['"%eax"', 'ARG2']
+['3086015300L', '3086015301L', 'ADDR']
+['4294967294L', 'EAX']
+['4', 'EDX']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['3086015280L', 'CR2']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  popl();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'orig(EAX)', 'orig(EBX)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"%esp"', 'ARG2', 'orig(ARG2)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['ECX', 'orig(ECX)']
+['EDX', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['0', 'ADDR - orig(ADDR) - 1', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'ECX % orig(EAX)', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+[' (ADDR == 3086015301L)', '(ARG1 == "$0xfffff001,")', '(ARG1 == "$0xfffff001,") ', '(ARG2 == "%eax")', '(CCD == 4294966272L)', '(CCS == 1027)', '(CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(ECX == 0)', '(EDX == 4)', '(EFL == 135)', '(EIP == 3222285665L)', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")', '(orig(ADDR) == 3086015300L)', '(orig(EAX) == 4294967294L)']
+[' (ARG2 == "%esp")', '(ARG1 one of { "%ebp", "%edi", "%esi" })', '(ARG1 one of { "%ebp", "%edi", "%esi" }) ', '(CCD one of { 0, 4294967295L })', '(CCS one of { 1, 4294967294L })', '(CPL == 3)', '(CPL == ES_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(EAX == orig(EAX))', '(ECX one of { 3086034988L, 3086036176L })', '(EDX one of { 0, 2 })', '(EFL one of { 582, 646 })', '(EIP one of { 3085964152L, 3085998601L })', '(ES == SS)', '(FS == GS)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(orig(EAX) == -1)']
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+(ARG1 == "$0xfffff001,") ==>  _x_ for all _x_ in  ['(CR2 == 3086015280L)', '(orig(ARG1) == "%ebx")']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  pushl()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CCD == 0)', '(ADDR == 3086017696L)', '(ADDR == 3086017696L) ', '(CCS == 1)', '(CPL == 3)', '(CPL == ES_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(EAX == 1)', '(ECX == 134578452)', '(EFL == 582)', '(EIP == 3085991882L)', '(ES == SS)', '(FS == GS)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")']
+[' (CCD == 4294966272L)', '(CCS == 1027)', '(CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EAX one of { 3086022069L, 3086035512L })', '(EAX one of { 3086022069L, 3086035512L }) ', '(ECX one of { -1, 0, 3 })', '(EFL == 135)', '(EIP == 3222285665L)', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+ARG1 != _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+EAX != _x_ for all _x_ in  ['EBX', 'ECX', 'EDX']
+EBX != _x_ for all _x_ in  ['EDX']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(ADDR == 3086017696L) ==>  _x_ for all _x_ in  ['(ARG1 == "%edi")', '(ARG2 == "(%esp)")', '(CR2 == 3085991408L)', '(EBX == 3086034988L)', '(EDX == 0)']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  pushl();condition="CPL==0"
+== begin equality sets ==
+['0', 'CPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+['EAX', 'orig(EAX)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  pushl();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"%edi"', '"8(%esp),"', 'ARG1']
+['"%eax"', '"(%esp)"', 'ARG2']
+['3086017696L', '3086017697L', 'ADDR']
+['-1', '1', 'A20', 'CCS', 'EAX', 'PE', 'orig(A20)', 'orig(CCS)', 'orig(PE)']
+['3086034988L', 'EBX', 'orig(EBX)']
+['134578452', 'ECX', 'orig(ECX)']
+['0', 'ADDR - orig(ADDR) - 1', 'CC0', 'CCD', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EAX % orig(EAX)', 'EDX', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CCD)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EAX) % EAX', 'orig(EDX)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['3085991882L', 'EIP', 'orig(EIP)']
+['582', 'EFL', 'orig(EFL)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['3085991408L', 'CR2', 'orig(CR2)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CCD == 0)', '(ADDR == 3086017697L)', '(ADDR == 3086017697L) ', '(CCS == 1)', '(CPL == 3)', '(CPL == ES_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(EAX == -1)', '(ECX == 134578452)', '(EFL == 582)', '(EIP == 3085991882L)', '(ES == SS)', '(FS == GS)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(orig(ADDR) == 3086017696L)', '(orig(EAX) == 1)', '(orig(ECX) == 134578452)']
+[' (CCD == 4294966272L)', '(CCS == 1027)', '(CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EAX == orig(EAX))', '(EAX one of { 3086022069L, 3086035512L })', '(EAX one of { 3086022069L, 3086035512L }) ', '(ECX one of { -1, 0, 3 })', '(EFL == 135)', '(EIP == 3222285665L)', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")', '(orig(EAX) one of { 3086022069L, 3086035512L })', '(orig(ECX) one of { -1, 0, 3 })']
+== end equivalence sets ==
+== begin inequality properties ==
+ECX >= _x_ for all _x_ in  ['-1']
+ECX != _x_ for all _x_ in  ['orig(EAX)']
+ECX <= _x_ for all _x_ in  ['orig(ECX)']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG1)', 'orig(ARG2)']
+ADDR != _x_ for all _x_ in  ['EIP']
+EAX != _x_ for all _x_ in  ['EBX', 'ECX', 'EDX', 'orig(EBX)', 'orig(ECX)', 'orig(EDX)']
+EAX <= _x_ for all _x_ in  ['orig(EAX)']
+EBX != _x_ for all _x_ in  ['orig(EAX)', 'orig(EDX)']
+EBX <= _x_ for all _x_ in  ['orig(EBX)']
+EDX != _x_ for all _x_ in  ['orig(EAX)']
+EDX <= _x_ for all _x_ in  ['orig(EDX)']
+EIP != _x_ for all _x_ in  ['orig(ADDR)']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(ADDR == 3086017697L) ==>  _x_ for all _x_ in  ['(ARG1 == "8(%esp),")', '(ARG2 == "%eax")', '(CR2 == 3085991408L)', '(EBX == 3086034988L)', '(EBX == orig(EBX))', '(ECX == orig(ECX))', '(EDX == 0)', '(EDX == orig(EDX))', '(orig(ARG1) == "%edi")', '(orig(ARG2) == "(%esp)")', '(orig(EBX) == 3086034988L)', '(orig(EDX) == 0)']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  rdtsc()
+== begin equality sets ==
+['3086034988L', 'EBX', 'ECX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"0xb7eff028"', 'ARG1']
+['"%eax"', 'ARG2']
+['3085951842L', 'ADDR']
+['134578588', 'CCD', 'EAX']
+['2', 'EDX']
+['3085951828L', 'EIP']
+['518', 'EFL']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3086015280L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+['4294967295L', 'CCS']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  rdtsc();condition="not(CPL==0)"
+== begin equality sets ==
+['134578588', 'CCD', 'EAX', 'orig(CCD)', 'orig(EAX)']
+['3086034988L', 'EBX', 'orig(EBX)', 'orig(ECX)']
+['2', 'EDX', 'orig(EDX)']
+['3085951828L', 'EIP', 'orig(EIP)']
+['518', 'EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3086015280L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['4294967295L', 'CCS', 'orig(CCS)']
+['"%ecx,"', 'ARG1']
+['"%ecx"', 'ARG2']
+['3085951844L', 'ADDR']
+['-1', 'ECX']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  repe()
+== begin equality sets ==
+['-1', 'EAX', 'ECX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"cmpsb"', 'ARG1']
+['"%es:(%edi),"', 'ARG2']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3085938696L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  repe();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085938696L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['3086034988L', 'EBX']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  retl()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  retl();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EDX) % EDX', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  sete()
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"%cl"', 'ARG1']
+['"%eax"', 'ARG2']
+['3085951865L', 'ADDR']
+['2', 'EDX']
+['3085951828L', 'EIP']
+['518', 'EFL']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3086015280L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+['4294967295L', 'CCS']
+['134578588', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  sete();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX', 'orig(EAX)', 'orig(EBX)', 'orig(ECX)']
+['3085951828L', 'EIP', 'orig(EIP)']
+['518', 'EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3086015280L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['4294967295L', 'CCS', 'orig(CCS)']
+['134578588', 'CCD', 'orig(CCD)']
+['"%edx,"', 'ARG1']
+['"-0xdc(%ebp)"', 'ARG2']
+['3085951868L', 'ADDR']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  shll()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['-1', 'EAX']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 < _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+EAX <= _x_ for all _x_ in  ['EBX', 'ECX', 'EDX']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  shll();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'EAX', 'orig(EAX)']
+['EBX', 'orig(EBX)']
+['EDX', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'ADDR - orig(ADDR) - 3', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(ECX) % ECX', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG2)']
+ARG1 > _x_ for all _x_ in  ['orig(ARG1)']
+ARG2 > _x_ for all _x_ in  ['orig(ARG1)']
+ARG2 != _x_ for all _x_ in  ['orig(ARG2)']
+ADDR != _x_ for all _x_ in  ['EIP']
+EAX <= _x_ for all _x_ in  ['EBX', 'ECX', 'EDX', 'orig(ECX)']
+ECX <= _x_ for all _x_ in  ['orig(ECX)']
+EIP != _x_ for all _x_ in  ['orig(ADDR)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  subl()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+[' (ADDR == 3085998547L)', '(ARG1 == "$0xa8,")', '(ARG1 == "$0xa8,") ', '(CCD == 4294966272L)', '(CCS == 1027)', '(CPL == 0)', '(CPL == FS_DPL)', '(CR2 == 3085998544L)', '(CS == "006000000000ffffffff00cf9a00")', '(EAX == 3086022069L)', '(ECX == 3)', '(EDX == 3218687872L)', '(EFL == 135)', '(EIP == 3222285665L)', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+[' (ADDR one of { 3085991431L, 3085991453L, 3086015322L })', '(ARG1 one of { "$0xcc,", "%eax,", "%edx," })', '(ARG1 one of { "$0xcc,", "%eax,", "%edx," }) ', '(CCD one of { 4093, 3240296420L })', '(CCS one of { 145, 4294963201L })', '(CPL == 3)', '(CPL == ES_DPL)', '(CR2 one of { 3085991408L, 3086015280L })', '(CS == "007300000000ffffffff00cffa00")', '(EAX one of { -1, 3086035512L })', '(ECX == EDX)', '(ECX one of { -1, 0 })', '(EDX one of { -1, 0 })', '(EFL one of { 514, 659 })', '(EIP one of { 3085991408L, 3086019275L })', '(ES == SS)', '(FS == GS)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")']
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+(ARG1 == "$0xa8,") ==>  _x_ for all _x_ in  ['(ARG2 == "%esp")', '(EBX == 3086034988L)']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  subl();condition="CPL==0"
+== begin equality sets ==
+['0', 'CPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['"$0xa8,"', '"%ebx,"', 'ARG1']
+['"%esp"', '"-0xc(%ebp)"', 'ARG2']
+['3085998547L', '3085998553L', 'ADDR']
+['3086022069L', 'EAX']
+['-1', '3086034988L', 'EBX']
+['3', 'ECX']
+['3218687872L', 'EDX', 'orig(EDX)']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['3085998544L', 'CR2']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  subl();condition="not(CPL==0)"
+== begin equality sets ==
+['-1', 'ECX', 'EDX', 'orig(ECX)', 'orig(EDX)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['EAX', 'orig(EAX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+['EBX', 'orig(EBX)']
+== end equality sets ==
+== begin equivalence sets ==
+[' (ADDR == 3085998553L)', '(ARG1 == "%ebx,")', '(ARG1 == "%ebx,") ', '(ARG2 == "-0xc(%ebp)")', '(CCD == 4294966272L)', '(CCS == 1027)', '(CPL == 0)', '(CPL == FS_DPL)', '(CR2 == 3085998544L)', '(CS == "006000000000ffffffff00cf9a00")', '(EAX == 3086022069L)', '(ECX == 3)', '(EDX == 3218687872L)', '(EFL == 135)', '(EIP == 3222285665L)', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")', '(orig(ADDR) == 3085998547L)', '(orig(ARG1) == "$0xa8,")', '(orig(EDX) == 3218687872L)']
+[' (ADDR one of { 3085991437L, 3085991455L, 3086015324L })', '(ARG1 one of { "%edx,", "0x10(%esp)," })', '(ARG1 one of { "%edx,", "0x10(%esp)," }) ', '(ARG2 one of { "%esi", "-0x58(%ebp)", "0x11c(%ecx)" })', '(CCD one of { 4093, 3240296420L })', '(CCS one of { 145, 4294963201L })', '(CPL == 3)', '(CPL == ES_DPL)', '(CR2 one of { 3085991408L, 3086015280L })', '(CS == "007300000000ffffffff00cffa00")', '(EAX one of { -1, 3086035512L })', '(EBX == orig(EBX))', '(ECX == orig(EDX))', '(ECX one of { -1, 0 })', '(EDX == -1)', '(EFL one of { 514, 659 })', '(EIP one of { 3085991408L, 3086019275L })', '(ES == SS)', '(FS == GS)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(orig(ADDR) one of { 3085991431L, 3085991453L, 3086015322L })', '(orig(ARG1) one of { "$0xcc,", "%eax,", "%edx," })', '(orig(EDX) one of { -1, 0 })']
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+(ARG1 == "%ebx,") ==>  _x_ for all _x_ in  ['(EBX == -1)', '(EDX == orig(EDX))', '(orig(ARG2) == "%esp")', '(orig(EBX) == 3086034988L)']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  testb()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['3086034988L', 'EBX']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['3085991408L', 'CR2']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  testb();condition="not(CPL==0)"
+== begin equality sets ==
+['ARG2', 'orig(ARG2)']
+['EAX', 'orig(EAX)']
+['3086034988L', 'EBX', 'orig(EBX)']
+['ECX', 'orig(ECX)']
+['EDX', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'ADDR - orig(ADDR) - 2', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['3085991408L', 'CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  testl()
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS']
+['"0000000000000000000000000000"', 'FS', 'GS']
+['"007300000000ffffffff00cffa00"', 'CS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 > _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  testl();condition="not(CPL==0)"
+== begin equality sets ==
+['EAX', 'orig(EAX)']
+['EBX', 'orig(EBX)']
+['ECX', 'orig(ECX)']
+['EDX', 'orig(EDX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['0', 'ADDR - orig(ADDR) - 2', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG2)']
+ARG2 != _x_ for all _x_ in  ['orig(ARG1)']
+ARG2 >= _x_ for all _x_ in  ['orig(ARG2)']
+ADDR != _x_ for all _x_ in  ['EIP']
+EIP != _x_ for all _x_ in  ['orig(ADDR)']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES < _x_ for all _x_ in  ['TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS < _x_ for all _x_ in  ['TR']
+FS < _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  xorl()
+== begin equality sets ==
+['CPL', 'CS_DPL', 'SS_DPL']
+['0', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE']
+['1', 'A20', 'PE']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES']
+['3', 'DS_DPL', 'ES_DPL']
+['"0000000000000000000000000000"', 'FS']
+['"0000000000000000000000008200"', 'LDT']
+['"0080c1100a800000207300008900"', 'TR']
+['"c1109000000000ff"', 'GDT']
+['"c049f000000007ff"', 'IDT']
+['2147811387L', 'CR0']
+['19075072', 'CR3']
+['1744', 'CR4']
+['4294905840L', 'DR6']
+['1024', 'DR7']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+ECX >= _x_ for all _x_ in  ['-1']
+EDX >= _x_ for all _x_ in  ['-1']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2']
+ADDR != _x_ for all _x_ in  ['EIP']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(EBX one of { -1, 3086034988L })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  xorl();condition="CPL==0"
+== begin equality sets ==
+['-1', 'EAX', 'EBX', 'ECX', 'EDX', 'orig(EAX)', 'orig(EBX)', 'orig(ECX)', 'orig(EDX)']
+['0', 'CPL', 'FS_DPL', 'GS_DPL', 'IOPL', 'LDT_DPL', 'TR_DPL', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['"%eax,"', '"%esi,"', 'ARG1']
+['"%eax"', 'ARG2', 'orig(ARG2)']
+['3085964031L', '3085964033L', 'ADDR']
+['3222285665L', 'EIP']
+['135', 'EFL']
+['"006000000000ffffffff00cf9a00"', 'CS']
+['"006800000000ffffffff00cf9300"', 'SS']
+['"00d8c110a0000000000f00009300"', 'GS']
+['3085938696L', 'CR2']
+['1027', 'CCS']
+['4294966272L', 'CCD']
+== end equality sets ==
+== begin equivalence sets ==
+== end equivalence sets ==
+== begin inequality properties ==
+== end inequality properties ==
+== begin implication properties ==
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
+===========================================================================
+CONDITION:  xorl();condition="not(CPL==0)"
+== begin equality sets ==
+['3', 'CPL', 'CS_DPL', 'DS_DPL', 'ES_DPL', 'SS_DPL', 'orig(CPL)', 'orig(CS_DPL)', 'orig(DS_DPL)', 'orig(ES_DPL)', 'orig(SS_DPL)']
+['"007b00000000ffffffff00cff300"', 'DS', 'ES', 'SS', 'orig(DS)', 'orig(ES)', 'orig(SS)']
+['"0000000000000000000000000000"', 'FS', 'GS', 'orig(FS)', 'orig(GS)']
+['"007300000000ffffffff00cffa00"', 'CS', 'orig(CS)']
+['EBX', 'orig(EBX)']
+['EIP', 'orig(EIP)']
+['EFL', 'orig(EFL)']
+['0', 'ADDR - orig(ADDR) - 2', 'CC0', 'CPUIDXE', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'FS_DPL', 'GS_DPL', 'HLT', 'II', 'IOPL', 'LDT_DPL', 'LMA', 'LME', 'SMAP', 'SMEP', 'SMM', 'TR_DPL', 'TSD', 'UMIP', 'VM', 'VMXE', 'orig(CC0)', 'orig(CPUIDXE)', 'orig(DR0)', 'orig(DR1)', 'orig(DR3)', 'orig(ECX) % ECX', 'orig(EDX) % EDX', 'orig(EFER)', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(II)', 'orig(IOPL)', 'orig(LDT_DPL)', 'orig(LMA)', 'orig(LME)', 'orig(SMAP)', 'orig(SMEP)', 'orig(SMM)', 'orig(TR_DPL)', 'orig(TSD)', 'orig(UMIP)', 'orig(VM)', 'orig(VMXE)']
+['1', 'A20', 'PE', 'orig(A20)', 'orig(PE)']
+['"0000000000000000000000008200"', 'LDT', 'orig(LDT)']
+['"0080c1100a800000207300008900"', 'TR', 'orig(TR)']
+['"c1109000000000ff"', 'GDT', 'orig(GDT)']
+['"c049f000000007ff"', 'IDT', 'orig(IDT)']
+['2147811387L', 'CR0', 'orig(CR0)']
+['CR2', 'orig(CR2)']
+['19075072', 'CR3', 'orig(CR3)']
+['1744', 'CR4', 'orig(CR4)']
+['DR2', 'orig(DR2)']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+['CCS', 'orig(CCS)']
+['CCD', 'orig(CCD)']
+== end equality sets ==
+== begin equivalence sets ==
+[' (CPL == ES_DPL)', '(CPL == 3)', '(CPL == 3) ', '(CPL > FS_DPL)', '(CS == "007300000000ffffffff00cffa00")', '(CS > GS)', '(ES == SS)', '(ES > GS)', '(FS == GS)', '(GS < LDT)', '(GS < TR)', '(GS == "0000000000000000000000000000")', '(SS == "007b00000000ffffffff00cff300")', '(SS > GS)']
+[' (CPL == 0)', '(CPL == FS_DPL)', '(CS == "006000000000ffffffff00cf9a00")', '(EFL == 135)', '(EIP == 3222285665L)', '(EIP == 3222285665L) ', '(GS == "00d8c110a0000000000f00009300")', '(SS == "006800000000ffffffff00cf9300")']
+== end equivalence sets ==
+== begin inequality properties ==
+EAX >= _x_ for all _x_ in  ['-1']
+EAX <= _x_ for all _x_ in  ['orig(EAX)']
+ECX >= _x_ for all _x_ in  ['-1']
+ECX <= _x_ for all _x_ in  ['orig(ECX)']
+EDX >= _x_ for all _x_ in  ['-1']
+EDX <= _x_ for all _x_ in  ['orig(EDX)']
+CCS >= _x_ for all _x_ in  ['0']
+CCD >= _x_ for all _x_ in  ['0']
+ARG1 != _x_ for all _x_ in  ['ARG2', 'orig(ARG2)']
+ARG2 != _x_ for all _x_ in  ['orig(ARG1)']
+ADDR != _x_ for all _x_ in  ['EIP']
+EIP != _x_ for all _x_ in  ['orig(ADDR)']
+CPL <= _x_ for all _x_ in  ['ES_DPL']
+CPL >= _x_ for all _x_ in  ['FS_DPL']
+ES > _x_ for all _x_ in  ['CS', 'FS', 'LDT']
+ES >= _x_ for all _x_ in  ['SS']
+ES != _x_ for all _x_ in  ['GS']
+ES < _x_ for all _x_ in  ['TR']
+CS < _x_ for all _x_ in  ['SS', 'TR']
+CS > _x_ for all _x_ in  ['FS', 'LDT']
+CS != _x_ for all _x_ in  ['GS']
+SS > _x_ for all _x_ in  ['FS', 'LDT']
+SS != _x_ for all _x_ in  ['GS']
+SS < _x_ for all _x_ in  ['TR']
+FS <= _x_ for all _x_ in  ['GS', 'LDT', 'TR']
+GS != _x_ for all _x_ in  ['LDT', 'TR']
+LDT < _x_ for all _x_ in  ['TR']
+GDT > _x_ for all _x_ in  ['IDT']
+== end inequality properties ==
+== begin implication properties ==
+(CPL == 3) ==>  _x_ for all _x_ in  ['(ADDR - orig(ADDR) - 2 == 0)', '(EBX one of { -1, 3086034988L })']
+== end implication properties ==
+== begin raw properties ==
+== end raw properties ==
