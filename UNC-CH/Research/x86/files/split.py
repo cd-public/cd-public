@@ -17,7 +17,7 @@
 # CR4[11] (SGDT, SIDT, SLDT, SMSW and STR -> CPL==0) "UMIP"
 # CR4[13] (VM* enable) "VMXE"
 
-s = "CPL==0" + '\n' + "PE==0" + '\n' + "LME==0" + '\n' + "LMA==0" + '\n' + "VM==0" + '\n' + "CPUIDXE==0" + '\n' + "TSD==0" + '\n' + "UMIP==0" + '\n' + "VMXE==0" + '\n'
+s = "CPL==0"# + '\n' + "PE==0" + '\n' + "LME==0" + '\n' + "LMA==0" + '\n' + "VM==0" + '\n' + "CPUIDXE==0" + '\n' + "TSD==0" + '\n' + "UMIP==0" + '\n' + "VMXE==0" + '\n'
 
 a = ""
 

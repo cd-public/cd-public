@@ -209,5 +209,5 @@ def parse(name):
 		line = new_line
 		
 parse("cs")		
-#parse("cs2")
-#parse("boot")
+parse("cs2")
+parse("boot")
