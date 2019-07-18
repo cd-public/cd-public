@@ -1,6 +1,7 @@
 # splice
 
 from time import sleep
+from copy import deepcopy
 
 def add_to_cache(save_name, cache, line):
 	to_add = []
@@ -102,7 +103,7 @@ def eqset(s):
 	
 def sets_combine(sets):
 	# return sets
-	# list of sets of items in symmetric relations, combine sets with common elements.
+	# given list of sets of items in symmetric relations, combine sets with common elements.
 	max = len(sets)
 	i = 0;
 	j = 0;
@@ -113,12 +114,15 @@ def sets_combine(sets):
 		while j < max:
 			for e in sets[i]:
 				if e in sets[j]:
-					to_add.union(sets[j])
+					to_add = to_add.union(sets[j])
 					to_remove.add(j)
 			j = j + 1
+		#print(to_add)
 		if len(to_add) != 0:
+			#print(to_add)
 			sets[i].union(to_add)
-			to_remove_l = list(to_remove).sort()
+			to_remove_l = list(to_remove)
+			to_remove_l.sort()
 			while len(to_remove_l) > 0:
 				sets.remove(sets[to_remove_l.pop(-1)])
 			max = len(sets)
@@ -219,6 +223,7 @@ def expand_ineq(cache):
 						for key in ["eqset: \"0000000000000000000000000000\"", "eqset: 0", "-1"]:
 							if key in oper[1]:
 								oper[1].remove(key)
+			#do the LHS combine here:	
 	for ele in to_del:
 		cache.remove(ele)
 	return cache
@@ -230,14 +235,26 @@ def print_globals(struct,outf):
 	for i in range(3):
 		group = extracted[i]
 		outf.write("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nGLOBAL:  " + pre[i] + condition + "\n~~ begin equality sets ~~\n")
+		#print(group[0])
 		for eqs in group[0]:
 			outf.write(sorted(eqs) + "\n")
 		outf.write("~~ end equality sets ~~\n~~ begin equivalence sets ~~\n")
 		for eqs in group[1]:
 			outf.write(sorted(eqs) + "\n")
-		
+		outf.write("~~ end equivalence sets ~~\n~~ begin inequality properties ~~\n")
+		#print(group[2])
+		for ineqs in group[2]:
+			if ineqs != []:
+				for opers in ineqs[1]:
+					if len(opers[1]) != 0:
+						outf.write(ineqs[0] + " " + opers[0] + " _x_ for all _x_ in  " + sorted(opers[1]) + "\n")
+		outf.write("~~ end inequality properties ~~\n~~ begin implication properties ~~\n")
+		for imps in group[3]:
+			outf.write(imps[0] + " ==>  _x_ for all _x_ in  " + sorted(imps[1]) + "\n")
+		outf.write("~~ end implication properties ~~\n")
 	
-def extract_globals(cache, condition):
+def extract_globals(cache_orig, condition):
+	cache = deepcopy(cache_orig) # get a local copy
 	# disregarding instructions, we splits properties into 3 groups
 	# (1) condition neutral (2) condition (3) not condition
 	groups = [[],[],[]]
@@ -256,42 +273,106 @@ def extract_globals(cache, condition):
 			if group_eqs == []:
 				group_eqs = entry[0]
 			else:
+				keep = set()
 				for iter_eq in entry[0]:
 					for group_eq in group_eqs:
 						for ele in iter_eq:
 							if ele in group_eq:
 								group_eq.intersection(iter_eq)
+								keep.add(group_eqs.index(group_eq))
+				l = list(keep)
+				l.sort()
+				l.reverse()
+				for i in l:
+					del group_eqs[i]
+						
 		# combine equivalences
 		group_equivs = []
 		for entry in group:
 			if group_equivs == []:
 				group_equivs = entry[1]
 			else:
+				keep = set()
 				for iter_equiv in entry[1]:
 					for group_equiv in group_equivs:
 						for ele in iter_equiv:
 							if ele in group_equiv:
 								group_equiv.intersection(iter_equiv)
+								keep.add(group_equivs.index(group_equiv))
+				l = list(keep)
+				l.sort()
+				l.reverse()
+				for i in l:
+					del group_equivs[i]
 		# combine inequalities
 		group_ineqs = []
+		for entry in group:
+			if group_ineqs == []:
+				# dont use ineq struct TODO
+				group_ineqs = entry[2]
+			else:
+				lhs_remove = []
+				for lhs in group_ineqs:
+					oper_remove = []
+					for oper in lhs[1]:
+						for iter_lhs in entry[2]:
+							if iter_lhs in lhs:
+								for iter_oper in iter_lhs:
+									if iter_oper[0] in oper[0]:
+										oper[1].intersection(iter_oper[1])
+										if len(oper[1]) == 0:
+											oper_remove.append(oper)
+					for oper in oper_remove:
+						lhs[1].remove(oper)
+					if len(lhs[1]) == 0:
+						lhs_remove.append(lhs)
+				for lhs in lhs_remove:
+					group_ineqs.remove(lhs)
 		# combine implications
 		group_imps = []
-		out.append([group_eqs,group_equivs,group_ineqs,group_imps])
+		for entry in group:
+			if group_imps == []:
+				group_imps = entry[3]
+			else:
+				lhs_remove = []
+				for lhs in group_imps:
+					for iter_lhs in entry[3]:
+						if lhs[0] in iter_lhs[0]:
+							lhs[1].intersection(iter_lhs[1])
+							if len(lhs[1]) == 0:
+								lhs_remove.append(lhs)
+				for lhs in lhs_remove:
+					group_imps.remove(lhs)
+		# create struct
+		#print(sets_combine(group_eqs) == group_eqs)
+		out.append([sets_combine(group_eqs),group_equivs,group_ineqs,group_imps])
 	return [condition,out]
 	
-def print_cache(cache, name):
+def print_cache(cache, outf):
 	#print(cache)
 	#return
 	cnt = 0
-	outf = open(name + "_spliced.out", "w")
-	#combine equality and inequality findings
-	cache = expand_ineq(cache)
-	#cache = extract_globals(cache, "(CPL==0)")
 	for entry in cache:
 			outf.write("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\nCONDITION:  " + entry[0].replace("..","").replace(":::ENTER","") + "\n~~ begin equality sets ~~\n")
 			#entry[1][0] = sets_combine(entry[1][0])
+			# eqs - lets separate out 'origs'
+			origs = []
+			removes = []
+			for eq in entry[1][0]:
+				if len(eq) == 2:
+					pair = list(eq)
+					pair.sort()
+					if "orig(" + pair[0] in pair[1]:
+						origs.append(pair[0])
+						removes.append(eq)			
+			for eq in removes:
+				entry[1][0].remove(eq)
 			for eqs in entry[1][0]:
 				outf.write(sorted(eqs) + "\n")
+				cnt = cnt + 1
+			if origs != []:
+				outf.write(" ~ unchanged register(s) ~ \n")
+				outf.write(sorted(origs) + "\n")
 				cnt = cnt + 1
 			outf.write("~~ end equality sets ~~\n~~ begin equivalence sets ~~\n")
 			for eqs in entry[1][1]:
@@ -311,10 +392,84 @@ def print_cache(cache, name):
 			outf.write(entry[2])
 			cnt = cnt + entry[2].count("\n")
 			outf.write("~~ end raw properties ~~\n")
-	#print(cnt)
+	print(cnt)
 	#print("\n\n\n")
-	print_globals(extract_globals(cache, "(CPL==0)"),outf)
+	return cache
+	#print_globals(extract_globals(cache, "(CPL==0)"),outf)
 	
+def cull_globals(cache,struct):
+	[condition, globals_list] = struct
+	notcond = "not" + condition
+	for entry in cache:
+		# find appropriate globals to compare to
+		if notcond in entry[0]: # contains relevant condition
+			globals = globals_list[2]
+		elif condition in entry[0]:
+			globals = globals_list[1]
+		else:
+			globals = globals_list[0]
+		#eqs
+		eqs_remove = []
+		for eq in entry[1][0]:
+			for g_eq in globals[0]:
+				if eq.issubset(g_eq):
+					eqs_remove.append(eq)
+		for eq in eqs_remove:
+			entry[1][0].remove(eq)
+		#equivs - barely changed
+		eqs_remove = []
+		for eq in entry[1][1]:
+			for g_eq in globals[1]:
+				if eq.issubset(g_eq):
+					eqs_remove.append(eq)
+		for eq in eqs_remove:
+			entry[1][1].remove(eq)
+		#ineqs
+		ineqs_to_remove = []
+		for ineq in entry[1][2]:
+			opers_to_remove = []
+			for g_ineq in globals[2]:
+				if ineq[0] in g_ineq[0]:
+				
+					for oper in ineq[1]:
+						vals_to_remove = set()
+						for g_oper in g_ineq[1]:
+							if oper[0] in g_oper[0]:
+								for val in oper[1]:
+									if val in g_oper[1]:
+										vals_to_remove.add(val)
+						for val in vals_to_remove:
+							oper[1].remove(val)
+						if len(oper[1]) == 0:
+							opers_to_remove.append(oper)
+			#print(ineq[1])
+			#print(opers_to_remove)
+			temp = [ii for n,ii in enumerate(opers_to_remove) if ii not in opers_to_remove[:n]]
+			for oper in temp:
+				ineq[1].remove(oper)
+			if len(ineq[1]) == 0:
+				ineqs_to_remove.append(ineq)
+		temp = [ii for n,ii in enumerate(ineqs_to_remove) if ii not in ineqs_to_remove[:n]]
+		for ineq in temp:
+			entry[1][2].remove(ineq)
+		
+		#imps
+		imp_remove = []
+		for imp in entry[1][3]:
+			p_remove = []
+			for g_imp in globals[3]:
+				if imp[0] in g_imp[0]:
+					for p in imp[1]:
+						if p in g_imp[1]:
+							p_remove.append(p)
+			for p in p_remove:
+				imp[1].remove(p)
+			if len(imp[1]) == 0:
+				imp_remove.append(imp)
+		for imp in imp_remove:
+			entry[1][3].remove(imp) 
+	return cache
+			
 def splice(name):
 	in_file = open(name + ".out", "r")
 	check_next = False
@@ -325,7 +480,12 @@ def splice(name):
 	cache = [] # should be of form [<ENTER line>,[<list of sets of equal regs>, <list of sets of equivalent properties>, <inequality struct>, <implication struct>],<raw string>]]
 	for line in in_file:
 		if "Exiting Dai" in line:
-			print_cache(cache, name) # expansion of inequalities w/i this call
+			outf = open(name + "_spliced.out", "w")
+			cache = expand_ineq(cache)
+			globals = extract_globals(cache, "(CPL==0)")
+			print_globals(globals,outf)
+			#to_print = cull_globals(cache, globals)
+			print_cache(cache, outf)
 			return
 		elif "====" in line:
 			check_next = True
@@ -344,4 +504,6 @@ def splice(name):
 			add_to_cache(save_name, cache, line)
 
 #splice("1sp")
+#splice()
 splice("one_cs")
+#splice("one_css")
