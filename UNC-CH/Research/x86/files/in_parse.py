@@ -74,7 +74,9 @@ def get_bit(string,index):
 # CR4[11] (SGDT, SIDT, SLDT, SMSW and STR -> CPL==0) "UMIP"
 # CR4[13] (VM* enable) "VMXE"	
 			
-def print_help(vars,outf):
+			
+			
+def print_help_cbs(vars,outf):
 	# IOPL first since its not a single bit / is a special case
 	value = bin(int(vars[9][1],16))  # look at EFL to get IOPL
 	if len(value) <  16: # IOPL necessarily 0
@@ -86,22 +88,30 @@ def print_help(vars,outf):
 	lst = [[9,17,"VM"],[9,21,"CPUIDXE"],[33,0,"PE"],[36,2,"TSD"],[36,11,"UMIP"],[36,13,"VMXE"],[36,20,"SMEP"],[36,21,"SMAP"],[46,8,"LME"],[46,10,"LMA"]]
 	for item in lst:
 		outf.write("\n" + item[2] + "\n" + get_bit(vars[item[0]][1],item[1]) + "\n" + "1")
-
-
+		
+def print_help(vars,outf):
+	crs = [9,33,36,46] # EFL, CR0, CR4, EFER
+	names = ["EFL","CR0","CR4","EFER"]
+	lens = [22,31,23,16]
+	crs_temp = [list(bin(int(vars[i][1],16)))[2:] for i in crs]
+	crs = [["0"]*(lens[i] - len(crs_temp[i])) + crs_temp[i] for i in range(len(crs_temp))]
+	for i in range(len(crs)):
+		for j in range(lens[i]):
+			outf.write("\n" + names[i] + "[" + str(j) + "]\n" + crs[i][-j+1] + "\n" + "1")
+			
 def printer(for_next,vars,uniq,outf,nonce):
 	if for_next == "":
 		nonce = get_nonce(vars[0][1], uniq)
 		#print(vars[0][1])
 		outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
 		for var in vars:
-			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
+			if "arg" in var[0]:
+				1 == 1
+			elif var[0] in ["es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
 				outf.write("\n" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
 			elif "dpl" in var[0]:
 				outf.write("\n" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
 			elif "inst" not in var[0]:
-			
-				#print(var[0])
-				#print(var[1])
 				outf.write("\n" + var[0].upper() + "\n" + str(int(var[1],16)) + "\n" + "1")	
 		print_help(vars,outf)
 	#print_vars(vars)
@@ -110,7 +120,9 @@ def printer(for_next,vars,uniq,outf,nonce):
 		#print(nonce)
 		outf.write("\n\n.." + for_next + "():::EXIT0\nthis_invocation_nonce\n" + nonce)	
 		for var in vars:
-			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
+			if "arg" in var[0]:
+				1 == 1
+			elif var[0] in ["es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
 				outf.write("\n" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
 			elif "dpl" in var[0]:
 				outf.write("\n" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	
@@ -120,7 +132,9 @@ def printer(for_next,vars,uniq,outf,nonce):
 		nonce = get_nonce(vars[0][1], uniq)
 		outf.write("\n\n.." + vars[0][1] + "():::ENTER\nthis_invocation_nonce\n" + nonce)	
 		for var in vars:
-			if var[0] in ["arg1", "arg2", "es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
+			if "arg" in var[0]:
+				1 == 1
+			elif var[0] in ["es", "cs", "ss", "ds", "fs", "gs", "ldt", "tr", "gdt", "idt"]:
 				outf.write("\n" + var[0].upper() + "\n\"" + var[1] + "\"\n" + "1")	
 			elif "dpl" in var[0]:
 				outf.write("\n" + var[0].upper() + "\n" + str(var[1]) + "\n" + "1")	

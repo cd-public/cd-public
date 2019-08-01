@@ -245,16 +245,16 @@ def print_globals(struct,outf):
 		#print(group[2])
 		for ineqs in group[2]:
 			if ineqs != []:
-				for opers in ineqs[1]:
-					if len(opers[1]) != 0:
-						outf.write(ineqs[0] + " " + opers[0] + " _x_ for all _x_ in  " + sorted(opers[1]) + "\n")
+				if len(ineqs[2]) != 0:
+						outf.write(ineqs[0] + " " + ineqs[1] + " _x_ for all _x_ in  " + sorted(ineqs[2]) + "\n")
 		outf.write("~~ end inequality properties ~~\n~~ begin implication properties ~~\n")
 		for imps in group[3]:
 			outf.write(imps[0] + " ==>  _x_ for all _x_ in  " + sorted(imps[1]) + "\n")
 		outf.write("~~ end implication properties ~~\n")
 	
 def extract_globals(cache_orig, condition):
-	cache = deepcopy(cache_orig) # get a local copy
+	cache = cache_orig
+	#cache = deepcopy(cache_orig) # get a local copy, now doing it on smaller scale
 	# disregarding instructions, we splits properties into 3 groups
 	# (1) condition neutral (2) condition (3) not condition
 	groups = [[],[],[]]
@@ -271,7 +271,7 @@ def extract_globals(cache_orig, condition):
 		group_eqs = []
 		for entry in group:
 			if group_eqs == []:
-				group_eqs = entry[0]
+				group_eqs = deepcopy(entry[0])
 			else:
 				keep = set()
 				for iter_eq in entry[0]:
@@ -279,7 +279,8 @@ def extract_globals(cache_orig, condition):
 						for ele in iter_eq:
 							if ele in group_eq:
 								group_eq.intersection(iter_eq)
-								keep.add(group_eqs.index(group_eq))
+								if len(group_eq) != 0:
+									keep.add(group_eqs.index(group_eq))
 				l = list(keep)
 				l.sort()
 				l.reverse()
@@ -290,7 +291,7 @@ def extract_globals(cache_orig, condition):
 		group_equivs = []
 		for entry in group:
 			if group_equivs == []:
-				group_equivs = entry[1]
+				group_equivs = deepcopy(entry[1])
 			else:
 				keep = set()
 				for iter_equiv in entry[1]:
@@ -298,7 +299,8 @@ def extract_globals(cache_orig, condition):
 						for ele in iter_equiv:
 							if ele in group_equiv:
 								group_equiv.intersection(iter_equiv)
-								keep.add(group_equivs.index(group_equiv))
+								if len(group_equiv) != 0:
+									keep.add(group_equivs.index(group_equiv))
 				l = list(keep)
 				l.sort()
 				l.reverse()
@@ -309,40 +311,43 @@ def extract_globals(cache_orig, condition):
 		for entry in group:
 			if group_ineqs == []:
 				# dont use ineq struct TODO
-				group_ineqs = entry[2]
-			else:
-				lhs_remove = []
-				for lhs in group_ineqs:
-					oper_remove = []
+				safety = deepcopy(entry[2])
+				for lhs in safety:
 					for oper in lhs[1]:
-						for iter_lhs in entry[2]:
-							if iter_lhs in lhs:
-								for iter_oper in iter_lhs:
-									if iter_oper[0] in oper[0]:
-										oper[1].intersection(iter_oper[1])
-										if len(oper[1]) == 0:
-											oper_remove.append(oper)
-					for oper in oper_remove:
-						lhs[1].remove(oper)
-					if len(lhs[1]) == 0:
-						lhs_remove.append(lhs)
-				for lhs in lhs_remove:
-					group_ineqs.remove(lhs)
+						group_ineqs.append([lhs[0], oper[0], oper[1]])
+			else:
+				keep = set()
+				for ineq in group_ineqs:
+					for lhs in entry[2]:
+						if lhs[0] in ineq[0]:
+							for oper in lhs[1]:
+								if oper[0] in ineq[1]:
+									ineq[2].intersection(oper[1])
+									if len(ineq[2]) != 0:
+										keep.add(group_ineqs.index(ineq))
+				l = list(keep)
+				l.sort()
+				l.reverse()
+				for i in l:
+					del group_ineqs[i]
 		# combine implications
 		group_imps = []
 		for entry in group:
 			if group_imps == []:
-				group_imps = entry[3]
+				group_imps = deepcopy(entry[3])
 			else:
-				lhs_remove = []
-				for lhs in group_imps:
-					for iter_lhs in entry[3]:
-						if lhs[0] in iter_lhs[0]:
-							lhs[1].intersection(iter_lhs[1])
+				keep = set()
+				for imp in group_imps:
+					for lhs in entry[3]:
+						if imp[0] in lhs[0]:
+							imp[1].intersection(lhs[1])
 							if len(lhs[1]) == 0:
-								lhs_remove.append(lhs)
-				for lhs in lhs_remove:
-					group_imps.remove(lhs)
+								keep.add(group_imps.index(imp))
+				l = list(keep)
+				l.sort()
+				l.reverse()
+				for i in l:
+					del group_ineqs[i]
 		# create struct
 		#print(sets_combine(group_eqs) == group_eqs)
 		out.append([sets_combine(group_eqs),group_equivs,group_ineqs,group_imps])
@@ -430,14 +435,12 @@ def cull_globals(cache,struct):
 			opers_to_remove = []
 			for g_ineq in globals[2]:
 				if ineq[0] in g_ineq[0]:
-				
 					for oper in ineq[1]:
 						vals_to_remove = set()
-						for g_oper in g_ineq[1]:
-							if oper[0] in g_oper[0]:
-								for val in oper[1]:
-									if val in g_oper[1]:
-										vals_to_remove.add(val)
+						if oper[0] in g_ineq[1]:
+							for val in oper[1]:
+								if val in g_ineq[2]:
+									vals_to_remove.add(val)
 						for val in vals_to_remove:
 							oper[1].remove(val)
 						if len(oper[1]) == 0:
@@ -484,8 +487,8 @@ def splice(name):
 			cache = expand_ineq(cache)
 			globals = extract_globals(cache, "(CPL==0)")
 			print_globals(globals,outf)
-			#to_print = cull_globals(cache, globals)
-			print_cache(cache, outf)
+			to_print = cull_globals(cache, globals)
+			print_cache(to_print, outf)
 			return
 		elif "====" in line:
 			check_next = True
@@ -505,5 +508,5 @@ def splice(name):
 
 #splice("1sp")
 #splice()
-splice("one_cs")
+splice("pre")
 #splice("one_css")
