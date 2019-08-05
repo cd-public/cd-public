@@ -1,0 +1,82 @@
+GPRs	
+
+variable EAX
+variable EBX
+variable ECX
+variable EDX
+		
+EIP
+	
+variable EIP
+	
+CRs	
+variable EFL
+variable CR0
+variable CR2
+variable CR3
+variable CR4
+variable EFER
+		
+	
+PLs
+	
+variable CPL
+variable ES_DPL
+variable CS_DPL
+variable SS_DPL
+variable DS_DPL
+variable FS_DPL
+variable GS_DPL
+variable LDT_DPL
+variable TR_DPL
+		
+Bits
+	
+variable II
+variable A20
+variable SMM
+variable HLT
+	
+Segments
+
+variable ES
+variable CS
+variable SS
+variable DS
+variable FS
+variable GS
+variable LDT
+variable TR
+	
+DTs
+
+variable GDT
+variable IDT
+		
+DRs
+variable DR0
+variable DR1
+variable DR2
+variable DR3
+variable DR6
+variable DR7
+	
+CCs
+
+variable CCS
+variable CCD
+variable CC0
+
+DVs
+		
+variable IOPL
+variable VM
+variable CPUIDXE
+variable PE
+variable TSD
+variable UMIP
+variable VMXE
+variable SMEP
+variable SMAP
+variable LME
+variable LMA
