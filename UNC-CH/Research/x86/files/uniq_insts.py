@@ -21,6 +21,9 @@ def gen_s():
 	for i in range(len(names)):
 		for j in range(lens[i]):
 			s += names[i] + "[" + str(j) + "]" + fill + fill2
+	for i in range(len(names)):
+		for j in range(lens[i]//2):
+			s += names[i] + "[" + str(j*2) + ":" + str(j*2 + 1) +  "]" + fill + fill2
 	s = s[:-len(fill2)] + "\n"
 	return s
 
