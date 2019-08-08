@@ -1,0 +1,96 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GLOBAL:  ~(CPL==0)
+~~ begin equality sets ~~
+['CPL', 'CS_DPL', 'SS_DPL']
+['1', 'A20', 'CR0[6]', 'EFL[3]', 'orig(A20)', 'orig(CR0[6])', 'orig(EFL[3])']
+['0', 'CC0', 'CR0[0:1] % CR0[4:5]', 'CR0[0:1] % orig(CR0[4:5])', 'CR0[10:11]', 'CR0[10]', 'CR0[11]', 'CR0[12:13]', 'CR0[12]', 'CR0[13]', 'CR0[14:15]', 'CR0[14]', 'CR0[15]', 'CR0[16]', 'CR0[17]', 'CR0[19]', 'CR0[20:21]', 'CR0[21]', 'CR0[22:23]', 'CR0[22]', 'CR0[23]', 'CR0[24:25]', 'CR0[24]', 'CR0[25]', 'CR0[26:27]', 'CR0[26]', 'CR0[27]', 'CR0[28]', 'CR0[29]', 'CR0[30]', 'CR0[4]', 'CR0[6:7]', 'CR0[8:9]', 'CR0[8]', 'CR0[9]', 'CR4[0:1]', 'CR4[0]', 'CR4[10]', 'CR4[12:13]', 'CR4[13]', 'CR4[14:15]', 'CR4[14]', 'CR4[15]', 'CR4[16:17]', 'CR4[16]', 'CR4[17]', 'CR4[18:19]', 'CR4[18]', 'CR4[19]', 'CR4[1]', 'CR4[20:21]', 'CR4[20]', 'CR4[21]', 'CR4[22]', 'CR4[2:3]', 'CR4[2]', 'CR4[3]', 'CR4[4]', 'CR4[5]', 'CR4[7]', 'DR0', 'DR1', 'DR2', 'DR3', 'EFER', 'EFER[0:1]', 'EFER[0]', 'EFER[10:11]', 'EFER[10]', 'EFER[11]', 'EFER[12:13]', 'EFER[12]', 'EFER[13]', 'EFER[14:15]', 'EFER[14]', 'EFER[15]', 'EFER[1]', 'EFER[2:3]', 'EFER[2]', 'EFER[3]', 'EFER[4:5]', 'EFER[4]', 'EFER[5]', 'EFER[6:7]', 'EFER[6]', 'EFER[7]', 'EFER[8:9]', 'EFER[8]', 'EFER[9]', 'EFL[0]', 'EFL[10]', 'EFL[12:13]', 'EFL[12]', 'EFL[14:15]', 'EFL[14]', 'EFL[15]', 'EFL[16:17]', 'EFL[16]', 'EFL[17]', 'EFL[18:19]', 'EFL[18]', 'EFL[19]', 'EFL[20]', 'EFL[21]', 'EFL[5]', 'EFL[7]', 'FS_DPL', 'GS_DPL', 'HLT', 'LDT_DPL', 'TR_DPL', 'orig(CC0)', 'orig(CR0[10:11])', 'orig(CR0[10])', 'orig(CR0[11])', 'orig(CR0[12:13])', 'orig(CR0[12])', 'orig(CR0[13])', 'orig(CR0[14:15])', 'orig(CR0[14])', 'orig(CR0[15])', 'orig(CR0[16])', 'orig(CR0[17])', 'orig(CR0[19])', 'orig(CR0[20:21])', 'orig(CR0[21])', 'orig(CR0[22:23])', 'orig(CR0[22])', 'orig(CR0[23])', 'orig(CR0[24:25])', 'orig(CR0[24])', 'orig(CR0[25])', 'orig(CR0[26:27])', 'orig(CR0[26])', 'orig(CR0[27])', 'orig(CR0[28])', 'orig(CR0[29])', 'orig(CR0[30])', 'orig(CR0[4])', 'orig(CR0[6:7])', 'orig(CR0[8:9])', 'orig(CR0[8])', 'orig(CR0[9])', 'orig(CR4[0:1])', 'orig(CR4[0])', 'orig(CR4[10])', 'orig(CR4[12:13])', 'orig(CR4[13])', 'orig(CR4[14:15])', 'orig(CR4[14])', 'orig(CR4[15])', 'orig(CR4[16:17])', 'orig(CR4[16])', 'orig(CR4[17])', 'orig(CR4[18:19])', 'orig(CR4[18])', 'orig(CR4[19])', 'orig(CR4[1])', 'orig(CR4[20:21])', 'orig(CR4[20])', 'orig(CR4[21])', 'orig(CR4[22])', 'orig(CR4[2:3])', 'orig(CR4[2])', 'orig(CR4[3])', 'orig(CR4[4])', 'orig(CR4[5])', 'orig(CR4[7])', 'orig(DR0)', 'orig(DR1)', 'orig(DR2)', 'orig(DR3)', 'orig(EFER)', 'orig(EFER[0:1])', 'orig(EFER[0])', 'orig(EFER[10:11])', 'orig(EFER[10])', 'orig(EFER[11])', 'orig(EFER[12:13])', 'orig(EFER[12])', 'orig(EFER[13])', 'orig(EFER[14:15])', 'orig(EFER[14])', 'orig(EFER[15])', 'orig(EFER[1])', 'orig(EFER[2:3])', 'orig(EFER[2])', 'orig(EFER[3])', 'orig(EFER[4:5])', 'orig(EFER[4])', 'orig(EFER[5])', 'orig(EFER[6:7])', 'orig(EFER[6])', 'orig(EFER[7])', 'orig(EFER[8:9])', 'orig(EFER[8])', 'orig(EFER[9])', 'orig(EFL[0])', 'orig(EFL[10])', 'orig(EFL[12:13])', 'orig(EFL[12])', 'orig(EFL[14:15])', 'orig(EFL[14])', 'orig(EFL[15])', 'orig(EFL[16:17])', 'orig(EFL[16])', 'orig(EFL[17])', 'orig(EFL[18:19])', 'orig(EFL[18])', 'orig(EFL[19])', 'orig(EFL[20])', 'orig(EFL[21])', 'orig(EFL[5])', 'orig(EFL[7])', 'orig(FS_DPL)', 'orig(GS_DPL)', 'orig(HLT)', 'orig(LDT_DPL)', 'orig(TR_DPL)']
+['DS_DPL', 'ES_DPL']
+['EFL[1]', 'EFL[20:21]']
+['EFL[11]', 'EFL[8:9]']
+['EFL[10:11]', 'EFL[13]']
+['CR0[0]', 'CR0[28:29]']
+['CR0[18]', 'CR0[20]', 'CR0[2:3]', 'CR0[3]', 'CR0[5]', 'CR0[7]', 'CR4[11]', 'CR4[12]', 'CR4[6]', 'CR4[8:9]', 'CR4[8]', 'CR4[9]']
+['CR0[16:17]', 'CR0[18:19]', 'CR4[10:11]', 'CR4[4:5]']
+['4294905840L', 'DR6', 'orig(DR6)']
+['1024', 'DR7', 'orig(DR7)']
+~~ end equality sets ~~
+~~ begin equivalence sets ~~
+~~ end equivalence sets ~~
+~~ begin inequality properties ~~
+ADDR != _x_ for all _x_ in  ['eqset: 0']
+CR0[0:1] <= _x_ for all _x_ in  ['CR0[4:5]', 'orig(CR0[4:5])']
+CR0[0:1] >= _x_ for all _x_ in  ['CR4[6:7]', 'eqset: CR0[16:17]', 'orig(EFL[1])']
+CR0[1] <= _x_ for all _x_ in  ['CR0[4:5]', 'EFL[0:1]', 'orig(CR0[1])', 'orig(CR0[4:5])', 'orig(EFL[0:1])']
+CR0[1] >= _x_ for all _x_ in  ['eqset: CR0[18]', 'orig(CR0[3])']
+CR0[2] <= _x_ for all _x_ in  ['CR0[0:1]', 'CR0[4:5]', 'EFL[0:1]', 'orig(CR0[4:5])', 'orig(EFL[0:1])']
+CR0[2] >= _x_ for all _x_ in  ['eqset: CR0[18]', 'orig(EFL[1])']
+CR0[4:5] <= _x_ for all _x_ in  ['orig(CR0[4:5])']
+CR0[4:5] > _x_ for all _x_ in  ['eqset: CR0[16:17]', 'orig(CR0[0])', 'orig(CR0[1])', 'orig(CR0[2])', 'orig(CR0[3])', 'orig(EFL[11])', 'orig(EFL[13])', 'orig(EFL[1])', 'orig(EFL[2])', 'orig(EFL[4])', 'orig(EFL[6])', 'orig(EFL[8])', 'orig(EFL[9])', 'orig(II)', 'orig(SMM)']
+CR0[4:5] >= _x_ for all _x_ in  ['CR4[6:7]', 'orig(CR0[16:17])', 'orig(EFL[2:3])', 'orig(EFL[4:5])']
+CR4 <= _x_ for all _x_ in  ['orig(CR0[0:1])', 'orig(CR0[4:5])', 'orig(CR4)', 'orig(CR4[6:7])']
+CS != _x_ for all _x_ in  ['DS', 'FS', 'GS', 'SS', 'TR', 'orig(DS)', 'orig(ES)', 'orig(FS)', 'orig(GS)', 'orig(SS)', 'orig(TR)']
+CS > _x_ for all _x_ in  ['LDT', 'orig(LDT)']
+DS != _x_ for all _x_ in  ['TR', 'orig(CS)', 'orig(TR)']
+DS >= _x_ for all _x_ in  ['FS', 'LDT', 'orig(LDT)']
+EFL != _x_ for all _x_ in  ['EFL[2:3]', 'EFL[4:5]', 'eqset: CR0[16:17]', 'orig(CR0[16:17])', 'orig(EFL[0:1])', 'orig(EFL[2:3])', 'orig(EFL[4:5])']
+EFL <= _x_ for all _x_ in  ['CR0[0:1]', 'CR0[2]', 'CR0[4:5]', 'EFL[0:1]', 'EFL[2:3]', 'EFL[4:5]', 'EFL[6:7]', 'orig(CR0[0:1])', 'orig(CR0[2])', 'orig(CR0[4:5])', 'orig(EFL[0:1])']
+EFL >= _x_ for all _x_ in  ['2', 'EFL[8]', 'orig(CR0[0])', 'orig(CR0[1])', 'orig(CR0[2])', 'orig(CR0[3])', 'orig(EFL[11])', 'orig(EFL[13])', 'orig(EFL[1])', 'orig(EFL[2])', 'orig(EFL[4])', 'orig(EFL[6])', 'orig(EFL[8])', 'orig(EFL[9])', 'orig(II)', 'orig(SMM)']
+ES != _x_ for all _x_ in  ['CS', 'TR', 'orig(CS)', 'orig(TR)']
+ES <= _x_ for all _x_ in  ['orig(ES_DPL)']
+ES >= _x_ for all _x_ in  ['FS', 'LDT', 'orig(CPL)', 'orig(LDT)']
+FS != _x_ for all _x_ in  ['LDT', 'TR', 'orig(CS)', 'orig(LDT)', 'orig(TR)']
+FS <= _x_ for all _x_ in  ['orig(CPL)', 'orig(ES_DPL)']
+GS != _x_ for all _x_ in  ['LDT', 'TR', 'orig(CS)', 'orig(LDT)', 'orig(TR)']
+II <= _x_ for all _x_ in  ['CR0[4:5]', 'EFL[0:1]', 'eqset: 1', 'orig(CR0[4:5])', 'orig(EFL[0:1])']
+LDT != _x_ for all _x_ in  ['orig(FS)', 'orig(GS)']
+LDT < _x_ for all _x_ in  ['TR', 'orig(CS)', 'orig(DS)', 'orig(ES)', 'orig(SS)', 'orig(TR)']
+LDT >= _x_ for all _x_ in  ['orig(LDT)']
+SMM <= _x_ for all _x_ in  ['CR0[4:5]', 'EFL[0:1]', 'orig(CR0[4:5])', 'orig(EFL[0:1])']
+SS != _x_ for all _x_ in  ['TR', 'orig(CS)', 'orig(TR)']
+SS >= _x_ for all _x_ in  ['FS', 'LDT', 'orig(LDT)']
+TR != _x_ for all _x_ in  ['orig(CS)', 'orig(DS)', 'orig(ES)', 'orig(FS)', 'orig(GS)', 'orig(SS)']
+TR <= _x_ for all _x_ in  ['orig(TR)']
+TR > _x_ for all _x_ in  ['orig(LDT)']
+eqset: 1 != _x_ for all _x_ in  ['CR0[0:1]', 'CR4[6:7]', 'EFL[2:3]', 'EFL[4:5]', 'eqset: CR0[16:17]', 'orig(CR0[0:1])', 'orig(CR0[16:17])', 'orig(CR4[6:7])', 'orig(EFL[2:3])', 'orig(EFL[4:5])']
+eqset: 1 <= _x_ for all _x_ in  ['CR0[4:5]', 'EFL[0:1]', 'orig(CR0[4:5])', 'orig(EFL[0:1])']
+eqset: 1 >= _x_ for all _x_ in  ['CR0[1]', 'CR0[2]', 'EFL[2]', 'EFL[4]', 'EFL[6]', 'EFL[8]', 'EFL[9]', 'SMM', 'eqset: CR0[0]', 'eqset: CR0[18]', 'eqset: EFL[10:11]', 'eqset: EFL[11]', 'eqset: EFL[1]', 'orig(CR0[0])', 'orig(CR0[1])', 'orig(CR0[2])', 'orig(CR0[3])', 'orig(EFL[11])', 'orig(EFL[13])', 'orig(EFL[1])', 'orig(EFL[2])', 'orig(EFL[4])', 'orig(EFL[6])', 'orig(EFL[8])', 'orig(EFL[9])', 'orig(II)', 'orig(SMM)']
+eqset: CPL <= _x_ for all _x_ in  ['eqset: DS_DPL', 'orig(ES_DPL)']
+eqset: CR0[0] <= _x_ for all _x_ in  ['CR0[1]', 'CR0[4:5]', 'EFL[0:1]', 'orig(CR0[1])', 'orig(CR0[4:5])', 'orig(EFL[0:1])']
+eqset: CR0[16:17] != _x_ for all _x_ in  ['orig(EFL[0:1])']
+eqset: CR0[16:17] <= _x_ for all _x_ in  ['CR4[6:7]', 'orig(CR0[0:1])', 'orig(CR0[16:17])', 'orig(CR0[4:5])', 'orig(CR4[6:7])']
+eqset: CR0[18] <= _x_ for all _x_ in  ['CR0[0:1]', 'CR0[4:5]', 'CR4[6:7]', 'EFL[0:1]', 'eqset: CR0[16:17]', 'orig(CR0[0:1])', 'orig(CR0[16:17])', 'orig(CR0[1])', 'orig(CR0[2])', 'orig(CR0[3])', 'orig(CR0[4:5])', 'orig(CR4[6:7])', 'orig(EFL[0:1])']
+~~ end inequality properties ~~
+~~ begin implication properties ~~
+~~ end implication properties ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GLOBAL:  (CPL==0)
+~~ begin equality sets ~~
+~~ end equality sets ~~
+~~ begin equivalence sets ~~
+~~ end equivalence sets ~~
+~~ begin inequality properties ~~
+~~ end inequality properties ~~
+~~ begin implication properties ~~
+~~ end implication properties ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+GLOBAL:  not(CPL==0)
+~~ begin equality sets ~~
+~~ end equality sets ~~
+~~ begin equivalence sets ~~
+~~ end equivalence sets ~~
+~~ begin inequality properties ~~
+~~ end inequality properties ~~
+~~ begin implication properties ~~
+~~ end implication properties ~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CONDITION:  clock()
+~~ begin equality sets ~~
+~~ end equality sets ~~
+~~ begin equivalence sets ~~
+~~ end equivalence sets ~~
+~~ begin inequality properties ~~
+~~ end inequality properties ~~
+~~ begin implication properties ~~
+~~ end implication properties ~~
+~~ begin raw properties ~~
+~~ end raw properties ~~
