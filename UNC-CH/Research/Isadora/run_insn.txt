@@ -1,5 +1,9 @@
-## use MobaXterm on Windows
+## VPN into UNC
+## using MobaXterm or other X window server on Windows, to cadence.cs.unc.edu
 ## configure path as needed - my install directory for JG is /afs/cs.unc.edu/home/cd/jg_install/jasper_2020.06/bin
 
+setenv PATH ${PATH}:"/afs/cs.unc.edu/home/cd/jg_install/jasper_2020.06/bin"
 setenv CDS_LIC_FILE "5280@cadence.cs.unc.edu"
 setenv LM_LICENSE_FILE "/opt/cadence/installs/LCU/License_69819_1866daf8e644_11_25_2019.txt"
+
+## "jg -fpv" runs, launching an X window
