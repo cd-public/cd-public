@@ -13,7 +13,7 @@ int main(int argc, char const *argv[])
 
     sock = socket(DOMAIN, SOCK_STREAM, 0);
 
-	address.sin6_family = DOMAIN; 
+    address.sin6_family = DOMAIN; 
     address.sin6_port = htons(PORT); // "In practice, only the port field needs to be formatted with htons()"
     address.sin6_addr = in6addr_any; 
 	
@@ -22,9 +22,9 @@ int main(int argc, char const *argv[])
     	
     bind(sock, &address, sizeof(address));
     listen(sock, 1);
-	int addrlen = sizeof(address); 
+    int addrlen = sizeof(address); 
     int connection = accept(sock, &address, &addrlen); 
-	char buffer[BUFF_SIZE] = {0}; 
+    char buffer[BUFF_SIZE] = {0}; 
     read(connection, buffer, BUFF_SIZE); 
 	
     printf("%s\n",buffer ); 
