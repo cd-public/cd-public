@@ -34,9 +34,6 @@ class Empty:
 		return "()"
 		
 	def insert(self,arg):
-		if (type(arg) != type(1)):
-			print("SL ERROR: Attempt to insert non-integer!")
-			return self
 		return List(arg)
 		
 	def size(self):
