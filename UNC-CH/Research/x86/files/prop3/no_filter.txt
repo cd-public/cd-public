@@ -1,9 +1,0 @@
-daikon.inv.filter.DerivedParameterFilter.enabled=false
-daikon.inv.filter.ObviousFilter.enabled=false
-daikon.inv.filter.OnlyConstantVariablesFilter.enabled=false
-daikon.inv.filter.ParentFilter.enabled=false
-daikon.inv.filter.ReadonlyPrestateFilter.enabled=false 
-daikon.inv.filter.SimplifyFilter.enabled=false 
-daikon.inv.filter.UnjustifiedFilter.enabled=false 
-daikon.inv.filter.UnmodifiedVariableEqualityFilter.enabled=false
-

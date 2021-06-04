@@ -1,6 +1,0 @@
-The mystery language is most likely French as:
-
-Cross Entropy across French and Mystery are very close to (self) Entropy.
-
-Cross Entropy between French and <language> and Mystery and <language> are consistently very close.
-
